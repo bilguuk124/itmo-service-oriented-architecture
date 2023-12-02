@@ -30,4 +30,13 @@ public class House {
     @Max(634)
     private Integer year;
 
+    @Min(1)
+    private Integer numberOfFloors;
+
+    public void update(House house){
+        this.name = house.getName();
+        this.year = house.getYear();
+        this.numberOfFloors = house.getNumberOfFloors();
+    }
+
 }

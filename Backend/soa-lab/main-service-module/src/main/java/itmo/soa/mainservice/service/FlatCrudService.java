@@ -13,7 +13,6 @@ import java.util.List;
 public interface FlatCrudService {
     Flat createFlat(FlatCreateDTO flatCreateDTO);
     List<Flat> getAllFlats(List<String> sort, List<String> filter, Integer page, Integer pageSize);
-
     Flat getFlatByID(Integer id) throws FlatNotFoundException;
     Flat updateFlatById(Integer id, FlatCreateDTO flatCreateDTO) throws FlatNotFoundException;
     void deleteById(Integer id) throws FlatNotFoundException;
