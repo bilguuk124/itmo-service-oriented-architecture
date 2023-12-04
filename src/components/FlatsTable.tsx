@@ -85,7 +85,7 @@ export default class FlatsTable extends React.Component<MyProps, any, any> {
 
   public render(): React.ReactNode {
     return <Table bordered showHeader size='small' columns={this.columns} dataSource={this.props.flats}>
-      <Column key={}
+      {/* <Column key={} */}
     </Table>
   }
 
