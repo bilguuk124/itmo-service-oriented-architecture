@@ -2,28 +2,50 @@ import React from 'react';
 import { Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import Flat from '../model/Flat';
+import Column from 'antd/es/table/Column';
 
-export default class FlatsTable extends React.Component {
+interface MyProps{
+  flats: Flat[]
+}
+
+export default class FlatsTable extends React.Component<MyProps, any, any> {
   private columns: ColumnsType<Flat> = [
     {
       title: 'id',
       dataIndex: 'id',
       key: 'id',
+      align: 'center'
     },
     {
       title: 'name',
       dataIndex: 'name',
       key: 'name',
+      align: 'center'
     },
     {
       title: 'coordinates',
-      dataIndex: 'coordinates',
-      key: 'coordinates',
+      children: [
+        {
+          title: 'X',
+          dataIndex: 'coordinatesX',
+          key: 'coordinatesX',
+          width: '2vh',
+          render: (_, rec, __) => rec.coordinates.x
+        },
+        {
+          title: 'Y',
+          dataIndex: 'coordinatesY',
+          key: 'coordinatesY',
+          width: '2vh',
+          render: (_, rec, __) => rec.coordinates.y
+        }
+      ]
     },
     {
       title: 'creationDate',
       dataIndex: 'creationDate',
       key: 'creationDate',
+      render: (_, record: Flat, __) => record.creationDate.toLocaleString()
     },
     {
       title: 'area',
@@ -38,7 +60,7 @@ export default class FlatsTable extends React.Component {
     {
       title: 'furnish',
       dataIndex: 'furnish',
-      key: 'furnish',
+      key: 'furnish'
     },
     {
       title: 'view',
@@ -58,38 +80,13 @@ export default class FlatsTable extends React.Component {
   ];
 
   constructor(public data: Flat[]){
-    super({data});
+    super({flats: data});
   }
 
-  render(): React.ReactNode {
-    return <Table columns={this.columns} dataSource={this.data}/>
+  public render(): React.ReactNode {
+    return <Table bordered showHeader size='small' columns={this.columns} dataSource={this.props.flats}>
+      <Column key={}
+    </Table>
   }
 
 }
-
-
-// const data: DataType[] = [
-//   {
-//     key: '1',
-//     name: 'John Brown',
-//     age: 32,
-//     address: 'New York No. 1 Lake Park',
-//     tags: ['nice', 'developer'],
-//   },
-//   {
-//     key: '2',
-//     name: 'Jim Green',
-//     age: 42,
-//     address: 'London No. 1 Lake Park',
-//     tags: ['loser'],
-//   },
-//   {
-//     key: '3',
-//     name: 'Joe Black',
-//     age: 32,
-//     address: 'Sydney No. 1 Lake Park',
-//     tags: ['cool', 'teacher'],
-//   },
-// ];
-
-// const FlatsTable = <Table columns={columns} dataSource={data} />;

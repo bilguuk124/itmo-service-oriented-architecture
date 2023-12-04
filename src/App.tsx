@@ -3,6 +3,9 @@ import { Layout, Space } from 'antd';
 import FlatsTable from './components/FlatsTable';
 import Flat, { Furnish, View, Transport } from './model/Flat';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 const { Header, Footer, Content } = Layout;
 
 const headerStyle: React.CSSProperties = {
@@ -33,19 +36,22 @@ const footerStyle: React.CSSProperties = {
   backgroundColor: '#7dbcea',
 };
 
+const data: Flat[] = [
+  {
+    id: 1, name: 'name', coordinates: { x: 1, y: 2 },
+    creationDate: new Date(), area: 10, roomsNumber: 5,
+    furnish: Furnish.FINE, view: View.STREET,
+    transport: Transport.LITTLE,
+    house: { name: 'My House', year: 100, numberOfFloors: 20 }
+  }
+];
+
 const App: React.FC = () => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout>
       <Header style={headerStyle}>Header</Header>
-      <Content style={contentStyle}><>{new FlatsTable([
-        {
-          id: 1, name: 'name', coordinates: { x: 1, y: 2 },
-          creationDate: new Date(), area: 10, roomsNumber: 5,
-          furnish: Furnish.FINE, view: View.STREET,
-          transport: Transport.LITTLE,
-          house: { name: 'My House', year: 100, numberOfFloors: 20 }
-        }
-      ])}</>
+      <Content style={contentStyle}>
+        <FlatsTable flats={data} />
       </Content>
       <Footer style={footerStyle}>Footer</Footer>
     </Layout>

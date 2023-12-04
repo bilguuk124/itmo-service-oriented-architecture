@@ -1,5 +1,5 @@
 export default interface Flat {
-    id:number;
+    id: number;
     name: String;
     coordinates: Coordinates;
     creationDate: Date;
@@ -23,13 +23,24 @@ export interface Coordinates {
 }
 
 export enum Furnish {
-    NONE, FINE, BAD, LITTLE
+    NONE = "NONE",
+    FINE = "FINE",
+    BAD = "BAD",
+    LITTLE = "LITTLE"
 }
 
 export enum View {
-    STREET, YARD, BAD, NORMAL, TERRIBLE
+    STREET = "STREET",
+    YARD = "YARD",
+    BAD = "BAD",
+    NORMAL = "NORMAL",
+    TERRIBLE = "TERRIBLE"
 }
 
 export enum Transport {
-    FEW, NONE, LITTLE, NORMAL, ENOUGH
+    FEW = "FEW",
+    NONE = "NONE",
+    LITTLE = "LITTLE",
+    NORMAL = "NORMAL",
+    ENOUGH = "ENOUGH"
 }
