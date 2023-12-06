@@ -1,10 +1,7 @@
 package itmo.mainservice.exception.handler;
 
-import itmo.mainservice.exception.MyValidationException;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
-import itmo.mainservice.utility.CustomValidator;
 import jakarta.inject.Inject;
-import jakarta.validation.ConstraintViolationException;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
