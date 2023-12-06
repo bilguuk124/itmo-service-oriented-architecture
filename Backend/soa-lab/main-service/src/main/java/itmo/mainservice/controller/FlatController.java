@@ -3,7 +3,6 @@ package itmo.mainservice.controller;
 import itmo.library.*;
 import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.FlatNotFoundException;
-import itmo.mainservice.exception.MyValidationException;
 import itmo.mainservice.exception.NotCreatedException;
 import itmo.mainservice.service.FlatCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
@@ -23,7 +22,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -35,9 +33,6 @@ public class FlatController {
 
     @Inject
     private ErrorBodyGenerator errorBodyGenerator;
-
-    @Inject
-    private Validator validator;
 
     private final Logger logger = LoggerFactory.getLogger(FlatController.class);
 
@@ -110,17 +105,13 @@ public class FlatController {
                     .build();
         }
     }
-    private void validateDto(FlatCreateDTO flatCreateDTO) throws MyValidationException {
-        Set<ConstraintViolation<FlatCreateDTO>> violations = validator.validate(flatCreateDTO);
-        if (!violations.isEmpty()) throw new MyValidationException(violations);
-    }
+
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response createFlat(FlatCreateDTO flatCreateDTO) throws MyValidationException {
+    public Response createFlat(FlatCreateDTO flatCreateDTO)  {
         try{
-            validateDto(flatCreateDTO);
             Flat result = service.createFlat(flatCreateDTO);
             return Response
                     .ok()

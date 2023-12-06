@@ -1,9 +1,7 @@
 package itmo.mainservice.service.impl;
 
 import itmo.library.ErrorBody;
-import itmo.mainservice.exception.MyValidationException;
 import itmo.mainservice.exception.NotCreatedException;
-import jakarta.validation.ConstraintViolation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,27 +14,6 @@ public class ErrorBodyGenerator {
     public ErrorBody generateFlatNotFoundError(int id){
         logger.info("Generating flat not found error body");
         return new ErrorBody(404, "Flat not found", "Flat with id = " + id + " was not found", LocalDateTime.now());
-    }
-
-    public ErrorBody generateValidationError(MyValidationException ex) {
-        logger.info("Generating validation error body");
-        StringBuilder details = new StringBuilder("<errors>");
-        for (ConstraintViolation<?> violation : ex.getViolations()) {
-            details.append("<error>")
-                    .append("<propertyPath>").append(violation.getPropertyPath()).append("</propertyPath>")
-                    .append("<invalidValue>").append(violation.getInvalidValue()).append("</invalidValue>")
-                    .append("<message>").append(violation.getMessage()).append("</message>")
-                    .append("</error>");
-        }
-
-        details.append("</errors>");
-
-        return ErrorBody.builder()
-                .errorCode(400)
-                .message("Validation Error")
-                .details(details.toString())
-                .timestamp(LocalDateTime.now())
-                .build();
     }
 
     public ErrorBody generateValidationError(Integer id){
@@ -59,15 +36,6 @@ public class ErrorBodyGenerator {
                 .build();
     }
 
-    public ErrorBody generateNullPointerException(NullPointerException exception) {
-        logger.info("Generating null pointer exception error body");
-        return ErrorBody.builder()
-                .errorCode(500)
-                .message("Server Error")
-                .details(exception.getMessage())
-                .timestamp(LocalDateTime.now())
-                .build();
-    }
 
     public ErrorBody generateValidationError(String message) {
         logger.info("Generating Validation error error body");

@@ -15,10 +15,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.PrintWriter;
+import java.io.Serial;
 import java.util.Enumeration;
 
 @WebServlet("/AppExceptionHandler")
 public class AppExceptionHandler extends HttpServlet {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Inject

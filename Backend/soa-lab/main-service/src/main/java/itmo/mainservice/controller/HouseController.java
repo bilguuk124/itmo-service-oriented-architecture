@@ -3,7 +3,6 @@ package itmo.mainservice.controller;
 import itmo.library.House;
 import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.HouseNotFoundException;
-import itmo.mainservice.exception.MyValidationException;
 import itmo.mainservice.exception.NotCreatedException;
 import itmo.mainservice.service.HouseCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
@@ -21,7 +20,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -33,9 +31,6 @@ public class HouseController {
 
     @Inject
     private ErrorBodyGenerator errorBodyGenerator;
-
-    @Inject
-    private Validator validator;
 
     private final Logger logger = LoggerFactory.getLogger(HouseController.class);
 
@@ -57,9 +52,8 @@ public class HouseController {
     @Path("/aaa")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response post(House house) throws MyValidationException {
+    public Response post(House house)  {
         logger.info("Testing post method");
-        validateDto(house);
         return Response.ok(house).build();
     }
 
@@ -107,17 +101,13 @@ public class HouseController {
                 .build();
     }
 
-    private void validateDto(House house) throws MyValidationException {
-        Set<ConstraintViolation<House>> violations = validator.validate(house);
-        if (!violations.isEmpty()) throw new MyValidationException(violations);
-    }
+
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    public Response createHouse(House house) throws MyValidationException {
+    public Response createHouse(House house) {
         logger.info("Got request to create a new house");
         try{
-            validateDto(house);
             House result = service.createHouse(house);
             return Response
                     .ok(result, MediaType.APPLICATION_XML)
