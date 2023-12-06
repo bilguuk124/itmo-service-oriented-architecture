@@ -1,0 +1,5385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flats>
+	<flat id="1">
+		<name>anim</name>
+		<coordinates>
+			<x>541.2075</x>
+			<y>30.6503</y>
+		</coordinates>
+		<creationDate>Tue Feb 01 2011 15:03:06 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>332</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>adipisicing</name>
+			<year>173</year>
+			<numberOfFloors>556</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="2">
+		<name>consectetur</name>
+		<coordinates>
+			<x>428.9794</x>
+			<y>72.7641</y>
+		</coordinates>
+		<creationDate>Mon Nov 29 2021 12:44:01 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>518</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>laborum</name>
+			<year>154</year>
+			<numberOfFloors>550</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="3">
+		<name>consectetur</name>
+		<coordinates>
+			<x>501.9889</x>
+			<y>53.1224</y>
+		</coordinates>
+		<creationDate>Fri Jun 16 2000 12:30:45 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>379</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>in</name>
+			<year>542</year>
+			<numberOfFloors>55</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="4">
+		<name>pariatur</name>
+		<coordinates>
+			<x>12.5169</x>
+			<y>85.6322</y>
+		</coordinates>
+		<creationDate>Thu Feb 09 2017 06:19:29 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>216</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>non</name>
+			<year>575</year>
+			<numberOfFloors>418</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="5">
+		<name>voluptate</name>
+		<coordinates>
+			<x>120.684</x>
+			<y>124.8833</y>
+		</coordinates>
+		<creationDate>Thu Nov 09 2023 21:41:00 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>394</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>laborum</name>
+			<year>274</year>
+			<numberOfFloors>706</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="6">
+		<name>amet</name>
+		<coordinates>
+			<x>286.9284</x>
+			<y>42.9957</y>
+		</coordinates>
+		<creationDate>Tue Feb 11 1975 04:26:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>59</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>do</name>
+			<year>363</year>
+			<numberOfFloors>512</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="7">
+		<name>fugiat</name>
+		<coordinates>
+			<x>470.8466</x>
+			<y>62.0032</y>
+		</coordinates>
+		<creationDate>Tue Jan 10 1995 23:41:48 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>351</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>mollit</name>
+			<year>34</year>
+			<numberOfFloors>904</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="8">
+		<name>ea</name>
+		<coordinates>
+			<x>166.035</x>
+			<y>153.1999</y>
+		</coordinates>
+		<creationDate>Sun Aug 27 1995 06:58:04 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>436</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>et</name>
+			<year>619</year>
+			<numberOfFloors>647</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="9">
+		<name>non</name>
+		<coordinates>
+			<x>189.5862</x>
+			<y>11.5051</y>
+		</coordinates>
+		<creationDate>Sat Nov 01 1975 22:23:47 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>494</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>est</name>
+			<year>458</year>
+			<numberOfFloors>452</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="10">
+		<name>nostrud</name>
+		<coordinates>
+			<x>317.666</x>
+			<y>78.4422</y>
+		</coordinates>
+		<creationDate>Sun Sep 23 2018 15:01:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>16</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>tempor</name>
+			<year>474</year>
+			<numberOfFloors>642</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="11">
+		<name>amet</name>
+		<coordinates>
+			<x>390.6589</x>
+			<y>115.0608</y>
+		</coordinates>
+		<creationDate>Sat Sep 10 2005 14:44:00 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>264</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>Lorem</name>
+			<year>305</year>
+			<numberOfFloors>120</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="12">
+		<name>enim</name>
+		<coordinates>
+			<x>536.2686</x>
+			<y>19.1859</y>
+		</coordinates>
+		<creationDate>Wed Oct 25 2023 12:09:47 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>369</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>nisi</name>
+			<year>498</year>
+			<numberOfFloors>753</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="13">
+		<name>culpa</name>
+		<coordinates>
+			<x>172.2574</x>
+			<y>30.304</y>
+		</coordinates>
+		<creationDate>Wed Feb 15 2006 00:42:42 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>459</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>cupidatat</name>
+			<year>175</year>
+			<numberOfFloors>831</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="14">
+		<name>quis</name>
+		<coordinates>
+			<x>53.9882</x>
+			<y>44.7621</y>
+		</coordinates>
+		<creationDate>Mon Mar 25 1996 16:26:41 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>58</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>non</name>
+			<year>342</year>
+			<numberOfFloors>143</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="15">
+		<name>excepteur</name>
+		<coordinates>
+			<x>131.3222</x>
+			<y>138.7836</y>
+		</coordinates>
+		<creationDate>Fri Oct 29 2021 04:04:41 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>335</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>eu</name>
+			<year>612</year>
+			<numberOfFloors>97</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="16">
+		<name>mollit</name>
+		<coordinates>
+			<x>502.6428</x>
+			<y>38.7913</y>
+		</coordinates>
+		<creationDate>Sat Feb 19 1983 13:56:23 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>496</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ullamco</name>
+			<year>435</year>
+			<numberOfFloors>93</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="17">
+		<name>ut</name>
+		<coordinates>
+			<x>424.0714</x>
+			<y>123.3665</y>
+		</coordinates>
+		<creationDate>Tue Mar 31 1981 09:59:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>347</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>ullamco</name>
+			<year>200</year>
+			<numberOfFloors>234</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="18">
+		<name>Lorem</name>
+		<coordinates>
+			<x>165.5398</x>
+			<y>146.1277</y>
+		</coordinates>
+		<creationDate>Fri Feb 29 2008 07:41:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>141</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>veniam</name>
+			<year>624</year>
+			<numberOfFloors>180</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="19">
+		<name>sunt</name>
+		<coordinates>
+			<x>124.1248</x>
+			<y>27.27</y>
+		</coordinates>
+		<creationDate>Thu May 19 2022 12:53:27 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>328</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>reprehenderit</name>
+			<year>105</year>
+			<numberOfFloors>624</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="20">
+		<name>qui</name>
+		<coordinates>
+			<x>199.1495</x>
+			<y>102.8601</y>
+		</coordinates>
+		<creationDate>Sat Apr 26 1997 13:41:07 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>143</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>sint</name>
+			<year>552</year>
+			<numberOfFloors>159</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="21">
+		<name>occaecat</name>
+		<coordinates>
+			<x>458.112</x>
+			<y>50.6875</y>
+		</coordinates>
+		<creationDate>Wed Mar 19 1997 12:26:48 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>447</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>dolore</name>
+			<year>169</year>
+			<numberOfFloors>316</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="22">
+		<name>nulla</name>
+		<coordinates>
+			<x>244.6853</x>
+			<y>159.1546</y>
+		</coordinates>
+		<creationDate>Thu May 18 1989 20:07:30 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>485</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>enim</name>
+			<year>110</year>
+			<numberOfFloors>11</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="23">
+		<name>consectetur</name>
+		<coordinates>
+			<x>500.63</x>
+			<y>123.3864</y>
+		</coordinates>
+		<creationDate>Mon Feb 11 1974 22:27:19 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>131</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>sunt</name>
+			<year>281</year>
+			<numberOfFloors>485</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="24">
+		<name>nostrud</name>
+		<coordinates>
+			<x>166.9701</x>
+			<y>117.6651</y>
+		</coordinates>
+		<creationDate>Mon Mar 15 2010 09:24:23 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>60</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>culpa</name>
+			<year>93</year>
+			<numberOfFloors>956</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="25">
+		<name>consequat</name>
+		<coordinates>
+			<x>311.3841</x>
+			<y>51.4561</y>
+		</coordinates>
+		<creationDate>Thu Sep 28 2017 09:02:32 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>281</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>dolore</name>
+			<year>420</year>
+			<numberOfFloors>313</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="26">
+		<name>excepteur</name>
+		<coordinates>
+			<x>83.3613</x>
+			<y>41.215</y>
+		</coordinates>
+		<creationDate>Sun Jul 06 2003 07:17:00 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>453</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>consectetur</name>
+			<year>600</year>
+			<numberOfFloors>609</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="27">
+		<name>sit</name>
+		<coordinates>
+			<x>27.2488</x>
+			<y>24.1572</y>
+		</coordinates>
+		<creationDate>Wed Nov 02 2022 23:24:49 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>494</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>nostrud</name>
+			<year>471</year>
+			<numberOfFloors>981</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="28">
+		<name>nisi</name>
+		<coordinates>
+			<x>109.2847</x>
+			<y>107.0733</y>
+		</coordinates>
+		<creationDate>Fri May 31 2013 03:42:27 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>374</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>labore</name>
+			<year>46</year>
+			<numberOfFloors>135</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="29">
+		<name>cillum</name>
+		<coordinates>
+			<x>243.0358</x>
+			<y>19.4731</y>
+		</coordinates>
+		<creationDate>Sat Jan 24 2015 21:33:57 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>487</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>sit</name>
+			<year>605</year>
+			<numberOfFloors>974</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="30">
+		<name>velit</name>
+		<coordinates>
+			<x>426.7252</x>
+			<y>158.0883</y>
+		</coordinates>
+		<creationDate>Thu Aug 30 1979 11:10:11 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>491</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>ad</name>
+			<year>66</year>
+			<numberOfFloors>790</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="31">
+		<name>anim</name>
+		<coordinates>
+			<x>105.3129</x>
+			<y>172.0825</y>
+		</coordinates>
+		<creationDate>Fri Jun 19 1992 00:34:47 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>354</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>et</name>
+			<year>441</year>
+			<numberOfFloors>957</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="32">
+		<name>eu</name>
+		<coordinates>
+			<x>288.8381</x>
+			<y>58.8356</y>
+		</coordinates>
+		<creationDate>Fri Sep 09 1977 17:19:11 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>462</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>amet</name>
+			<year>588</year>
+			<numberOfFloors>236</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="33">
+		<name>sint</name>
+		<coordinates>
+			<x>383.7363</x>
+			<y>77.1675</y>
+		</coordinates>
+		<creationDate>Sat Feb 05 2011 08:12:10 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>324</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>cupidatat</name>
+			<year>43</year>
+			<numberOfFloors>398</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="34">
+		<name>officia</name>
+		<coordinates>
+			<x>339.9535</x>
+			<y>118.8212</y>
+		</coordinates>
+		<creationDate>Tue May 12 1992 09:10:50 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>236</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>91</year>
+			<numberOfFloors>708</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="35">
+		<name>elit</name>
+		<coordinates>
+			<x>136.0593</x>
+			<y>2.5643</y>
+		</coordinates>
+		<creationDate>Mon Sep 09 1991 15:36:21 GMT+0300 (Москва, летнее время)</creationDate>
+		<area>387</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>deserunt</name>
+			<year>461</year>
+			<numberOfFloors>960</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="36">
+		<name>ullamco</name>
+		<coordinates>
+			<x>387.78</x>
+			<y>67.0694</y>
+		</coordinates>
+		<creationDate>Thu Jan 08 1970 14:00:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>512</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>velit</name>
+			<year>397</year>
+			<numberOfFloors>217</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="37">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>293.3372</x>
+			<y>153.8097</y>
+		</coordinates>
+		<creationDate>Thu Jan 24 1980 13:46:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>176</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>fugiat</name>
+			<year>439</year>
+			<numberOfFloors>350</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="38">
+		<name>deserunt</name>
+		<coordinates>
+			<x>139.3087</x>
+			<y>110.7104</y>
+		</coordinates>
+		<creationDate>Mon Apr 02 2007 05:34:05 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>462</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>exercitation</name>
+			<year>38</year>
+			<numberOfFloors>521</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="39">
+		<name>laboris</name>
+		<coordinates>
+			<x>40.9477</x>
+			<y>64.3368</y>
+		</coordinates>
+		<creationDate>Sat Aug 25 1990 16:03:32 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>323</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>commodo</name>
+			<year>550</year>
+			<numberOfFloors>718</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="40">
+		<name>minim</name>
+		<coordinates>
+			<x>370.8016</x>
+			<y>76.1082</y>
+		</coordinates>
+		<creationDate>Thu Jan 02 2003 05:09:48 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>342</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>enim</name>
+			<year>349</year>
+			<numberOfFloors>130</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="41">
+		<name>labore</name>
+		<coordinates>
+			<x>8.6349</x>
+			<y>176.7717</y>
+		</coordinates>
+		<creationDate>Sat May 28 1977 12:44:43 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>165</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>cillum</name>
+			<year>366</year>
+			<numberOfFloors>72</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="42">
+		<name>laboris</name>
+		<coordinates>
+			<x>269.8758</x>
+			<y>136.8472</y>
+		</coordinates>
+		<creationDate>Wed Jul 14 1993 20:03:44 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>24</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>417</year>
+			<numberOfFloors>962</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="43">
+		<name>exercitation</name>
+		<coordinates>
+			<x>232.3395</x>
+			<y>127.3659</y>
+		</coordinates>
+		<creationDate>Wed Aug 12 2015 21:42:40 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>379</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>cupidatat</name>
+			<year>612</year>
+			<numberOfFloors>291</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="44">
+		<name>occaecat</name>
+		<coordinates>
+			<x>98.854</x>
+			<y>3.9317</y>
+		</coordinates>
+		<creationDate>Fri Aug 05 1977 16:19:37 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>357</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>id</name>
+			<year>122</year>
+			<numberOfFloors>409</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="45">
+		<name>voluptate</name>
+		<coordinates>
+			<x>392.0597</x>
+			<y>102.5529</y>
+		</coordinates>
+		<creationDate>Wed Jul 31 1991 14:34:15 GMT+0300 (Москва, летнее время)</creationDate>
+		<area>323</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>do</name>
+			<year>205</year>
+			<numberOfFloors>306</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="46">
+		<name>eiusmod</name>
+		<coordinates>
+			<x>397.0705</x>
+			<y>13.2026</y>
+		</coordinates>
+		<creationDate>Tue Apr 08 2014 01:48:40 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>500</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>exercitation</name>
+			<year>317</year>
+			<numberOfFloors>255</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="47">
+		<name>officia</name>
+		<coordinates>
+			<x>52.6734</x>
+			<y>105.4295</y>
+		</coordinates>
+		<creationDate>Sat Jul 24 2010 03:24:53 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>415</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>dolor</name>
+			<year>236</year>
+			<numberOfFloors>794</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="48">
+		<name>nulla</name>
+		<coordinates>
+			<x>517.8723</x>
+			<y>150.8153</y>
+		</coordinates>
+		<creationDate>Tue Dec 09 1980 04:57:42 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>262</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ad</name>
+			<year>614</year>
+			<numberOfFloors>336</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="49">
+		<name>nulla</name>
+		<coordinates>
+			<x>119.3141</x>
+			<y>96.3106</y>
+		</coordinates>
+		<creationDate>Thu Apr 03 2014 14:17:19 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>399</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>proident</name>
+			<year>487</year>
+			<numberOfFloors>195</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="50">
+		<name>mollit</name>
+		<coordinates>
+			<x>114.0557</x>
+			<y>29.7745</y>
+		</coordinates>
+		<creationDate>Tue Jun 12 2001 19:46:22 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>116</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>culpa</name>
+			<year>572</year>
+			<numberOfFloors>850</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="51">
+		<name>amet</name>
+		<coordinates>
+			<x>331.4965</x>
+			<y>106.4523</y>
+		</coordinates>
+		<creationDate>Fri Sep 27 1974 15:01:18 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>134</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>deserunt</name>
+			<year>409</year>
+			<numberOfFloors>897</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="52">
+		<name>anim</name>
+		<coordinates>
+			<x>532.5353</x>
+			<y>177.1088</y>
+		</coordinates>
+		<creationDate>Fri Dec 16 2016 13:13:12 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>15</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>ad</name>
+			<year>399</year>
+			<numberOfFloors>907</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="53">
+		<name>ad</name>
+		<coordinates>
+			<x>275.7765</x>
+			<y>135.2969</y>
+		</coordinates>
+		<creationDate>Mon Apr 20 1998 13:26:45 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>511</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>officia</name>
+			<year>259</year>
+			<numberOfFloors>542</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="54">
+		<name>quis</name>
+		<coordinates>
+			<x>104.1684</x>
+			<y>119.9503</y>
+		</coordinates>
+		<creationDate>Sun Apr 17 1994 01:09:47 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>392</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>laborum</name>
+			<year>110</year>
+			<numberOfFloors>189</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="55">
+		<name>duis</name>
+		<coordinates>
+			<x>286.6736</x>
+			<y>23.8962</y>
+		</coordinates>
+		<creationDate>Wed Aug 26 1992 22:07:39 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>100</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>aliquip</name>
+			<year>618</year>
+			<numberOfFloors>858</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="56">
+		<name>et</name>
+		<coordinates>
+			<x>391.191</x>
+			<y>145.7487</y>
+		</coordinates>
+		<creationDate>Tue Nov 30 1976 11:48:36 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>433</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>reprehenderit</name>
+			<year>404</year>
+			<numberOfFloors>483</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="57">
+		<name>eu</name>
+		<coordinates>
+			<x>489.0434</x>
+			<y>125.202</y>
+		</coordinates>
+		<creationDate>Wed Mar 21 1984 23:39:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>498</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>duis</name>
+			<year>362</year>
+			<numberOfFloors>357</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="58">
+		<name>minim</name>
+		<coordinates>
+			<x>20.9161</x>
+			<y>87.0846</y>
+		</coordinates>
+		<creationDate>Tue May 14 1991 02:56:07 GMT+0300 (Москва, летнее время)</creationDate>
+		<area>433</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>consectetur</name>
+			<year>241</year>
+			<numberOfFloors>798</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="59">
+		<name>consequat</name>
+		<coordinates>
+			<x>345.3566</x>
+			<y>95.1611</y>
+		</coordinates>
+		<creationDate>Sun Sep 02 2001 19:32:28 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>176</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>occaecat</name>
+			<year>452</year>
+			<numberOfFloors>922</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="60">
+		<name>culpa</name>
+		<coordinates>
+			<x>491.9844</x>
+			<y>68.8064</y>
+		</coordinates>
+		<creationDate>Sun Aug 19 2018 17:35:49 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>418</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>dolore</name>
+			<year>391</year>
+			<numberOfFloors>702</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="61">
+		<name>nostrud</name>
+		<coordinates>
+			<x>524.3485</x>
+			<y>42.1904</y>
+		</coordinates>
+		<creationDate>Wed Nov 08 1995 23:38:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>458</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ipsum</name>
+			<year>22</year>
+			<numberOfFloors>69</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="62">
+		<name>mollit</name>
+		<coordinates>
+			<x>169.4786</x>
+			<y>45.7933</y>
+		</coordinates>
+		<creationDate>Wed Mar 22 2000 14:47:20 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>6</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>dolore</name>
+			<year>395</year>
+			<numberOfFloors>201</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="63">
+		<name>officia</name>
+		<coordinates>
+			<x>168.4599</x>
+			<y>39.8626</y>
+		</coordinates>
+		<creationDate>Tue Apr 04 1989 06:41:44 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>402</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>veniam</name>
+			<year>80</year>
+			<numberOfFloors>21</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="64">
+		<name>elit</name>
+		<coordinates>
+			<x>466.6661</x>
+			<y>103.7684</y>
+		</coordinates>
+		<creationDate>Sun Apr 30 1989 14:17:04 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>2</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>aliqua</name>
+			<year>234</year>
+			<numberOfFloors>813</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="65">
+		<name>amet</name>
+		<coordinates>
+			<x>256.597</x>
+			<y>88.0137</y>
+		</coordinates>
+		<creationDate>Fri Dec 25 2020 13:05:55 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>117</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>et</name>
+			<year>422</year>
+			<numberOfFloors>617</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="66">
+		<name>deserunt</name>
+		<coordinates>
+			<x>430.0687</x>
+			<y>42.8433</y>
+		</coordinates>
+		<creationDate>Sat Jun 10 1972 05:00:55 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>497</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>do</name>
+			<year>254</year>
+			<numberOfFloors>884</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="67">
+		<name>do</name>
+		<coordinates>
+			<x>436.8829</x>
+			<y>63.1022</y>
+		</coordinates>
+		<creationDate>Wed Jan 23 1980 05:36:19 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>8</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>dolore</name>
+			<year>587</year>
+			<numberOfFloors>273</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="68">
+		<name>adipisicing</name>
+		<coordinates>
+			<x>408.9997</x>
+			<y>79.3462</y>
+		</coordinates>
+		<creationDate>Tue Mar 06 2018 15:54:40 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>431</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>enim</name>
+			<year>247</year>
+			<numberOfFloors>683</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="69">
+		<name>sit</name>
+		<coordinates>
+			<x>382.5941</x>
+			<y>2.249</y>
+		</coordinates>
+		<creationDate>Wed Feb 06 2002 03:33:49 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>378</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>sint</name>
+			<year>627</year>
+			<numberOfFloors>328</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="70">
+		<name>nulla</name>
+		<coordinates>
+			<x>119.2409</x>
+			<y>64.2624</y>
+		</coordinates>
+		<creationDate>Wed Jul 01 2015 06:30:36 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>331</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>eu</name>
+			<year>108</year>
+			<numberOfFloors>737</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="71">
+		<name>veniam</name>
+		<coordinates>
+			<x>494.3261</x>
+			<y>4.5793</y>
+		</coordinates>
+		<creationDate>Thu May 16 2019 16:39:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>188</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>non</name>
+			<year>158</year>
+			<numberOfFloors>156</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="72">
+		<name>ex</name>
+		<coordinates>
+			<x>37.069</x>
+			<y>17.8763</y>
+		</coordinates>
+		<creationDate>Fri Mar 24 2006 22:40:34 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>113</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>excepteur</name>
+			<year>456</year>
+			<numberOfFloors>145</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="73">
+		<name>eu</name>
+		<coordinates>
+			<x>133.1979</x>
+			<y>31.4442</y>
+		</coordinates>
+		<creationDate>Mon May 06 1974 18:39:35 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>362</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>in</name>
+			<year>327</year>
+			<numberOfFloors>436</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="74">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>198.8022</x>
+			<y>69.0321</y>
+		</coordinates>
+		<creationDate>Tue Aug 02 2011 18:43:03 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>435</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ex</name>
+			<year>59</year>
+			<numberOfFloors>400</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="75">
+		<name>ad</name>
+		<coordinates>
+			<x>472.453</x>
+			<y>4.7652</y>
+		</coordinates>
+		<creationDate>Fri Jul 11 2014 18:38:13 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>487</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>minim</name>
+			<year>498</year>
+			<numberOfFloors>37</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="76">
+		<name>duis</name>
+		<coordinates>
+			<x>261.7362</x>
+			<y>129.0973</y>
+		</coordinates>
+		<creationDate>Sat Jun 07 1980 07:54:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>491</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>sunt</name>
+			<year>348</year>
+			<numberOfFloors>10</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="77">
+		<name>laboris</name>
+		<coordinates>
+			<x>134.9901</x>
+			<y>135.5514</y>
+		</coordinates>
+		<creationDate>Sun Mar 15 1992 09:52:25 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>255</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>veniam</name>
+			<year>629</year>
+			<numberOfFloors>56</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="78">
+		<name>nostrud</name>
+		<coordinates>
+			<x>188.3398</x>
+			<y>14.6384</y>
+		</coordinates>
+		<creationDate>Sun Feb 06 2005 07:18:59 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>213</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>enim</name>
+			<year>135</year>
+			<numberOfFloors>279</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="79">
+		<name>aliqua</name>
+		<coordinates>
+			<x>19.982</x>
+			<y>135.9442</y>
+		</coordinates>
+		<creationDate>Thu Dec 05 2019 09:05:55 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>144</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>et</name>
+			<year>45</year>
+			<numberOfFloors>985</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="80">
+		<name>est</name>
+		<coordinates>
+			<x>345.5105</x>
+			<y>85.9392</y>
+		</coordinates>
+		<creationDate>Sat May 07 1994 13:19:42 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>428</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>mollit</name>
+			<year>513</year>
+			<numberOfFloors>547</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="81">
+		<name>culpa</name>
+		<coordinates>
+			<x>294.346</x>
+			<y>108.9562</y>
+		</coordinates>
+		<creationDate>Sat Jun 25 2005 11:06:52 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>477</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>id</name>
+			<year>320</year>
+			<numberOfFloors>605</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="82">
+		<name>laboris</name>
+		<coordinates>
+			<x>227.227</x>
+			<y>177.7872</y>
+		</coordinates>
+		<creationDate>Sun Jan 19 2014 21:26:36 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>178</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>sunt</name>
+			<year>440</year>
+			<numberOfFloors>347</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="83">
+		<name>id</name>
+		<coordinates>
+			<x>527.1796</x>
+			<y>121.265</y>
+		</coordinates>
+		<creationDate>Fri Sep 18 1981 10:26:35 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>107</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>mollit</name>
+			<year>208</year>
+			<numberOfFloors>255</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="84">
+		<name>sunt</name>
+		<coordinates>
+			<x>402.5398</x>
+			<y>115.2164</y>
+		</coordinates>
+		<creationDate>Sat Mar 14 1992 03:53:14 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>464</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>deserunt</name>
+			<year>437</year>
+			<numberOfFloors>295</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="85">
+		<name>officia</name>
+		<coordinates>
+			<x>511.0442</x>
+			<y>53.6376</y>
+		</coordinates>
+		<creationDate>Sun Jul 31 2011 17:09:05 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>374</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>elit</name>
+			<year>88</year>
+			<numberOfFloors>35</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="86">
+		<name>veniam</name>
+		<coordinates>
+			<x>110.7183</x>
+			<y>161.6927</y>
+		</coordinates>
+		<creationDate>Thu Nov 28 2019 05:27:17 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>4</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>est</name>
+			<year>301</year>
+			<numberOfFloors>165</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="87">
+		<name>non</name>
+		<coordinates>
+			<x>513.0784</x>
+			<y>17.3227</y>
+		</coordinates>
+		<creationDate>Thu Nov 30 2017 02:35:37 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>422</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>aliqua</name>
+			<year>459</year>
+			<numberOfFloors>932</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="88">
+		<name>veniam</name>
+		<coordinates>
+			<x>467.2289</x>
+			<y>144.2573</y>
+		</coordinates>
+		<creationDate>Mon Nov 29 1999 00:55:23 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>59</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>deserunt</name>
+			<year>363</year>
+			<numberOfFloors>598</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="89">
+		<name>non</name>
+		<coordinates>
+			<x>298.8074</x>
+			<y>21.0499</y>
+		</coordinates>
+		<creationDate>Sun Oct 20 1985 16:48:15 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>434</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>id</name>
+			<year>537</year>
+			<numberOfFloors>441</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="90">
+		<name>laborum</name>
+		<coordinates>
+			<x>212.7446</x>
+			<y>90.294</y>
+		</coordinates>
+		<creationDate>Thu Aug 27 1998 04:20:20 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>451</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>nulla</name>
+			<year>509</year>
+			<numberOfFloors>226</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="91">
+		<name>esse</name>
+		<coordinates>
+			<x>346.9887</x>
+			<y>41.7581</y>
+		</coordinates>
+		<creationDate>Sat Feb 15 2003 06:28:44 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>254</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>elit</name>
+			<year>66</year>
+			<numberOfFloors>934</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="92">
+		<name>laborum</name>
+		<coordinates>
+			<x>144.8135</x>
+			<y>49.2377</y>
+		</coordinates>
+		<creationDate>Wed May 02 1979 10:37:29 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>255</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>eu</name>
+			<year>10</year>
+			<numberOfFloors>626</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="93">
+		<name>aliqua</name>
+		<coordinates>
+			<x>403.3833</x>
+			<y>14.5683</y>
+		</coordinates>
+		<creationDate>Mon Jan 14 2019 20:54:06 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>381</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>pariatur</name>
+			<year>41</year>
+			<numberOfFloors>500</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="94">
+		<name>non</name>
+		<coordinates>
+			<x>233.3253</x>
+			<y>67.3036</y>
+		</coordinates>
+		<creationDate>Wed Mar 24 1976 07:25:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>72</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>dolor</name>
+			<year>625</year>
+			<numberOfFloors>619</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="95">
+		<name>exercitation</name>
+		<coordinates>
+			<x>124.5672</x>
+			<y>146.7346</y>
+		</coordinates>
+		<creationDate>Mon Feb 02 1987 02:12:28 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>391</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>duis</name>
+			<year>143</year>
+			<numberOfFloors>635</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="96">
+		<name>deserunt</name>
+		<coordinates>
+			<x>34.5475</x>
+			<y>104.0059</y>
+		</coordinates>
+		<creationDate>Thu Jul 12 1979 05:43:38 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>512</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>laborum</name>
+			<year>64</year>
+			<numberOfFloors>16</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="97">
+		<name>velit</name>
+		<coordinates>
+			<x>490.178</x>
+			<y>24.8533</y>
+		</coordinates>
+		<creationDate>Sat Apr 24 1993 15:40:41 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>148</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ipsum</name>
+			<year>286</year>
+			<numberOfFloors>759</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="98">
+		<name>quis</name>
+		<coordinates>
+			<x>16.4552</x>
+			<y>36.6192</y>
+		</coordinates>
+		<creationDate>Sat Feb 26 2000 13:55:09 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>52</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>ad</name>
+			<year>494</year>
+			<numberOfFloors>932</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="99">
+		<name>et</name>
+		<coordinates>
+			<x>240.2234</x>
+			<y>64.2931</y>
+		</coordinates>
+		<creationDate>Fri Nov 30 2018 23:59:06 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>473</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>et</name>
+			<year>327</year>
+			<numberOfFloors>614</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="100">
+		<name>proident</name>
+		<coordinates>
+			<x>91.0445</x>
+			<y>88.8105</y>
+		</coordinates>
+		<creationDate>Thu Apr 13 2006 01:40:07 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>111</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>magna</name>
+			<year>266</year>
+			<numberOfFloors>203</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="101">
+		<name>ex</name>
+		<coordinates>
+			<x>331.6339</x>
+			<y>121.2851</y>
+		</coordinates>
+		<creationDate>Thu Jun 27 2019 13:04:27 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>334</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>duis</name>
+			<year>482</year>
+			<numberOfFloors>892</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="102">
+		<name>adipisicing</name>
+		<coordinates>
+			<x>92.8341</x>
+			<y>16.5476</y>
+		</coordinates>
+		<creationDate>Sat Jun 17 2023 03:45:14 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>369</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>dolore</name>
+			<year>106</year>
+			<numberOfFloors>638</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="103">
+		<name>veniam</name>
+		<coordinates>
+			<x>416.9347</x>
+			<y>26.7228</y>
+		</coordinates>
+		<creationDate>Mon Oct 23 1978 23:56:21 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>216</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>laboris</name>
+			<year>606</year>
+			<numberOfFloors>638</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="104">
+		<name>mollit</name>
+		<coordinates>
+			<x>223.7682</x>
+			<y>159.7525</y>
+		</coordinates>
+		<creationDate>Mon Nov 02 2009 15:55:33 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>93</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>qui</name>
+			<year>389</year>
+			<numberOfFloors>354</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="105">
+		<name>mollit</name>
+		<coordinates>
+			<x>320.5888</x>
+			<y>25.5472</y>
+		</coordinates>
+		<creationDate>Wed Apr 26 1972 01:34:27 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>16</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>nisi</name>
+			<year>569</year>
+			<numberOfFloors>856</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="106">
+		<name>ex</name>
+		<coordinates>
+			<x>278.237</x>
+			<y>170.1552</y>
+		</coordinates>
+		<creationDate>Sun Apr 01 2012 20:03:01 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>353</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>enim</name>
+			<year>120</year>
+			<numberOfFloors>156</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="107">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>243.4375</x>
+			<y>66.8047</y>
+		</coordinates>
+		<creationDate>Thu Sep 21 1995 22:14:35 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>146</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>et</name>
+			<year>453</year>
+			<numberOfFloors>810</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="108">
+		<name>commodo</name>
+		<coordinates>
+			<x>119.0089</x>
+			<y>115.1925</y>
+		</coordinates>
+		<creationDate>Tue Nov 10 1998 23:39:53 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>407</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>amet</name>
+			<year>406</year>
+			<numberOfFloors>517</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="109">
+		<name>minim</name>
+		<coordinates>
+			<x>449.2499</x>
+			<y>34.7476</y>
+		</coordinates>
+		<creationDate>Fri Sep 07 1973 10:03:02 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>312</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>enim</name>
+			<year>54</year>
+			<numberOfFloors>377</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="110">
+		<name>consectetur</name>
+		<coordinates>
+			<x>541.9015</x>
+			<y>76.3371</y>
+		</coordinates>
+		<creationDate>Thu Oct 06 2022 09:52:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>485</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>est</name>
+			<year>194</year>
+			<numberOfFloors>94</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="111">
+		<name>elit</name>
+		<coordinates>
+			<x>462.5206</x>
+			<y>170.597</y>
+		</coordinates>
+		<creationDate>Tue Jul 15 1986 18:15:39 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>428</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>eu</name>
+			<year>475</year>
+			<numberOfFloors>19</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="112">
+		<name>velit</name>
+		<coordinates>
+			<x>444.1328</x>
+			<y>165.3164</y>
+		</coordinates>
+		<creationDate>Thu Jun 13 1985 02:34:41 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>70</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>aute</name>
+			<year>149</year>
+			<numberOfFloors>274</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="113">
+		<name>laboris</name>
+		<coordinates>
+			<x>58.6233</x>
+			<y>145.602</y>
+		</coordinates>
+		<creationDate>Tue Jan 29 2013 02:33:47 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>105</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>exercitation</name>
+			<year>181</year>
+			<numberOfFloors>731</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="114">
+		<name>fugiat</name>
+		<coordinates>
+			<x>148.2514</x>
+			<y>131.4206</y>
+		</coordinates>
+		<creationDate>Mon Jan 25 2016 05:48:39 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>102</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>in</name>
+			<year>352</year>
+			<numberOfFloors>458</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="115">
+		<name>tempor</name>
+		<coordinates>
+			<x>535.0273</x>
+			<y>7.3761</y>
+		</coordinates>
+		<creationDate>Sat Dec 11 1971 05:56:58 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>13</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>in</name>
+			<year>554</year>
+			<numberOfFloors>693</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="116">
+		<name>enim</name>
+		<coordinates>
+			<x>324.1524</x>
+			<y>127.1369</y>
+		</coordinates>
+		<creationDate>Sun Sep 07 2014 16:53:48 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>408</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>velit</name>
+			<year>235</year>
+			<numberOfFloors>7</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="117">
+		<name>commodo</name>
+		<coordinates>
+			<x>495.1722</x>
+			<y>30.8779</y>
+		</coordinates>
+		<creationDate>Sun Oct 30 1988 01:57:49 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>160</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>quis</name>
+			<year>29</year>
+			<numberOfFloors>687</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="118">
+		<name>velit</name>
+		<coordinates>
+			<x>464.0904</x>
+			<y>2.1578</y>
+		</coordinates>
+		<creationDate>Sat Feb 27 2010 18:50:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>9</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>occaecat</name>
+			<year>329</year>
+			<numberOfFloors>561</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="119">
+		<name>ipsum</name>
+		<coordinates>
+			<x>327.071</x>
+			<y>15.4563</y>
+		</coordinates>
+		<creationDate>Thu Dec 27 2012 00:10:34 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>374</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>eu</name>
+			<year>86</year>
+			<numberOfFloors>519</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="120">
+		<name>dolore</name>
+		<coordinates>
+			<x>306.6691</x>
+			<y>166.5138</y>
+		</coordinates>
+		<creationDate>Thu Mar 30 1995 23:25:53 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>30</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>eu</name>
+			<year>60</year>
+			<numberOfFloors>633</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="121">
+		<name>laboris</name>
+		<coordinates>
+			<x>426.8429</x>
+			<y>21.9613</y>
+		</coordinates>
+		<creationDate>Sat May 31 2014 04:21:33 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>143</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>ipsum</name>
+			<year>37</year>
+			<numberOfFloors>223</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="122">
+		<name>aute</name>
+		<coordinates>
+			<x>310.6877</x>
+			<y>99.2685</y>
+		</coordinates>
+		<creationDate>Mon Nov 21 2005 20:35:19 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>185</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>exercitation</name>
+			<year>602</year>
+			<numberOfFloors>281</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="123">
+		<name>minim</name>
+		<coordinates>
+			<x>420.0166</x>
+			<y>121.2956</y>
+		</coordinates>
+		<creationDate>Thu Jan 17 1985 11:23:18 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>118</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>irure</name>
+			<year>621</year>
+			<numberOfFloors>255</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="124">
+		<name>adipisicing</name>
+		<coordinates>
+			<x>133.8258</x>
+			<y>15.9581</y>
+		</coordinates>
+		<creationDate>Sat Aug 11 2001 08:15:16 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>27</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>consequat</name>
+			<year>144</year>
+			<numberOfFloors>598</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="125">
+		<name>pariatur</name>
+		<coordinates>
+			<x>196.2326</x>
+			<y>136.0101</y>
+		</coordinates>
+		<creationDate>Fri Jun 17 1988 04:31:54 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>321</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>sit</name>
+			<year>263</year>
+			<numberOfFloors>179</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="126">
+		<name>mollit</name>
+		<coordinates>
+			<x>317.8298</x>
+			<y>139.725</y>
+		</coordinates>
+		<creationDate>Wed Sep 04 1974 17:52:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>240</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>378</year>
+			<numberOfFloors>857</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="127">
+		<name>Lorem</name>
+		<coordinates>
+			<x>180.7875</x>
+			<y>125.3487</y>
+		</coordinates>
+		<creationDate>Wed Dec 21 2016 12:22:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>179</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>tempor</name>
+			<year>379</year>
+			<numberOfFloors>459</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="128">
+		<name>laborum</name>
+		<coordinates>
+			<x>342.161</x>
+			<y>118.2938</y>
+		</coordinates>
+		<creationDate>Wed Sep 13 2017 22:06:58 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>74</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>elit</name>
+			<year>210</year>
+			<numberOfFloors>546</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="129">
+		<name>incididunt</name>
+		<coordinates>
+			<x>327.6042</x>
+			<y>121.8661</y>
+		</coordinates>
+		<creationDate>Wed Dec 11 1985 09:09:01 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>48</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>magna</name>
+			<year>593</year>
+			<numberOfFloors>148</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="130">
+		<name>non</name>
+		<coordinates>
+			<x>371.6252</x>
+			<y>144.2741</y>
+		</coordinates>
+		<creationDate>Fri Jul 29 2011 11:04:02 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>425</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>Lorem</name>
+			<year>83</year>
+			<numberOfFloors>583</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="131">
+		<name>ut</name>
+		<coordinates>
+			<x>343.7933</x>
+			<y>44.1754</y>
+		</coordinates>
+		<creationDate>Thu Sep 11 2008 00:36:40 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>98</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>do</name>
+			<year>180</year>
+			<numberOfFloors>609</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="132">
+		<name>esse</name>
+		<coordinates>
+			<x>467.021</x>
+			<y>45.3641</y>
+		</coordinates>
+		<creationDate>Wed Sep 27 2023 11:33:35 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>81</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>est</name>
+			<year>506</year>
+			<numberOfFloors>821</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="133">
+		<name>ex</name>
+		<coordinates>
+			<x>286.5765</x>
+			<y>121.5031</y>
+		</coordinates>
+		<creationDate>Thu Aug 14 2014 09:01:58 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>198</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>deserunt</name>
+			<year>283</year>
+			<numberOfFloors>412</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="134">
+		<name>amet</name>
+		<coordinates>
+			<x>518.5848</x>
+			<y>13.99</y>
+		</coordinates>
+		<creationDate>Sun Sep 30 1990 21:29:37 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>315</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>culpa</name>
+			<year>619</year>
+			<numberOfFloors>987</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="135">
+		<name>velit</name>
+		<coordinates>
+			<x>434.1769</x>
+			<y>163.3497</y>
+		</coordinates>
+		<creationDate>Fri Feb 01 2013 04:29:16 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>518</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>esse</name>
+			<year>198</year>
+			<numberOfFloors>994</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="136">
+		<name>nostrud</name>
+		<coordinates>
+			<x>498.7775</x>
+			<y>38.46</y>
+		</coordinates>
+		<creationDate>Tue Apr 20 1971 09:39:29 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>247</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>cillum</name>
+			<year>426</year>
+			<numberOfFloors>100</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="137">
+		<name>culpa</name>
+		<coordinates>
+			<x>62.2638</x>
+			<y>149.7398</y>
+		</coordinates>
+		<creationDate>Sat May 14 2016 03:59:20 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>459</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>Lorem</name>
+			<year>222</year>
+			<numberOfFloors>568</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="138">
+		<name>anim</name>
+		<coordinates>
+			<x>396.0193</x>
+			<y>18.6918</y>
+		</coordinates>
+		<creationDate>Fri Aug 30 1985 09:23:09 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>477</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>aliquip</name>
+			<year>518</year>
+			<numberOfFloors>58</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="139">
+		<name>eu</name>
+		<coordinates>
+			<x>122.3858</x>
+			<y>117.8219</y>
+		</coordinates>
+		<creationDate>Fri Jul 26 1974 06:09:31 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>310</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>fugiat</name>
+			<year>26</year>
+			<numberOfFloors>457</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="140">
+		<name>ipsum</name>
+		<coordinates>
+			<x>240.875</x>
+			<y>9.6664</y>
+		</coordinates>
+		<creationDate>Thu May 20 1971 01:21:53 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>183</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>dolor</name>
+			<year>26</year>
+			<numberOfFloors>293</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="141">
+		<name>dolore</name>
+		<coordinates>
+			<x>93.4043</x>
+			<y>40.8485</y>
+		</coordinates>
+		<creationDate>Thu Aug 07 2003 04:19:21 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>443</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>amet</name>
+			<year>52</year>
+			<numberOfFloors>951</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="142">
+		<name>eiusmod</name>
+		<coordinates>
+			<x>278.8529</x>
+			<y>89.8743</y>
+		</coordinates>
+		<creationDate>Mon Feb 19 1979 16:49:24 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>45</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>excepteur</name>
+			<year>446</year>
+			<numberOfFloors>110</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="143">
+		<name>cillum</name>
+		<coordinates>
+			<x>86.1067</x>
+			<y>26.9448</y>
+		</coordinates>
+		<creationDate>Thu Sep 21 1978 09:13:40 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>485</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>laborum</name>
+			<year>319</year>
+			<numberOfFloors>716</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="144">
+		<name>excepteur</name>
+		<coordinates>
+			<x>191.0018</x>
+			<y>48.3961</y>
+		</coordinates>
+		<creationDate>Sun Nov 18 1979 03:15:46 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>13</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>consectetur</name>
+			<year>475</year>
+			<numberOfFloors>720</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="145">
+		<name>duis</name>
+		<coordinates>
+			<x>475.4137</x>
+			<y>160.9888</y>
+		</coordinates>
+		<creationDate>Sat Nov 05 2005 01:22:51 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>170</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>proident</name>
+			<year>474</year>
+			<numberOfFloors>12</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="146">
+		<name>qui</name>
+		<coordinates>
+			<x>90.6183</x>
+			<y>157.5821</y>
+		</coordinates>
+		<creationDate>Tue Nov 10 2020 17:58:16 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>177</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>deserunt</name>
+			<year>16</year>
+			<numberOfFloors>338</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="147">
+		<name>laborum</name>
+		<coordinates>
+			<x>517.2693</x>
+			<y>29.6877</y>
+		</coordinates>
+		<creationDate>Wed Sep 02 2009 11:06:14 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>455</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>amet</name>
+			<year>267</year>
+			<numberOfFloors>762</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="148">
+		<name>in</name>
+		<coordinates>
+			<x>152.7374</x>
+			<y>91.6662</y>
+		</coordinates>
+		<creationDate>Tue Oct 02 1984 19:36:40 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>244</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>incididunt</name>
+			<year>0</year>
+			<numberOfFloors>914</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="149">
+		<name>non</name>
+		<coordinates>
+			<x>50.6503</x>
+			<y>148.3554</y>
+		</coordinates>
+		<creationDate>Mon Sep 24 2012 23:12:43 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>149</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>duis</name>
+			<year>112</year>
+			<numberOfFloors>648</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="150">
+		<name>mollit</name>
+		<coordinates>
+			<x>95.6178</x>
+			<y>28.2565</y>
+		</coordinates>
+		<creationDate>Wed Apr 22 2020 01:11:10 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>314</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>veniam</name>
+			<year>344</year>
+			<numberOfFloors>879</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="151">
+		<name>adipisicing</name>
+		<coordinates>
+			<x>469.9713</x>
+			<y>94.1932</y>
+		</coordinates>
+		<creationDate>Tue Jun 13 2000 22:40:21 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>37</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>duis</name>
+			<year>580</year>
+			<numberOfFloors>456</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="152">
+		<name>labore</name>
+		<coordinates>
+			<x>140.9779</x>
+			<y>84.3646</y>
+		</coordinates>
+		<creationDate>Sat Dec 09 2017 12:09:26 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>41</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>qui</name>
+			<year>435</year>
+			<numberOfFloors>441</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="153">
+		<name>ea</name>
+		<coordinates>
+			<x>270.7377</x>
+			<y>134.4067</y>
+		</coordinates>
+		<creationDate>Fri Jun 14 1974 15:09:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>150</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>214</year>
+			<numberOfFloors>66</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="154">
+		<name>aliqua</name>
+		<coordinates>
+			<x>270.1262</x>
+			<y>167.0097</y>
+		</coordinates>
+		<creationDate>Tue Dec 27 2022 15:39:43 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>426</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>magna</name>
+			<year>393</year>
+			<numberOfFloors>403</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="155">
+		<name>ea</name>
+		<coordinates>
+			<x>293.0967</x>
+			<y>129.764</y>
+		</coordinates>
+		<creationDate>Thu May 14 1992 20:14:14 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>32</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>sint</name>
+			<year>446</year>
+			<numberOfFloors>42</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="156">
+		<name>Lorem</name>
+		<coordinates>
+			<x>413.0716</x>
+			<y>79.9143</y>
+		</coordinates>
+		<creationDate>Sat Nov 14 1998 05:39:44 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>252</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ut</name>
+			<year>605</year>
+			<numberOfFloors>789</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="157">
+		<name>pariatur</name>
+		<coordinates>
+			<x>271.3438</x>
+			<y>26.8739</y>
+		</coordinates>
+		<creationDate>Thu Feb 14 2002 04:15:53 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>191</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>nulla</name>
+			<year>188</year>
+			<numberOfFloors>387</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="158">
+		<name>id</name>
+		<coordinates>
+			<x>451.2152</x>
+			<y>56.8119</y>
+		</coordinates>
+		<creationDate>Wed Dec 08 1976 01:23:34 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>174</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>exercitation</name>
+			<year>571</year>
+			<numberOfFloors>883</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="159">
+		<name>est</name>
+		<coordinates>
+			<x>533.015</x>
+			<y>32.3747</y>
+		</coordinates>
+		<creationDate>Tue Mar 01 2005 16:30:05 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>43</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>tempor</name>
+			<year>458</year>
+			<numberOfFloors>675</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="160">
+		<name>in</name>
+		<coordinates>
+			<x>489.5241</x>
+			<y>99.1896</y>
+		</coordinates>
+		<creationDate>Tue Dec 18 2012 23:52:04 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>287</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>nulla</name>
+			<year>273</year>
+			<numberOfFloors>893</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="161">
+		<name>tempor</name>
+		<coordinates>
+			<x>545.6635</x>
+			<y>63.5116</y>
+		</coordinates>
+		<creationDate>Sun Nov 07 1976 21:32:35 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>496</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>sunt</name>
+			<year>457</year>
+			<numberOfFloors>123</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="162">
+		<name>qui</name>
+		<coordinates>
+			<x>390.7218</x>
+			<y>77.2483</y>
+		</coordinates>
+		<creationDate>Sun May 03 1981 16:51:19 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>359</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>laboris</name>
+			<year>344</year>
+			<numberOfFloors>313</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="163">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>213.5222</x>
+			<y>150.2722</y>
+		</coordinates>
+		<creationDate>Tue Jun 23 1992 13:54:47 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>192</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>617</year>
+			<numberOfFloors>528</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="164">
+		<name>qui</name>
+		<coordinates>
+			<x>394.6297</x>
+			<y>104.1183</y>
+		</coordinates>
+		<creationDate>Wed Mar 15 1972 15:12:29 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>285</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>proident</name>
+			<year>428</year>
+			<numberOfFloors>547</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="165">
+		<name>commodo</name>
+		<coordinates>
+			<x>484.3999</x>
+			<y>35.4653</y>
+		</coordinates>
+		<creationDate>Sun May 30 2021 03:54:08 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>491</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>in</name>
+			<year>161</year>
+			<numberOfFloors>792</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="166">
+		<name>consequat</name>
+		<coordinates>
+			<x>76.6019</x>
+			<y>106.7133</y>
+		</coordinates>
+		<creationDate>Tue Jan 12 2010 07:43:15 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>268</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>aliqua</name>
+			<year>395</year>
+			<numberOfFloors>910</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="167">
+		<name>non</name>
+		<coordinates>
+			<x>379.1826</x>
+			<y>64.9741</y>
+		</coordinates>
+		<creationDate>Sat Apr 24 2021 16:38:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>116</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>ut</name>
+			<year>456</year>
+			<numberOfFloors>128</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="168">
+		<name>dolor</name>
+		<coordinates>
+			<x>11.226</x>
+			<y>132.0327</y>
+		</coordinates>
+		<creationDate>Tue Nov 04 1975 19:09:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>452</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>irure</name>
+			<year>620</year>
+			<numberOfFloors>198</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="169">
+		<name>et</name>
+		<coordinates>
+			<x>535.3935</x>
+			<y>172.7408</y>
+		</coordinates>
+		<creationDate>Sat Jun 27 2009 00:31:07 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>325</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>id</name>
+			<year>117</year>
+			<numberOfFloors>662</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="170">
+		<name>consequat</name>
+		<coordinates>
+			<x>172.5383</x>
+			<y>30.7682</y>
+		</coordinates>
+		<creationDate>Fri Mar 26 1999 06:53:26 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>512</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>consequat</name>
+			<year>631</year>
+			<numberOfFloors>319</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="171">
+		<name>proident</name>
+		<coordinates>
+			<x>152.8075</x>
+			<y>14.693</y>
+		</coordinates>
+		<creationDate>Wed Dec 03 1980 09:40:33 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>491</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>adipisicing</name>
+			<year>259</year>
+			<numberOfFloors>486</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="172">
+		<name>eiusmod</name>
+		<coordinates>
+			<x>145.2397</x>
+			<y>9.3708</y>
+		</coordinates>
+		<creationDate>Thu Apr 06 2006 07:01:53 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>176</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>eiusmod</name>
+			<year>266</year>
+			<numberOfFloors>464</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="173">
+		<name>pariatur</name>
+		<coordinates>
+			<x>96.2867</x>
+			<y>130.8751</y>
+		</coordinates>
+		<creationDate>Wed Jan 17 2007 00:13:04 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>410</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>voluptate</name>
+			<year>631</year>
+			<numberOfFloors>839</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="174">
+		<name>exercitation</name>
+		<coordinates>
+			<x>161.7489</x>
+			<y>26.1551</y>
+		</coordinates>
+		<creationDate>Wed Dec 13 1978 11:18:39 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>9</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>occaecat</name>
+			<year>506</year>
+			<numberOfFloors>367</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="175">
+		<name>dolore</name>
+		<coordinates>
+			<x>350.2034</x>
+			<y>120.9249</y>
+		</coordinates>
+		<creationDate>Tue Dec 30 2003 06:44:07 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>147</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>aute</name>
+			<year>175</year>
+			<numberOfFloors>493</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="176">
+		<name>nostrud</name>
+		<coordinates>
+			<x>432.5169</x>
+			<y>46.9387</y>
+		</coordinates>
+		<creationDate>Fri Nov 03 1995 20:54:58 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>87</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>enim</name>
+			<year>516</year>
+			<numberOfFloors>496</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="177">
+		<name>proident</name>
+		<coordinates>
+			<x>373.4005</x>
+			<y>148.4056</y>
+		</coordinates>
+		<creationDate>Mon Feb 03 1975 13:40:18 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>81</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>aute</name>
+			<year>61</year>
+			<numberOfFloors>765</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="178">
+		<name>mollit</name>
+		<coordinates>
+			<x>447.8306</x>
+			<y>151.347</y>
+		</coordinates>
+		<creationDate>Sat Apr 04 2015 08:44:51 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>366</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>labore</name>
+			<year>17</year>
+			<numberOfFloors>524</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="179">
+		<name>officia</name>
+		<coordinates>
+			<x>294.7923</x>
+			<y>64.0409</y>
+		</coordinates>
+		<creationDate>Sat Feb 18 1995 13:36:04 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>521</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>cillum</name>
+			<year>480</year>
+			<numberOfFloors>861</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="180">
+		<name>mollit</name>
+		<coordinates>
+			<x>444.0198</x>
+			<y>48.7199</y>
+		</coordinates>
+		<creationDate>Sat Nov 20 1993 22:33:04 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>151</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>laboris</name>
+			<year>220</year>
+			<numberOfFloors>415</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="181">
+		<name>pariatur</name>
+		<coordinates>
+			<x>543.4979</x>
+			<y>20.4103</y>
+		</coordinates>
+		<creationDate>Sun Nov 07 1993 01:56:15 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>71</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ea</name>
+			<year>364</year>
+			<numberOfFloors>376</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="182">
+		<name>ipsum</name>
+		<coordinates>
+			<x>136.3005</x>
+			<y>108.5276</y>
+		</coordinates>
+		<creationDate>Thu Jul 29 1971 13:41:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>400</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>esse</name>
+			<year>189</year>
+			<numberOfFloors>588</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="183">
+		<name>eiusmod</name>
+		<coordinates>
+			<x>483.7712</x>
+			<y>79.7277</y>
+		</coordinates>
+		<creationDate>Mon Dec 16 2019 09:24:35 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>440</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>NONE</transport>
+		<house>
+			<name>eu</name>
+			<year>406</year>
+			<numberOfFloors>483</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="184">
+		<name>tempor</name>
+		<coordinates>
+			<x>522.3548</x>
+			<y>78.4087</y>
+		</coordinates>
+		<creationDate>Thu Dec 18 2008 17:06:15 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>513</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>ullamco</name>
+			<year>556</year>
+			<numberOfFloors>351</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="185">
+		<name>in</name>
+		<coordinates>
+			<x>240.3857</x>
+			<y>63.9752</y>
+		</coordinates>
+		<creationDate>Sat Jan 09 1999 19:56:28 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>335</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>mollit</name>
+			<year>419</year>
+			<numberOfFloors>348</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="186">
+		<name>cupidatat</name>
+		<coordinates>
+			<x>94.5008</x>
+			<y>177.059</y>
+		</coordinates>
+		<creationDate>Sat May 26 2007 23:11:29 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>382</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>aute</name>
+			<year>490</year>
+			<numberOfFloors>301</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="187">
+		<name>culpa</name>
+		<coordinates>
+			<x>482.5663</x>
+			<y>122.3323</y>
+		</coordinates>
+		<creationDate>Sun Feb 28 1982 06:52:26 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>486</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>nostrud</name>
+			<year>554</year>
+			<numberOfFloors>278</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="188">
+		<name>anim</name>
+		<coordinates>
+			<x>506.4102</x>
+			<y>174.5865</y>
+		</coordinates>
+		<creationDate>Sat Jan 26 2008 16:48:04 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>445</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>laborum</name>
+			<year>78</year>
+			<numberOfFloors>551</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="189">
+		<name>exercitation</name>
+		<coordinates>
+			<x>246.781</x>
+			<y>47.3847</y>
+		</coordinates>
+		<creationDate>Sat Aug 22 1998 02:27:58 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>476</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>nostrud</name>
+			<year>288</year>
+			<numberOfFloors>723</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="190">
+		<name>voluptate</name>
+		<coordinates>
+			<x>363.4564</x>
+			<y>131.5504</y>
+		</coordinates>
+		<creationDate>Tue Apr 27 1976 16:58:11 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>504</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>quis</name>
+			<year>538</year>
+			<numberOfFloors>703</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="191">
+		<name>ex</name>
+		<coordinates>
+			<x>205.5386</x>
+			<y>57.4347</y>
+		</coordinates>
+		<creationDate>Mon Nov 12 1984 00:18:02 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>504</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ipsum</name>
+			<year>304</year>
+			<numberOfFloors>851</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="192">
+		<name>mollit</name>
+		<coordinates>
+			<x>266.7341</x>
+			<y>99.8225</y>
+		</coordinates>
+		<creationDate>Mon Feb 15 1999 11:35:21 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>271</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>Lorem</name>
+			<year>282</year>
+			<numberOfFloors>570</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="193">
+		<name>duis</name>
+		<coordinates>
+			<x>181.9411</x>
+			<y>49.9701</y>
+		</coordinates>
+		<creationDate>Sun Apr 05 1992 09:31:42 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>150</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>nulla</name>
+			<year>246</year>
+			<numberOfFloors>72</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="194">
+		<name>labore</name>
+		<coordinates>
+			<x>194.8898</x>
+			<y>72.7868</y>
+		</coordinates>
+		<creationDate>Thu Apr 04 1985 07:34:09 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>471</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ea</name>
+			<year>568</year>
+			<numberOfFloors>515</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="195">
+		<name>tempor</name>
+		<coordinates>
+			<x>322.7543</x>
+			<y>117.0882</y>
+		</coordinates>
+		<creationDate>Sun Oct 31 1982 01:43:47 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>442</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>consectetur</name>
+			<year>71</year>
+			<numberOfFloors>932</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="196">
+		<name>veniam</name>
+		<coordinates>
+			<x>88.2049</x>
+			<y>82.7896</y>
+		</coordinates>
+		<creationDate>Tue Jun 14 1983 00:13:06 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>158</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>anim</name>
+			<year>503</year>
+			<numberOfFloors>252</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="197">
+		<name>aliqua</name>
+		<coordinates>
+			<x>531.4244</x>
+			<y>103.7698</y>
+		</coordinates>
+		<creationDate>Sun Mar 06 1988 18:26:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>66</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>nulla</name>
+			<year>356</year>
+			<numberOfFloors>102</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="198">
+		<name>aliquip</name>
+		<coordinates>
+			<x>239.1064</x>
+			<y>127.1959</y>
+		</coordinates>
+		<creationDate>Sat Sep 23 1995 06:43:07 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>241</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>sint</name>
+			<year>396</year>
+			<numberOfFloors>802</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="199">
+		<name>nulla</name>
+		<coordinates>
+			<x>291.9724</x>
+			<y>67.8915</y>
+		</coordinates>
+		<creationDate>Thu Dec 30 2004 20:31:23 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>147</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>tempor</name>
+			<year>386</year>
+			<numberOfFloors>983</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="200">
+		<name>veniam</name>
+		<coordinates>
+			<x>101.362</x>
+			<y>92.4464</y>
+		</coordinates>
+		<creationDate>Sat Dec 02 1989 11:21:48 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>168</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>culpa</name>
+			<year>80</year>
+			<numberOfFloors>602</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="201">
+		<name>aliquip</name>
+		<coordinates>
+			<x>199.7781</x>
+			<y>127.9766</y>
+		</coordinates>
+		<creationDate>Tue Jan 15 2008 07:08:27 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>19</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>aliqua</name>
+			<year>631</year>
+			<numberOfFloors>507</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="202">
+		<name>irure</name>
+		<coordinates>
+			<x>385.8202</x>
+			<y>2.392</y>
+		</coordinates>
+		<creationDate>Sat Jun 26 2004 08:16:16 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>187</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>id</name>
+			<year>257</year>
+			<numberOfFloors>507</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="203">
+		<name>eu</name>
+		<coordinates>
+			<x>247.5412</x>
+			<y>151.2558</y>
+		</coordinates>
+		<creationDate>Sun Jul 27 1986 16:40:18 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>44</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>commodo</name>
+			<year>95</year>
+			<numberOfFloors>738</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="204">
+		<name>ea</name>
+		<coordinates>
+			<x>189.7356</x>
+			<y>170.5938</y>
+		</coordinates>
+		<creationDate>Fri Aug 22 2008 22:31:19 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>413</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>ea</name>
+			<year>410</year>
+			<numberOfFloors>843</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="205">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>132.5921</x>
+			<y>46.9425</y>
+		</coordinates>
+		<creationDate>Thu Feb 28 2008 09:17:18 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>123</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>et</name>
+			<year>567</year>
+			<numberOfFloors>134</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="206">
+		<name>ea</name>
+		<coordinates>
+			<x>322.2687</x>
+			<y>60.7989</y>
+		</coordinates>
+		<creationDate>Sun Feb 19 1978 23:55:54 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>480</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>anim</name>
+			<year>553</year>
+			<numberOfFloors>308</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="207">
+		<name>tempor</name>
+		<coordinates>
+			<x>251.4435</x>
+			<y>85.9425</y>
+		</coordinates>
+		<creationDate>Fri Mar 06 1992 16:03:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>183</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>anim</name>
+			<year>424</year>
+			<numberOfFloors>253</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="208">
+		<name>officia</name>
+		<coordinates>
+			<x>49.0447</x>
+			<y>129.968</y>
+		</coordinates>
+		<creationDate>Fri Sep 19 2003 11:01:59 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>183</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>non</name>
+			<year>586</year>
+			<numberOfFloors>349</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="209">
+		<name>excepteur</name>
+		<coordinates>
+			<x>192.4924</x>
+			<y>58.4829</y>
+		</coordinates>
+		<creationDate>Sat Nov 06 1971 11:46:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>289</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>proident</name>
+			<year>22</year>
+			<numberOfFloors>764</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="210">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>63.0339</x>
+			<y>117.7911</y>
+		</coordinates>
+		<creationDate>Wed Jul 28 1993 04:01:48 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>445</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>do</name>
+			<year>158</year>
+			<numberOfFloors>757</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="211">
+		<name>eu</name>
+		<coordinates>
+			<x>281.7221</x>
+			<y>14.1611</y>
+		</coordinates>
+		<creationDate>Tue May 21 1985 21:40:52 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>101</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>enim</name>
+			<year>634</year>
+			<numberOfFloors>59</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="212">
+		<name>aliqua</name>
+		<coordinates>
+			<x>459.1685</x>
+			<y>178.1743</y>
+		</coordinates>
+		<creationDate>Fri Jul 16 2010 06:26:40 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>383</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>sint</name>
+			<year>191</year>
+			<numberOfFloors>839</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="213">
+		<name>proident</name>
+		<coordinates>
+			<x>427.8198</x>
+			<y>97.2694</y>
+		</coordinates>
+		<creationDate>Sat Nov 01 1975 08:21:55 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>167</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ullamco</name>
+			<year>414</year>
+			<numberOfFloors>148</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="214">
+		<name>minim</name>
+		<coordinates>
+			<x>148.2921</x>
+			<y>25.6295</y>
+		</coordinates>
+		<creationDate>Sun Jul 17 2005 22:41:22 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>170</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>incididunt</name>
+			<year>563</year>
+			<numberOfFloors>590</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="215">
+		<name>culpa</name>
+		<coordinates>
+			<x>530.8679</x>
+			<y>42.3136</y>
+		</coordinates>
+		<creationDate>Wed Apr 21 1976 10:46:46 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>396</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>deserunt</name>
+			<year>31</year>
+			<numberOfFloors>446</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="216">
+		<name>id</name>
+		<coordinates>
+			<x>192.8863</x>
+			<y>94.5506</y>
+		</coordinates>
+		<creationDate>Sun Feb 03 1980 23:49:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>314</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>excepteur</name>
+			<year>200</year>
+			<numberOfFloors>636</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="217">
+		<name>deserunt</name>
+		<coordinates>
+			<x>497.8025</x>
+			<y>0.9035</y>
+		</coordinates>
+		<creationDate>Fri Nov 26 2021 17:43:06 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>217</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>cillum</name>
+			<year>356</year>
+			<numberOfFloors>767</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="218">
+		<name>in</name>
+		<coordinates>
+			<x>363.9331</x>
+			<y>51.6862</y>
+		</coordinates>
+		<creationDate>Thu Oct 13 1977 15:32:32 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>467</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>et</name>
+			<year>374</year>
+			<numberOfFloors>992</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="219">
+		<name>id</name>
+		<coordinates>
+			<x>81.5244</x>
+			<y>40.2965</y>
+		</coordinates>
+		<creationDate>Sat Sep 17 1988 01:37:03 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>16</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ut</name>
+			<year>122</year>
+			<numberOfFloors>325</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="220">
+		<name>aute</name>
+		<coordinates>
+			<x>36.5636</x>
+			<y>164.4371</y>
+		</coordinates>
+		<creationDate>Sat Sep 13 2008 07:50:40 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>336</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>ea</name>
+			<year>172</year>
+			<numberOfFloors>19</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="221">
+		<name>enim</name>
+		<coordinates>
+			<x>351.6053</x>
+			<y>126.7441</y>
+		</coordinates>
+		<creationDate>Wed Jan 14 1998 19:11:01 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>419</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>proident</name>
+			<year>334</year>
+			<numberOfFloors>430</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="222">
+		<name>ut</name>
+		<coordinates>
+			<x>316.4518</x>
+			<y>135.8723</y>
+		</coordinates>
+		<creationDate>Fri Apr 29 2011 01:43:34 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>153</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>cillum</name>
+			<year>366</year>
+			<numberOfFloors>906</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="223">
+		<name>quis</name>
+		<coordinates>
+			<x>106.6382</x>
+			<y>54.7043</y>
+		</coordinates>
+		<creationDate>Mon Aug 21 1995 10:56:17 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>30</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>pariatur</name>
+			<year>428</year>
+			<numberOfFloors>374</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="224">
+		<name>laborum</name>
+		<coordinates>
+			<x>371.2708</x>
+			<y>131.8862</y>
+		</coordinates>
+		<creationDate>Sun Nov 22 2015 03:09:12 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>125</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>in</name>
+			<year>489</year>
+			<numberOfFloors>775</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="225">
+		<name>magna</name>
+		<coordinates>
+			<x>151.525</x>
+			<y>64.5779</y>
+		</coordinates>
+		<creationDate>Fri Jan 25 1974 23:17:44 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>221</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>anim</name>
+			<year>200</year>
+			<numberOfFloors>214</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="226">
+		<name>id</name>
+		<coordinates>
+			<x>269.4085</x>
+			<y>27.8737</y>
+		</coordinates>
+		<creationDate>Sat Jun 23 2018 21:57:05 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>217</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>aliqua</name>
+			<year>4</year>
+			<numberOfFloors>177</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="227">
+		<name>laborum</name>
+		<coordinates>
+			<x>528.5837</x>
+			<y>88.2841</y>
+		</coordinates>
+		<creationDate>Mon Jan 13 1986 08:48:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>392</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>reprehenderit</name>
+			<year>380</year>
+			<numberOfFloors>87</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="228">
+		<name>consequat</name>
+		<coordinates>
+			<x>274.314</x>
+			<y>106.8018</y>
+		</coordinates>
+		<creationDate>Sun Mar 26 2000 18:34:45 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>296</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>in</name>
+			<year>441</year>
+			<numberOfFloors>248</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="229">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>8.1998</x>
+			<y>36.7624</y>
+		</coordinates>
+		<creationDate>Mon May 01 1995 16:08:31 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>179</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>nulla</name>
+			<year>165</year>
+			<numberOfFloors>248</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="230">
+		<name>nostrud</name>
+		<coordinates>
+			<x>403.6805</x>
+			<y>161.6475</y>
+		</coordinates>
+		<creationDate>Thu Mar 28 1991 23:44:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>450</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>qui</name>
+			<year>48</year>
+			<numberOfFloors>824</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="231">
+		<name>ullamco</name>
+		<coordinates>
+			<x>188.8348</x>
+			<y>123.2161</y>
+		</coordinates>
+		<creationDate>Sat Dec 22 2018 12:48:38 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>515</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>quis</name>
+			<year>15</year>
+			<numberOfFloors>50</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="232">
+		<name>ex</name>
+		<coordinates>
+			<x>211.3531</x>
+			<y>43.647</y>
+		</coordinates>
+		<creationDate>Sat Apr 17 2010 12:56:46 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>128</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>irure</name>
+			<year>42</year>
+			<numberOfFloors>875</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="233">
+		<name>officia</name>
+		<coordinates>
+			<x>243.8026</x>
+			<y>46.7952</y>
+		</coordinates>
+		<creationDate>Thu Apr 18 2002 20:37:41 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>106</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ea</name>
+			<year>315</year>
+			<numberOfFloors>961</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="234">
+		<name>veniam</name>
+		<coordinates>
+			<x>274.2384</x>
+			<y>163.9975</y>
+		</coordinates>
+		<creationDate>Mon Mar 28 2016 12:58:58 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>206</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>irure</name>
+			<year>250</year>
+			<numberOfFloors>774</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="235">
+		<name>minim</name>
+		<coordinates>
+			<x>289.9027</x>
+			<y>162.598</y>
+		</coordinates>
+		<creationDate>Sun Sep 01 2013 17:11:14 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>241</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>nisi</name>
+			<year>349</year>
+			<numberOfFloors>634</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="236">
+		<name>fugiat</name>
+		<coordinates>
+			<x>298.1604</x>
+			<y>74.0321</y>
+		</coordinates>
+		<creationDate>Sat Jul 15 1972 00:42:49 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>189</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>deserunt</name>
+			<year>399</year>
+			<numberOfFloors>371</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="237">
+		<name>veniam</name>
+		<coordinates>
+			<x>450.264</x>
+			<y>84.6567</y>
+		</coordinates>
+		<creationDate>Fri Jan 04 2013 09:04:47 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>505</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>anim</name>
+			<year>419</year>
+			<numberOfFloors>604</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="238">
+		<name>anim</name>
+		<coordinates>
+			<x>509.5458</x>
+			<y>50.1525</y>
+		</coordinates>
+		<creationDate>Sun Jun 20 1976 16:39:21 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>394</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>dolore</name>
+			<year>509</year>
+			<numberOfFloors>554</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="239">
+		<name>eu</name>
+		<coordinates>
+			<x>449.717</x>
+			<y>139.0506</y>
+		</coordinates>
+		<creationDate>Mon Aug 02 2010 11:36:50 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>143</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>occaecat</name>
+			<year>607</year>
+			<numberOfFloors>134</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="240">
+		<name>proident</name>
+		<coordinates>
+			<x>95.2408</x>
+			<y>6.2412</y>
+		</coordinates>
+		<creationDate>Fri Nov 02 2007 02:42:27 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>312</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>consectetur</name>
+			<year>209</year>
+			<numberOfFloors>881</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="241">
+		<name>amet</name>
+		<coordinates>
+			<x>17.4142</x>
+			<y>146.8817</y>
+		</coordinates>
+		<creationDate>Wed Jan 18 2012 02:23:04 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>98</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>Lorem</name>
+			<year>143</year>
+			<numberOfFloors>276</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="242">
+		<name>quis</name>
+		<coordinates>
+			<x>541.52</x>
+			<y>166.0426</y>
+		</coordinates>
+		<creationDate>Sun Jul 02 1972 22:40:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>447</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>sit</name>
+			<year>103</year>
+			<numberOfFloors>477</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="243">
+		<name>magna</name>
+		<coordinates>
+			<x>501.9427</x>
+			<y>40.3683</y>
+		</coordinates>
+		<creationDate>Thu Sep 11 1975 17:53:21 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>131</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>do</name>
+			<year>417</year>
+			<numberOfFloors>902</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="244">
+		<name>occaecat</name>
+		<coordinates>
+			<x>155.7973</x>
+			<y>27.757</y>
+		</coordinates>
+		<creationDate>Mon Sep 24 2007 07:22:36 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>145</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>sint</name>
+			<year>124</year>
+			<numberOfFloors>183</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="245">
+		<name>voluptate</name>
+		<coordinates>
+			<x>91.8857</x>
+			<y>151.278</y>
+		</coordinates>
+		<creationDate>Mon Mar 31 1975 14:39:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>253</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>excepteur</name>
+			<year>485</year>
+			<numberOfFloors>617</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="246">
+		<name>laborum</name>
+		<coordinates>
+			<x>45.3477</x>
+			<y>93.7495</y>
+		</coordinates>
+		<creationDate>Tue Feb 18 1997 09:40:37 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>37</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>velit</name>
+			<year>189</year>
+			<numberOfFloors>269</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="247">
+		<name>magna</name>
+		<coordinates>
+			<x>411.1628</x>
+			<y>148.8925</y>
+		</coordinates>
+		<creationDate>Fri Jun 14 1991 02:27:58 GMT+0300 (Москва, летнее время)</creationDate>
+		<area>5</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>aliquip</name>
+			<year>196</year>
+			<numberOfFloors>129</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="248">
+		<name>incididunt</name>
+		<coordinates>
+			<x>42.0558</x>
+			<y>131.1075</y>
+		</coordinates>
+		<creationDate>Wed Mar 29 2023 03:14:58 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>496</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>ipsum</name>
+			<year>354</year>
+			<numberOfFloors>239</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="249">
+		<name>excepteur</name>
+		<coordinates>
+			<x>19.2123</x>
+			<y>66.1814</y>
+		</coordinates>
+		<creationDate>Fri Feb 09 1990 22:56:26 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>289</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>officia</name>
+			<year>629</year>
+			<numberOfFloors>741</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="250">
+		<name>culpa</name>
+		<coordinates>
+			<x>356.6495</x>
+			<y>124.592</y>
+		</coordinates>
+		<creationDate>Fri Dec 07 1990 19:55:35 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>428</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>Lorem</name>
+			<year>124</year>
+			<numberOfFloors>317</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="251">
+		<name>occaecat</name>
+		<coordinates>
+			<x>495.8749</x>
+			<y>13.2304</y>
+		</coordinates>
+		<creationDate>Tue May 29 1984 13:26:24 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>114</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>consequat</name>
+			<year>442</year>
+			<numberOfFloors>408</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="252">
+		<name>sunt</name>
+		<coordinates>
+			<x>302.5567</x>
+			<y>174.1121</y>
+		</coordinates>
+		<creationDate>Thu Jun 14 1990 09:15:19 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>242</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>sit</name>
+			<year>486</year>
+			<numberOfFloors>198</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="253">
+		<name>labore</name>
+		<coordinates>
+			<x>111.4867</x>
+			<y>142.764</y>
+		</coordinates>
+		<creationDate>Wed Jan 29 2003 23:21:34 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>323</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>culpa</name>
+			<year>255</year>
+			<numberOfFloors>986</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="254">
+		<name>deserunt</name>
+		<coordinates>
+			<x>427.1496</x>
+			<y>85.6915</y>
+		</coordinates>
+		<creationDate>Thu Jan 30 2020 17:13:19 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>436</area>
+		<roomsNumber>19</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>FEW</transport>
+		<house>
+			<name>enim</name>
+			<year>154</year>
+			<numberOfFloors>776</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="255">
+		<name>elit</name>
+		<coordinates>
+			<x>343.1232</x>
+			<y>128.4972</y>
+		</coordinates>
+		<creationDate>Wed May 03 2023 03:26:12 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>350</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>anim</name>
+			<year>226</year>
+			<numberOfFloors>129</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="256">
+		<name>consequat</name>
+		<coordinates>
+			<x>434.6743</x>
+			<y>138.2065</y>
+		</coordinates>
+		<creationDate>Fri Jun 18 2010 02:09:23 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>347</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>nostrud</name>
+			<year>248</year>
+			<numberOfFloors>871</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="257">
+		<name>adipisicing</name>
+		<coordinates>
+			<x>134.695</x>
+			<y>124.1636</y>
+		</coordinates>
+		<creationDate>Mon Jan 27 1992 04:18:21 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>452</area>
+		<roomsNumber>8</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>quis</name>
+			<year>293</year>
+			<numberOfFloors>670</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="258">
+		<name>dolore</name>
+		<coordinates>
+			<x>90.4309</x>
+			<y>36.1075</y>
+		</coordinates>
+		<creationDate>Sat May 17 1997 21:22:44 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>478</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>eiusmod</name>
+			<year>507</year>
+			<numberOfFloors>895</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="259">
+		<name>dolore</name>
+		<coordinates>
+			<x>174.5571</x>
+			<y>161.4591</y>
+		</coordinates>
+		<creationDate>Sun Mar 04 2001 09:24:56 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>349</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>tempor</name>
+			<year>383</year>
+			<numberOfFloors>346</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="260">
+		<name>dolor</name>
+		<coordinates>
+			<x>534.5613</x>
+			<y>22.8429</y>
+		</coordinates>
+		<creationDate>Mon Apr 08 2019 23:08:59 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>261</area>
+		<roomsNumber>2</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NONE</transport>
+		<house>
+			<name>magna</name>
+			<year>110</year>
+			<numberOfFloors>279</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="261">
+		<name>labore</name>
+		<coordinates>
+			<x>14.1928</x>
+			<y>70.6158</y>
+		</coordinates>
+		<creationDate>Sun Aug 30 1992 21:19:09 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>432</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>enim</name>
+			<year>230</year>
+			<numberOfFloors>987</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="262">
+		<name>occaecat</name>
+		<coordinates>
+			<x>212.4898</x>
+			<y>141.4155</y>
+		</coordinates>
+		<creationDate>Thu Jan 01 1981 23:40:12 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>122</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>nisi</name>
+			<year>35</year>
+			<numberOfFloors>511</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="263">
+		<name>eiusmod</name>
+		<coordinates>
+			<x>538.9217</x>
+			<y>151.8631</y>
+		</coordinates>
+		<creationDate>Thu Sep 06 1984 04:09:48 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>379</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>NORMAL</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>eu</name>
+			<year>52</year>
+			<numberOfFloors>481</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="264">
+		<name>ex</name>
+		<coordinates>
+			<x>327.1881</x>
+			<y>60.7292</y>
+		</coordinates>
+		<creationDate>Wed Mar 07 2007 16:48:48 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>440</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>commodo</name>
+			<year>28</year>
+			<numberOfFloors>300</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="265">
+		<name>duis</name>
+		<coordinates>
+			<x>312.9544</x>
+			<y>64.7245</y>
+		</coordinates>
+		<creationDate>Tue Jan 09 2018 13:49:41 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>367</area>
+		<roomsNumber>5</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>voluptate</name>
+			<year>207</year>
+			<numberOfFloors>620</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="266">
+		<name>sit</name>
+		<coordinates>
+			<x>261.2425</x>
+			<y>141.3607</y>
+		</coordinates>
+		<creationDate>Tue Aug 04 1987 03:31:36 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>419</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>do</name>
+			<year>413</year>
+			<numberOfFloors>773</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="267">
+		<name>nulla</name>
+		<coordinates>
+			<x>86.3588</x>
+			<y>93.2387</y>
+		</coordinates>
+		<creationDate>Sun Oct 07 2012 23:18:34 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>226</area>
+		<roomsNumber>1</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>eiusmod</name>
+			<year>287</year>
+			<numberOfFloors>804</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="268">
+		<name>sunt</name>
+		<coordinates>
+			<x>204.9062</x>
+			<y>83.8588</y>
+		</coordinates>
+		<creationDate>Wed Feb 28 1996 11:19:42 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>305</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>adipisicing</name>
+			<year>395</year>
+			<numberOfFloors>202</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="269">
+		<name>officia</name>
+		<coordinates>
+			<x>387.1429</x>
+			<y>116.7314</y>
+		</coordinates>
+		<creationDate>Mon Feb 08 1999 12:44:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>76</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>veniam</name>
+			<year>512</year>
+			<numberOfFloors>527</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="270">
+		<name>anim</name>
+		<coordinates>
+			<x>118.8953</x>
+			<y>172.4973</y>
+		</coordinates>
+		<creationDate>Tue Sep 25 1973 16:54:52 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>112</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>STREET</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>laboris</name>
+			<year>623</year>
+			<numberOfFloors>103</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="271">
+		<name>consectetur</name>
+		<coordinates>
+			<x>445.3581</x>
+			<y>154.5321</y>
+		</coordinates>
+		<creationDate>Tue Feb 05 2008 06:09:40 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>253</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>incididunt</name>
+			<year>481</year>
+			<numberOfFloors>614</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="272">
+		<name>ipsum</name>
+		<coordinates>
+			<x>194.3286</x>
+			<y>144.5678</y>
+		</coordinates>
+		<creationDate>Thu Apr 10 2014 04:58:03 GMT+0400 (Москва, стандартное время)</creationDate>
+		<area>298</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>culpa</name>
+			<year>91</year>
+			<numberOfFloors>512</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="273">
+		<name>quis</name>
+		<coordinates>
+			<x>513.994</x>
+			<y>65.5326</y>
+		</coordinates>
+		<creationDate>Tue Oct 13 2015 02:40:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>254</area>
+		<roomsNumber>17</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>proident</name>
+			<year>122</year>
+			<numberOfFloors>83</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="274">
+		<name>deserunt</name>
+		<coordinates>
+			<x>214.328</x>
+			<y>101.2927</y>
+		</coordinates>
+		<creationDate>Mon Sep 22 2008 09:35:12 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>178</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>consectetur</name>
+			<year>529</year>
+			<numberOfFloors>97</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="275">
+		<name>nisi</name>
+		<coordinates>
+			<x>157.2923</x>
+			<y>23.9526</y>
+		</coordinates>
+		<creationDate>Wed Mar 29 2000 15:13:58 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>7</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ea</name>
+			<year>246</year>
+			<numberOfFloors>457</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="276">
+		<name>esse</name>
+		<coordinates>
+			<x>258.2991</x>
+			<y>64.2162</y>
+		</coordinates>
+		<creationDate>Sun Jul 06 2008 00:24:05 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>311</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>ullamco</name>
+			<year>47</year>
+			<numberOfFloors>713</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="277">
+		<name>esse</name>
+		<coordinates>
+			<x>382.6113</x>
+			<y>22.2628</y>
+		</coordinates>
+		<creationDate>Sat Oct 14 2000 18:11:43 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>355</area>
+		<roomsNumber>13</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>do</name>
+			<year>354</year>
+			<numberOfFloors>785</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="278">
+		<name>et</name>
+		<coordinates>
+			<x>350.0823</x>
+			<y>137.713</y>
+		</coordinates>
+		<creationDate>Thu Mar 01 1984 20:29:45 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>510</area>
+		<roomsNumber>6</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>quis</name>
+			<year>202</year>
+			<numberOfFloors>631</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="279">
+		<name>nostrud</name>
+		<coordinates>
+			<x>70.8739</x>
+			<y>101.2281</y>
+		</coordinates>
+		<creationDate>Sun Apr 10 1988 23:37:49 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>1</area>
+		<roomsNumber>15</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>reprehenderit</name>
+			<year>373</year>
+			<numberOfFloors>304</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="280">
+		<name>pariatur</name>
+		<coordinates>
+			<x>545.0116</x>
+			<y>19.9246</y>
+		</coordinates>
+		<creationDate>Sat Jul 19 1980 06:54:18 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>52</area>
+		<roomsNumber>3</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>est</name>
+			<year>223</year>
+			<numberOfFloors>749</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="281">
+		<name>ex</name>
+		<coordinates>
+			<x>198.1087</x>
+			<y>178.5003</y>
+		</coordinates>
+		<creationDate>Fri Dec 22 1995 16:04:38 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>358</area>
+		<roomsNumber>4</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>TERRIBLE</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>eu</name>
+			<year>132</year>
+			<numberOfFloors>297</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="282">
+		<name>mollit</name>
+		<coordinates>
+			<x>91.2285</x>
+			<y>98.5033</y>
+		</coordinates>
+		<creationDate>Sun Jan 01 2006 15:02:59 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>119</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>cupidatat</name>
+			<year>273</year>
+			<numberOfFloors>393</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="283">
+		<name>velit</name>
+		<coordinates>
+			<x>222.0946</x>
+			<y>73.2464</y>
+		</coordinates>
+		<creationDate>Thu Jan 11 2007 19:01:34 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>427</area>
+		<roomsNumber>11</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>ad</name>
+			<year>546</year>
+			<numberOfFloors>438</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="284">
+		<name>pariatur</name>
+		<coordinates>
+			<x>68.5287</x>
+			<y>59.5383</y>
+		</coordinates>
+		<creationDate>Tue Nov 05 2019 10:11:00 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>62</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>Lorem</name>
+			<year>171</year>
+			<numberOfFloors>785</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="285">
+		<name>laborum</name>
+		<coordinates>
+			<x>84.7032</x>
+			<y>92.0254</y>
+		</coordinates>
+		<creationDate>Sat Jan 14 1989 07:41:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>151</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>YARD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>sint</name>
+			<year>242</year>
+			<numberOfFloors>93</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="286">
+		<name>proident</name>
+		<coordinates>
+			<x>113.5084</x>
+			<y>120.8281</y>
+		</coordinates>
+		<creationDate>Tue Oct 08 2019 05:50:13 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>334</area>
+		<roomsNumber>20</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>eiusmod</name>
+			<year>474</year>
+			<numberOfFloors>418</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="287">
+		<name>ipsum</name>
+		<coordinates>
+			<x>523.6222</x>
+			<y>60.1971</y>
+		</coordinates>
+		<creationDate>Sun Feb 06 1983 10:58:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>149</area>
+		<roomsNumber>0</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>NORMAL</view>
+		<transport>FEW</transport>
+		<house>
+			<name>officia</name>
+			<year>224</year>
+			<numberOfFloors>758</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="288">
+		<name>sint</name>
+		<coordinates>
+			<x>370.3269</x>
+			<y>96.9359</y>
+		</coordinates>
+		<creationDate>Sat Oct 21 1972 06:19:50 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>462</area>
+		<roomsNumber>10</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>YARD</view>
+		<transport>NORMAL</transport>
+		<house>
+			<name>nulla</name>
+			<year>42</year>
+			<numberOfFloors>626</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="289">
+		<name>laborum</name>
+		<coordinates>
+			<x>440.1413</x>
+			<y>45.2864</y>
+		</coordinates>
+		<creationDate>Mon Aug 06 1984 03:19:19 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>507</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>consectetur</name>
+			<year>270</year>
+			<numberOfFloors>129</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="290">
+		<name>reprehenderit</name>
+		<coordinates>
+			<x>362.4246</x>
+			<y>54.0597</y>
+		</coordinates>
+		<creationDate>Thu Apr 05 2001 04:32:17 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>196</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>TERRIBLE</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>ullamco</name>
+			<year>424</year>
+			<numberOfFloors>490</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="291">
+		<name>consectetur</name>
+		<coordinates>
+			<x>495.6284</x>
+			<y>171.2805</y>
+		</coordinates>
+		<creationDate>Fri Feb 13 2015 08:02:57 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>453</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>FINE</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>aute</name>
+			<year>389</year>
+			<numberOfFloors>879</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="292">
+		<name>tempor</name>
+		<coordinates>
+			<x>268.713</x>
+			<y>104.6781</y>
+		</coordinates>
+		<creationDate>Mon Sep 10 1990 21:18:15 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>142</area>
+		<roomsNumber>9</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>qui</name>
+			<year>279</year>
+			<numberOfFloors>499</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="293">
+		<name>commodo</name>
+		<coordinates>
+			<x>215.7709</x>
+			<y>96.7291</y>
+		</coordinates>
+		<creationDate>Tue Jul 09 1991 00:45:41 GMT+0300 (Москва, летнее время)</creationDate>
+		<area>430</area>
+		<roomsNumber>14</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>NORMAL</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>dolore</name>
+			<year>64</year>
+			<numberOfFloors>510</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="294">
+		<name>veniam</name>
+		<coordinates>
+			<x>301.1009</x>
+			<y>119.9899</y>
+		</coordinates>
+		<creationDate>Mon Jun 07 1982 03:15:53 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>355</area>
+		<roomsNumber>12</roomsNumber>
+		<furnish>LITTLE</furnish>
+		<view>STREET</view>
+		<transport>LITTLE</transport>
+		<house>
+			<name>ipsum</name>
+			<year>225</year>
+			<numberOfFloors>824</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="295">
+		<name>voluptate</name>
+		<coordinates>
+			<x>401.6411</x>
+			<y>16.5508</y>
+		</coordinates>
+		<creationDate>Sun Jan 23 1994 09:07:22 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>441</area>
+		<roomsNumber>18</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>NORMAL</view>
+		<transport>NONE</transport>
+		<house>
+			<name>nulla</name>
+			<year>158</year>
+			<numberOfFloors>18</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="296">
+		<name>elit</name>
+		<coordinates>
+			<x>201.6137</x>
+			<y>125.4215</y>
+		</coordinates>
+		<creationDate>Tue Apr 29 2008 06:10:42 GMT+0400 (Москва, летнее время)</creationDate>
+		<area>218</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>NONE</transport>
+		<house>
+			<name>ullamco</name>
+			<year>2</year>
+			<numberOfFloors>1000</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="297">
+		<name>consectetur</name>
+		<coordinates>
+			<x>25.4238</x>
+			<y>153.9923</y>
+		</coordinates>
+		<creationDate>Wed Oct 31 2018 07:05:37 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>100</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>STREET</view>
+		<transport>FEW</transport>
+		<house>
+			<name>cupidatat</name>
+			<year>496</year>
+			<numberOfFloors>804</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="298">
+		<name>quis</name>
+		<coordinates>
+			<x>507.5916</x>
+			<y>16.6986</y>
+		</coordinates>
+		<creationDate>Thu May 11 2017 15:44:42 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>232</area>
+		<roomsNumber>7</roomsNumber>
+		<furnish>NONE</furnish>
+		<view>YARD</view>
+		<transport>ENOUGH</transport>
+		<house>
+			<name>occaecat</name>
+			<year>98</year>
+			<numberOfFloors>440</numberOfFloors>
+		</house>
+	</flat>
+	<flat id="299">
+		<name>aliqua</name>
+		<coordinates>
+			<x>506.45</x>
+			<y>52.1262</y>
+		</coordinates>
+		<creationDate>Mon Oct 25 2021 00:48:03 GMT+0300 (Москва, стандартное время)</creationDate>
+		<area>407</area>
+		<roomsNumber>16</roomsNumber>
+		<furnish>BAD</furnish>
+		<view>BAD</view>
+		<transport>FEW</transport>
+		<house>
+			<name>laborum</name>
+			<year>284</year>
+			<numberOfFloors>466</numberOfFloors>
+		</house>
+	</flat>
+</root> 

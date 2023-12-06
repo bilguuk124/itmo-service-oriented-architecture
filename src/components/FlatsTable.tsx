@@ -1,92 +1,58 @@
 import React from 'react';
-import { Space, Table, Tag } from 'antd';
-import type { ColumnsType } from 'antd/es/table';
 import Flat from '../model/Flat';
-import Column from 'antd/es/table/Column';
+import { useQuery } from 'react-query';
+import { FlatService }from '../services/FlatsService';
+import { Box } from '@material-ui/core'; 
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-interface MyProps{
+interface MyProps {
   flats: Flat[]
 }
 
-export default class FlatsTable extends React.Component<MyProps, any, any> {
-  private columns: ColumnsType<Flat> = [
-    {
-      title: 'id',
-      dataIndex: 'id',
-      key: 'id',
-      align: 'center'
-    },
-    {
-      title: 'name',
-      dataIndex: 'name',
-      key: 'name',
-      align: 'center'
-    },
-    {
-      title: 'coordinates',
-      children: [
-        {
-          title: 'X',
-          dataIndex: 'coordinatesX',
-          key: 'coordinatesX',
-          width: '2vh',
-          render: (_, rec, __) => rec.coordinates.x
-        },
-        {
-          title: 'Y',
-          dataIndex: 'coordinatesY',
-          key: 'coordinatesY',
-          width: '2vh',
-          render: (_, rec, __) => rec.coordinates.y
-        }
-      ]
-    },
-    {
-      title: 'creationDate',
-      dataIndex: 'creationDate',
-      key: 'creationDate',
-      render: (_, record: Flat, __) => record.creationDate.toLocaleString()
-    },
-    {
-      title: 'area',
-      dataIndex: 'area',
-      key: 'area',
-    },
-    {
-      title: 'roomsNumber',
-      dataIndex: 'roomsNumber',
-      key: 'roomsNumber',
-    },
-    {
-      title: 'furnish',
-      dataIndex: 'furnish',
-      key: 'furnish'
-    },
-    {
-      title: 'view',
-      dataIndex: 'view',
-      key: 'view',
-    },
-    {
-      title: 'transport',
-      dataIndex: 'transport',
-      key: 'transport',
-    },
-    {
-      title: 'house',
-      dataIndex: 'house',
-      key: 'house',
-    },
-  ];
+const VISIBLE_FIELDS = ['name', 'rating', 'country', 'dateCreated', 'isAdmin'];
 
-  constructor(public data: Flat[]){
-    super({flats: data});
+export default class FlatsTable extends React.Component<MyProps, any, any> {\
+
+  constructor(public data: Flat[]) {
+    super({ flats: data });
   }
 
-  public render(): React.ReactNode {
-    return <Table bordered showHeader size='small' columns={this.columns} dataSource={this.props.flats}>
-      {/* <Column key={} */}
-    </Table>
+  render(): React.ReactNode {
+    const { isLoading, error, data: resp } = useQuery(
+      'repoData',
+      () => FlatService.getAll()
+    )
+
+    let a = resp?.data
+
+    if (isLoading) return a = new Array<Flat>()!;
+
+    if (error) return a = new Array<Flat>()!;
+    return (
+      <Box sx={{ height: '75vh', mt: 10, width: 1 }}>
+        <DataGrid<Flat>
+          columns={VISIBLE_FIELDS.map((e) => {
+            return { field: e, width: 100 }
+          })}
+          rows={[]}
+          getRowId={(row) => row.id}
+          disableColumnSelector
+          disableDensitySelector
+          disableColumnFilter
+          density='compact'
+          // paginationModel={{page: 1, pageSize: 50}}
+          autoPageSize
+          slots={{ toolbar: GridToolbar }}
+          slotProps={{
+            toolbar: {
+              showQuickFilter: true,
+            }
+          }}
+          rowSpacingType='border'
+          showCellVerticalBorder
+        />
+      </Box>
+    )
   }
 
 }

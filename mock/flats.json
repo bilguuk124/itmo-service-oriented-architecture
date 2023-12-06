@@ -1,0 +1,5704 @@
+{
+  "flats": [
+    {
+      "id": 0,
+      "name": "ullamco",
+      "coordinates": {
+        "x": 420.619,
+        "y": 16.6538
+      },
+      "creationDate": "Sat Apr 19 2014 00:09:37 GMT+0400 (Москва, стандартное время)",
+      "area": 152,
+      "roomsNumber": 7,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "quis",
+        "year": 301,
+        "numberOfFloors": 849
+      }
+    },
+    {
+      "id": 1,
+      "name": "anim",
+      "coordinates": {
+        "x": 541.2075,
+        "y": 30.6503
+      },
+      "creationDate": "Tue Feb 01 2011 15:03:06 GMT+0300 (Москва, стандартное время)",
+      "area": 332,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "adipisicing",
+        "year": 173,
+        "numberOfFloors": 556
+      }
+    },
+    {
+      "id": 2,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 428.9794,
+        "y": 72.7641
+      },
+      "creationDate": "Mon Nov 29 2021 12:44:01 GMT+0300 (Москва, стандартное время)",
+      "area": 518,
+      "roomsNumber": 8,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "laborum",
+        "year": 154,
+        "numberOfFloors": 550
+      }
+    },
+    {
+      "id": 3,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 501.9889,
+        "y": 53.1224
+      },
+      "creationDate": "Fri Jun 16 2000 12:30:45 GMT+0400 (Москва, летнее время)",
+      "area": 379,
+      "roomsNumber": 8,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "in",
+        "year": 542,
+        "numberOfFloors": 55
+      }
+    },
+    {
+      "id": 4,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 12.5169,
+        "y": 85.6322
+      },
+      "creationDate": "Thu Feb 09 2017 06:19:29 GMT+0300 (Москва, стандартное время)",
+      "area": 216,
+      "roomsNumber": 4,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "non",
+        "year": 575,
+        "numberOfFloors": 418
+      }
+    },
+    {
+      "id": 5,
+      "name": "voluptate",
+      "coordinates": {
+        "x": 120.684,
+        "y": 124.8833
+      },
+      "creationDate": "Thu Nov 09 2023 21:41:00 GMT+0300 (Москва, стандартное время)",
+      "area": 394,
+      "roomsNumber": 14,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "laborum",
+        "year": 274,
+        "numberOfFloors": 706
+      }
+    },
+    {
+      "id": 6,
+      "name": "amet",
+      "coordinates": {
+        "x": 286.9284,
+        "y": 42.9957
+      },
+      "creationDate": "Tue Feb 11 1975 04:26:07 GMT+0300 (Москва, стандартное время)",
+      "area": 59,
+      "roomsNumber": 5,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "do",
+        "year": 363,
+        "numberOfFloors": 512
+      }
+    },
+    {
+      "id": 7,
+      "name": "fugiat",
+      "coordinates": {
+        "x": 470.8466,
+        "y": 62.0032
+      },
+      "creationDate": "Tue Jan 10 1995 23:41:48 GMT+0300 (Москва, стандартное время)",
+      "area": 351,
+      "roomsNumber": 20,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "mollit",
+        "year": 34,
+        "numberOfFloors": 904
+      }
+    },
+    {
+      "id": 8,
+      "name": "ea",
+      "coordinates": {
+        "x": 166.035,
+        "y": 153.1999
+      },
+      "creationDate": "Sun Aug 27 1995 06:58:04 GMT+0400 (Москва, летнее время)",
+      "area": 436,
+      "roomsNumber": 7,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "et",
+        "year": 619,
+        "numberOfFloors": 647
+      }
+    },
+    {
+      "id": 9,
+      "name": "non",
+      "coordinates": {
+        "x": 189.5862,
+        "y": 11.5051
+      },
+      "creationDate": "Sat Nov 01 1975 22:23:47 GMT+0300 (Москва, стандартное время)",
+      "area": 494,
+      "roomsNumber": 12,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "est",
+        "year": 458,
+        "numberOfFloors": 452
+      }
+    },
+    {
+      "id": 10,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 317.666,
+        "y": 78.4422
+      },
+      "creationDate": "Sun Sep 23 2018 15:01:50 GMT+0300 (Москва, стандартное время)",
+      "area": 16,
+      "roomsNumber": 20,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "tempor",
+        "year": 474,
+        "numberOfFloors": 642
+      }
+    },
+    {
+      "id": 11,
+      "name": "amet",
+      "coordinates": {
+        "x": 390.6589,
+        "y": 115.0608
+      },
+      "creationDate": "Sat Sep 10 2005 14:44:00 GMT+0400 (Москва, летнее время)",
+      "area": 264,
+      "roomsNumber": 2,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "Lorem",
+        "year": 305,
+        "numberOfFloors": 120
+      }
+    },
+    {
+      "id": 12,
+      "name": "enim",
+      "coordinates": {
+        "x": 536.2686,
+        "y": 19.1859
+      },
+      "creationDate": "Wed Oct 25 2023 12:09:47 GMT+0300 (Москва, стандартное время)",
+      "area": 369,
+      "roomsNumber": 19,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "nisi",
+        "year": 498,
+        "numberOfFloors": 753
+      }
+    },
+    {
+      "id": 13,
+      "name": "culpa",
+      "coordinates": {
+        "x": 172.2574,
+        "y": 30.304
+      },
+      "creationDate": "Wed Feb 15 2006 00:42:42 GMT+0300 (Москва, стандартное время)",
+      "area": 459,
+      "roomsNumber": 10,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "cupidatat",
+        "year": 175,
+        "numberOfFloors": 831
+      }
+    },
+    {
+      "id": 14,
+      "name": "quis",
+      "coordinates": {
+        "x": 53.9882,
+        "y": 44.7621
+      },
+      "creationDate": "Mon Mar 25 1996 16:26:41 GMT+0300 (Москва, стандартное время)",
+      "area": 58,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "non",
+        "year": 342,
+        "numberOfFloors": 143
+      }
+    },
+    {
+      "id": 15,
+      "name": "excepteur",
+      "coordinates": {
+        "x": 131.3222,
+        "y": 138.7836
+      },
+      "creationDate": "Fri Oct 29 2021 04:04:41 GMT+0300 (Москва, стандартное время)",
+      "area": 335,
+      "roomsNumber": 17,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "eu",
+        "year": 612,
+        "numberOfFloors": 97
+      }
+    },
+    {
+      "id": 16,
+      "name": "mollit",
+      "coordinates": {
+        "x": 502.6428,
+        "y": 38.7913
+      },
+      "creationDate": "Sat Feb 19 1983 13:56:23 GMT+0300 (Москва, стандартное время)",
+      "area": 496,
+      "roomsNumber": 13,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ullamco",
+        "year": 435,
+        "numberOfFloors": 93
+      }
+    },
+    {
+      "id": 17,
+      "name": "ut",
+      "coordinates": {
+        "x": 424.0714,
+        "y": 123.3665
+      },
+      "creationDate": "Tue Mar 31 1981 09:59:22 GMT+0300 (Москва, стандартное время)",
+      "area": 347,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "ullamco",
+        "year": 200,
+        "numberOfFloors": 234
+      }
+    },
+    {
+      "id": 18,
+      "name": "Lorem",
+      "coordinates": {
+        "x": 165.5398,
+        "y": 146.1277
+      },
+      "creationDate": "Fri Feb 29 2008 07:41:03 GMT+0300 (Москва, стандартное время)",
+      "area": 141,
+      "roomsNumber": 11,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "veniam",
+        "year": 624,
+        "numberOfFloors": 180
+      }
+    },
+    {
+      "id": 19,
+      "name": "sunt",
+      "coordinates": {
+        "x": 124.1248,
+        "y": 27.27
+      },
+      "creationDate": "Thu May 19 2022 12:53:27 GMT+0300 (Москва, стандартное время)",
+      "area": 328,
+      "roomsNumber": 13,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "reprehenderit",
+        "year": 105,
+        "numberOfFloors": 624
+      }
+    },
+    {
+      "id": 20,
+      "name": "qui",
+      "coordinates": {
+        "x": 199.1495,
+        "y": 102.8601
+      },
+      "creationDate": "Sat Apr 26 1997 13:41:07 GMT+0400 (Москва, летнее время)",
+      "area": 143,
+      "roomsNumber": 1,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "sint",
+        "year": 552,
+        "numberOfFloors": 159
+      }
+    },
+    {
+      "id": 21,
+      "name": "occaecat",
+      "coordinates": {
+        "x": 458.112,
+        "y": 50.6875
+      },
+      "creationDate": "Wed Mar 19 1997 12:26:48 GMT+0300 (Москва, стандартное время)",
+      "area": 447,
+      "roomsNumber": 0,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "dolore",
+        "year": 169,
+        "numberOfFloors": 316
+      }
+    },
+    {
+      "id": 22,
+      "name": "nulla",
+      "coordinates": {
+        "x": 244.6853,
+        "y": 159.1546
+      },
+      "creationDate": "Thu May 18 1989 20:07:30 GMT+0400 (Москва, летнее время)",
+      "area": 485,
+      "roomsNumber": 1,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "enim",
+        "year": 110,
+        "numberOfFloors": 11
+      }
+    },
+    {
+      "id": 23,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 500.63,
+        "y": 123.3864
+      },
+      "creationDate": "Mon Feb 11 1974 22:27:19 GMT+0300 (Москва, стандартное время)",
+      "area": 131,
+      "roomsNumber": 17,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "sunt",
+        "year": 281,
+        "numberOfFloors": 485
+      }
+    },
+    {
+      "id": 24,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 166.9701,
+        "y": 117.6651
+      },
+      "creationDate": "Mon Mar 15 2010 09:24:23 GMT+0300 (Москва, стандартное время)",
+      "area": 60,
+      "roomsNumber": 1,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "culpa",
+        "year": 93,
+        "numberOfFloors": 956
+      }
+    },
+    {
+      "id": 25,
+      "name": "consequat",
+      "coordinates": {
+        "x": 311.3841,
+        "y": 51.4561
+      },
+      "creationDate": "Thu Sep 28 2017 09:02:32 GMT+0300 (Москва, стандартное время)",
+      "area": 281,
+      "roomsNumber": 6,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "dolore",
+        "year": 420,
+        "numberOfFloors": 313
+      }
+    },
+    {
+      "id": 26,
+      "name": "excepteur",
+      "coordinates": {
+        "x": 83.3613,
+        "y": 41.215
+      },
+      "creationDate": "Sun Jul 06 2003 07:17:00 GMT+0400 (Москва, летнее время)",
+      "area": 453,
+      "roomsNumber": 12,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "consectetur",
+        "year": 600,
+        "numberOfFloors": 609
+      }
+    },
+    {
+      "id": 27,
+      "name": "sit",
+      "coordinates": {
+        "x": 27.2488,
+        "y": 24.1572
+      },
+      "creationDate": "Wed Nov 02 2022 23:24:49 GMT+0300 (Москва, стандартное время)",
+      "area": 494,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "nostrud",
+        "year": 471,
+        "numberOfFloors": 981
+      }
+    },
+    {
+      "id": 28,
+      "name": "nisi",
+      "coordinates": {
+        "x": 109.2847,
+        "y": 107.0733
+      },
+      "creationDate": "Fri May 31 2013 03:42:27 GMT+0400 (Москва, стандартное время)",
+      "area": 374,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "labore",
+        "year": 46,
+        "numberOfFloors": 135
+      }
+    },
+    {
+      "id": 29,
+      "name": "cillum",
+      "coordinates": {
+        "x": 243.0358,
+        "y": 19.4731
+      },
+      "creationDate": "Sat Jan 24 2015 21:33:57 GMT+0300 (Москва, стандартное время)",
+      "area": 487,
+      "roomsNumber": 18,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "sit",
+        "year": 605,
+        "numberOfFloors": 974
+      }
+    },
+    {
+      "id": 30,
+      "name": "velit",
+      "coordinates": {
+        "x": 426.7252,
+        "y": 158.0883
+      },
+      "creationDate": "Thu Aug 30 1979 11:10:11 GMT+0300 (Москва, стандартное время)",
+      "area": 491,
+      "roomsNumber": 12,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "ad",
+        "year": 66,
+        "numberOfFloors": 790
+      }
+    },
+    {
+      "id": 31,
+      "name": "anim",
+      "coordinates": {
+        "x": 105.3129,
+        "y": 172.0825
+      },
+      "creationDate": "Fri Jun 19 1992 00:34:47 GMT+0400 (Москва, летнее время)",
+      "area": 354,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "et",
+        "year": 441,
+        "numberOfFloors": 957
+      }
+    },
+    {
+      "id": 32,
+      "name": "eu",
+      "coordinates": {
+        "x": 288.8381,
+        "y": 58.8356
+      },
+      "creationDate": "Fri Sep 09 1977 17:19:11 GMT+0300 (Москва, стандартное время)",
+      "area": 462,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "amet",
+        "year": 588,
+        "numberOfFloors": 236
+      }
+    },
+    {
+      "id": 33,
+      "name": "sint",
+      "coordinates": {
+        "x": 383.7363,
+        "y": 77.1675
+      },
+      "creationDate": "Sat Feb 05 2011 08:12:10 GMT+0300 (Москва, стандартное время)",
+      "area": 324,
+      "roomsNumber": 12,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "cupidatat",
+        "year": 43,
+        "numberOfFloors": 398
+      }
+    },
+    {
+      "id": 34,
+      "name": "officia",
+      "coordinates": {
+        "x": 339.9535,
+        "y": 118.8212
+      },
+      "creationDate": "Tue May 12 1992 09:10:50 GMT+0400 (Москва, летнее время)",
+      "area": 236,
+      "roomsNumber": 1,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "pariatur",
+        "year": 91,
+        "numberOfFloors": 708
+      }
+    },
+    {
+      "id": 35,
+      "name": "elit",
+      "coordinates": {
+        "x": 136.0593,
+        "y": 2.5643
+      },
+      "creationDate": "Mon Sep 09 1991 15:36:21 GMT+0300 (Москва, летнее время)",
+      "area": 387,
+      "roomsNumber": 5,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "deserunt",
+        "year": 461,
+        "numberOfFloors": 960
+      }
+    },
+    {
+      "id": 36,
+      "name": "ullamco",
+      "coordinates": {
+        "x": 387.78,
+        "y": 67.0694
+      },
+      "creationDate": "Thu Jan 08 1970 14:00:45 GMT+0300 (Москва, стандартное время)",
+      "area": 512,
+      "roomsNumber": 6,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "velit",
+        "year": 397,
+        "numberOfFloors": 217
+      }
+    },
+    {
+      "id": 37,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 293.3372,
+        "y": 153.8097
+      },
+      "creationDate": "Thu Jan 24 1980 13:46:07 GMT+0300 (Москва, стандартное время)",
+      "area": 176,
+      "roomsNumber": 2,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "fugiat",
+        "year": 439,
+        "numberOfFloors": 350
+      }
+    },
+    {
+      "id": 38,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 139.3087,
+        "y": 110.7104
+      },
+      "creationDate": "Mon Apr 02 2007 05:34:05 GMT+0400 (Москва, летнее время)",
+      "area": 462,
+      "roomsNumber": 12,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "exercitation",
+        "year": 38,
+        "numberOfFloors": 521
+      }
+    },
+    {
+      "id": 39,
+      "name": "laboris",
+      "coordinates": {
+        "x": 40.9477,
+        "y": 64.3368
+      },
+      "creationDate": "Sat Aug 25 1990 16:03:32 GMT+0400 (Москва, летнее время)",
+      "area": 323,
+      "roomsNumber": 13,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "commodo",
+        "year": 550,
+        "numberOfFloors": 718
+      }
+    },
+    {
+      "id": 40,
+      "name": "minim",
+      "coordinates": {
+        "x": 370.8016,
+        "y": 76.1082
+      },
+      "creationDate": "Thu Jan 02 2003 05:09:48 GMT+0300 (Москва, стандартное время)",
+      "area": 342,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "enim",
+        "year": 349,
+        "numberOfFloors": 130
+      }
+    },
+    {
+      "id": 41,
+      "name": "labore",
+      "coordinates": {
+        "x": 8.6349,
+        "y": 176.7717
+      },
+      "creationDate": "Sat May 28 1977 12:44:43 GMT+0300 (Москва, стандартное время)",
+      "area": 165,
+      "roomsNumber": 14,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "cillum",
+        "year": 366,
+        "numberOfFloors": 72
+      }
+    },
+    {
+      "id": 42,
+      "name": "laboris",
+      "coordinates": {
+        "x": 269.8758,
+        "y": 136.8472
+      },
+      "creationDate": "Wed Jul 14 1993 20:03:44 GMT+0400 (Москва, летнее время)",
+      "area": 24,
+      "roomsNumber": 6,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "pariatur",
+        "year": 417,
+        "numberOfFloors": 962
+      }
+    },
+    {
+      "id": 43,
+      "name": "exercitation",
+      "coordinates": {
+        "x": 232.3395,
+        "y": 127.3659
+      },
+      "creationDate": "Wed Aug 12 2015 21:42:40 GMT+0300 (Москва, стандартное время)",
+      "area": 379,
+      "roomsNumber": 6,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "cupidatat",
+        "year": 612,
+        "numberOfFloors": 291
+      }
+    },
+    {
+      "id": 44,
+      "name": "occaecat",
+      "coordinates": {
+        "x": 98.854,
+        "y": 3.9317
+      },
+      "creationDate": "Fri Aug 05 1977 16:19:37 GMT+0300 (Москва, стандартное время)",
+      "area": 357,
+      "roomsNumber": 20,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "id",
+        "year": 122,
+        "numberOfFloors": 409
+      }
+    },
+    {
+      "id": 45,
+      "name": "voluptate",
+      "coordinates": {
+        "x": 392.0597,
+        "y": 102.5529
+      },
+      "creationDate": "Wed Jul 31 1991 14:34:15 GMT+0300 (Москва, летнее время)",
+      "area": 323,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "do",
+        "year": 205,
+        "numberOfFloors": 306
+      }
+    },
+    {
+      "id": 46,
+      "name": "eiusmod",
+      "coordinates": {
+        "x": 397.0705,
+        "y": 13.2026
+      },
+      "creationDate": "Tue Apr 08 2014 01:48:40 GMT+0400 (Москва, стандартное время)",
+      "area": 500,
+      "roomsNumber": 18,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "exercitation",
+        "year": 317,
+        "numberOfFloors": 255
+      }
+    },
+    {
+      "id": 47,
+      "name": "officia",
+      "coordinates": {
+        "x": 52.6734,
+        "y": 105.4295
+      },
+      "creationDate": "Sat Jul 24 2010 03:24:53 GMT+0400 (Москва, летнее время)",
+      "area": 415,
+      "roomsNumber": 0,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "dolor",
+        "year": 236,
+        "numberOfFloors": 794
+      }
+    },
+    {
+      "id": 48,
+      "name": "nulla",
+      "coordinates": {
+        "x": 517.8723,
+        "y": 150.8153
+      },
+      "creationDate": "Tue Dec 09 1980 04:57:42 GMT+0300 (Москва, стандартное время)",
+      "area": 262,
+      "roomsNumber": 5,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ad",
+        "year": 614,
+        "numberOfFloors": 336
+      }
+    },
+    {
+      "id": 49,
+      "name": "nulla",
+      "coordinates": {
+        "x": 119.3141,
+        "y": 96.3106
+      },
+      "creationDate": "Thu Apr 03 2014 14:17:19 GMT+0400 (Москва, стандартное время)",
+      "area": 399,
+      "roomsNumber": 10,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "proident",
+        "year": 487,
+        "numberOfFloors": 195
+      }
+    },
+    {
+      "id": 50,
+      "name": "mollit",
+      "coordinates": {
+        "x": 114.0557,
+        "y": 29.7745
+      },
+      "creationDate": "Tue Jun 12 2001 19:46:22 GMT+0400 (Москва, летнее время)",
+      "area": 116,
+      "roomsNumber": 15,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "culpa",
+        "year": 572,
+        "numberOfFloors": 850
+      }
+    },
+    {
+      "id": 51,
+      "name": "amet",
+      "coordinates": {
+        "x": 331.4965,
+        "y": 106.4523
+      },
+      "creationDate": "Fri Sep 27 1974 15:01:18 GMT+0300 (Москва, стандартное время)",
+      "area": 134,
+      "roomsNumber": 1,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "deserunt",
+        "year": 409,
+        "numberOfFloors": 897
+      }
+    },
+    {
+      "id": 52,
+      "name": "anim",
+      "coordinates": {
+        "x": 532.5353,
+        "y": 177.1088
+      },
+      "creationDate": "Fri Dec 16 2016 13:13:12 GMT+0300 (Москва, стандартное время)",
+      "area": 15,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "ad",
+        "year": 399,
+        "numberOfFloors": 907
+      }
+    },
+    {
+      "id": 53,
+      "name": "ad",
+      "coordinates": {
+        "x": 275.7765,
+        "y": 135.2969
+      },
+      "creationDate": "Mon Apr 20 1998 13:26:45 GMT+0400 (Москва, летнее время)",
+      "area": 511,
+      "roomsNumber": 1,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "officia",
+        "year": 259,
+        "numberOfFloors": 542
+      }
+    },
+    {
+      "id": 54,
+      "name": "quis",
+      "coordinates": {
+        "x": 104.1684,
+        "y": 119.9503
+      },
+      "creationDate": "Sun Apr 17 1994 01:09:47 GMT+0400 (Москва, летнее время)",
+      "area": 392,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "laborum",
+        "year": 110,
+        "numberOfFloors": 189
+      }
+    },
+    {
+      "id": 55,
+      "name": "duis",
+      "coordinates": {
+        "x": 286.6736,
+        "y": 23.8962
+      },
+      "creationDate": "Wed Aug 26 1992 22:07:39 GMT+0400 (Москва, летнее время)",
+      "area": 100,
+      "roomsNumber": 13,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "aliquip",
+        "year": 618,
+        "numberOfFloors": 858
+      }
+    },
+    {
+      "id": 56,
+      "name": "et",
+      "coordinates": {
+        "x": 391.191,
+        "y": 145.7487
+      },
+      "creationDate": "Tue Nov 30 1976 11:48:36 GMT+0300 (Москва, стандартное время)",
+      "area": 433,
+      "roomsNumber": 18,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "reprehenderit",
+        "year": 404,
+        "numberOfFloors": 483
+      }
+    },
+    {
+      "id": 57,
+      "name": "eu",
+      "coordinates": {
+        "x": 489.0434,
+        "y": 125.202
+      },
+      "creationDate": "Wed Mar 21 1984 23:39:22 GMT+0300 (Москва, стандартное время)",
+      "area": 498,
+      "roomsNumber": 0,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "duis",
+        "year": 362,
+        "numberOfFloors": 357
+      }
+    },
+    {
+      "id": 58,
+      "name": "minim",
+      "coordinates": {
+        "x": 20.9161,
+        "y": 87.0846
+      },
+      "creationDate": "Tue May 14 1991 02:56:07 GMT+0300 (Москва, летнее время)",
+      "area": 433,
+      "roomsNumber": 8,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "consectetur",
+        "year": 241,
+        "numberOfFloors": 798
+      }
+    },
+    {
+      "id": 59,
+      "name": "consequat",
+      "coordinates": {
+        "x": 345.3566,
+        "y": 95.1611
+      },
+      "creationDate": "Sun Sep 02 2001 19:32:28 GMT+0400 (Москва, летнее время)",
+      "area": 176,
+      "roomsNumber": 18,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "occaecat",
+        "year": 452,
+        "numberOfFloors": 922
+      }
+    },
+    {
+      "id": 60,
+      "name": "culpa",
+      "coordinates": {
+        "x": 491.9844,
+        "y": 68.8064
+      },
+      "creationDate": "Sun Aug 19 2018 17:35:49 GMT+0300 (Москва, стандартное время)",
+      "area": 418,
+      "roomsNumber": 2,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "dolore",
+        "year": 391,
+        "numberOfFloors": 702
+      }
+    },
+    {
+      "id": 61,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 524.3485,
+        "y": 42.1904
+      },
+      "creationDate": "Wed Nov 08 1995 23:38:13 GMT+0300 (Москва, стандартное время)",
+      "area": 458,
+      "roomsNumber": 20,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "ipsum",
+        "year": 22,
+        "numberOfFloors": 69
+      }
+    },
+    {
+      "id": 62,
+      "name": "mollit",
+      "coordinates": {
+        "x": 169.4786,
+        "y": 45.7933
+      },
+      "creationDate": "Wed Mar 22 2000 14:47:20 GMT+0300 (Москва, стандартное время)",
+      "area": 6,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "dolore",
+        "year": 395,
+        "numberOfFloors": 201
+      }
+    },
+    {
+      "id": 63,
+      "name": "officia",
+      "coordinates": {
+        "x": 168.4599,
+        "y": 39.8626
+      },
+      "creationDate": "Tue Apr 04 1989 06:41:44 GMT+0400 (Москва, летнее время)",
+      "area": 402,
+      "roomsNumber": 5,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "veniam",
+        "year": 80,
+        "numberOfFloors": 21
+      }
+    },
+    {
+      "id": 64,
+      "name": "elit",
+      "coordinates": {
+        "x": 466.6661,
+        "y": 103.7684
+      },
+      "creationDate": "Sun Apr 30 1989 14:17:04 GMT+0400 (Москва, летнее время)",
+      "area": 2,
+      "roomsNumber": 7,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "aliqua",
+        "year": 234,
+        "numberOfFloors": 813
+      }
+    },
+    {
+      "id": 65,
+      "name": "amet",
+      "coordinates": {
+        "x": 256.597,
+        "y": 88.0137
+      },
+      "creationDate": "Fri Dec 25 2020 13:05:55 GMT+0300 (Москва, стандартное время)",
+      "area": 117,
+      "roomsNumber": 14,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "et",
+        "year": 422,
+        "numberOfFloors": 617
+      }
+    },
+    {
+      "id": 66,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 430.0687,
+        "y": 42.8433
+      },
+      "creationDate": "Sat Jun 10 1972 05:00:55 GMT+0300 (Москва, стандартное время)",
+      "area": 497,
+      "roomsNumber": 14,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "do",
+        "year": 254,
+        "numberOfFloors": 884
+      }
+    },
+    {
+      "id": 67,
+      "name": "do",
+      "coordinates": {
+        "x": 436.8829,
+        "y": 63.1022
+      },
+      "creationDate": "Wed Jan 23 1980 05:36:19 GMT+0300 (Москва, стандартное время)",
+      "area": 8,
+      "roomsNumber": 19,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "dolore",
+        "year": 587,
+        "numberOfFloors": 273
+      }
+    },
+    {
+      "id": 68,
+      "name": "adipisicing",
+      "coordinates": {
+        "x": 408.9997,
+        "y": 79.3462
+      },
+      "creationDate": "Tue Mar 06 2018 15:54:40 GMT+0300 (Москва, стандартное время)",
+      "area": 431,
+      "roomsNumber": 10,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "enim",
+        "year": 247,
+        "numberOfFloors": 683
+      }
+    },
+    {
+      "id": 69,
+      "name": "sit",
+      "coordinates": {
+        "x": 382.5941,
+        "y": 2.249
+      },
+      "creationDate": "Wed Feb 06 2002 03:33:49 GMT+0300 (Москва, стандартное время)",
+      "area": 378,
+      "roomsNumber": 8,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "sint",
+        "year": 627,
+        "numberOfFloors": 328
+      }
+    },
+    {
+      "id": 70,
+      "name": "nulla",
+      "coordinates": {
+        "x": 119.2409,
+        "y": 64.2624
+      },
+      "creationDate": "Wed Jul 01 2015 06:30:36 GMT+0300 (Москва, стандартное время)",
+      "area": 331,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "eu",
+        "year": 108,
+        "numberOfFloors": 737
+      }
+    },
+    {
+      "id": 71,
+      "name": "veniam",
+      "coordinates": {
+        "x": 494.3261,
+        "y": 4.5793
+      },
+      "creationDate": "Thu May 16 2019 16:39:50 GMT+0300 (Москва, стандартное время)",
+      "area": 188,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "non",
+        "year": 158,
+        "numberOfFloors": 156
+      }
+    },
+    {
+      "id": 72,
+      "name": "ex",
+      "coordinates": {
+        "x": 37.069,
+        "y": 17.8763
+      },
+      "creationDate": "Fri Mar 24 2006 22:40:34 GMT+0300 (Москва, стандартное время)",
+      "area": 113,
+      "roomsNumber": 4,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "excepteur",
+        "year": 456,
+        "numberOfFloors": 145
+      }
+    },
+    {
+      "id": 73,
+      "name": "eu",
+      "coordinates": {
+        "x": 133.1979,
+        "y": 31.4442
+      },
+      "creationDate": "Mon May 06 1974 18:39:35 GMT+0300 (Москва, стандартное время)",
+      "area": 362,
+      "roomsNumber": 2,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "in",
+        "year": 327,
+        "numberOfFloors": 436
+      }
+    },
+    {
+      "id": 74,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 198.8022,
+        "y": 69.0321
+      },
+      "creationDate": "Tue Aug 02 2011 18:43:03 GMT+0400 (Москва, стандартное время)",
+      "area": 435,
+      "roomsNumber": 8,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "ex",
+        "year": 59,
+        "numberOfFloors": 400
+      }
+    },
+    {
+      "id": 75,
+      "name": "ad",
+      "coordinates": {
+        "x": 472.453,
+        "y": 4.7652
+      },
+      "creationDate": "Fri Jul 11 2014 18:38:13 GMT+0400 (Москва, стандартное время)",
+      "area": 487,
+      "roomsNumber": 10,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "minim",
+        "year": 498,
+        "numberOfFloors": 37
+      }
+    },
+    {
+      "id": 76,
+      "name": "duis",
+      "coordinates": {
+        "x": 261.7362,
+        "y": 129.0973
+      },
+      "creationDate": "Sat Jun 07 1980 07:54:07 GMT+0300 (Москва, стандартное время)",
+      "area": 491,
+      "roomsNumber": 19,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "sunt",
+        "year": 348,
+        "numberOfFloors": 10
+      }
+    },
+    {
+      "id": 77,
+      "name": "laboris",
+      "coordinates": {
+        "x": 134.9901,
+        "y": 135.5514
+      },
+      "creationDate": "Sun Mar 15 1992 09:52:25 GMT+0300 (Москва, стандартное время)",
+      "area": 255,
+      "roomsNumber": 17,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "veniam",
+        "year": 629,
+        "numberOfFloors": 56
+      }
+    },
+    {
+      "id": 78,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 188.3398,
+        "y": 14.6384
+      },
+      "creationDate": "Sun Feb 06 2005 07:18:59 GMT+0300 (Москва, стандартное время)",
+      "area": 213,
+      "roomsNumber": 9,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "enim",
+        "year": 135,
+        "numberOfFloors": 279
+      }
+    },
+    {
+      "id": 79,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 19.982,
+        "y": 135.9442
+      },
+      "creationDate": "Thu Dec 05 2019 09:05:55 GMT+0300 (Москва, стандартное время)",
+      "area": 144,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "et",
+        "year": 45,
+        "numberOfFloors": 985
+      }
+    },
+    {
+      "id": 80,
+      "name": "est",
+      "coordinates": {
+        "x": 345.5105,
+        "y": 85.9392
+      },
+      "creationDate": "Sat May 07 1994 13:19:42 GMT+0400 (Москва, летнее время)",
+      "area": 428,
+      "roomsNumber": 15,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "mollit",
+        "year": 513,
+        "numberOfFloors": 547
+      }
+    },
+    {
+      "id": 81,
+      "name": "culpa",
+      "coordinates": {
+        "x": 294.346,
+        "y": 108.9562
+      },
+      "creationDate": "Sat Jun 25 2005 11:06:52 GMT+0400 (Москва, летнее время)",
+      "area": 477,
+      "roomsNumber": 12,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "id",
+        "year": 320,
+        "numberOfFloors": 605
+      }
+    },
+    {
+      "id": 82,
+      "name": "laboris",
+      "coordinates": {
+        "x": 227.227,
+        "y": 177.7872
+      },
+      "creationDate": "Sun Jan 19 2014 21:26:36 GMT+0400 (Москва, стандартное время)",
+      "area": 178,
+      "roomsNumber": 0,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "sunt",
+        "year": 440,
+        "numberOfFloors": 347
+      }
+    },
+    {
+      "id": 83,
+      "name": "id",
+      "coordinates": {
+        "x": 527.1796,
+        "y": 121.265
+      },
+      "creationDate": "Fri Sep 18 1981 10:26:35 GMT+0400 (Москва, летнее время)",
+      "area": 107,
+      "roomsNumber": 1,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "mollit",
+        "year": 208,
+        "numberOfFloors": 255
+      }
+    },
+    {
+      "id": 84,
+      "name": "sunt",
+      "coordinates": {
+        "x": 402.5398,
+        "y": 115.2164
+      },
+      "creationDate": "Sat Mar 14 1992 03:53:14 GMT+0300 (Москва, стандартное время)",
+      "area": 464,
+      "roomsNumber": 17,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "deserunt",
+        "year": 437,
+        "numberOfFloors": 295
+      }
+    },
+    {
+      "id": 85,
+      "name": "officia",
+      "coordinates": {
+        "x": 511.0442,
+        "y": 53.6376
+      },
+      "creationDate": "Sun Jul 31 2011 17:09:05 GMT+0400 (Москва, стандартное время)",
+      "area": 374,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "elit",
+        "year": 88,
+        "numberOfFloors": 35
+      }
+    },
+    {
+      "id": 86,
+      "name": "veniam",
+      "coordinates": {
+        "x": 110.7183,
+        "y": 161.6927
+      },
+      "creationDate": "Thu Nov 28 2019 05:27:17 GMT+0300 (Москва, стандартное время)",
+      "area": 4,
+      "roomsNumber": 19,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "est",
+        "year": 301,
+        "numberOfFloors": 165
+      }
+    },
+    {
+      "id": 87,
+      "name": "non",
+      "coordinates": {
+        "x": 513.0784,
+        "y": 17.3227
+      },
+      "creationDate": "Thu Nov 30 2017 02:35:37 GMT+0300 (Москва, стандартное время)",
+      "area": 422,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "aliqua",
+        "year": 459,
+        "numberOfFloors": 932
+      }
+    },
+    {
+      "id": 88,
+      "name": "veniam",
+      "coordinates": {
+        "x": 467.2289,
+        "y": 144.2573
+      },
+      "creationDate": "Mon Nov 29 1999 00:55:23 GMT+0300 (Москва, стандартное время)",
+      "area": 59,
+      "roomsNumber": 4,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "deserunt",
+        "year": 363,
+        "numberOfFloors": 598
+      }
+    },
+    {
+      "id": 89,
+      "name": "non",
+      "coordinates": {
+        "x": 298.8074,
+        "y": 21.0499
+      },
+      "creationDate": "Sun Oct 20 1985 16:48:15 GMT+0300 (Москва, стандартное время)",
+      "area": 434,
+      "roomsNumber": 1,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "id",
+        "year": 537,
+        "numberOfFloors": 441
+      }
+    },
+    {
+      "id": 90,
+      "name": "laborum",
+      "coordinates": {
+        "x": 212.7446,
+        "y": 90.294
+      },
+      "creationDate": "Thu Aug 27 1998 04:20:20 GMT+0400 (Москва, летнее время)",
+      "area": 451,
+      "roomsNumber": 3,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "nulla",
+        "year": 509,
+        "numberOfFloors": 226
+      }
+    },
+    {
+      "id": 91,
+      "name": "esse",
+      "coordinates": {
+        "x": 346.9887,
+        "y": 41.7581
+      },
+      "creationDate": "Sat Feb 15 2003 06:28:44 GMT+0300 (Москва, стандартное время)",
+      "area": 254,
+      "roomsNumber": 12,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "elit",
+        "year": 66,
+        "numberOfFloors": 934
+      }
+    },
+    {
+      "id": 92,
+      "name": "laborum",
+      "coordinates": {
+        "x": 144.8135,
+        "y": 49.2377
+      },
+      "creationDate": "Wed May 02 1979 10:37:29 GMT+0300 (Москва, стандартное время)",
+      "area": 255,
+      "roomsNumber": 7,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "eu",
+        "year": 10,
+        "numberOfFloors": 626
+      }
+    },
+    {
+      "id": 93,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 403.3833,
+        "y": 14.5683
+      },
+      "creationDate": "Mon Jan 14 2019 20:54:06 GMT+0300 (Москва, стандартное время)",
+      "area": 381,
+      "roomsNumber": 4,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "pariatur",
+        "year": 41,
+        "numberOfFloors": 500
+      }
+    },
+    {
+      "id": 94,
+      "name": "non",
+      "coordinates": {
+        "x": 233.3253,
+        "y": 67.3036
+      },
+      "creationDate": "Wed Mar 24 1976 07:25:07 GMT+0300 (Москва, стандартное время)",
+      "area": 72,
+      "roomsNumber": 7,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "dolor",
+        "year": 625,
+        "numberOfFloors": 619
+      }
+    },
+    {
+      "id": 95,
+      "name": "exercitation",
+      "coordinates": {
+        "x": 124.5672,
+        "y": 146.7346
+      },
+      "creationDate": "Mon Feb 02 1987 02:12:28 GMT+0300 (Москва, стандартное время)",
+      "area": 391,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "duis",
+        "year": 143,
+        "numberOfFloors": 635
+      }
+    },
+    {
+      "id": 96,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 34.5475,
+        "y": 104.0059
+      },
+      "creationDate": "Thu Jul 12 1979 05:43:38 GMT+0300 (Москва, стандартное время)",
+      "area": 512,
+      "roomsNumber": 15,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "laborum",
+        "year": 64,
+        "numberOfFloors": 16
+      }
+    },
+    {
+      "id": 97,
+      "name": "velit",
+      "coordinates": {
+        "x": 490.178,
+        "y": 24.8533
+      },
+      "creationDate": "Sat Apr 24 1993 15:40:41 GMT+0400 (Москва, летнее время)",
+      "area": 148,
+      "roomsNumber": 6,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "ipsum",
+        "year": 286,
+        "numberOfFloors": 759
+      }
+    },
+    {
+      "id": 98,
+      "name": "quis",
+      "coordinates": {
+        "x": 16.4552,
+        "y": 36.6192
+      },
+      "creationDate": "Sat Feb 26 2000 13:55:09 GMT+0300 (Москва, стандартное время)",
+      "area": 52,
+      "roomsNumber": 12,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "ad",
+        "year": 494,
+        "numberOfFloors": 932
+      }
+    },
+    {
+      "id": 99,
+      "name": "et",
+      "coordinates": {
+        "x": 240.2234,
+        "y": 64.2931
+      },
+      "creationDate": "Fri Nov 30 2018 23:59:06 GMT+0300 (Москва, стандартное время)",
+      "area": 473,
+      "roomsNumber": 17,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "et",
+        "year": 327,
+        "numberOfFloors": 614
+      }
+    },
+    {
+      "id": 100,
+      "name": "proident",
+      "coordinates": {
+        "x": 91.0445,
+        "y": 88.8105
+      },
+      "creationDate": "Thu Apr 13 2006 01:40:07 GMT+0400 (Москва, летнее время)",
+      "area": 111,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "magna",
+        "year": 266,
+        "numberOfFloors": 203
+      }
+    },
+    {
+      "id": 101,
+      "name": "ex",
+      "coordinates": {
+        "x": 331.6339,
+        "y": 121.2851
+      },
+      "creationDate": "Thu Jun 27 2019 13:04:27 GMT+0300 (Москва, стандартное время)",
+      "area": 334,
+      "roomsNumber": 5,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "duis",
+        "year": 482,
+        "numberOfFloors": 892
+      }
+    },
+    {
+      "id": 102,
+      "name": "adipisicing",
+      "coordinates": {
+        "x": 92.8341,
+        "y": 16.5476
+      },
+      "creationDate": "Sat Jun 17 2023 03:45:14 GMT+0300 (Москва, стандартное время)",
+      "area": 369,
+      "roomsNumber": 2,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "dolore",
+        "year": 106,
+        "numberOfFloors": 638
+      }
+    },
+    {
+      "id": 103,
+      "name": "veniam",
+      "coordinates": {
+        "x": 416.9347,
+        "y": 26.7228
+      },
+      "creationDate": "Mon Oct 23 1978 23:56:21 GMT+0300 (Москва, стандартное время)",
+      "area": 216,
+      "roomsNumber": 19,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "laboris",
+        "year": 606,
+        "numberOfFloors": 638
+      }
+    },
+    {
+      "id": 104,
+      "name": "mollit",
+      "coordinates": {
+        "x": 223.7682,
+        "y": 159.7525
+      },
+      "creationDate": "Mon Nov 02 2009 15:55:33 GMT+0300 (Москва, стандартное время)",
+      "area": 93,
+      "roomsNumber": 6,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "qui",
+        "year": 389,
+        "numberOfFloors": 354
+      }
+    },
+    {
+      "id": 105,
+      "name": "mollit",
+      "coordinates": {
+        "x": 320.5888,
+        "y": 25.5472
+      },
+      "creationDate": "Wed Apr 26 1972 01:34:27 GMT+0300 (Москва, стандартное время)",
+      "area": 16,
+      "roomsNumber": 11,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "nisi",
+        "year": 569,
+        "numberOfFloors": 856
+      }
+    },
+    {
+      "id": 106,
+      "name": "ex",
+      "coordinates": {
+        "x": 278.237,
+        "y": 170.1552
+      },
+      "creationDate": "Sun Apr 01 2012 20:03:01 GMT+0400 (Москва, стандартное время)",
+      "area": 353,
+      "roomsNumber": 9,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "enim",
+        "year": 120,
+        "numberOfFloors": 156
+      }
+    },
+    {
+      "id": 107,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 243.4375,
+        "y": 66.8047
+      },
+      "creationDate": "Thu Sep 21 1995 22:14:35 GMT+0400 (Москва, летнее время)",
+      "area": 146,
+      "roomsNumber": 8,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "et",
+        "year": 453,
+        "numberOfFloors": 810
+      }
+    },
+    {
+      "id": 108,
+      "name": "commodo",
+      "coordinates": {
+        "x": 119.0089,
+        "y": 115.1925
+      },
+      "creationDate": "Tue Nov 10 1998 23:39:53 GMT+0300 (Москва, стандартное время)",
+      "area": 407,
+      "roomsNumber": 13,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "amet",
+        "year": 406,
+        "numberOfFloors": 517
+      }
+    },
+    {
+      "id": 109,
+      "name": "minim",
+      "coordinates": {
+        "x": 449.2499,
+        "y": 34.7476
+      },
+      "creationDate": "Fri Sep 07 1973 10:03:02 GMT+0300 (Москва, стандартное время)",
+      "area": 312,
+      "roomsNumber": 17,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "enim",
+        "year": 54,
+        "numberOfFloors": 377
+      }
+    },
+    {
+      "id": 110,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 541.9015,
+        "y": 76.3371
+      },
+      "creationDate": "Thu Oct 06 2022 09:52:22 GMT+0300 (Москва, стандартное время)",
+      "area": 485,
+      "roomsNumber": 4,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "est",
+        "year": 194,
+        "numberOfFloors": 94
+      }
+    },
+    {
+      "id": 111,
+      "name": "elit",
+      "coordinates": {
+        "x": 462.5206,
+        "y": 170.597
+      },
+      "creationDate": "Tue Jul 15 1986 18:15:39 GMT+0400 (Москва, летнее время)",
+      "area": 428,
+      "roomsNumber": 5,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "eu",
+        "year": 475,
+        "numberOfFloors": 19
+      }
+    },
+    {
+      "id": 112,
+      "name": "velit",
+      "coordinates": {
+        "x": 444.1328,
+        "y": 165.3164
+      },
+      "creationDate": "Thu Jun 13 1985 02:34:41 GMT+0400 (Москва, летнее время)",
+      "area": 70,
+      "roomsNumber": 13,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "aute",
+        "year": 149,
+        "numberOfFloors": 274
+      }
+    },
+    {
+      "id": 113,
+      "name": "laboris",
+      "coordinates": {
+        "x": 58.6233,
+        "y": 145.602
+      },
+      "creationDate": "Tue Jan 29 2013 02:33:47 GMT+0400 (Москва, стандартное время)",
+      "area": 105,
+      "roomsNumber": 20,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "exercitation",
+        "year": 181,
+        "numberOfFloors": 731
+      }
+    },
+    {
+      "id": 114,
+      "name": "fugiat",
+      "coordinates": {
+        "x": 148.2514,
+        "y": 131.4206
+      },
+      "creationDate": "Mon Jan 25 2016 05:48:39 GMT+0300 (Москва, стандартное время)",
+      "area": 102,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "in",
+        "year": 352,
+        "numberOfFloors": 458
+      }
+    },
+    {
+      "id": 115,
+      "name": "tempor",
+      "coordinates": {
+        "x": 535.0273,
+        "y": 7.3761
+      },
+      "creationDate": "Sat Dec 11 1971 05:56:58 GMT+0300 (Москва, стандартное время)",
+      "area": 13,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "in",
+        "year": 554,
+        "numberOfFloors": 693
+      }
+    },
+    {
+      "id": 116,
+      "name": "enim",
+      "coordinates": {
+        "x": 324.1524,
+        "y": 127.1369
+      },
+      "creationDate": "Sun Sep 07 2014 16:53:48 GMT+0400 (Москва, стандартное время)",
+      "area": 408,
+      "roomsNumber": 10,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "velit",
+        "year": 235,
+        "numberOfFloors": 7
+      }
+    },
+    {
+      "id": 117,
+      "name": "commodo",
+      "coordinates": {
+        "x": 495.1722,
+        "y": 30.8779
+      },
+      "creationDate": "Sun Oct 30 1988 01:57:49 GMT+0300 (Москва, стандартное время)",
+      "area": 160,
+      "roomsNumber": 1,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "quis",
+        "year": 29,
+        "numberOfFloors": 687
+      }
+    },
+    {
+      "id": 118,
+      "name": "velit",
+      "coordinates": {
+        "x": 464.0904,
+        "y": 2.1578
+      },
+      "creationDate": "Sat Feb 27 2010 18:50:13 GMT+0300 (Москва, стандартное время)",
+      "area": 9,
+      "roomsNumber": 6,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "occaecat",
+        "year": 329,
+        "numberOfFloors": 561
+      }
+    },
+    {
+      "id": 119,
+      "name": "ipsum",
+      "coordinates": {
+        "x": 327.071,
+        "y": 15.4563
+      },
+      "creationDate": "Thu Dec 27 2012 00:10:34 GMT+0400 (Москва, стандартное время)",
+      "area": 374,
+      "roomsNumber": 5,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "eu",
+        "year": 86,
+        "numberOfFloors": 519
+      }
+    },
+    {
+      "id": 120,
+      "name": "dolore",
+      "coordinates": {
+        "x": 306.6691,
+        "y": 166.5138
+      },
+      "creationDate": "Thu Mar 30 1995 23:25:53 GMT+0400 (Москва, летнее время)",
+      "area": 30,
+      "roomsNumber": 15,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "eu",
+        "year": 60,
+        "numberOfFloors": 633
+      }
+    },
+    {
+      "id": 121,
+      "name": "laboris",
+      "coordinates": {
+        "x": 426.8429,
+        "y": 21.9613
+      },
+      "creationDate": "Sat May 31 2014 04:21:33 GMT+0400 (Москва, стандартное время)",
+      "area": 143,
+      "roomsNumber": 5,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "ipsum",
+        "year": 37,
+        "numberOfFloors": 223
+      }
+    },
+    {
+      "id": 122,
+      "name": "aute",
+      "coordinates": {
+        "x": 310.6877,
+        "y": 99.2685
+      },
+      "creationDate": "Mon Nov 21 2005 20:35:19 GMT+0300 (Москва, стандартное время)",
+      "area": 185,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "exercitation",
+        "year": 602,
+        "numberOfFloors": 281
+      }
+    },
+    {
+      "id": 123,
+      "name": "minim",
+      "coordinates": {
+        "x": 420.0166,
+        "y": 121.2956
+      },
+      "creationDate": "Thu Jan 17 1985 11:23:18 GMT+0300 (Москва, стандартное время)",
+      "area": 118,
+      "roomsNumber": 2,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "irure",
+        "year": 621,
+        "numberOfFloors": 255
+      }
+    },
+    {
+      "id": 124,
+      "name": "adipisicing",
+      "coordinates": {
+        "x": 133.8258,
+        "y": 15.9581
+      },
+      "creationDate": "Sat Aug 11 2001 08:15:16 GMT+0400 (Москва, летнее время)",
+      "area": 27,
+      "roomsNumber": 17,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "consequat",
+        "year": 144,
+        "numberOfFloors": 598
+      }
+    },
+    {
+      "id": 125,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 196.2326,
+        "y": 136.0101
+      },
+      "creationDate": "Fri Jun 17 1988 04:31:54 GMT+0400 (Москва, летнее время)",
+      "area": 321,
+      "roomsNumber": 19,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "sit",
+        "year": 263,
+        "numberOfFloors": 179
+      }
+    },
+    {
+      "id": 126,
+      "name": "mollit",
+      "coordinates": {
+        "x": 317.8298,
+        "y": 139.725
+      },
+      "creationDate": "Wed Sep 04 1974 17:52:45 GMT+0300 (Москва, стандартное время)",
+      "area": 240,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "pariatur",
+        "year": 378,
+        "numberOfFloors": 857
+      }
+    },
+    {
+      "id": 127,
+      "name": "Lorem",
+      "coordinates": {
+        "x": 180.7875,
+        "y": 125.3487
+      },
+      "creationDate": "Wed Dec 21 2016 12:22:07 GMT+0300 (Москва, стандартное время)",
+      "area": 179,
+      "roomsNumber": 0,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "tempor",
+        "year": 379,
+        "numberOfFloors": 459
+      }
+    },
+    {
+      "id": 128,
+      "name": "laborum",
+      "coordinates": {
+        "x": 342.161,
+        "y": 118.2938
+      },
+      "creationDate": "Wed Sep 13 2017 22:06:58 GMT+0300 (Москва, стандартное время)",
+      "area": 74,
+      "roomsNumber": 6,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "elit",
+        "year": 210,
+        "numberOfFloors": 546
+      }
+    },
+    {
+      "id": 129,
+      "name": "incididunt",
+      "coordinates": {
+        "x": 327.6042,
+        "y": 121.8661
+      },
+      "creationDate": "Wed Dec 11 1985 09:09:01 GMT+0300 (Москва, стандартное время)",
+      "area": 48,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "magna",
+        "year": 593,
+        "numberOfFloors": 148
+      }
+    },
+    {
+      "id": 130,
+      "name": "non",
+      "coordinates": {
+        "x": 371.6252,
+        "y": 144.2741
+      },
+      "creationDate": "Fri Jul 29 2011 11:04:02 GMT+0400 (Москва, стандартное время)",
+      "area": 425,
+      "roomsNumber": 2,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "Lorem",
+        "year": 83,
+        "numberOfFloors": 583
+      }
+    },
+    {
+      "id": 131,
+      "name": "ut",
+      "coordinates": {
+        "x": 343.7933,
+        "y": 44.1754
+      },
+      "creationDate": "Thu Sep 11 2008 00:36:40 GMT+0400 (Москва, летнее время)",
+      "area": 98,
+      "roomsNumber": 14,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "do",
+        "year": 180,
+        "numberOfFloors": 609
+      }
+    },
+    {
+      "id": 132,
+      "name": "esse",
+      "coordinates": {
+        "x": 467.021,
+        "y": 45.3641
+      },
+      "creationDate": "Wed Sep 27 2023 11:33:35 GMT+0300 (Москва, стандартное время)",
+      "area": 81,
+      "roomsNumber": 8,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "est",
+        "year": 506,
+        "numberOfFloors": 821
+      }
+    },
+    {
+      "id": 133,
+      "name": "ex",
+      "coordinates": {
+        "x": 286.5765,
+        "y": 121.5031
+      },
+      "creationDate": "Thu Aug 14 2014 09:01:58 GMT+0400 (Москва, стандартное время)",
+      "area": 198,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "deserunt",
+        "year": 283,
+        "numberOfFloors": 412
+      }
+    },
+    {
+      "id": 134,
+      "name": "amet",
+      "coordinates": {
+        "x": 518.5848,
+        "y": 13.99
+      },
+      "creationDate": "Sun Sep 30 1990 21:29:37 GMT+0300 (Москва, стандартное время)",
+      "area": 315,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "culpa",
+        "year": 619,
+        "numberOfFloors": 987
+      }
+    },
+    {
+      "id": 135,
+      "name": "velit",
+      "coordinates": {
+        "x": 434.1769,
+        "y": 163.3497
+      },
+      "creationDate": "Fri Feb 01 2013 04:29:16 GMT+0400 (Москва, стандартное время)",
+      "area": 518,
+      "roomsNumber": 18,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "esse",
+        "year": 198,
+        "numberOfFloors": 994
+      }
+    },
+    {
+      "id": 136,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 498.7775,
+        "y": 38.46
+      },
+      "creationDate": "Tue Apr 20 1971 09:39:29 GMT+0300 (Москва, стандартное время)",
+      "area": 247,
+      "roomsNumber": 0,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "cillum",
+        "year": 426,
+        "numberOfFloors": 100
+      }
+    },
+    {
+      "id": 137,
+      "name": "culpa",
+      "coordinates": {
+        "x": 62.2638,
+        "y": 149.7398
+      },
+      "creationDate": "Sat May 14 2016 03:59:20 GMT+0300 (Москва, стандартное время)",
+      "area": 459,
+      "roomsNumber": 5,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "Lorem",
+        "year": 222,
+        "numberOfFloors": 568
+      }
+    },
+    {
+      "id": 138,
+      "name": "anim",
+      "coordinates": {
+        "x": 396.0193,
+        "y": 18.6918
+      },
+      "creationDate": "Fri Aug 30 1985 09:23:09 GMT+0400 (Москва, летнее время)",
+      "area": 477,
+      "roomsNumber": 14,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "aliquip",
+        "year": 518,
+        "numberOfFloors": 58
+      }
+    },
+    {
+      "id": 139,
+      "name": "eu",
+      "coordinates": {
+        "x": 122.3858,
+        "y": 117.8219
+      },
+      "creationDate": "Fri Jul 26 1974 06:09:31 GMT+0300 (Москва, стандартное время)",
+      "area": 310,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "fugiat",
+        "year": 26,
+        "numberOfFloors": 457
+      }
+    },
+    {
+      "id": 140,
+      "name": "ipsum",
+      "coordinates": {
+        "x": 240.875,
+        "y": 9.6664
+      },
+      "creationDate": "Thu May 20 1971 01:21:53 GMT+0300 (Москва, стандартное время)",
+      "area": 183,
+      "roomsNumber": 14,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "dolor",
+        "year": 26,
+        "numberOfFloors": 293
+      }
+    },
+    {
+      "id": 141,
+      "name": "dolore",
+      "coordinates": {
+        "x": 93.4043,
+        "y": 40.8485
+      },
+      "creationDate": "Thu Aug 07 2003 04:19:21 GMT+0400 (Москва, летнее время)",
+      "area": 443,
+      "roomsNumber": 4,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "amet",
+        "year": 52,
+        "numberOfFloors": 951
+      }
+    },
+    {
+      "id": 142,
+      "name": "eiusmod",
+      "coordinates": {
+        "x": 278.8529,
+        "y": 89.8743
+      },
+      "creationDate": "Mon Feb 19 1979 16:49:24 GMT+0300 (Москва, стандартное время)",
+      "area": 45,
+      "roomsNumber": 16,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "excepteur",
+        "year": 446,
+        "numberOfFloors": 110
+      }
+    },
+    {
+      "id": 143,
+      "name": "cillum",
+      "coordinates": {
+        "x": 86.1067,
+        "y": 26.9448
+      },
+      "creationDate": "Thu Sep 21 1978 09:13:40 GMT+0300 (Москва, стандартное время)",
+      "area": 485,
+      "roomsNumber": 15,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "laborum",
+        "year": 319,
+        "numberOfFloors": 716
+      }
+    },
+    {
+      "id": 144,
+      "name": "excepteur",
+      "coordinates": {
+        "x": 191.0018,
+        "y": 48.3961
+      },
+      "creationDate": "Sun Nov 18 1979 03:15:46 GMT+0300 (Москва, стандартное время)",
+      "area": 13,
+      "roomsNumber": 11,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "consectetur",
+        "year": 475,
+        "numberOfFloors": 720
+      }
+    },
+    {
+      "id": 145,
+      "name": "duis",
+      "coordinates": {
+        "x": 475.4137,
+        "y": 160.9888
+      },
+      "creationDate": "Sat Nov 05 2005 01:22:51 GMT+0300 (Москва, стандартное время)",
+      "area": 170,
+      "roomsNumber": 9,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "proident",
+        "year": 474,
+        "numberOfFloors": 12
+      }
+    },
+    {
+      "id": 146,
+      "name": "qui",
+      "coordinates": {
+        "x": 90.6183,
+        "y": 157.5821
+      },
+      "creationDate": "Tue Nov 10 2020 17:58:16 GMT+0300 (Москва, стандартное время)",
+      "area": 177,
+      "roomsNumber": 18,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "deserunt",
+        "year": 16,
+        "numberOfFloors": 338
+      }
+    },
+    {
+      "id": 147,
+      "name": "laborum",
+      "coordinates": {
+        "x": 517.2693,
+        "y": 29.6877
+      },
+      "creationDate": "Wed Sep 02 2009 11:06:14 GMT+0400 (Москва, летнее время)",
+      "area": 455,
+      "roomsNumber": 15,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "amet",
+        "year": 267,
+        "numberOfFloors": 762
+      }
+    },
+    {
+      "id": 148,
+      "name": "in",
+      "coordinates": {
+        "x": 152.7374,
+        "y": 91.6662
+      },
+      "creationDate": "Tue Oct 02 1984 19:36:40 GMT+0300 (Москва, стандартное время)",
+      "area": 244,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "incididunt",
+        "year": 0,
+        "numberOfFloors": 914
+      }
+    },
+    {
+      "id": 149,
+      "name": "non",
+      "coordinates": {
+        "x": 50.6503,
+        "y": 148.3554
+      },
+      "creationDate": "Mon Sep 24 2012 23:12:43 GMT+0400 (Москва, стандартное время)",
+      "area": 149,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "duis",
+        "year": 112,
+        "numberOfFloors": 648
+      }
+    },
+    {
+      "id": 150,
+      "name": "mollit",
+      "coordinates": {
+        "x": 95.6178,
+        "y": 28.2565
+      },
+      "creationDate": "Wed Apr 22 2020 01:11:10 GMT+0300 (Москва, стандартное время)",
+      "area": 314,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "veniam",
+        "year": 344,
+        "numberOfFloors": 879
+      }
+    },
+    {
+      "id": 151,
+      "name": "adipisicing",
+      "coordinates": {
+        "x": 469.9713,
+        "y": 94.1932
+      },
+      "creationDate": "Tue Jun 13 2000 22:40:21 GMT+0400 (Москва, летнее время)",
+      "area": 37,
+      "roomsNumber": 2,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "duis",
+        "year": 580,
+        "numberOfFloors": 456
+      }
+    },
+    {
+      "id": 152,
+      "name": "labore",
+      "coordinates": {
+        "x": 140.9779,
+        "y": 84.3646
+      },
+      "creationDate": "Sat Dec 09 2017 12:09:26 GMT+0300 (Москва, стандартное время)",
+      "area": 41,
+      "roomsNumber": 8,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "qui",
+        "year": 435,
+        "numberOfFloors": 441
+      }
+    },
+    {
+      "id": 153,
+      "name": "ea",
+      "coordinates": {
+        "x": 270.7377,
+        "y": 134.4067
+      },
+      "creationDate": "Fri Jun 14 1974 15:09:50 GMT+0300 (Москва, стандартное время)",
+      "area": 150,
+      "roomsNumber": 10,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "pariatur",
+        "year": 214,
+        "numberOfFloors": 66
+      }
+    },
+    {
+      "id": 154,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 270.1262,
+        "y": 167.0097
+      },
+      "creationDate": "Tue Dec 27 2022 15:39:43 GMT+0300 (Москва, стандартное время)",
+      "area": 426,
+      "roomsNumber": 8,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "magna",
+        "year": 393,
+        "numberOfFloors": 403
+      }
+    },
+    {
+      "id": 155,
+      "name": "ea",
+      "coordinates": {
+        "x": 293.0967,
+        "y": 129.764
+      },
+      "creationDate": "Thu May 14 1992 20:14:14 GMT+0400 (Москва, летнее время)",
+      "area": 32,
+      "roomsNumber": 9,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "sint",
+        "year": 446,
+        "numberOfFloors": 42
+      }
+    },
+    {
+      "id": 156,
+      "name": "Lorem",
+      "coordinates": {
+        "x": 413.0716,
+        "y": 79.9143
+      },
+      "creationDate": "Sat Nov 14 1998 05:39:44 GMT+0300 (Москва, стандартное время)",
+      "area": 252,
+      "roomsNumber": 12,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ut",
+        "year": 605,
+        "numberOfFloors": 789
+      }
+    },
+    {
+      "id": 157,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 271.3438,
+        "y": 26.8739
+      },
+      "creationDate": "Thu Feb 14 2002 04:15:53 GMT+0300 (Москва, стандартное время)",
+      "area": 191,
+      "roomsNumber": 15,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "nulla",
+        "year": 188,
+        "numberOfFloors": 387
+      }
+    },
+    {
+      "id": 158,
+      "name": "id",
+      "coordinates": {
+        "x": 451.2152,
+        "y": 56.8119
+      },
+      "creationDate": "Wed Dec 08 1976 01:23:34 GMT+0300 (Москва, стандартное время)",
+      "area": 174,
+      "roomsNumber": 15,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "exercitation",
+        "year": 571,
+        "numberOfFloors": 883
+      }
+    },
+    {
+      "id": 159,
+      "name": "est",
+      "coordinates": {
+        "x": 533.015,
+        "y": 32.3747
+      },
+      "creationDate": "Tue Mar 01 2005 16:30:05 GMT+0300 (Москва, стандартное время)",
+      "area": 43,
+      "roomsNumber": 2,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "tempor",
+        "year": 458,
+        "numberOfFloors": 675
+      }
+    },
+    {
+      "id": 160,
+      "name": "in",
+      "coordinates": {
+        "x": 489.5241,
+        "y": 99.1896
+      },
+      "creationDate": "Tue Dec 18 2012 23:52:04 GMT+0400 (Москва, стандартное время)",
+      "area": 287,
+      "roomsNumber": 10,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "nulla",
+        "year": 273,
+        "numberOfFloors": 893
+      }
+    },
+    {
+      "id": 161,
+      "name": "tempor",
+      "coordinates": {
+        "x": 545.6635,
+        "y": 63.5116
+      },
+      "creationDate": "Sun Nov 07 1976 21:32:35 GMT+0300 (Москва, стандартное время)",
+      "area": 496,
+      "roomsNumber": 17,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "sunt",
+        "year": 457,
+        "numberOfFloors": 123
+      }
+    },
+    {
+      "id": 162,
+      "name": "qui",
+      "coordinates": {
+        "x": 390.7218,
+        "y": 77.2483
+      },
+      "creationDate": "Sun May 03 1981 16:51:19 GMT+0400 (Москва, летнее время)",
+      "area": 359,
+      "roomsNumber": 0,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "laboris",
+        "year": 344,
+        "numberOfFloors": 313
+      }
+    },
+    {
+      "id": 163,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 213.5222,
+        "y": 150.2722
+      },
+      "creationDate": "Tue Jun 23 1992 13:54:47 GMT+0400 (Москва, летнее время)",
+      "area": 192,
+      "roomsNumber": 5,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "pariatur",
+        "year": 617,
+        "numberOfFloors": 528
+      }
+    },
+    {
+      "id": 164,
+      "name": "qui",
+      "coordinates": {
+        "x": 394.6297,
+        "y": 104.1183
+      },
+      "creationDate": "Wed Mar 15 1972 15:12:29 GMT+0300 (Москва, стандартное время)",
+      "area": 285,
+      "roomsNumber": 5,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "proident",
+        "year": 428,
+        "numberOfFloors": 547
+      }
+    },
+    {
+      "id": 165,
+      "name": "commodo",
+      "coordinates": {
+        "x": 484.3999,
+        "y": 35.4653
+      },
+      "creationDate": "Sun May 30 2021 03:54:08 GMT+0300 (Москва, стандартное время)",
+      "area": 491,
+      "roomsNumber": 13,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "in",
+        "year": 161,
+        "numberOfFloors": 792
+      }
+    },
+    {
+      "id": 166,
+      "name": "consequat",
+      "coordinates": {
+        "x": 76.6019,
+        "y": 106.7133
+      },
+      "creationDate": "Tue Jan 12 2010 07:43:15 GMT+0300 (Москва, стандартное время)",
+      "area": 268,
+      "roomsNumber": 10,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "aliqua",
+        "year": 395,
+        "numberOfFloors": 910
+      }
+    },
+    {
+      "id": 167,
+      "name": "non",
+      "coordinates": {
+        "x": 379.1826,
+        "y": 64.9741
+      },
+      "creationDate": "Sat Apr 24 2021 16:38:45 GMT+0300 (Москва, стандартное время)",
+      "area": 116,
+      "roomsNumber": 4,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "ut",
+        "year": 456,
+        "numberOfFloors": 128
+      }
+    },
+    {
+      "id": 168,
+      "name": "dolor",
+      "coordinates": {
+        "x": 11.226,
+        "y": 132.0327
+      },
+      "creationDate": "Tue Nov 04 1975 19:09:50 GMT+0300 (Москва, стандартное время)",
+      "area": 452,
+      "roomsNumber": 5,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "irure",
+        "year": 620,
+        "numberOfFloors": 198
+      }
+    },
+    {
+      "id": 169,
+      "name": "et",
+      "coordinates": {
+        "x": 535.3935,
+        "y": 172.7408
+      },
+      "creationDate": "Sat Jun 27 2009 00:31:07 GMT+0400 (Москва, летнее время)",
+      "area": 325,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "id",
+        "year": 117,
+        "numberOfFloors": 662
+      }
+    },
+    {
+      "id": 170,
+      "name": "consequat",
+      "coordinates": {
+        "x": 172.5383,
+        "y": 30.7682
+      },
+      "creationDate": "Fri Mar 26 1999 06:53:26 GMT+0300 (Москва, стандартное время)",
+      "area": 512,
+      "roomsNumber": 17,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "consequat",
+        "year": 631,
+        "numberOfFloors": 319
+      }
+    },
+    {
+      "id": 171,
+      "name": "proident",
+      "coordinates": {
+        "x": 152.8075,
+        "y": 14.693
+      },
+      "creationDate": "Wed Dec 03 1980 09:40:33 GMT+0300 (Москва, стандартное время)",
+      "area": 491,
+      "roomsNumber": 15,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "adipisicing",
+        "year": 259,
+        "numberOfFloors": 486
+      }
+    },
+    {
+      "id": 172,
+      "name": "eiusmod",
+      "coordinates": {
+        "x": 145.2397,
+        "y": 9.3708
+      },
+      "creationDate": "Thu Apr 06 2006 07:01:53 GMT+0400 (Москва, летнее время)",
+      "area": 176,
+      "roomsNumber": 18,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "eiusmod",
+        "year": 266,
+        "numberOfFloors": 464
+      }
+    },
+    {
+      "id": 173,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 96.2867,
+        "y": 130.8751
+      },
+      "creationDate": "Wed Jan 17 2007 00:13:04 GMT+0300 (Москва, стандартное время)",
+      "area": 410,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "voluptate",
+        "year": 631,
+        "numberOfFloors": 839
+      }
+    },
+    {
+      "id": 174,
+      "name": "exercitation",
+      "coordinates": {
+        "x": 161.7489,
+        "y": 26.1551
+      },
+      "creationDate": "Wed Dec 13 1978 11:18:39 GMT+0300 (Москва, стандартное время)",
+      "area": 9,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "occaecat",
+        "year": 506,
+        "numberOfFloors": 367
+      }
+    },
+    {
+      "id": 175,
+      "name": "dolore",
+      "coordinates": {
+        "x": 350.2034,
+        "y": 120.9249
+      },
+      "creationDate": "Tue Dec 30 2003 06:44:07 GMT+0300 (Москва, стандартное время)",
+      "area": 147,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "aute",
+        "year": 175,
+        "numberOfFloors": 493
+      }
+    },
+    {
+      "id": 176,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 432.5169,
+        "y": 46.9387
+      },
+      "creationDate": "Fri Nov 03 1995 20:54:58 GMT+0300 (Москва, стандартное время)",
+      "area": 87,
+      "roomsNumber": 18,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "enim",
+        "year": 516,
+        "numberOfFloors": 496
+      }
+    },
+    {
+      "id": 177,
+      "name": "proident",
+      "coordinates": {
+        "x": 373.4005,
+        "y": 148.4056
+      },
+      "creationDate": "Mon Feb 03 1975 13:40:18 GMT+0300 (Москва, стандартное время)",
+      "area": 81,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "aute",
+        "year": 61,
+        "numberOfFloors": 765
+      }
+    },
+    {
+      "id": 178,
+      "name": "mollit",
+      "coordinates": {
+        "x": 447.8306,
+        "y": 151.347
+      },
+      "creationDate": "Sat Apr 04 2015 08:44:51 GMT+0300 (Москва, стандартное время)",
+      "area": 366,
+      "roomsNumber": 5,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "labore",
+        "year": 17,
+        "numberOfFloors": 524
+      }
+    },
+    {
+      "id": 179,
+      "name": "officia",
+      "coordinates": {
+        "x": 294.7923,
+        "y": 64.0409
+      },
+      "creationDate": "Sat Feb 18 1995 13:36:04 GMT+0300 (Москва, стандартное время)",
+      "area": 521,
+      "roomsNumber": 12,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "cillum",
+        "year": 480,
+        "numberOfFloors": 861
+      }
+    },
+    {
+      "id": 180,
+      "name": "mollit",
+      "coordinates": {
+        "x": 444.0198,
+        "y": 48.7199
+      },
+      "creationDate": "Sat Nov 20 1993 22:33:04 GMT+0300 (Москва, стандартное время)",
+      "area": 151,
+      "roomsNumber": 10,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "laboris",
+        "year": 220,
+        "numberOfFloors": 415
+      }
+    },
+    {
+      "id": 181,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 543.4979,
+        "y": 20.4103
+      },
+      "creationDate": "Sun Nov 07 1993 01:56:15 GMT+0300 (Москва, стандартное время)",
+      "area": 71,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "ea",
+        "year": 364,
+        "numberOfFloors": 376
+      }
+    },
+    {
+      "id": 182,
+      "name": "ipsum",
+      "coordinates": {
+        "x": 136.3005,
+        "y": 108.5276
+      },
+      "creationDate": "Thu Jul 29 1971 13:41:03 GMT+0300 (Москва, стандартное время)",
+      "area": 400,
+      "roomsNumber": 0,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "esse",
+        "year": 189,
+        "numberOfFloors": 588
+      }
+    },
+    {
+      "id": 183,
+      "name": "eiusmod",
+      "coordinates": {
+        "x": 483.7712,
+        "y": 79.7277
+      },
+      "creationDate": "Mon Dec 16 2019 09:24:35 GMT+0300 (Москва, стандартное время)",
+      "area": 440,
+      "roomsNumber": 10,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "NONE",
+      "house": {
+        "name": "eu",
+        "year": 406,
+        "numberOfFloors": 483
+      }
+    },
+    {
+      "id": 184,
+      "name": "tempor",
+      "coordinates": {
+        "x": 522.3548,
+        "y": 78.4087
+      },
+      "creationDate": "Thu Dec 18 2008 17:06:15 GMT+0300 (Москва, стандартное время)",
+      "area": 513,
+      "roomsNumber": 17,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "ullamco",
+        "year": 556,
+        "numberOfFloors": 351
+      }
+    },
+    {
+      "id": 185,
+      "name": "in",
+      "coordinates": {
+        "x": 240.3857,
+        "y": 63.9752
+      },
+      "creationDate": "Sat Jan 09 1999 19:56:28 GMT+0300 (Москва, стандартное время)",
+      "area": 335,
+      "roomsNumber": 15,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "mollit",
+        "year": 419,
+        "numberOfFloors": 348
+      }
+    },
+    {
+      "id": 186,
+      "name": "cupidatat",
+      "coordinates": {
+        "x": 94.5008,
+        "y": 177.059
+      },
+      "creationDate": "Sat May 26 2007 23:11:29 GMT+0400 (Москва, летнее время)",
+      "area": 382,
+      "roomsNumber": 3,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "aute",
+        "year": 490,
+        "numberOfFloors": 301
+      }
+    },
+    {
+      "id": 187,
+      "name": "culpa",
+      "coordinates": {
+        "x": 482.5663,
+        "y": 122.3323
+      },
+      "creationDate": "Sun Feb 28 1982 06:52:26 GMT+0300 (Москва, стандартное время)",
+      "area": 486,
+      "roomsNumber": 18,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "nostrud",
+        "year": 554,
+        "numberOfFloors": 278
+      }
+    },
+    {
+      "id": 188,
+      "name": "anim",
+      "coordinates": {
+        "x": 506.4102,
+        "y": 174.5865
+      },
+      "creationDate": "Sat Jan 26 2008 16:48:04 GMT+0300 (Москва, стандартное время)",
+      "area": 445,
+      "roomsNumber": 4,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "laborum",
+        "year": 78,
+        "numberOfFloors": 551
+      }
+    },
+    {
+      "id": 189,
+      "name": "exercitation",
+      "coordinates": {
+        "x": 246.781,
+        "y": 47.3847
+      },
+      "creationDate": "Sat Aug 22 1998 02:27:58 GMT+0400 (Москва, летнее время)",
+      "area": 476,
+      "roomsNumber": 2,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "nostrud",
+        "year": 288,
+        "numberOfFloors": 723
+      }
+    },
+    {
+      "id": 190,
+      "name": "voluptate",
+      "coordinates": {
+        "x": 363.4564,
+        "y": 131.5504
+      },
+      "creationDate": "Tue Apr 27 1976 16:58:11 GMT+0300 (Москва, стандартное время)",
+      "area": 504,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "quis",
+        "year": 538,
+        "numberOfFloors": 703
+      }
+    },
+    {
+      "id": 191,
+      "name": "ex",
+      "coordinates": {
+        "x": 205.5386,
+        "y": 57.4347
+      },
+      "creationDate": "Mon Nov 12 1984 00:18:02 GMT+0300 (Москва, стандартное время)",
+      "area": 504,
+      "roomsNumber": 4,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "ipsum",
+        "year": 304,
+        "numberOfFloors": 851
+      }
+    },
+    {
+      "id": 192,
+      "name": "mollit",
+      "coordinates": {
+        "x": 266.7341,
+        "y": 99.8225
+      },
+      "creationDate": "Mon Feb 15 1999 11:35:21 GMT+0300 (Москва, стандартное время)",
+      "area": 271,
+      "roomsNumber": 12,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "Lorem",
+        "year": 282,
+        "numberOfFloors": 570
+      }
+    },
+    {
+      "id": 193,
+      "name": "duis",
+      "coordinates": {
+        "x": 181.9411,
+        "y": 49.9701
+      },
+      "creationDate": "Sun Apr 05 1992 09:31:42 GMT+0400 (Москва, летнее время)",
+      "area": 150,
+      "roomsNumber": 9,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "nulla",
+        "year": 246,
+        "numberOfFloors": 72
+      }
+    },
+    {
+      "id": 194,
+      "name": "labore",
+      "coordinates": {
+        "x": 194.8898,
+        "y": 72.7868
+      },
+      "creationDate": "Thu Apr 04 1985 07:34:09 GMT+0400 (Москва, летнее время)",
+      "area": 471,
+      "roomsNumber": 2,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "ea",
+        "year": 568,
+        "numberOfFloors": 515
+      }
+    },
+    {
+      "id": 195,
+      "name": "tempor",
+      "coordinates": {
+        "x": 322.7543,
+        "y": 117.0882
+      },
+      "creationDate": "Sun Oct 31 1982 01:43:47 GMT+0300 (Москва, стандартное время)",
+      "area": 442,
+      "roomsNumber": 20,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "consectetur",
+        "year": 71,
+        "numberOfFloors": 932
+      }
+    },
+    {
+      "id": 196,
+      "name": "veniam",
+      "coordinates": {
+        "x": 88.2049,
+        "y": 82.7896
+      },
+      "creationDate": "Tue Jun 14 1983 00:13:06 GMT+0400 (Москва, летнее время)",
+      "area": 158,
+      "roomsNumber": 15,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "anim",
+        "year": 503,
+        "numberOfFloors": 252
+      }
+    },
+    {
+      "id": 197,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 531.4244,
+        "y": 103.7698
+      },
+      "creationDate": "Sun Mar 06 1988 18:26:03 GMT+0300 (Москва, стандартное время)",
+      "area": 66,
+      "roomsNumber": 20,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "nulla",
+        "year": 356,
+        "numberOfFloors": 102
+      }
+    },
+    {
+      "id": 198,
+      "name": "aliquip",
+      "coordinates": {
+        "x": 239.1064,
+        "y": 127.1959
+      },
+      "creationDate": "Sat Sep 23 1995 06:43:07 GMT+0400 (Москва, летнее время)",
+      "area": 241,
+      "roomsNumber": 8,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "sint",
+        "year": 396,
+        "numberOfFloors": 802
+      }
+    },
+    {
+      "id": 199,
+      "name": "nulla",
+      "coordinates": {
+        "x": 291.9724,
+        "y": 67.8915
+      },
+      "creationDate": "Thu Dec 30 2004 20:31:23 GMT+0300 (Москва, стандартное время)",
+      "area": 147,
+      "roomsNumber": 9,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "tempor",
+        "year": 386,
+        "numberOfFloors": 983
+      }
+    },
+    {
+      "id": 200,
+      "name": "veniam",
+      "coordinates": {
+        "x": 101.362,
+        "y": 92.4464
+      },
+      "creationDate": "Sat Dec 02 1989 11:21:48 GMT+0300 (Москва, стандартное время)",
+      "area": 168,
+      "roomsNumber": 6,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "culpa",
+        "year": 80,
+        "numberOfFloors": 602
+      }
+    },
+    {
+      "id": 201,
+      "name": "aliquip",
+      "coordinates": {
+        "x": 199.7781,
+        "y": 127.9766
+      },
+      "creationDate": "Tue Jan 15 2008 07:08:27 GMT+0300 (Москва, стандартное время)",
+      "area": 19,
+      "roomsNumber": 20,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "aliqua",
+        "year": 631,
+        "numberOfFloors": 507
+      }
+    },
+    {
+      "id": 202,
+      "name": "irure",
+      "coordinates": {
+        "x": 385.8202,
+        "y": 2.392
+      },
+      "creationDate": "Sat Jun 26 2004 08:16:16 GMT+0400 (Москва, летнее время)",
+      "area": 187,
+      "roomsNumber": 9,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "id",
+        "year": 257,
+        "numberOfFloors": 507
+      }
+    },
+    {
+      "id": 203,
+      "name": "eu",
+      "coordinates": {
+        "x": 247.5412,
+        "y": 151.2558
+      },
+      "creationDate": "Sun Jul 27 1986 16:40:18 GMT+0400 (Москва, летнее время)",
+      "area": 44,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "commodo",
+        "year": 95,
+        "numberOfFloors": 738
+      }
+    },
+    {
+      "id": 204,
+      "name": "ea",
+      "coordinates": {
+        "x": 189.7356,
+        "y": 170.5938
+      },
+      "creationDate": "Fri Aug 22 2008 22:31:19 GMT+0400 (Москва, летнее время)",
+      "area": 413,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "ea",
+        "year": 410,
+        "numberOfFloors": 843
+      }
+    },
+    {
+      "id": 205,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 132.5921,
+        "y": 46.9425
+      },
+      "creationDate": "Thu Feb 28 2008 09:17:18 GMT+0300 (Москва, стандартное время)",
+      "area": 123,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "et",
+        "year": 567,
+        "numberOfFloors": 134
+      }
+    },
+    {
+      "id": 206,
+      "name": "ea",
+      "coordinates": {
+        "x": 322.2687,
+        "y": 60.7989
+      },
+      "creationDate": "Sun Feb 19 1978 23:55:54 GMT+0300 (Москва, стандартное время)",
+      "area": 480,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "anim",
+        "year": 553,
+        "numberOfFloors": 308
+      }
+    },
+    {
+      "id": 207,
+      "name": "tempor",
+      "coordinates": {
+        "x": 251.4435,
+        "y": 85.9425
+      },
+      "creationDate": "Fri Mar 06 1992 16:03:50 GMT+0300 (Москва, стандартное время)",
+      "area": 183,
+      "roomsNumber": 0,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "anim",
+        "year": 424,
+        "numberOfFloors": 253
+      }
+    },
+    {
+      "id": 208,
+      "name": "officia",
+      "coordinates": {
+        "x": 49.0447,
+        "y": 129.968
+      },
+      "creationDate": "Fri Sep 19 2003 11:01:59 GMT+0400 (Москва, летнее время)",
+      "area": 183,
+      "roomsNumber": 12,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "non",
+        "year": 586,
+        "numberOfFloors": 349
+      }
+    },
+    {
+      "id": 209,
+      "name": "excepteur",
+      "coordinates": {
+        "x": 192.4924,
+        "y": 58.4829
+      },
+      "creationDate": "Sat Nov 06 1971 11:46:13 GMT+0300 (Москва, стандартное время)",
+      "area": 289,
+      "roomsNumber": 6,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "proident",
+        "year": 22,
+        "numberOfFloors": 764
+      }
+    },
+    {
+      "id": 210,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 63.0339,
+        "y": 117.7911
+      },
+      "creationDate": "Wed Jul 28 1993 04:01:48 GMT+0400 (Москва, летнее время)",
+      "area": 445,
+      "roomsNumber": 19,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "do",
+        "year": 158,
+        "numberOfFloors": 757
+      }
+    },
+    {
+      "id": 211,
+      "name": "eu",
+      "coordinates": {
+        "x": 281.7221,
+        "y": 14.1611
+      },
+      "creationDate": "Tue May 21 1985 21:40:52 GMT+0400 (Москва, летнее время)",
+      "area": 101,
+      "roomsNumber": 14,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "enim",
+        "year": 634,
+        "numberOfFloors": 59
+      }
+    },
+    {
+      "id": 212,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 459.1685,
+        "y": 178.1743
+      },
+      "creationDate": "Fri Jul 16 2010 06:26:40 GMT+0400 (Москва, летнее время)",
+      "area": 383,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "sint",
+        "year": 191,
+        "numberOfFloors": 839
+      }
+    },
+    {
+      "id": 213,
+      "name": "proident",
+      "coordinates": {
+        "x": 427.8198,
+        "y": 97.2694
+      },
+      "creationDate": "Sat Nov 01 1975 08:21:55 GMT+0300 (Москва, стандартное время)",
+      "area": 167,
+      "roomsNumber": 14,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ullamco",
+        "year": 414,
+        "numberOfFloors": 148
+      }
+    },
+    {
+      "id": 214,
+      "name": "minim",
+      "coordinates": {
+        "x": 148.2921,
+        "y": 25.6295
+      },
+      "creationDate": "Sun Jul 17 2005 22:41:22 GMT+0400 (Москва, летнее время)",
+      "area": 170,
+      "roomsNumber": 1,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "incididunt",
+        "year": 563,
+        "numberOfFloors": 590
+      }
+    },
+    {
+      "id": 215,
+      "name": "culpa",
+      "coordinates": {
+        "x": 530.8679,
+        "y": 42.3136
+      },
+      "creationDate": "Wed Apr 21 1976 10:46:46 GMT+0300 (Москва, стандартное время)",
+      "area": 396,
+      "roomsNumber": 18,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "deserunt",
+        "year": 31,
+        "numberOfFloors": 446
+      }
+    },
+    {
+      "id": 216,
+      "name": "id",
+      "coordinates": {
+        "x": 192.8863,
+        "y": 94.5506
+      },
+      "creationDate": "Sun Feb 03 1980 23:49:45 GMT+0300 (Москва, стандартное время)",
+      "area": 314,
+      "roomsNumber": 10,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "excepteur",
+        "year": 200,
+        "numberOfFloors": 636
+      }
+    },
+    {
+      "id": 217,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 497.8025,
+        "y": 0.9035
+      },
+      "creationDate": "Fri Nov 26 2021 17:43:06 GMT+0300 (Москва, стандартное время)",
+      "area": 217,
+      "roomsNumber": 15,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "cillum",
+        "year": 356,
+        "numberOfFloors": 767
+      }
+    },
+    {
+      "id": 218,
+      "name": "in",
+      "coordinates": {
+        "x": 363.9331,
+        "y": 51.6862
+      },
+      "creationDate": "Thu Oct 13 1977 15:32:32 GMT+0300 (Москва, стандартное время)",
+      "area": 467,
+      "roomsNumber": 7,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "et",
+        "year": 374,
+        "numberOfFloors": 992
+      }
+    },
+    {
+      "id": 219,
+      "name": "id",
+      "coordinates": {
+        "x": 81.5244,
+        "y": 40.2965
+      },
+      "creationDate": "Sat Sep 17 1988 01:37:03 GMT+0400 (Москва, летнее время)",
+      "area": 16,
+      "roomsNumber": 5,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ut",
+        "year": 122,
+        "numberOfFloors": 325
+      }
+    },
+    {
+      "id": 220,
+      "name": "aute",
+      "coordinates": {
+        "x": 36.5636,
+        "y": 164.4371
+      },
+      "creationDate": "Sat Sep 13 2008 07:50:40 GMT+0400 (Москва, летнее время)",
+      "area": 336,
+      "roomsNumber": 20,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "ea",
+        "year": 172,
+        "numberOfFloors": 19
+      }
+    },
+    {
+      "id": 221,
+      "name": "enim",
+      "coordinates": {
+        "x": 351.6053,
+        "y": 126.7441
+      },
+      "creationDate": "Wed Jan 14 1998 19:11:01 GMT+0300 (Москва, стандартное время)",
+      "area": 419,
+      "roomsNumber": 1,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "proident",
+        "year": 334,
+        "numberOfFloors": 430
+      }
+    },
+    {
+      "id": 222,
+      "name": "ut",
+      "coordinates": {
+        "x": 316.4518,
+        "y": 135.8723
+      },
+      "creationDate": "Fri Apr 29 2011 01:43:34 GMT+0400 (Москва, стандартное время)",
+      "area": 153,
+      "roomsNumber": 8,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "cillum",
+        "year": 366,
+        "numberOfFloors": 906
+      }
+    },
+    {
+      "id": 223,
+      "name": "quis",
+      "coordinates": {
+        "x": 106.6382,
+        "y": 54.7043
+      },
+      "creationDate": "Mon Aug 21 1995 10:56:17 GMT+0400 (Москва, летнее время)",
+      "area": 30,
+      "roomsNumber": 6,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "pariatur",
+        "year": 428,
+        "numberOfFloors": 374
+      }
+    },
+    {
+      "id": 224,
+      "name": "laborum",
+      "coordinates": {
+        "x": 371.2708,
+        "y": 131.8862
+      },
+      "creationDate": "Sun Nov 22 2015 03:09:12 GMT+0300 (Москва, стандартное время)",
+      "area": 125,
+      "roomsNumber": 14,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "in",
+        "year": 489,
+        "numberOfFloors": 775
+      }
+    },
+    {
+      "id": 225,
+      "name": "magna",
+      "coordinates": {
+        "x": 151.525,
+        "y": 64.5779
+      },
+      "creationDate": "Fri Jan 25 1974 23:17:44 GMT+0300 (Москва, стандартное время)",
+      "area": 221,
+      "roomsNumber": 6,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "anim",
+        "year": 200,
+        "numberOfFloors": 214
+      }
+    },
+    {
+      "id": 226,
+      "name": "id",
+      "coordinates": {
+        "x": 269.4085,
+        "y": 27.8737
+      },
+      "creationDate": "Sat Jun 23 2018 21:57:05 GMT+0300 (Москва, стандартное время)",
+      "area": 217,
+      "roomsNumber": 5,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "aliqua",
+        "year": 4,
+        "numberOfFloors": 177
+      }
+    },
+    {
+      "id": 227,
+      "name": "laborum",
+      "coordinates": {
+        "x": 528.5837,
+        "y": 88.2841
+      },
+      "creationDate": "Mon Jan 13 1986 08:48:03 GMT+0300 (Москва, стандартное время)",
+      "area": 392,
+      "roomsNumber": 1,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "reprehenderit",
+        "year": 380,
+        "numberOfFloors": 87
+      }
+    },
+    {
+      "id": 228,
+      "name": "consequat",
+      "coordinates": {
+        "x": 274.314,
+        "y": 106.8018
+      },
+      "creationDate": "Sun Mar 26 2000 18:34:45 GMT+0400 (Москва, летнее время)",
+      "area": 296,
+      "roomsNumber": 14,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "in",
+        "year": 441,
+        "numberOfFloors": 248
+      }
+    },
+    {
+      "id": 229,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 8.1998,
+        "y": 36.7624
+      },
+      "creationDate": "Mon May 01 1995 16:08:31 GMT+0400 (Москва, летнее время)",
+      "area": 179,
+      "roomsNumber": 9,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "nulla",
+        "year": 165,
+        "numberOfFloors": 248
+      }
+    },
+    {
+      "id": 230,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 403.6805,
+        "y": 161.6475
+      },
+      "creationDate": "Thu Mar 28 1991 23:44:13 GMT+0300 (Москва, стандартное время)",
+      "area": 450,
+      "roomsNumber": 1,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "qui",
+        "year": 48,
+        "numberOfFloors": 824
+      }
+    },
+    {
+      "id": 231,
+      "name": "ullamco",
+      "coordinates": {
+        "x": 188.8348,
+        "y": 123.2161
+      },
+      "creationDate": "Sat Dec 22 2018 12:48:38 GMT+0300 (Москва, стандартное время)",
+      "area": 515,
+      "roomsNumber": 17,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "quis",
+        "year": 15,
+        "numberOfFloors": 50
+      }
+    },
+    {
+      "id": 232,
+      "name": "ex",
+      "coordinates": {
+        "x": 211.3531,
+        "y": 43.647
+      },
+      "creationDate": "Sat Apr 17 2010 12:56:46 GMT+0400 (Москва, летнее время)",
+      "area": 128,
+      "roomsNumber": 2,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "irure",
+        "year": 42,
+        "numberOfFloors": 875
+      }
+    },
+    {
+      "id": 233,
+      "name": "officia",
+      "coordinates": {
+        "x": 243.8026,
+        "y": 46.7952
+      },
+      "creationDate": "Thu Apr 18 2002 20:37:41 GMT+0400 (Москва, летнее время)",
+      "area": 106,
+      "roomsNumber": 18,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "ea",
+        "year": 315,
+        "numberOfFloors": 961
+      }
+    },
+    {
+      "id": 234,
+      "name": "veniam",
+      "coordinates": {
+        "x": 274.2384,
+        "y": 163.9975
+      },
+      "creationDate": "Mon Mar 28 2016 12:58:58 GMT+0300 (Москва, стандартное время)",
+      "area": 206,
+      "roomsNumber": 7,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "irure",
+        "year": 250,
+        "numberOfFloors": 774
+      }
+    },
+    {
+      "id": 235,
+      "name": "minim",
+      "coordinates": {
+        "x": 289.9027,
+        "y": 162.598
+      },
+      "creationDate": "Sun Sep 01 2013 17:11:14 GMT+0400 (Москва, стандартное время)",
+      "area": 241,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "nisi",
+        "year": 349,
+        "numberOfFloors": 634
+      }
+    },
+    {
+      "id": 236,
+      "name": "fugiat",
+      "coordinates": {
+        "x": 298.1604,
+        "y": 74.0321
+      },
+      "creationDate": "Sat Jul 15 1972 00:42:49 GMT+0300 (Москва, стандартное время)",
+      "area": 189,
+      "roomsNumber": 16,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "deserunt",
+        "year": 399,
+        "numberOfFloors": 371
+      }
+    },
+    {
+      "id": 237,
+      "name": "veniam",
+      "coordinates": {
+        "x": 450.264,
+        "y": 84.6567
+      },
+      "creationDate": "Fri Jan 04 2013 09:04:47 GMT+0400 (Москва, стандартное время)",
+      "area": 505,
+      "roomsNumber": 19,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "anim",
+        "year": 419,
+        "numberOfFloors": 604
+      }
+    },
+    {
+      "id": 238,
+      "name": "anim",
+      "coordinates": {
+        "x": 509.5458,
+        "y": 50.1525
+      },
+      "creationDate": "Sun Jun 20 1976 16:39:21 GMT+0300 (Москва, стандартное время)",
+      "area": 394,
+      "roomsNumber": 20,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "dolore",
+        "year": 509,
+        "numberOfFloors": 554
+      }
+    },
+    {
+      "id": 239,
+      "name": "eu",
+      "coordinates": {
+        "x": 449.717,
+        "y": 139.0506
+      },
+      "creationDate": "Mon Aug 02 2010 11:36:50 GMT+0400 (Москва, летнее время)",
+      "area": 143,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "occaecat",
+        "year": 607,
+        "numberOfFloors": 134
+      }
+    },
+    {
+      "id": 240,
+      "name": "proident",
+      "coordinates": {
+        "x": 95.2408,
+        "y": 6.2412
+      },
+      "creationDate": "Fri Nov 02 2007 02:42:27 GMT+0300 (Москва, стандартное время)",
+      "area": 312,
+      "roomsNumber": 9,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "consectetur",
+        "year": 209,
+        "numberOfFloors": 881
+      }
+    },
+    {
+      "id": 241,
+      "name": "amet",
+      "coordinates": {
+        "x": 17.4142,
+        "y": 146.8817
+      },
+      "creationDate": "Wed Jan 18 2012 02:23:04 GMT+0400 (Москва, стандартное время)",
+      "area": 98,
+      "roomsNumber": 0,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "Lorem",
+        "year": 143,
+        "numberOfFloors": 276
+      }
+    },
+    {
+      "id": 242,
+      "name": "quis",
+      "coordinates": {
+        "x": 541.52,
+        "y": 166.0426
+      },
+      "creationDate": "Sun Jul 02 1972 22:40:45 GMT+0300 (Москва, стандартное время)",
+      "area": 447,
+      "roomsNumber": 11,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "sit",
+        "year": 103,
+        "numberOfFloors": 477
+      }
+    },
+    {
+      "id": 243,
+      "name": "magna",
+      "coordinates": {
+        "x": 501.9427,
+        "y": 40.3683
+      },
+      "creationDate": "Thu Sep 11 1975 17:53:21 GMT+0300 (Москва, стандартное время)",
+      "area": 131,
+      "roomsNumber": 16,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "do",
+        "year": 417,
+        "numberOfFloors": 902
+      }
+    },
+    {
+      "id": 244,
+      "name": "occaecat",
+      "coordinates": {
+        "x": 155.7973,
+        "y": 27.757
+      },
+      "creationDate": "Mon Sep 24 2007 07:22:36 GMT+0400 (Москва, летнее время)",
+      "area": 145,
+      "roomsNumber": 19,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "sint",
+        "year": 124,
+        "numberOfFloors": 183
+      }
+    },
+    {
+      "id": 245,
+      "name": "voluptate",
+      "coordinates": {
+        "x": 91.8857,
+        "y": 151.278
+      },
+      "creationDate": "Mon Mar 31 1975 14:39:22 GMT+0300 (Москва, стандартное время)",
+      "area": 253,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "NORMAL",
+      "house": {
+        "name": "excepteur",
+        "year": 485,
+        "numberOfFloors": 617
+      }
+    },
+    {
+      "id": 246,
+      "name": "laborum",
+      "coordinates": {
+        "x": 45.3477,
+        "y": 93.7495
+      },
+      "creationDate": "Tue Feb 18 1997 09:40:37 GMT+0300 (Москва, стандартное время)",
+      "area": 37,
+      "roomsNumber": 15,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "velit",
+        "year": 189,
+        "numberOfFloors": 269
+      }
+    },
+    {
+      "id": 247,
+      "name": "magna",
+      "coordinates": {
+        "x": 411.1628,
+        "y": 148.8925
+      },
+      "creationDate": "Fri Jun 14 1991 02:27:58 GMT+0300 (Москва, летнее время)",
+      "area": 5,
+      "roomsNumber": 11,
+      "furnish": "LITTLE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "aliquip",
+        "year": 196,
+        "numberOfFloors": 129
+      }
+    },
+    {
+      "id": 248,
+      "name": "incididunt",
+      "coordinates": {
+        "x": 42.0558,
+        "y": 131.1075
+      },
+      "creationDate": "Wed Mar 29 2023 03:14:58 GMT+0300 (Москва, стандартное время)",
+      "area": 496,
+      "roomsNumber": 6,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "ipsum",
+        "year": 354,
+        "numberOfFloors": 239
+      }
+    },
+    {
+      "id": 249,
+      "name": "excepteur",
+      "coordinates": {
+        "x": 19.2123,
+        "y": 66.1814
+      },
+      "creationDate": "Fri Feb 09 1990 22:56:26 GMT+0300 (Москва, стандартное время)",
+      "area": 289,
+      "roomsNumber": 4,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "officia",
+        "year": 629,
+        "numberOfFloors": 741
+      }
+    },
+    {
+      "id": 250,
+      "name": "culpa",
+      "coordinates": {
+        "x": 356.6495,
+        "y": 124.592
+      },
+      "creationDate": "Fri Dec 07 1990 19:55:35 GMT+0300 (Москва, стандартное время)",
+      "area": 428,
+      "roomsNumber": 12,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "Lorem",
+        "year": 124,
+        "numberOfFloors": 317
+      }
+    },
+    {
+      "id": 251,
+      "name": "occaecat",
+      "coordinates": {
+        "x": 495.8749,
+        "y": 13.2304
+      },
+      "creationDate": "Tue May 29 1984 13:26:24 GMT+0400 (Москва, летнее время)",
+      "area": 114,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "consequat",
+        "year": 442,
+        "numberOfFloors": 408
+      }
+    },
+    {
+      "id": 252,
+      "name": "sunt",
+      "coordinates": {
+        "x": 302.5567,
+        "y": 174.1121
+      },
+      "creationDate": "Thu Jun 14 1990 09:15:19 GMT+0400 (Москва, летнее время)",
+      "area": 242,
+      "roomsNumber": 16,
+      "furnish": "BAD",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "sit",
+        "year": 486,
+        "numberOfFloors": 198
+      }
+    },
+    {
+      "id": 253,
+      "name": "labore",
+      "coordinates": {
+        "x": 111.4867,
+        "y": 142.764
+      },
+      "creationDate": "Wed Jan 29 2003 23:21:34 GMT+0300 (Москва, стандартное время)",
+      "area": 323,
+      "roomsNumber": 9,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "culpa",
+        "year": 255,
+        "numberOfFloors": 986
+      }
+    },
+    {
+      "id": 254,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 427.1496,
+        "y": 85.6915
+      },
+      "creationDate": "Thu Jan 30 2020 17:13:19 GMT+0300 (Москва, стандартное время)",
+      "area": 436,
+      "roomsNumber": 19,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "FEW",
+      "house": {
+        "name": "enim",
+        "year": 154,
+        "numberOfFloors": 776
+      }
+    },
+    {
+      "id": 255,
+      "name": "elit",
+      "coordinates": {
+        "x": 343.1232,
+        "y": 128.4972
+      },
+      "creationDate": "Wed May 03 2023 03:26:12 GMT+0300 (Москва, стандартное время)",
+      "area": 350,
+      "roomsNumber": 8,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NORMAL",
+      "house": {
+        "name": "anim",
+        "year": 226,
+        "numberOfFloors": 129
+      }
+    },
+    {
+      "id": 256,
+      "name": "consequat",
+      "coordinates": {
+        "x": 434.6743,
+        "y": 138.2065
+      },
+      "creationDate": "Fri Jun 18 2010 02:09:23 GMT+0400 (Москва, летнее время)",
+      "area": 347,
+      "roomsNumber": 17,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "nostrud",
+        "year": 248,
+        "numberOfFloors": 871
+      }
+    },
+    {
+      "id": 257,
+      "name": "adipisicing",
+      "coordinates": {
+        "x": 134.695,
+        "y": 124.1636
+      },
+      "creationDate": "Mon Jan 27 1992 04:18:21 GMT+0300 (Москва, стандартное время)",
+      "area": 452,
+      "roomsNumber": 8,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "quis",
+        "year": 293,
+        "numberOfFloors": 670
+      }
+    },
+    {
+      "id": 258,
+      "name": "dolore",
+      "coordinates": {
+        "x": 90.4309,
+        "y": 36.1075
+      },
+      "creationDate": "Sat May 17 1997 21:22:44 GMT+0400 (Москва, летнее время)",
+      "area": 478,
+      "roomsNumber": 7,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "eiusmod",
+        "year": 507,
+        "numberOfFloors": 895
+      }
+    },
+    {
+      "id": 259,
+      "name": "dolore",
+      "coordinates": {
+        "x": 174.5571,
+        "y": 161.4591
+      },
+      "creationDate": "Sun Mar 04 2001 09:24:56 GMT+0300 (Москва, стандартное время)",
+      "area": 349,
+      "roomsNumber": 11,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "tempor",
+        "year": 383,
+        "numberOfFloors": 346
+      }
+    },
+    {
+      "id": 260,
+      "name": "dolor",
+      "coordinates": {
+        "x": 534.5613,
+        "y": 22.8429
+      },
+      "creationDate": "Mon Apr 08 2019 23:08:59 GMT+0300 (Москва, стандартное время)",
+      "area": 261,
+      "roomsNumber": 2,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NONE",
+      "house": {
+        "name": "magna",
+        "year": 110,
+        "numberOfFloors": 279
+      }
+    },
+    {
+      "id": 261,
+      "name": "labore",
+      "coordinates": {
+        "x": 14.1928,
+        "y": 70.6158
+      },
+      "creationDate": "Sun Aug 30 1992 21:19:09 GMT+0400 (Москва, летнее время)",
+      "area": 432,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "enim",
+        "year": 230,
+        "numberOfFloors": 987
+      }
+    },
+    {
+      "id": 262,
+      "name": "occaecat",
+      "coordinates": {
+        "x": 212.4898,
+        "y": 141.4155
+      },
+      "creationDate": "Thu Jan 01 1981 23:40:12 GMT+0300 (Москва, стандартное время)",
+      "area": 122,
+      "roomsNumber": 3,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "nisi",
+        "year": 35,
+        "numberOfFloors": 511
+      }
+    },
+    {
+      "id": 263,
+      "name": "eiusmod",
+      "coordinates": {
+        "x": 538.9217,
+        "y": 151.8631
+      },
+      "creationDate": "Thu Sep 06 1984 04:09:48 GMT+0400 (Москва, летнее время)",
+      "area": 379,
+      "roomsNumber": 12,
+      "furnish": "FINE",
+      "view": "NORMAL",
+      "transport": "LITTLE",
+      "house": {
+        "name": "eu",
+        "year": 52,
+        "numberOfFloors": 481
+      }
+    },
+    {
+      "id": 264,
+      "name": "ex",
+      "coordinates": {
+        "x": 327.1881,
+        "y": 60.7292
+      },
+      "creationDate": "Wed Mar 07 2007 16:48:48 GMT+0300 (Москва, стандартное время)",
+      "area": 440,
+      "roomsNumber": 7,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "commodo",
+        "year": 28,
+        "numberOfFloors": 300
+      }
+    },
+    {
+      "id": 265,
+      "name": "duis",
+      "coordinates": {
+        "x": 312.9544,
+        "y": 64.7245
+      },
+      "creationDate": "Tue Jan 09 2018 13:49:41 GMT+0300 (Москва, стандартное время)",
+      "area": 367,
+      "roomsNumber": 5,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "voluptate",
+        "year": 207,
+        "numberOfFloors": 620
+      }
+    },
+    {
+      "id": 266,
+      "name": "sit",
+      "coordinates": {
+        "x": 261.2425,
+        "y": 141.3607
+      },
+      "creationDate": "Tue Aug 04 1987 03:31:36 GMT+0400 (Москва, летнее время)",
+      "area": 419,
+      "roomsNumber": 0,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "do",
+        "year": 413,
+        "numberOfFloors": 773
+      }
+    },
+    {
+      "id": 267,
+      "name": "nulla",
+      "coordinates": {
+        "x": 86.3588,
+        "y": 93.2387
+      },
+      "creationDate": "Sun Oct 07 2012 23:18:34 GMT+0400 (Москва, стандартное время)",
+      "area": 226,
+      "roomsNumber": 1,
+      "furnish": "LITTLE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "eiusmod",
+        "year": 287,
+        "numberOfFloors": 804
+      }
+    },
+    {
+      "id": 268,
+      "name": "sunt",
+      "coordinates": {
+        "x": 204.9062,
+        "y": 83.8588
+      },
+      "creationDate": "Wed Feb 28 1996 11:19:42 GMT+0300 (Москва, стандартное время)",
+      "area": 305,
+      "roomsNumber": 17,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "adipisicing",
+        "year": 395,
+        "numberOfFloors": 202
+      }
+    },
+    {
+      "id": 269,
+      "name": "officia",
+      "coordinates": {
+        "x": 387.1429,
+        "y": 116.7314
+      },
+      "creationDate": "Mon Feb 08 1999 12:44:13 GMT+0300 (Москва, стандартное время)",
+      "area": 76,
+      "roomsNumber": 6,
+      "furnish": "NONE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "veniam",
+        "year": 512,
+        "numberOfFloors": 527
+      }
+    },
+    {
+      "id": 270,
+      "name": "anim",
+      "coordinates": {
+        "x": 118.8953,
+        "y": 172.4973
+      },
+      "creationDate": "Tue Sep 25 1973 16:54:52 GMT+0300 (Москва, стандартное время)",
+      "area": 112,
+      "roomsNumber": 20,
+      "furnish": "FINE",
+      "view": "STREET",
+      "transport": "NORMAL",
+      "house": {
+        "name": "laboris",
+        "year": 623,
+        "numberOfFloors": 103
+      }
+    },
+    {
+      "id": 271,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 445.3581,
+        "y": 154.5321
+      },
+      "creationDate": "Tue Feb 05 2008 06:09:40 GMT+0300 (Москва, стандартное время)",
+      "area": 253,
+      "roomsNumber": 11,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "incididunt",
+        "year": 481,
+        "numberOfFloors": 614
+      }
+    },
+    {
+      "id": 272,
+      "name": "ipsum",
+      "coordinates": {
+        "x": 194.3286,
+        "y": 144.5678
+      },
+      "creationDate": "Thu Apr 10 2014 04:58:03 GMT+0400 (Москва, стандартное время)",
+      "area": 298,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "culpa",
+        "year": 91,
+        "numberOfFloors": 512
+      }
+    },
+    {
+      "id": 273,
+      "name": "quis",
+      "coordinates": {
+        "x": 513.994,
+        "y": 65.5326
+      },
+      "creationDate": "Tue Oct 13 2015 02:40:03 GMT+0300 (Москва, стандартное время)",
+      "area": 254,
+      "roomsNumber": 17,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "FEW",
+      "house": {
+        "name": "proident",
+        "year": 122,
+        "numberOfFloors": 83
+      }
+    },
+    {
+      "id": 274,
+      "name": "deserunt",
+      "coordinates": {
+        "x": 214.328,
+        "y": 101.2927
+      },
+      "creationDate": "Mon Sep 22 2008 09:35:12 GMT+0400 (Москва, летнее время)",
+      "area": 178,
+      "roomsNumber": 15,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "consectetur",
+        "year": 529,
+        "numberOfFloors": 97
+      }
+    },
+    {
+      "id": 275,
+      "name": "nisi",
+      "coordinates": {
+        "x": 157.2923,
+        "y": 23.9526
+      },
+      "creationDate": "Wed Mar 29 2000 15:13:58 GMT+0400 (Москва, летнее время)",
+      "area": 7,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "ea",
+        "year": 246,
+        "numberOfFloors": 457
+      }
+    },
+    {
+      "id": 276,
+      "name": "esse",
+      "coordinates": {
+        "x": 258.2991,
+        "y": 64.2162
+      },
+      "creationDate": "Sun Jul 06 2008 00:24:05 GMT+0400 (Москва, летнее время)",
+      "area": 311,
+      "roomsNumber": 20,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "ullamco",
+        "year": 47,
+        "numberOfFloors": 713
+      }
+    },
+    {
+      "id": 277,
+      "name": "esse",
+      "coordinates": {
+        "x": 382.6113,
+        "y": 22.2628
+      },
+      "creationDate": "Sat Oct 14 2000 18:11:43 GMT+0400 (Москва, летнее время)",
+      "area": 355,
+      "roomsNumber": 13,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "do",
+        "year": 354,
+        "numberOfFloors": 785
+      }
+    },
+    {
+      "id": 278,
+      "name": "et",
+      "coordinates": {
+        "x": 350.0823,
+        "y": 137.713
+      },
+      "creationDate": "Thu Mar 01 1984 20:29:45 GMT+0300 (Москва, стандартное время)",
+      "area": 510,
+      "roomsNumber": 6,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "quis",
+        "year": 202,
+        "numberOfFloors": 631
+      }
+    },
+    {
+      "id": 279,
+      "name": "nostrud",
+      "coordinates": {
+        "x": 70.8739,
+        "y": 101.2281
+      },
+      "creationDate": "Sun Apr 10 1988 23:37:49 GMT+0400 (Москва, летнее время)",
+      "area": 1,
+      "roomsNumber": 15,
+      "furnish": "BAD",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "reprehenderit",
+        "year": 373,
+        "numberOfFloors": 304
+      }
+    },
+    {
+      "id": 280,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 545.0116,
+        "y": 19.9246
+      },
+      "creationDate": "Sat Jul 19 1980 06:54:18 GMT+0300 (Москва, стандартное время)",
+      "area": 52,
+      "roomsNumber": 3,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "est",
+        "year": 223,
+        "numberOfFloors": 749
+      }
+    },
+    {
+      "id": 281,
+      "name": "ex",
+      "coordinates": {
+        "x": 198.1087,
+        "y": 178.5003
+      },
+      "creationDate": "Fri Dec 22 1995 16:04:38 GMT+0300 (Москва, стандартное время)",
+      "area": 358,
+      "roomsNumber": 4,
+      "furnish": "FINE",
+      "view": "TERRIBLE",
+      "transport": "LITTLE",
+      "house": {
+        "name": "eu",
+        "year": 132,
+        "numberOfFloors": 297
+      }
+    },
+    {
+      "id": 282,
+      "name": "mollit",
+      "coordinates": {
+        "x": 91.2285,
+        "y": 98.5033
+      },
+      "creationDate": "Sun Jan 01 2006 15:02:59 GMT+0300 (Москва, стандартное время)",
+      "area": 119,
+      "roomsNumber": 14,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "cupidatat",
+        "year": 273,
+        "numberOfFloors": 393
+      }
+    },
+    {
+      "id": 283,
+      "name": "velit",
+      "coordinates": {
+        "x": 222.0946,
+        "y": 73.2464
+      },
+      "creationDate": "Thu Jan 11 2007 19:01:34 GMT+0300 (Москва, стандартное время)",
+      "area": 427,
+      "roomsNumber": 11,
+      "furnish": "NONE",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "ad",
+        "year": 546,
+        "numberOfFloors": 438
+      }
+    },
+    {
+      "id": 284,
+      "name": "pariatur",
+      "coordinates": {
+        "x": 68.5287,
+        "y": 59.5383
+      },
+      "creationDate": "Tue Nov 05 2019 10:11:00 GMT+0300 (Москва, стандартное время)",
+      "area": 62,
+      "roomsNumber": 14,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "LITTLE",
+      "house": {
+        "name": "Lorem",
+        "year": 171,
+        "numberOfFloors": 785
+      }
+    },
+    {
+      "id": 285,
+      "name": "laborum",
+      "coordinates": {
+        "x": 84.7032,
+        "y": 92.0254
+      },
+      "creationDate": "Sat Jan 14 1989 07:41:03 GMT+0300 (Москва, стандартное время)",
+      "area": 151,
+      "roomsNumber": 10,
+      "furnish": "FINE",
+      "view": "YARD",
+      "transport": "NONE",
+      "house": {
+        "name": "sint",
+        "year": 242,
+        "numberOfFloors": 93
+      }
+    },
+    {
+      "id": 286,
+      "name": "proident",
+      "coordinates": {
+        "x": 113.5084,
+        "y": 120.8281
+      },
+      "creationDate": "Tue Oct 08 2019 05:50:13 GMT+0300 (Москва, стандартное время)",
+      "area": 334,
+      "roomsNumber": 20,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "eiusmod",
+        "year": 474,
+        "numberOfFloors": 418
+      }
+    },
+    {
+      "id": 287,
+      "name": "ipsum",
+      "coordinates": {
+        "x": 523.6222,
+        "y": 60.1971
+      },
+      "creationDate": "Sun Feb 06 1983 10:58:22 GMT+0300 (Москва, стандартное время)",
+      "area": 149,
+      "roomsNumber": 0,
+      "furnish": "NONE",
+      "view": "NORMAL",
+      "transport": "FEW",
+      "house": {
+        "name": "officia",
+        "year": 224,
+        "numberOfFloors": 758
+      }
+    },
+    {
+      "id": 288,
+      "name": "sint",
+      "coordinates": {
+        "x": 370.3269,
+        "y": 96.9359
+      },
+      "creationDate": "Sat Oct 21 1972 06:19:50 GMT+0300 (Москва, стандартное время)",
+      "area": 462,
+      "roomsNumber": 10,
+      "furnish": "LITTLE",
+      "view": "YARD",
+      "transport": "NORMAL",
+      "house": {
+        "name": "nulla",
+        "year": 42,
+        "numberOfFloors": 626
+      }
+    },
+    {
+      "id": 289,
+      "name": "laborum",
+      "coordinates": {
+        "x": 440.1413,
+        "y": 45.2864
+      },
+      "creationDate": "Mon Aug 06 1984 03:19:19 GMT+0400 (Москва, летнее время)",
+      "area": 507,
+      "roomsNumber": 16,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "consectetur",
+        "year": 270,
+        "numberOfFloors": 129
+      }
+    },
+    {
+      "id": 290,
+      "name": "reprehenderit",
+      "coordinates": {
+        "x": 362.4246,
+        "y": 54.0597
+      },
+      "creationDate": "Thu Apr 05 2001 04:32:17 GMT+0400 (Москва, летнее время)",
+      "area": 196,
+      "roomsNumber": 16,
+      "furnish": "BAD",
+      "view": "TERRIBLE",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "ullamco",
+        "year": 424,
+        "numberOfFloors": 490
+      }
+    },
+    {
+      "id": 291,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 495.6284,
+        "y": 171.2805
+      },
+      "creationDate": "Fri Feb 13 2015 08:02:57 GMT+0300 (Москва, стандартное время)",
+      "area": 453,
+      "roomsNumber": 18,
+      "furnish": "FINE",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "aute",
+        "year": 389,
+        "numberOfFloors": 879
+      }
+    },
+    {
+      "id": 292,
+      "name": "tempor",
+      "coordinates": {
+        "x": 268.713,
+        "y": 104.6781
+      },
+      "creationDate": "Mon Sep 10 1990 21:18:15 GMT+0400 (Москва, летнее время)",
+      "area": 142,
+      "roomsNumber": 9,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "qui",
+        "year": 279,
+        "numberOfFloors": 499
+      }
+    },
+    {
+      "id": 293,
+      "name": "commodo",
+      "coordinates": {
+        "x": 215.7709,
+        "y": 96.7291
+      },
+      "creationDate": "Tue Jul 09 1991 00:45:41 GMT+0300 (Москва, летнее время)",
+      "area": 430,
+      "roomsNumber": 14,
+      "furnish": "LITTLE",
+      "view": "NORMAL",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "dolore",
+        "year": 64,
+        "numberOfFloors": 510
+      }
+    },
+    {
+      "id": 294,
+      "name": "veniam",
+      "coordinates": {
+        "x": 301.1009,
+        "y": 119.9899
+      },
+      "creationDate": "Mon Jun 07 1982 03:15:53 GMT+0400 (Москва, летнее время)",
+      "area": 355,
+      "roomsNumber": 12,
+      "furnish": "LITTLE",
+      "view": "STREET",
+      "transport": "LITTLE",
+      "house": {
+        "name": "ipsum",
+        "year": 225,
+        "numberOfFloors": 824
+      }
+    },
+    {
+      "id": 295,
+      "name": "voluptate",
+      "coordinates": {
+        "x": 401.6411,
+        "y": 16.5508
+      },
+      "creationDate": "Sun Jan 23 1994 09:07:22 GMT+0300 (Москва, стандартное время)",
+      "area": 441,
+      "roomsNumber": 18,
+      "furnish": "BAD",
+      "view": "NORMAL",
+      "transport": "NONE",
+      "house": {
+        "name": "nulla",
+        "year": 158,
+        "numberOfFloors": 18
+      }
+    },
+    {
+      "id": 296,
+      "name": "elit",
+      "coordinates": {
+        "x": 201.6137,
+        "y": 125.4215
+      },
+      "creationDate": "Tue Apr 29 2008 06:10:42 GMT+0400 (Москва, летнее время)",
+      "area": 218,
+      "roomsNumber": 7,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "NONE",
+      "house": {
+        "name": "ullamco",
+        "year": 2,
+        "numberOfFloors": 1000
+      }
+    },
+    {
+      "id": 297,
+      "name": "consectetur",
+      "coordinates": {
+        "x": 25.4238,
+        "y": 153.9923
+      },
+      "creationDate": "Wed Oct 31 2018 07:05:37 GMT+0300 (Москва, стандартное время)",
+      "area": 100,
+      "roomsNumber": 16,
+      "furnish": "NONE",
+      "view": "STREET",
+      "transport": "FEW",
+      "house": {
+        "name": "cupidatat",
+        "year": 496,
+        "numberOfFloors": 804
+      }
+    },
+    {
+      "id": 298,
+      "name": "quis",
+      "coordinates": {
+        "x": 507.5916,
+        "y": 16.6986
+      },
+      "creationDate": "Thu May 11 2017 15:44:42 GMT+0300 (Москва, стандартное время)",
+      "area": 232,
+      "roomsNumber": 7,
+      "furnish": "NONE",
+      "view": "YARD",
+      "transport": "ENOUGH",
+      "house": {
+        "name": "occaecat",
+        "year": 98,
+        "numberOfFloors": 440
+      }
+    },
+    {
+      "id": 299,
+      "name": "aliqua",
+      "coordinates": {
+        "x": 506.45,
+        "y": 52.1262
+      },
+      "creationDate": "Mon Oct 25 2021 00:48:03 GMT+0300 (Москва, стандартное время)",
+      "area": 407,
+      "roomsNumber": 16,
+      "furnish": "BAD",
+      "view": "BAD",
+      "transport": "FEW",
+      "house": {
+        "name": "laborum",
+        "year": 284,
+        "numberOfFloors": 466
+      }
+    }
+  ]
+}
