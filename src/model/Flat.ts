@@ -4,8 +4,10 @@ export default interface Flat {
     coordinates: Coordinates;
     creationDate: Date;
     area: number;
-    roomsNumber: number;
+    numberOfRooms: number;
     furnish: Furnish;
+    hasBalcany: boolean;
+    price: number;
     view: View;
     transport: Transport;
     house: House;
