@@ -5,7 +5,9 @@
         version = "5.0">
     <display-name>SOA-lab2</display-name>
     <description>Software Oriented Architecture</description>
-
+    <default-context-path>
+        /
+    </default-context-path>
     <listener>
         <listener-class>itmo.mainservice.config.LogbackServletContextListener</listener-class>
     </listener>

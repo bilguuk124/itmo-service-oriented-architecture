@@ -38,12 +38,6 @@ public class AppExceptionHandler extends HttpServlet {
     @SneakyThrows
     private void processError(HttpServletRequest request, HttpServletResponse response) {
         logger.info("Processing default error fallback");
-        Enumeration<String> enumerationP = request.getAttributeNames();
-
-        int i = 1;
-        while(enumerationP.hasMoreElements()){
-            logger.info(i++ + " " + enumerationP.nextElement());
-        }
 
         String message = (String) request.getAttribute("jakarta.servlet.error.message");
         Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");

@@ -3,15 +3,14 @@ package itmo.mainservice.controller;
 import itmo.library.*;
 import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.FlatNotFoundException;
-import itmo.mainservice.exception.NotCreatedException;
+import itmo.mainservice.exception.HouseNotFoundException;
+import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.service.FlatCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
 import jakarta.inject.Inject;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.*;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -22,7 +21,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Path("/flats")
@@ -46,56 +44,49 @@ public class FlatController {
 
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public Response getAllFlats(@Context final HttpServletRequest request) throws BadPageableException {
-        logger.info("Received a request to get all flats");
-        String[] sortParameters = request.getParameterValues("sort");
-        String[] filterParameters = request.getParameterValues("filter");
-        String pageParam = request.getParameter("page");
-        String pageSizeParam = request.getParameter("pageSize");
-        Integer page = null, pageSize = null;
-        logger.info("page = " + pageParam + " pageSize = " + pageSizeParam + " \nsort = " + Arrays.toString(sortParameters) + " \nfilter = " + Arrays.toString(filterParameters));
+    public Response getAllFlats(@QueryParam("page") Integer page,
+                                @QueryParam("pageSize") Integer pageSize,
+                                @QueryParam("sort") String sortParam,
+                                @QueryParam("filter") String filterParam) throws BadPageableException {
+        try{
+            logger.info("Received a request to get all flats");
 
-        if (pageParam != null && !pageParam.isEmpty()){
-            page = Integer.parseInt(pageParam);
-            if(page <= 0) throw new BadPageableException();
+            if (page != null && page <= 0) throw new BadPageableException();
+            if (page != null && pageSize <= 0) throw new BadPageableException();
+
+            List<String> sort = (sortParam == null)
+                    ? new ArrayList<>()
+                    : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+            List<String> filter = (filterParam == null)
+                    ? new ArrayList<>()
+                    : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+
+            logger.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
+
+            List<Flat> resultPage = service.getAllFlats(sort, filter, page, pageSize);
+
+            logger.info("Sending result, result =" + resultPage.toString());
+            GenericEntity<List<Flat>> entity = new GenericEntity<>(resultPage) {};
+            return Response
+                    .ok(entity, MediaType.APPLICATION_XML)
+                    .build();
         }
-        if (pageSizeParam != null && !pageSizeParam.isEmpty()){
-            pageSize = Integer.parseInt(pageSizeParam);
-            if (pageSize <= 0) throw new BadPageableException();
+        catch (IllegalArgumentException e){
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(errorBodyGenerator.generateValidationError("Opposite sorts!"))
+                    .build();
         }
-
-        List<String> sort = (sortParameters == null)
-                ? new ArrayList<>()
-                : Stream.of(sortParameters).filter(s -> !s.isEmpty())
-                .collect(Collectors.toList());
-
-        List<String> filter = (filterParameters == null)
-                ? new ArrayList<>()
-                : Stream.of(filterParameters).filter(s -> !s.isEmpty())
-                .collect(Collectors.toList());
-
-        List<Flat> resultPage = service.getAllFlats(sort, filter, page, pageSize);
-        logger.info("Sending result, result =" + resultPage.toString());
-        GenericEntity<List<Flat>> entity = new GenericEntity<>(resultPage){};
-        return Response
-                .ok(entity, MediaType.APPLICATION_XML)
-                .build();
     }
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response getFlatById(@PathParam("id") Integer id){
+    public Response getFlatById(@PathParam("id") Integer id) throws FlatNotFoundException {
         try {
             if (id <= 0) throw new ValidationException();
             return Response
-                    .ok()
-                    .entity(service.getFlatByID(id))
-                    .build();
-        } catch (FlatNotFoundException e) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateFlatNotFoundError(id))
+                    .ok(service.getFlatByID(id))
                     .build();
         }
         catch (ValidationException e){
@@ -110,68 +101,86 @@ public class FlatController {
     @POST
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response createFlat(FlatCreateDTO flatCreateDTO)  {
-        try{
-            Flat result = service.createFlat(flatCreateDTO);
-            return Response
-                    .ok()
-                    .entity(result)
-                    .type(MediaType.APPLICATION_XML)
+    public Response createFlat(FlatCreateDTO flatCreateDTO) throws JpaException, HouseNotFoundException {
+        Flat result = service.createFlat(flatCreateDTO);
+        return Response
+                .ok(result)
+                .build();
 
-                    .build();
-        } catch (NotCreatedException e) {
-            return Response
-                    .status(400)
-                    .entity(errorBodyGenerator.generateTransactionError(e))
-                    .build();
-        }
     }
 
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response deleteFlatById(@PathParam("id") Integer id){
+    public Response deleteFlatByIdOrHouse(@PathParam("id") String param) throws JpaException, HouseNotFoundException, FlatNotFoundException {
+        int id;
         try{
-            if (id <= 0 ) throw new ValidationException();
+            if (param == null || param.isEmpty()) throw new ValidationException();
+            id = Integer.parseInt(param);
             service.deleteById(id);
             return Response
                     .ok()
                     .build();
-        } catch (FlatNotFoundException ex){
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateFlatNotFoundError(id))
-                    .build();
-        } catch (ValidationException ex){
+
+        } catch (NumberFormatException ex){
+            service.deleteFlatsOfTheHouse(param);
+            return Response.ok().build();
+
+        }  catch (ValidationException ex){
             return Response
                     .status(Response.Status.BAD_REQUEST)
-                    .entity(errorBodyGenerator.generateValidationError(id))
+                    .entity(errorBodyGenerator.generateValidationError("Method parameter can not be null!"))
                     .build();
         }
-
     }
 
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response updateFlatById(@PathParam("id") Integer id, FlatCreateDTO dto){
+    public Response updateFlatById(@PathParam("id") Integer id, FlatCreateDTO dto) throws FlatNotFoundException {
         try{
             if (id <= 0) throw new ValidationException();
             Flat result = service.updateFlatById(id, dto);
             return Response
-                    .ok()
-                    .entity(result)
-                    .build();
-        } catch (FlatNotFoundException e) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateFlatNotFoundError(id))
+                    .ok(result)
                     .build();
         } catch (ValidationException ex){
             return Response
                     .status(Response.Status.BAD_REQUEST)
                     .entity(errorBodyGenerator.generateValidationError(id))
+                    .build();
+        }
+    }
+
+    @GET
+    @Path("/{houseName}/count")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getCountOfFlatsInTheSameHouse(@PathParam("houseName") String houseName) throws HouseNotFoundException {
+        try{
+            if (houseName == null || houseName.isEmpty()) throw new IllegalArgumentException();
+            return Response
+                    .ok(service.getFlatCountOfHouse(houseName))
+                    .build();
+        } catch (IllegalArgumentException e){
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(errorBodyGenerator.generateValidationError("house name can not be empty!"))
+                    .build();
+        }
+    }
+
+    @GET
+    @Path("/numberOfRooms/{numberOfRooms}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getFlatsWithRoomsLessThan(@PathParam("numberOfRooms") Integer numberOfRooms){
+        try{
+            if(numberOfRooms == null) throw new IllegalArgumentException("number of rooms can't be null");
+            return Response.ok(service.getFlatCountWithLessRooms(numberOfRooms)).build();
+        } catch (IllegalArgumentException e){
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(errorBodyGenerator.generateValidationError(e.getMessage()))
                     .build();
         }
     }

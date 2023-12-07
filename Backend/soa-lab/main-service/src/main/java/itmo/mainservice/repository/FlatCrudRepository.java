@@ -4,10 +4,13 @@ import itmo.library.*;
 import itmo.mainservice.config.EntityManagerProvider;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -16,6 +19,7 @@ public class FlatCrudRepository {
     @Inject
     private EntityManagerProvider entityManagerProvider;
 
+    @Transactional
     public void save(Flat flat){
         entityManagerProvider.getEntityManager().persist(flat);
         entityManagerProvider.getEntityManager().flush();
@@ -31,9 +35,9 @@ public class FlatCrudRepository {
         CriteriaQuery<Flat> criteriaQuery = criteriaBuilder.createQuery(Flat.class);
         Root<Flat> root = criteriaQuery.from(Flat.class);
         criteriaQuery.select(root);
+
         if (filters != null && !filters.isEmpty()){
-            Predicate predicate = criteriaBuilder.conjunction();
-            applyFilters(predicate, criteriaBuilder, root, filters);
+            criteriaQuery.where(applyFilters(criteriaBuilder, root, filters));
         }
 
         if (sorts != null && !sorts.isEmpty()){
@@ -56,9 +60,10 @@ public class FlatCrudRepository {
         return true;
     }
 
-    private void applyFilters(Predicate predicate, CriteriaBuilder criteriaBuilder, Root<?> root,  List<Filter> filters){
+    private Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root,  List<Filter> filters){
+        Predicate predicate = criteriaBuilder.conjunction();
         for(Filter filter : filters){
-            if (filter.getNestedName() != null){
+            if ( (filter.getNestedName() != null && !filter.getNestedName().isEmpty()) || !(Objects.equals(filter.getNestedName(), "null"))){
                 switch (filter.getFilteringOperation()){
                     case EQ:
                         predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
@@ -83,36 +88,36 @@ public class FlatCrudRepository {
                 }
             }
             else{
-                Join<Flat, Coordinates> flatCoordinatesJoin = root.join(filter.getFieldName());
                 switch (filter.getFilteringOperation()){
                     case EQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     case NEQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     case GT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     case LT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThan(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     case GTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     case LTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(flatCoordinatesJoin.get(filter.getNestedName()), filter.getFieldValue()));
+                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
                         break;
                     default:
                         throw new IllegalArgumentException();
                 }
             }
         }
+        return predicate;
     }
     private List<Order> getJPAOrders(CriteriaBuilder criteriaBuilder, Root<?> root, List<Sort> sorts){
         return sorts.stream()
                 .map(sortParam -> {
-                    if(sortParam.getNestedName() == null || sortParam.getNestedName().isEmpty()){
+                    if( (sortParam.getNestedName() != null && !sortParam.getNestedName().isEmpty()) || !(Objects.equals(sortParam.getNestedName(), "null"))){
                         if (sortParam.isDesc()){
                             return criteriaBuilder.desc(root.get(sortParam.getFieldName()));
                         }
@@ -121,16 +126,79 @@ public class FlatCrudRepository {
                         }
                     }
                     else{
-                        Join<Flat, Coordinates> flatCoordinatesJoin = root.join(sortParam.getFieldName());
                         if (sortParam.isDesc()){
-                            return criteriaBuilder.desc(flatCoordinatesJoin.get(sortParam.getNestedName()));
+                            return criteriaBuilder.desc(root.get(sortParam.getFieldName()).get(sortParam.getNestedName()));
                         }
                         else{
-                            return criteriaBuilder.asc(flatCoordinatesJoin.get(sortParam.getNestedName()));
+                            return criteriaBuilder.asc(root.get(sortParam.getNestedName()).get(sortParam.getNestedName()));
                         }
                     }
                 })
                 .collect(Collectors.toList());
     }
 
+    @Transactional
+    public void deleteFlatsOfTheHouse(House house) {
+        EntityManager entityManager = entityManagerProvider.getEntityManager();
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaDelete<Flat> deleteQuery = criteriaBuilder.createCriteriaDelete(Flat.class);
+
+        Root<Flat> flatRoot = deleteQuery.from(Flat.class);
+        deleteQuery.where(criteriaBuilder.equal(flatRoot.get("house"),house));
+
+        entityManager.createQuery(deleteQuery).executeUpdate();
+    }
+
+    public long getFlatCountWithSameHouse(House house) {
+        EntityManager entityManager = entityManagerProvider.getEntityManager();
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Long> countQuery = criteriaBuilder.createQuery(Long.class);
+
+        Root<Flat> flatRoot = countQuery.from(Flat.class);
+        Predicate condition = criteriaBuilder.equal(flatRoot.get("house"), house);
+        countQuery.select(criteriaBuilder.count(flatRoot)).where(condition);
+
+        return entityManager.createQuery(countQuery).getSingleResult();
+    }
+
+    public long getFlatCountWithLessRooms(Integer maxRoomNumber) {
+        EntityManager entityManager = entityManagerProvider.getEntityManager();
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Long> countQuery = criteriaBuilder.createQuery(Long.class);
+
+        Root<Flat> flatRoot = countQuery.from(Flat.class);
+        Predicate condition = criteriaBuilder.lessThan(flatRoot.get("numberOfRooms"), maxRoomNumber);
+        countQuery.select(criteriaBuilder.count(flatRoot)).where(condition);
+
+        return entityManager.createQuery(countQuery).getSingleResult();
+
+    }
+
+    public Flat getCheapestOrExpensiveWithOrWithoutBalcony(String cheapness, String balcony){
+        EntityManager entityManager= entityManagerProvider.getEntityManager();
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Flat> query = criteriaBuilder.createQuery(Flat.class);
+        Root<Flat> root = query.from(Flat.class);
+
+        query.select(root);
+
+        if(Objects.equals(cheapness, "cheapest")){
+            query.orderBy(criteriaBuilder.asc(root.get("price")));
+        }
+        else{
+            query.orderBy(criteriaBuilder.desc(root.get("price")));
+        }
+
+        Predicate balconyPredicate;
+        if (Objects.equals(balcony, "with-balcony")){
+            balconyPredicate = criteriaBuilder.isTrue(root.get("hasBalcony"));
+        }
+        else{
+            balconyPredicate = criteriaBuilder.isFalse(root.get("hasBalcony"));
+        }
+
+        query.where(balconyPredicate);
+
+        return entityManager.createQuery(query).getSingleResult();
+    }
 }

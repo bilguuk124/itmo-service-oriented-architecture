@@ -3,7 +3,7 @@ package itmo.mainservice.controller;
 import itmo.library.House;
 import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.HouseNotFoundException;
-import itmo.mainservice.exception.NotCreatedException;
+import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.service.HouseCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
 import jakarta.inject.Inject;
@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Path("/houses")
@@ -61,39 +61,25 @@ public class HouseController {
     @GET
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response getAllHousesFilteredAndSorted(@Context final HttpServletRequest request) throws BadPageableException {
+    public Response getAllHousesFilteredAndSorted(@QueryParam("page") Integer page,
+                                                  @QueryParam("pageSize") Integer pageSize,
+                                                  @QueryParam("sort") String sortParam,
+                                                  @QueryParam("filter") String filterParam) throws BadPageableException {
         logger.info("Got request to get all houses");
-        String[] sortParameters = request.getParameterValues("sort");
-        String[] filterParameters = request.getParameterValues("filter");
-        String pageParam = request.getParameter("page");
-        String pageSizeParam = request.getParameter("pageSize");
 
-        Integer page = null, pageSize = null;
+        if (page != null && page <= 0) throw new BadPageableException();
+        if (page != null && pageSize <= 0) throw new BadPageableException();
 
-        if (pageParam != null && !pageParam.isEmpty()){
-            page = Integer.parseInt(pageParam);
-            if(page <= 0) throw new BadPageableException();
-        }
-        if (pageSizeParam != null && !pageSizeParam.isEmpty()){
-            pageSize = Integer.parseInt(pageSizeParam);
-            if(pageSize <= 0) throw new BadPageableException();
-        }
-        logger.info("Page = {}, Page Size = {}", page, pageSize );
-
-
-        List<String> sorts = (sortParameters == null)
+        List<String> sort = (sortParam == null)
                 ? new ArrayList<>()
-                : Stream.of(sortParameters)
-                .filter(s -> !s.isEmpty())
-                .collect(Collectors.toList());
-
-        List<String> filters = (filterParameters == null)
+                : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+        List<String> filter = (filterParam == null)
                 ? new ArrayList<>()
-                : Stream.of(filterParameters)
-                .filter(s -> !s.isEmpty())
-                .collect(Collectors.toList());
+                : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
 
-        List<House> resultPage = service.getAllHousesFilteredAndSorted(sorts, filters, page, pageSize);
+        logger.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
+
+        List<House> resultPage = service.getAllHousesFilteredAndSorted(sort, filter, page, pageSize);
         GenericEntity<List<House>> entity = new GenericEntity<>(resultPage){};
         logger.info("Successfully processed the request");
         return Response
@@ -105,37 +91,23 @@ public class HouseController {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    public Response createHouse(House house) {
+    public Response createHouse(House house) throws JpaException {
         logger.info("Got request to create a new house");
-        try{
-            House result = service.createHouse(house);
-            return Response
-                    .ok(result, MediaType.APPLICATION_XML)
-                    .build();
-        } catch (NotCreatedException e) {
-            logger.warn("House was not created due to transaction error");
-            return Response
-                    .status(Response.Status.INTERNAL_SERVER_ERROR)
-                    .entity(errorBodyGenerator.generateTransactionError(e))
-                    .build();
-        }
+        House result = service.createHouse(house);
+        return Response
+                .ok(result, MediaType.APPLICATION_XML)
+                .build();
     }
 
     @DELETE
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response deleteHouseByName(@PathParam("name") String name){
+    public Response deleteHouseByName(@PathParam("name") String name) throws JpaException, HouseNotFoundException {
         logger.info("Got request to delete a house with name = {}", name);
         try {
             if (name == null || name.isEmpty()) throw new ValidationException();
             service.deleteByName(name);
             return Response.ok().build();
-        } catch (HouseNotFoundException e) {
-            logger.warn("House with specified name ({}) was not found", name);
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateHouseNotFoundError(name))
-                    .build();
         }
         catch (ValidationException e){
             logger.warn("Validation error");
@@ -149,25 +121,17 @@ public class HouseController {
     @GET
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response getHouseByName(@PathParam("name") String name){
+    public Response getHouseByName(@PathParam("name") String name) throws HouseNotFoundException {
         logger.info("Got request to get a house with name = {}", name);
-        try{
-            return Response
-                    .ok(service.getHouseByName(name))
-                    .build();
-        } catch (HouseNotFoundException e) {
-            logger.warn("House with specified name ({}) was not found", name);
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateHouseNotFoundError(name))
-                    .build();
-        }
+        return Response
+                .ok(service.getHouseByName(name))
+                .build();
     }
 
     @PUT
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response updateHouseByName(@PathParam("name") String name, @Valid House house){
+    public Response updateHouseByName(@PathParam("name") String name, @Valid House house) throws JpaException, HouseNotFoundException {
         logger.info("Got request to update a house with name = {}", name);
         try{
             if (name == null || name.isEmpty()) throw new ValidationException();
@@ -180,19 +144,6 @@ public class HouseController {
             return Response
                     .status(Response.Status.BAD_REQUEST)
                     .entity(errorBodyGenerator.generateValidationError(name))
-                    .build();
-        }
-        catch (HouseNotFoundException e){
-            logger.warn("House with specified name ({}) was not found", name);
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(errorBodyGenerator.generateHouseNotFoundError(name))
-                    .build();
-        } catch (NotCreatedException e) {
-            logger.warn("House was not updated due to transaction error");
-            return Response
-                    .status(Response.Status.INTERNAL_SERVER_ERROR)
-                    .entity(errorBodyGenerator.generateTransactionError(e))
                     .build();
         }
     }

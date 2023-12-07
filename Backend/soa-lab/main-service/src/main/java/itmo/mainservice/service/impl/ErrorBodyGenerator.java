@@ -1,7 +1,7 @@
 package itmo.mainservice.service.impl;
 
 import itmo.library.ErrorBody;
-import itmo.mainservice.exception.NotCreatedException;
+import itmo.mainservice.exception.JpaException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,11 +62,23 @@ public class ErrorBodyGenerator {
                 .build();
     }
 
-    public ErrorBody generateTransactionError(NotCreatedException e) {
+    public ErrorBody generateTransactionError(JpaException e) {
+        logger.warn("Transaction error has occurred" + e.getMessage());
         logger.info("Generating Transaction exception error body");
         return ErrorBody.builder()
                 .errorCode(500)
                 .message("Transaction Exception")
+                .details(e.getMessage())
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+
+    public ErrorBody generateInternalServerError(Throwable e) {
+        logger.warn("Unknown Error has occurred" + e.getMessage());
+        logger.info("Generating Unknown exception error body");
+        return ErrorBody.builder()
+                .errorCode(500)
+                .message("Unknown error")
                 .details(e.getMessage())
                 .timestamp(LocalDateTime.now())
                 .build();

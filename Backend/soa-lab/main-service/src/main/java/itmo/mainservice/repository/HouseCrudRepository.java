@@ -44,8 +44,7 @@ public class HouseCrudRepository {
         criteriaQuery.select(root);
 
         if (filters != null && !filters.isEmpty()){
-            Predicate predicate = criteriaBuilder.conjunction();
-            applyFilters(predicate, criteriaBuilder, root, filters);
+            criteriaQuery.where(applyFilters(criteriaBuilder, root, filters));
         }
 
         if (sorts != null && !sorts.isEmpty()){
@@ -72,7 +71,9 @@ public class HouseCrudRepository {
                 .collect(Collectors.toList());
     }
 
-    public void applyFilters(Predicate predicate, CriteriaBuilder criteriaBuilder, Root<?> root, List<Filter> filters){
+    public Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root, List<Filter> filters){
+        Predicate predicate = criteriaBuilder.conjunction();
+
         for (Filter filter: filters){
             switch (filter.getFilteringOperation()){
                 case EQ:
@@ -97,5 +98,11 @@ public class HouseCrudRepository {
                     throw new IllegalArgumentException();
             }
         }
+        return predicate;
+    }
+
+    public boolean checkExist(House house) {
+       Optional<House> result = getByName(house.getName());
+       return result.isPresent();
     }
 }

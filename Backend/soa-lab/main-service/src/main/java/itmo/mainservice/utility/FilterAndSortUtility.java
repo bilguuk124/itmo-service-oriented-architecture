@@ -17,28 +17,16 @@ public class FilterAndSortUtility {
 
     private final static Pattern nestedFieldNamePattern = Pattern.compile("(.*)\\.(.*)");
     private final static Pattern lhsPattern = Pattern.compile("(.*)\\[(.*)]=(.*)");
-    private final static int DEFAULT_PAGE_SIZE = 10;
-    private final static int DEFAULT_PAGE = 1;
+    public final static int DEFAULT_PAGE_SIZE = 10;
+    public final static int DEFAULT_PAGE = 1;
 
-
-    public static void prepareDataForSortFilter(List<String> sorts, List<String> filters,
-                                                Integer page, Integer pageSize, Class<?> clazz,
-                                                List<Sort> sortList, List<Filter> filterList){
-        if (page == null) page = DEFAULT_PAGE;
-        if (pageSize == null) page = DEFAULT_PAGE_SIZE;
-
-        if (!sorts.isEmpty()){
-            sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
-        }
-        if (!filters.isEmpty()){
-            filterList = FilterAndSortUtility.getFiltersFromStringList(filters, clazz);
-        }
-    }
-
-    private static List<Sort> getSortsFromStringList(List<String> sorts) {
+    public static List<Sort> getSortsFromStringList(List<String> sorts) {
         List<Sort> sortList = new ArrayList<>();
+        if (sorts.isEmpty()) return sortList;
+
         boolean containsOppositeSorts = sorts.stream().allMatch(e1 -> sorts.stream().allMatch(e2 -> Objects.equals(e1, "-" + e2)));
         if (containsOppositeSorts) throw new IllegalArgumentException("Opposite sorts");
+
         for (String sort : sorts) {
             boolean desc = sort.startsWith("-");
             String sortFieldName = desc ? sort.substring(1) : sort;
@@ -62,7 +50,8 @@ public class FilterAndSortUtility {
         return sortList;
     }
 
-    private static List<Filter> getFiltersFromStringList(List<String> filters, Class<?> clazz) {
+
+    public static List<Filter> getFiltersFromStringList(List<String> filters, Class<?> clazz) {
         List<Filter> filterList = new ArrayList<>();
         for (String filter : filters) {
             Matcher matcher = lhsPattern.matcher(filter);
@@ -86,6 +75,8 @@ public class FilterAndSortUtility {
                     if (Objects.equals(fieldName, "view") || Objects.equals(fieldName, "transport") || Objects.equals(fieldName, "furnish")) {
                         fieldValue = matcher.group(3).toLowerCase();
                     } else fieldValue = matcher.group(3);
+                } else{
+                    fieldValue = matcher.group(3);
                 }
             }
             if (fieldName != null && fieldName.isEmpty())
@@ -128,6 +119,7 @@ public class FilterAndSortUtility {
             }
         }
     }
+
 
 }
 
