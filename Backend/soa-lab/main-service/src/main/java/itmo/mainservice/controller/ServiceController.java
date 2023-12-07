@@ -43,8 +43,7 @@ public class ServiceController {
         if (id1 == null || id1 < 1) throw new ValidationException();
         if (id2 == null || id2 < 1) throw new ValidationException();
 
-        Flat flat = null;
-        flat = bonusService.getCheaperOfTwoFlats(id1, id2);
+        Flat flat = bonusService.getCheaperOfTwoFlats(id1, id2);
         return Response
                 .ok(flat)
                 .build();
