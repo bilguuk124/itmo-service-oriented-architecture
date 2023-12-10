@@ -13,6 +13,10 @@ export default interface Flat {
     house: House;
 }
 
+export interface FlatCreate extends Omit<Flat, 'id' | 'creationDate'>{
+    price: number
+}
+
 export interface House {
     name: String;
     year: number;
