@@ -5,7 +5,7 @@ import {
     Container,
     Typography,
     Box,
-    Button
+    Button, Snackbar, Alert, AlertColor
 } from '@mui/material/';
 import Flat, { Furnish, View, Transport, FlatCreate, House } from '../model/Flat';
 import { useMutation } from 'react-query';
@@ -32,13 +32,25 @@ export const CreateHouseForm = () => {
         numberOfFloors: 1
     }
     const [houseState, setHouseState] = React.useState<House>(initStateHouse)
+    const [status, setStatus] = React.useState({
+        severity: '',
+        msg: ''
+    });
 
     const { mutate } = useMutation(['createFlat'],
         (data: House) => HouseService.create(data),
         {
-            onSuccess() { setHouseState(initStateHouse);  }
+            onSuccess() { setHouseState(initStateHouse); setStatus({ severity: 'success', msg: 'House was created' }) }
         }
     )
+
+    const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setStatus({ severity: '', msg: '' });
+    };
 
     const submitForm = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -78,7 +90,15 @@ export const CreateHouseForm = () => {
                 </FormControl>
                 <Button variant='contained' sx={{ width: '70%', m: 2 }} type='submit'>Send</Button>
             </form>
-            <Typography variant='h3'></Typography>
+            <Snackbar
+                open={status.severity != ''}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                message={status.msg}>
+                <Alert onClose={handleClose} severity={status.severity ? 'info' : status.severity as AlertColor} sx={{ width: '100%' }}>
+                    {status.msg}
+                </Alert>
+            </Snackbar>
         </Container>
     )
 }

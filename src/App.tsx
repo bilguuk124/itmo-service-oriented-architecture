@@ -18,13 +18,13 @@ function BasicTabs() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <TabContext value={value}  >
+      <TabContext value={value} >
         <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 1 }}>
           <TabList onChange={handleChange} sx={{ m: 0 }} >
-            <Tab value="1" label="Table" />
+            <Tab value="1" label="Flats table" />
+            <Tab value="3" label="Houses table"></Tab>
             <Tab value="0" label="Create Flat"></Tab>
             <Tab value="2" label="Create House"></Tab>
-            <Tab value="3" label="Delete"></Tab>
           </TabList>
         </Box>
         <TabPanel value='1'>

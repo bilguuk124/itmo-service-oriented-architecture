@@ -12,8 +12,11 @@ export const FlatService = {
             },
         })
         if (headers["content-type"] === 'application/xml' || headers["Content-Type"] === 'application/xml') {
-            const obj = parseXml(data)
-            console.log('new sata received /api/flats' + obj)
+            let obj = parseXml(data)
+            console.log('new sata received /api/flats')
+            if (obj.flats === '')
+                obj = []
+            console.log(obj)
             return mapRespToFlat(obj)
         }
         return data
