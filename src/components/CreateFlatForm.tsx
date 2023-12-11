@@ -15,7 +15,7 @@ import {
     Switch,
     Grid
 } from '@mui/material/';
-import Flat, { Furnish, View, Transport, FlatCreate } from '../model/Flat';
+import { Furnish, View, Transport, FlatCreate } from '../model/Flat';
 import { useMutation } from 'react-query';
 import { FlatService } from '../services/FlatsService';
 
@@ -33,7 +33,7 @@ const LabeledBox: React.FC<LabeledBoxProps> = ({ label, children }) => {
     )
 }
 
-const checkValid = (flat: any): string[] => {
+const checkValid = (flat: FlatCreate): string[] => {
     const res = []
     if (flat.name === '' || flat.name === null)
         res.push('name')
@@ -45,17 +45,17 @@ const checkValid = (flat: any): string[] => {
         res.push('numberOfFloors')
     if (flat.furnish === null || !Object.keys(Furnish).includes(flat.furnish))
         res.push('furnish')
-    if (flat.veiw === null || !Object.keys(View).includes(flat.view))
+    if (flat.view === null || !Object.keys(View).includes(flat.view))
         res.push('view')
     if (flat.transport === null || !Object.keys(Transport).includes(flat.transport))
         res.push('transport')
     if (flat.area > 527 || flat.area < 0)
         res.push('area');
-    if (flat.coordinates.x > 548)
+    if (flat.coordinates.coordinate_x > 548)
         res.push('coordinateX');
     if (flat.price == null || flat.price < 0)
         res.push('price');
-    if (flat.coordinates.y === null)
+    if (flat.coordinates.coordinate_y === null)
         res.push('coordinateY');
     if (flat.numberOfRooms < 0)
         res.push('numberOfRooms');
@@ -66,10 +66,10 @@ const checkValid = (flat: any): string[] => {
 
 export const CreateFlatForm = () => {
     const initStateFlat = {
-        name: 'fffffffffffffffffff',
+        name: '',
         coordinates: {
-            x: 0,
-            y: 0,
+            coordinate_x: 0,
+            coordinate_y: 0,
         },
         area: 1,
         numberOfRooms: 1,
@@ -79,7 +79,7 @@ export const CreateFlatForm = () => {
         view: View.NORMAL,
         transport: Transport.NORMAL,
         house: {
-            name: 'ddddddddddddddd',
+            name: '',
             year: 1,
             numberOfFloors: 1,
         }
@@ -87,15 +87,14 @@ export const CreateFlatForm = () => {
     const [flatState, setFlatState] = React.useState<FlatCreate>(initStateFlat)
 
     const { mutate } = useMutation(['createFlat'],
-    (data: FlatCreate) => FlatService.create(data),
-    {
-        onSuccess() { setFlatState(initStateFlat) }
-    }
-)
+        (data: FlatCreate) => FlatService.create(data),
+        {
+            onSuccess() { setFlatState(initStateFlat) }
+        }
+    )
 
     const submitForm = (e: React.SyntheticEvent) => {
         e.preventDefault();
-
         mutate(flatState)
     }
 
@@ -191,16 +190,16 @@ export const CreateFlatForm = () => {
                                 required
 
                                 error={checkValid(flatState).includes('coordinateX')}
-                                value={flatState.coordinates.x}
-                                onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, x: parseInt(e.target.value) } })} />
+                                value={flatState.coordinates.coordinate_x}
+                                onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_x: parseInt(e.target.value) } })} />
                             <TextField
                                 type='number'
                                 id='coordinateY'
                                 label='Y'
                                 error={checkValid(flatState).includes('coordinateY')}
                                 required
-                                value={flatState.coordinates.y}
-                                onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, y: parseInt(e.target.value) } })} />
+                                value={flatState.coordinates.coordinate_y}
+                                onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_y: parseInt(e.target.value) } })} />
                         </Box>
                     </LabeledBox>
                     <LabeledBox label='House'>

@@ -5,6 +5,7 @@ import { Container, Box, Tab } from '@mui/material'
 import { FlatsTable } from './components/FlatsTable';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { CreateFlatForm } from './components/CreateFlatForm';
+import { CreateHouseForm } from './components/CreateHouseForm';
 
 const queryClient = new QueryClient();
 
@@ -21,8 +22,8 @@ function BasicTabs() {
         <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 1 }}>
           <TabList onChange={handleChange} sx={{ m: 0 }} >
             <Tab value="1" label="Table" />
-            <Tab value="0" label="Create"></Tab>
-            <Tab value="2" label="Update"></Tab>
+            <Tab value="0" label="Create Flat"></Tab>
+            <Tab value="2" label="Create House"></Tab>
             <Tab value="3" label="Delete"></Tab>
           </TabList>
         </Box>
@@ -31,6 +32,9 @@ function BasicTabs() {
         </TabPanel>
         <TabPanel value='0' >
           <CreateFlatForm/>
+        </TabPanel>
+        <TabPanel value='2'>
+          <CreateHouseForm/>
         </TabPanel>
       </TabContext>
     </Box>

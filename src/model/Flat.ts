@@ -13,8 +13,12 @@ export default interface Flat {
     house: House;
 }
 
-export interface FlatCreate extends Omit<Flat, 'id' | 'creationDate'>{
-    price: number
+export interface FlatCreate extends Omit<Flat, 'id' | 'creationDate' | 'coordinates'>{
+    // price: number;
+    coordinates: {
+        coordinate_x: number;
+        coordinate_y: number;
+    }
 }
 
 export interface House {
