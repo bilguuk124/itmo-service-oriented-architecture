@@ -1,28 +1,42 @@
+
+export type ComparisonAlias = "eq" | "lt" | 'qt' | 'lte' | 'gte' | 'neq'
+export type ComparisonInfo = { operation: ComparisonAlias, value: any }
+export type SortingDirection = 'asc' | 'desc' | null
+export type FilteringInfo<T> = Record<keyof Partial<T>, ComparisonInfo>
+export type SortingInfo<T> = Record<keyof Partial<House>, SortingDirection>
+export type PaginationInfo = { pageNumber: number, pageSize: number }
+
 export default interface Flat {
     id: number;
-    name: String;
+    name: string;
     coordinates: Coordinates;
     creationDate: Date;
     area: number;
     numberOfRooms: number;
     furnish: Furnish;
-    hasBalcany: boolean;
+    hasBalcony: boolean;
     price: number;
     view: View;
     transport: Transport;
     house: House;
 }
 
-export interface FlatCreate extends Omit<Flat, 'id' | 'creationDate' | 'coordinates'>{
-    // price: number;
+export interface BadResponse {
+    code: number;
+    message: string;
+    details: string;
+    timestamp: Date;
+}
+
+export interface FlatBackend extends Omit<Flat, 'id' | 'creationDate' | 'coordinates'> {
     coordinates: {
         coordinate_x: number;
         coordinate_y: number;
     }
 }
 
-export interface House {
-    name: String;
+export type House = {
+    name: string;
     year: number;
     numberOfFloors: number;
 }

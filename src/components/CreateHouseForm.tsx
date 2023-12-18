@@ -7,7 +7,7 @@ import {
     Box,
     Button, Snackbar, Alert, AlertColor
 } from '@mui/material/';
-import Flat, { Furnish, View, Transport, FlatCreate, House } from '../model/Flat';
+import Flat, { Furnish, View, Transport, FlatBackend, House } from '../types';
 import { useMutation } from 'react-query';
 import { HouseService } from '../services/HouseService';
 import { genXml } from '../utils';
@@ -32,15 +32,28 @@ export const CreateHouseForm = () => {
         numberOfFloors: 1
     }
     const [houseState, setHouseState] = React.useState<House>(initStateHouse)
-    const [status, setStatus] = React.useState({
-        severity: '',
+    const [respStatus, setStatus] = React.useState({
+        status: '',
         msg: ''
     });
 
-    const { mutate } = useMutation(['createFlat'],
+    const { mutate, isError, isSuccess, error, status } = useMutation(['createHouse'],
         (data: House) => HouseService.create(data),
         {
-            onSuccess() { setHouseState(initStateHouse); setStatus({ severity: 'success', msg: 'House was created' }) }
+            onSuccess() {
+                setHouseState(initStateHouse);
+                setStatus({ status: status.toString(), msg: 'House Created' })
+            },
+            onError(error: any) {
+                console.log(error);
+                setHouseState(initStateHouse);
+                setStatus({ status: status.toString(), msg: error.delatils })
+            },
+            onSettled(data, error, variables){
+                if (isError)
+                    console.log(error)
+                console.log(data)
+            }
         }
     )
 
@@ -49,7 +62,7 @@ export const CreateHouseForm = () => {
             return;
         }
 
-        setStatus({ severity: '', msg: '' });
+        setStatus({ status: '', msg: '' });
     };
 
     const submitForm = (e: React.SyntheticEvent) => {
@@ -91,12 +104,13 @@ export const CreateHouseForm = () => {
                 <Button variant='contained' sx={{ width: '70%', m: 2 }} type='submit'>Send</Button>
             </form>
             <Snackbar
-                open={status.severity != ''}
+                open={respStatus.status != ''}
                 autoHideDuration={6000}
                 onClose={handleClose}
-                message={status.msg}>
-                <Alert onClose={handleClose} severity={status.severity ? 'info' : status.severity as AlertColor} sx={{ width: '100%' }}>
-                    {status.msg}
+                message={respStatus.msg}
+                anchorOrigin={{horizontal: 'right', vertical: 'top' }}>
+                <Alert onClose={handleClose} variant="filled" severity={respStatus.status === 'error' ? 'error' : respStatus.status === 'success' ? 'info' :'success'} sx={{ width: '100%' }}>
+                    {respStatus.msg}
                 </Alert>
             </Snackbar>
         </Container>

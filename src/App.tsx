@@ -6,6 +6,7 @@ import { FlatsTable } from './components/FlatsTable';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { CreateFlatForm } from './components/CreateFlatForm';
 import { CreateHouseForm } from './components/CreateHouseForm';
+import { HousesTable } from './components/HousesTable';
 
 const queryClient = new QueryClient();
 
@@ -17,25 +18,30 @@ function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box>
       <TabContext value={value} >
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 1 }}>
-          <TabList onChange={handleChange} sx={{ m: 0 }} >
-            <Tab value="1" label="Flats table" />
-            <Tab value="3" label="Houses table"></Tab>
-            <Tab value="0" label="Create Flat"></Tab>
-            <Tab value="2" label="Create House"></Tab>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <TabList onChange={handleChange} sx={{ m: 0, backgroundColor: 'lightblue', width: '100%', opacity: '90%' }} >
+            <Tab value="1" label="Flats table" sx={{ color: 'black', fontWeight: '500' }} />
+            <Tab value="3" label="Houses table" sx={{ color: 'black', fontWeight: '500' }} ></Tab>
+            <Tab value="0" label="Create Flat" sx={{ color: 'black', fontWeight: '500' }} ></Tab>
+            <Tab value="2" label="Create House" sx={{ color: 'black', fontWeight: '500' }} ></Tab>
           </TabList>
         </Box>
-        <TabPanel value='1'>
-          <FlatsTable />
-        </TabPanel>
-        <TabPanel value='0' >
-          <CreateFlatForm/>
-        </TabPanel>
-        <TabPanel value='2'>
-          <CreateHouseForm/>
-        </TabPanel>
+        <Box sx={{ height: '88vh', backgroundColor: 'white' }}>
+          <TabPanel value='1'>
+            <FlatsTable />
+          </TabPanel>
+          <TabPanel value='3'>
+            <HousesTable />
+          </TabPanel>
+          <TabPanel value='0'>
+            <CreateFlatForm />
+          </TabPanel>
+          <TabPanel value='2'>
+            <CreateHouseForm />
+          </TabPanel>
+        </Box>
       </TabContext>
     </Box>
   );
@@ -49,7 +55,7 @@ const App: React.FC = () => (
         </Toolbar>
       </AppBar>
       <main>
-        <Container sx={{ width: '100%' }} maxWidth={false} >
+        <Container maxWidth={false} >
           <BasicTabs />
         </Container>
       </main>

@@ -1,5 +1,5 @@
 import { create } from 'xmlbuilder2'
-import { FlatCreate } from './model/Flat'
+import { FilteringInfo, FlatBackend, SortingInfo } from './types'
 import { parseString } from 'xml2js';
 
 export const genXml = (target: any, rootKey?: string): string => {
@@ -18,13 +18,30 @@ export const genXml = (target: any, rootKey?: string): string => {
     return doc.toString()
 }
 
-export const parseXml = (xmlReq: any) => {
+export const parseXml = (xmlReq: any, root?: string) => {
     let res: any
     parseString(xmlReq, { explicitArray: false }, (err: any, result: any) => {
         if (err) {
             throw err
         }
-        res = result
+        if (root)
+            res = result[root]
+        else res = result
     })
     return res
+}
+
+
+export const buildSortingParams = (sorting: SortingInfo<any>): string => {
+    return Object.entries(sorting) //getting keys of type
+        .filter(([key, val]) => val ? true : false) // filtering undefined properties
+        .map(([key, val]) => val === 'desc' ? `-${key}` : key) // 'desc' -> -val , 'asc' -> val
+        .join(',')
+}
+
+export const buildFildetingParams = (filteringInfo: FilteringInfo<any>): string => {
+    return Object.entries(filteringInfo) //getting keys of type
+        .filter(([key, val]) => val ? true : false) // filtering undefined properties
+        .map(([key, val]) => `${key}[${val.operation}]=${val.value}`)
+        .join(',')
 }

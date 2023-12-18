@@ -15,7 +15,7 @@ import {
     Switch,
     Grid
 } from '@mui/material/';
-import { Furnish, View, Transport, FlatCreate } from '../model/Flat';
+import { Furnish, View, Transport, FlatBackend } from '../types';
 import { useMutation } from 'react-query';
 import { FlatService } from '../services/FlatsService';
 
@@ -33,7 +33,7 @@ const LabeledBox: React.FC<LabeledBoxProps> = ({ label, children }) => {
     )
 }
 
-const checkValid = (flat: FlatCreate): string[] => {
+const checkValid = (flat: FlatBackend): string[] => {
     const res = []
     if (flat.name === '' || flat.name === null)
         res.push('name')
@@ -74,7 +74,7 @@ export const CreateFlatForm = () => {
         area: 1,
         numberOfRooms: 1,
         furnish: Furnish.NONE,
-        hasBalcany: false,
+        hasBalcony: false,
         price: 1,
         view: View.NORMAL,
         transport: Transport.NORMAL,
@@ -84,10 +84,10 @@ export const CreateFlatForm = () => {
             numberOfFloors: 1,
         }
     }
-    const [flatState, setFlatState] = React.useState<FlatCreate>(initStateFlat)
+    const [flatState, setFlatState] = React.useState<FlatBackend>(initStateFlat)
 
     const { mutate } = useMutation(['createFlat'],
-        (data: FlatCreate) => FlatService.create(data),
+        (data: FlatBackend) => FlatService.create(data),
         {
             onSuccess() { setFlatState(initStateFlat) }
         }
@@ -237,7 +237,7 @@ export const CreateFlatForm = () => {
                                 onChange={e => setFlatState({ ...flatState, house: { ...flatState.house, numberOfFloors: parseInt(e.target.value) } })} />
                         </Box>
                     </LabeledBox>
-                    <FormControlLabel control={<Switch />} label="Has balcony" value={flatState.hasBalcany} onChange={(e, val) => setFlatState({ ...flatState, hasBalcany: val })} sx={{ alignSelf: 'center' }} />
+                    <FormControlLabel control={<Switch />} label="Has balcony" value={flatState.hasBalcony} onChange={(e, val) => setFlatState({ ...flatState, hasBalcony: val })} sx={{ alignSelf: 'center' }} />
                 </FormControl>
                 <Button variant='contained' sx={{ width: '70%', m: 4 }} type='submit'>Send</Button>
             </form>
