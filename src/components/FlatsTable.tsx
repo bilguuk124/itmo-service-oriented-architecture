@@ -3,10 +3,30 @@ import Flat, { FilteringInfo, FlatBackend, SortingInfo } from '../types';
 import { useQuery } from 'react-query';
 import { FlatService } from '../services/FlatsService';
 import { Box } from '@material-ui/core';
-import { DataGrid, GridToolbar, GridRenderCellParams, GridColDef, GridSortModel, GridToolbarContainer, GridToolbarDensitySelector, GridToolbarColumnsButton, GridToolbarFilterButton } from '@mui/x-data-grid';
+// import {
+//   DataGrid,
+//   GridToolbar,
+//   GridRenderCellParams,
+//   GridColDef,
+//   GridSortModel,
+//   GridToolbarContainer,
+//   GridToolbarDensitySelector,
+//   GridToolbarColumnsButton,
+//   GridToolbarFilterButton
+// } from '@mui/x-data-grid';
 import { Button, Pagination, Stack } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-// import { DataGridPro, GridColDef, GridToolbar, GridSortModel } from '@mui/x-data-grid-pro';
+import {
+  DataGridPro,
+  GridToolbar,
+  GridRenderCellParams,
+  GridColDef,
+  GridSortModel,
+  GridToolbarContainer,
+  GridToolbarDensitySelector,
+  GridToolbarColumnsButton,
+  GridToolbarFilterButton
+} from '@mui/x-data-grid-pro';
 
 const columns: GridColDef<Flat>[] = [{ field: 'id', width: 10 },
 { field: 'name', flex: 0.5 },
@@ -84,7 +104,7 @@ export const FlatsTable = () => {
 
   return (
     <Box sx={{ alignContent: 'center' }}>
-      <DataGrid
+      <DataGridPro
         columns={columns}
         rows={resp ? resp : []}
         getRowId={(row) => row.id}

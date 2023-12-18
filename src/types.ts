@@ -1,5 +1,5 @@
 
-export type ComparisonAlias = "eq" | "lt" | 'qt' | 'lte' | 'gte' | 'neq'
+export type ComparisonAlias = "eq" | "lt" | 'gt' | 'lte' | 'gte' | 'neq'
 export type ComparisonInfo = { operation: ComparisonAlias, value: any }
 export type SortingDirection = 'asc' | 'desc' | null
 export type FilteringInfo<T> = Record<keyof Partial<T>, ComparisonInfo>

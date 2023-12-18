@@ -1,6 +1,6 @@
 import axios from "axios";
 import Flat, { FilteringInfo, FlatBackend, PaginationInfo, SortingInfo } from "../types";
-import { parseXml, genXml, buildSortingParams, buildFildetingParams } from "../utils";
+import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
 // axios.defaults.baseURL = "http://localhost:9000"
 axios.defaults.baseURL = "http://localhost:8080/api"
 
@@ -11,7 +11,7 @@ export const FlatService = {
                 pageNumber: pagintion?.pageNumber,
                 pageSize: pagintion?.pageSize,
                 sort: sorting ? buildSortingParams(sorting) : undefined,
-                filter: filtering ? buildFildetingParams(filtering) : undefined
+                filter: filtering ? buildFilteringParams(filtering) : undefined
             },
             headers: {
                 'Content-Type': 'application/xml',

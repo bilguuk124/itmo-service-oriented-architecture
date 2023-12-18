@@ -1,10 +1,9 @@
 import axios from "axios";
 import { parseString } from 'xml2js';
 import { FilteringInfo, House, PaginationInfo, SortingInfo } from "../types";
-import { parseXml, genXml, buildSortingParams, buildFildetingParams } from "../utils";
+import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
 // axios.defaults.baseURL = "http://localhost:9000"
 axios.defaults.baseURL = "http://localhost:8080/api"
-
 
 axios.interceptors.request.use(request => {
     console.log('Starting Request', JSON.stringify(request, null, 2))
@@ -15,7 +14,6 @@ axios.interceptors.response.use(response => {
     return response
 })
 
-
 export const HouseService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<House>, sorting?: SortingInfo<House>) {
         const { data, headers } = await axios.get(`/houses`, {
@@ -23,7 +21,7 @@ export const HouseService = {
                 pageNumber: pagintion?.pageNumber,
                 pageSize: pagintion?.pageSize,
                 sort: sorting ? buildSortingParams(sorting) : undefined,
-                filter: filtering ? buildFildetingParams(filtering) : undefined
+                filter: filtering ? buildFilteringParams(filtering) : undefined
             },
             headers: {
                 'Content-Type': 'application/xml',
@@ -31,7 +29,10 @@ export const HouseService = {
         })
         if (headers["content-type"] === 'application/xml' || headers["Content-Type"] === 'application/xml') {
             var houses = parseXml(data, 'houses').house
-            console.log(houses)
+            if (houses === undefined)
+                return []
+            if (houses?.length === undefined)
+                houses = [houses]
             return houses
         }
         return data

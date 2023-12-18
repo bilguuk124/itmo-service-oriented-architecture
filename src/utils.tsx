@@ -1,6 +1,15 @@
 import { create } from 'xmlbuilder2'
-import { FilteringInfo, FlatBackend, SortingInfo } from './types'
+import { ComparisonAlias, FilteringInfo, FlatBackend, SortingInfo } from './types'
 import { parseString } from 'xml2js';
+
+export const getComparisonAliasByMathOperator = (oper: string): ComparisonAlias | undefined => {
+    if ('=' === oper) return 'eq'
+    if ('!=' === oper) return 'neq'
+    if ('>' === oper) return 'gt'
+    if ('>=' === oper) return 'gte'
+    if ('<' === oper) return 'lt'
+    if ('<=' === oper) return 'lte'
+}
 
 export const genXml = (target: any, rootKey?: string): string => {
     // create(flat)
@@ -39,9 +48,10 @@ export const buildSortingParams = (sorting: SortingInfo<any>): string => {
         .join(',')
 }
 
-export const buildFildetingParams = (filteringInfo: FilteringInfo<any>): string => {
+export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string | undefined => {
+    if (Object.values(filteringInfo).filter((val) => val.value !== undefined && val.value !== '').length === 0)
+        return undefined
     return Object.entries(filteringInfo) //getting keys of type
-        .filter(([key, val]) => val ? true : false) // filtering undefined properties
         .map(([key, val]) => `${key}[${val.operation}]=${val.value}`)
         .join(',')
 }

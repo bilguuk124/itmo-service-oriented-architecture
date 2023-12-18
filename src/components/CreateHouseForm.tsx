@@ -108,7 +108,8 @@ export const CreateHouseForm = () => {
                 autoHideDuration={6000}
                 onClose={handleClose}
                 message={respStatus.msg}
-                anchorOrigin={{horizontal: 'right', vertical: 'top' }}>
+                anchorOrigin={{horizontal: 'right', vertical: 'top' }}
+                sx={{width: 'auto'}}>
                 <Alert onClose={handleClose} variant="filled" severity={respStatus.status === 'error' ? 'error' : respStatus.status === 'success' ? 'info' :'success'} sx={{ width: '100%' }}>
                     {respStatus.msg}
                 </Alert>
