@@ -5,12 +5,15 @@ import {
     Container,
     Typography,
     Box,
-    Button, Snackbar, Alert, AlertColor
+    Button,
+    Snackbar,
+    Alert
 } from '@mui/material/';
-import Flat, { Furnish, View, Transport, FlatBackend, House } from '../types';
+import Flat, { House } from '../types';
 import { useMutation } from 'react-query';
 import { HouseService } from '../services/HouseService';
-import { genXml } from '../utils';
+import { queryClient } from '../App';
+import { reactQueryKeys } from '../constants';
 
 const checkValid = (house: House): string[] => {
     const res = []
@@ -31,25 +34,27 @@ export const CreateHouseForm = () => {
         year: 1,
         numberOfFloors: 1
     }
+
     const [houseState, setHouseState] = React.useState<House>(initStateHouse)
     const [respStatus, setStatus] = React.useState({
         status: '',
         msg: ''
     });
 
-    const { mutate, isError, isSuccess, error, status } = useMutation(['createHouse'],
+    const { mutate, isError, isSuccess, error, status } = useMutation([reactQueryKeys.createHouse],
         (data: House) => HouseService.create(data),
         {
             onSuccess() {
                 setHouseState(initStateHouse);
                 setStatus({ status: status.toString(), msg: 'House Created' })
+                queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
             },
             onError(error: any) {
                 console.log(error);
                 setHouseState(initStateHouse);
                 setStatus({ status: status.toString(), msg: error.delatils })
             },
-            onSettled(data, error, variables){
+            onSettled(data, error, variables) {
                 if (isError)
                     console.log(error)
                 console.log(data)
@@ -61,7 +66,6 @@ export const CreateHouseForm = () => {
         if (reason === 'clickaway') {
             return;
         }
-
         setStatus({ status: '', msg: '' });
     };
 
@@ -108,9 +112,12 @@ export const CreateHouseForm = () => {
                 autoHideDuration={6000}
                 onClose={handleClose}
                 message={respStatus.msg}
-                anchorOrigin={{horizontal: 'right', vertical: 'top' }}
-                sx={{width: 'auto'}}>
-                <Alert onClose={handleClose} variant="filled" severity={respStatus.status === 'error' ? 'error' : respStatus.status === 'success' ? 'info' :'success'} sx={{ width: '100%' }}>
+                anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+                sx={{ width: 'auto' }}>
+                <Alert onClose={handleClose}
+                    variant="filled"
+                    severity={respStatus.status === 'error' ? 'error' : respStatus.status === 'success' ? 'info' : 'success'}
+                    sx={{ width: '100%' }}>
                     {respStatus.msg}
                 </Alert>
             </Snackbar>

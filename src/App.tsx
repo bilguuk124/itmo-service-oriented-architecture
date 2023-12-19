@@ -8,7 +8,7 @@ import { CreateFlatForm } from './components/CreateFlatForm';
 import { CreateHouseForm } from './components/CreateHouseForm';
 import { HousesTable } from './components/HousesTable';
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient();
 
 function BasicTabs() {
   const [value, setValue] = React.useState('0');

@@ -18,15 +18,14 @@ import { Button, Pagination, Stack } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {
   DataGridPro,
-  GridToolbar,
-  GridRenderCellParams,
   GridColDef,
   GridSortModel,
   GridToolbarContainer,
-  GridToolbarDensitySelector,
   GridToolbarColumnsButton,
-  GridToolbarFilterButton
+  GridToolbarFilterButton,
+  useGridApiRef
 } from '@mui/x-data-grid-pro';
+import { reactQueryKeys } from '../constants';
 
 const columns: GridColDef<Flat>[] = [{ field: 'id', width: 10 },
 { field: 'name', flex: 0.5 },
@@ -56,6 +55,8 @@ const columnGroupingModel = [
 ];
 
 export const FlatsTable = () => {
+  const dataGridApiRef = useGridApiRef()
+
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
     pageSize: 5,
@@ -76,16 +77,22 @@ export const FlatsTable = () => {
     );
   }, []);
 
+  const handleDelete = () => {
+    const selectedRows = dataGridApiRef.current.getSelectedRows()
+    console.log(selectedRows);
+    useQuery
+  }
+
 
   const { isLoading, error, data: resp } = useQuery(
-    ['flatsAll', queryOptions],
+    [reactQueryKeys.getAllFlats, queryOptions, paginationModel],
     () => FlatService.getAll({ ...paginationModel, pageNumber: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
   )
 
   const CustomFooter = () => {
     return (
       <Stack direction="row" spacing={2} alignItems="center" sx={{ display: 'inline-grid', alignItems: 'center', gridAutoFlow: 'column' }}>
-        <Button variant="outlined" startIcon={<DeleteIcon />} sx={{ justifySelf: 'start' }}>
+        <Button variant="outlined" startIcon={<DeleteIcon />} sx={{ justifySelf: 'start' }} onClick={handleDelete}>
           Delete
         </Button>
         <Pagination count={10} showFirstButton showLastButton sx={{ justifySelf: 'end' }} />
@@ -111,6 +118,7 @@ export const FlatsTable = () => {
         density='compact'
         experimentalFeatures={{ columnGrouping: true }}
         columnGroupingModel={columnGroupingModel}
+        loading={isLoading}
         // autoPageSize
         slots={{ toolbar: CustomToolbar, footer: CustomFooter }}
         rowSpacingType='border'
@@ -122,6 +130,8 @@ export const FlatsTable = () => {
         // sorting
         sortingMode="server"
         onSortModelChange={handleSortModelChange}
+
+        apiRef={dataGridApiRef}
       />
     </Box>
   )

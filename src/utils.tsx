@@ -19,10 +19,7 @@ export const genXml = (target: any, rootKey?: string): string => {
         obj = {
             [rootKey]: { ...target }
         }
-
-
     const doc = create({ version: '1.0', encoding: "UTF-8", standalone: true }, obj);
-    // const xml = doc.end({ prettyPrint: true });
     console.log(doc.toString());
     return doc.toString()
 }

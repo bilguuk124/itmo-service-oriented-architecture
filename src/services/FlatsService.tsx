@@ -28,8 +28,12 @@ export const FlatService = {
         return data
     },
 
-    async create(data: FlatBackend) {
-        return await axios.post('/flats', genXml(data, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })
+    async create(flat: FlatBackend) {
+        return await axios.post('/flats', genXml(flat, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })
+    },
+
+    async delete(flatId: number){
+        return await axios.delete(`/flats/${flatId}`)
     }
 
 

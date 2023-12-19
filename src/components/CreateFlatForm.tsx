@@ -2,22 +2,19 @@ import * as React from 'react';
 import {
     TextField,
     FormControl,
-    InputLabel,
-    FormGroup,
-    FormLabel,
     Container,
     Typography,
     FormControlLabel,
     Box,
-    Paper,
     Button,
     Autocomplete,
-    Switch,
-    Grid
+    Switch
 } from '@mui/material/';
 import { Furnish, View, Transport, FlatBackend } from '../types';
 import { useMutation } from 'react-query';
 import { FlatService } from '../services/FlatsService';
+import { queryClient } from '../App';
+import { flatInitState, reactQueryKeys } from '../constants';
 
 interface LabeledBoxProps {
     label: string;
@@ -33,7 +30,7 @@ const LabeledBox: React.FC<LabeledBoxProps> = ({ label, children }) => {
     )
 }
 
-const checkValid = (flat: FlatBackend): string[] => {
+const validateForm = (flat: FlatBackend): string[] => {
     const res = []
     if (flat.name === '' || flat.name === null)
         res.push('name')
@@ -65,31 +62,15 @@ const checkValid = (flat: FlatBackend): string[] => {
 
 
 export const CreateFlatForm = () => {
-    const initStateFlat = {
-        name: '',
-        coordinates: {
-            coordinate_x: 0,
-            coordinate_y: 0,
-        },
-        area: 1,
-        numberOfRooms: 1,
-        furnish: Furnish.NONE,
-        hasBalcony: false,
-        price: 1,
-        view: View.NORMAL,
-        transport: Transport.NORMAL,
-        house: {
-            name: '',
-            year: 1,
-            numberOfFloors: 1,
-        }
-    }
-    const [flatState, setFlatState] = React.useState<FlatBackend>(initStateFlat)
+    const [flatState, setFlatState] = React.useState<FlatBackend>(flatInitState)
 
-    const { mutate } = useMutation(['createFlat'],
+    const { mutate } = useMutation([reactQueryKeys.createFlat],
         (data: FlatBackend) => FlatService.create(data),
         {
-            onSuccess() { setFlatState(initStateFlat) }
+            onSuccess() {
+                setFlatState(flatInitState);
+                queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
+            }
         }
     )
 
@@ -108,7 +89,7 @@ export const CreateFlatForm = () => {
                         label='Name'
                         value={flatState.name}
                         onChange={e => setFlatState({ ...flatState, name: e.target.value })}
-                        error={checkValid(flatState).includes('name')}
+                        error={validateForm(flatState).includes('name')}
                         required
                         sx={{ mb: 1, mt: 1 }}
                     />
@@ -116,7 +97,7 @@ export const CreateFlatForm = () => {
                         id='area'
                         label='Area'
                         type='number'
-                        error={checkValid(flatState).includes('area')}
+                        error={validateForm(flatState).includes('area')}
                         required
                         value={flatState.area}
                         onChange={e => setFlatState({ ...flatState, area: parseInt(e.target.value) })}
@@ -126,7 +107,7 @@ export const CreateFlatForm = () => {
                         id='numberOfRooms'
                         label='Number of rooms'
                         type='number'
-                        error={checkValid(flatState).includes('numberOfRooms')}
+                        error={validateForm(flatState).includes('numberOfRooms')}
                         required
                         value={flatState.numberOfRooms}
                         onChange={e => setFlatState({ ...flatState, numberOfRooms: parseInt(e.target.value) })}
@@ -136,7 +117,7 @@ export const CreateFlatForm = () => {
                         id='price'
                         label='Price'
                         type='number'
-                        error={checkValid(flatState).includes('price')}
+                        error={validateForm(flatState).includes('price')}
                         required
                         value={flatState.price}
                         onChange={e => setFlatState({ ...flatState, price: parseInt(e.target.value) })}
@@ -150,7 +131,7 @@ export const CreateFlatForm = () => {
                         onChange={(e, val) => setFlatState({ ...flatState, furnish: val == null ? Furnish.NONE : val as Furnish })}
                         renderInput={(params) =>
                             <TextField {...params} label={"Furnish"}
-                                error={checkValid(flatState).includes('furnish')} required />}
+                                error={validateForm(flatState).includes('furnish')} required />}
                         sx={{ mb: 1, mt: 1 }}
                     />
                     <Autocomplete
@@ -161,7 +142,7 @@ export const CreateFlatForm = () => {
                         onChange={(e, val) => setFlatState({ ...flatState, transport: val == null ? Transport.NONE : val as Transport })}
                         renderInput={(params) =>
                             <TextField {...params} label={"Transport"}
-                                error={checkValid(flatState).includes('transport')} required />}
+                                error={validateForm(flatState).includes('transport')} required />}
                         sx={{ mb: 1, mt: 1 }}
                     />
                     <Autocomplete
@@ -172,7 +153,7 @@ export const CreateFlatForm = () => {
                         onChange={(e, val) => setFlatState({ ...flatState, view: val == null ? View.NORMAL : val as View })}
                         renderInput={(params) =>
                             <TextField {...params} label={"View"}
-                                error={checkValid(flatState).includes('view')} required />}
+                                error={validateForm(flatState).includes('view')} required />}
                         sx={{ mb: 1, mt: 1 }}
                     />
                     <LabeledBox label='Coordinates'>
@@ -189,14 +170,14 @@ export const CreateFlatForm = () => {
                                 label='X'
                                 required
 
-                                error={checkValid(flatState).includes('coordinateX')}
+                                error={validateForm(flatState).includes('coordinateX')}
                                 value={flatState.coordinates.coordinate_x}
                                 onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_x: parseInt(e.target.value) } })} />
                             <TextField
                                 type='number'
                                 id='coordinateY'
                                 label='Y'
-                                error={checkValid(flatState).includes('coordinateY')}
+                                error={validateForm(flatState).includes('coordinateY')}
                                 required
                                 value={flatState.coordinates.coordinate_y}
                                 onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_y: parseInt(e.target.value) } })} />
@@ -214,7 +195,7 @@ export const CreateFlatForm = () => {
                                 sx={{ minWidth: 0.4, flexShrink: -1 }}
                                 id='houseName'
                                 label='Name'
-                                error={checkValid(flatState).includes('houseName')}
+                                error={validateForm(flatState).includes('houseName')}
                                 value={flatState.house.name}
                                 onChange={e => setFlatState({ ...flatState, house: { ...flatState.house, name: e.target.value } })}
 
@@ -224,7 +205,7 @@ export const CreateFlatForm = () => {
                                 type='number'
                                 id='houseYear'
                                 label='Year'
-                                error={checkValid(flatState).includes('houseYear')}
+                                error={validateForm(flatState).includes('houseYear')}
                                 value={flatState.house.year}
                                 onChange={e => setFlatState({ ...flatState, house: { ...flatState.house, year: parseInt(e.target.value) } })} />
                             <TextField
@@ -232,7 +213,7 @@ export const CreateFlatForm = () => {
                                 type='number'
                                 id='numberOfFloors'
                                 label='Number of floors'
-                                error={checkValid(flatState).includes('numberOfFloors')}
+                                error={validateForm(flatState).includes('numberOfFloors')}
                                 value={flatState.house.numberOfFloors}
                                 onChange={e => setFlatState({ ...flatState, house: { ...flatState.house, numberOfFloors: parseInt(e.target.value) } })} />
                         </Box>

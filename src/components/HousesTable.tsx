@@ -18,6 +18,7 @@ import { FilteringInfo, House, PaginationInfo, SortingInfo, ComparisonAlias, Com
 import { Button, Pagination, PaginationItem, Stack, TablePagination } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { getComparisonAliasByMathOperator } from '../utils';
+import { reactQueryKeys } from '../constants';
 
 const PAGE_SIZE = 10
 
@@ -72,7 +73,7 @@ export const HousesTable = () => {
 
 
   const { isLoading, error, data: resp } = useQuery(
-    ['getAllHouses', queryOptions, paginationModel],
+    [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
     () => HouseService.getAll({ ...paginationModel, pageNumber: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
   )
 
@@ -128,7 +129,6 @@ export const HousesTable = () => {
         slotProps={{
           noRowsOverlay: { sx: { display: 'flex', height: '300px' } },
         }}
-      // sx={{'--DataGrid-overlayHeight': '3000px'}}
       />
     </Box>
   )
