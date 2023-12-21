@@ -17,10 +17,10 @@ public class BonusServiceImpl implements BonusService {
     private FlatCrudRepository repository;
 
     @Override
-    public Flat getCheapestOrExpensiveWithOrWithoutBalcony(String cheapness, String balcony) throws NoFlatsExistsException {
-        Flat res = repository.getCheapestOrExpensiveWithOrWithoutBalcony(cheapness, balcony);
-        if (res == null) throw new NoFlatsExistsException();
-        return res;
+    public Flat getCheapestOrExpensiveWithOrWithoutBalcony(String cheapness, String balcony) throws NoFlatsExistsException, NoMatchFoundException {
+        Optional<Flat> res = repository.getCheapestOrExpensiveWithOrWithoutBalcony(cheapness, balcony);
+        if (res.isEmpty()) throw new NoMatchFoundException();
+        return res.get();
     }
 
     @Override

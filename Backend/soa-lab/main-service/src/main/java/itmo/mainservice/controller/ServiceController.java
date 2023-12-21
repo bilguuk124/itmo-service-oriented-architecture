@@ -4,7 +4,10 @@ import itmo.library.Flat;
 import itmo.mainservice.exception.FlatNotFoundException;
 import itmo.mainservice.exception.NoFlatsExistsException;
 import itmo.mainservice.service.BonusService;
+import itmo.mainservice.service.impl.ErrorBodyGenerator;
+import itmo.mainservice.service.impl.NoMatchFoundException;
 import jakarta.inject.Inject;
+import jakarta.persistence.NoResultException;
 import jakarta.validation.ValidationException;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -18,23 +21,39 @@ public class ServiceController {
 
     @Inject
     private BonusService bonusService;
+    @Inject
+    private ErrorBodyGenerator errorBodyGenerator;
 
     @GET
     @Path("/find-with-balcony/{cheapest}/{with-balcony}")
     public Response getCheapestOrExpensiveWithOrWithoutBalconyFlat(@PathParam("cheapest") String cheapness, @PathParam("with-balcony") String balcony) throws NoFlatsExistsException {
-        if (
-                (cheapness == null || cheapness.isEmpty()) ||
-                (!Objects.equals(cheapness, "expensive") && !Objects.equals(cheapness, "cheapest"))
-        ) throw new IllegalArgumentException();
+        try{
+            if (
+                    (cheapness == null || cheapness.isEmpty()) ||
+                    (!Objects.equals(cheapness, "expensive") && !Objects.equals(cheapness, "cheapest"))
+            ) throw new IllegalArgumentException("Must be expensive or cheapest!");
 
-        if (
-                (balcony == null || balcony.isEmpty()) ||
-                (!Objects.equals(balcony,"with-balcony") && !Objects.equals(balcony, "without-balcony"))
-        ) throw new IllegalArgumentException();
-        Flat flat = bonusService.getCheapestOrExpensiveWithOrWithoutBalcony(cheapness, balcony);
-        return Response
-                .ok(flat)
-                .build();
+            if (
+                    (balcony == null || balcony.isEmpty()) ||
+                    (!Objects.equals(balcony,"with-balcony") && !Objects.equals(balcony, "without-balcony"))
+            ) throw new IllegalArgumentException("Must be with-balcony or without-balcony");
+
+            Flat flat = bonusService.getCheapestOrExpensiveWithOrWithoutBalcony(cheapness, balcony);
+            return Response
+                    .ok(flat)
+                    .build();
+
+        } catch (IllegalArgumentException ex){
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(errorBodyGenerator.generateValidationError(ex.getMessage()))
+                    .build();
+        } catch (NoMatchFoundException e) {
+            return Response
+                    .status(Response.Status.NO_CONTENT)
+                    .entity(errorBodyGenerator.generateNoResultException(cheapness, balcony))
+                    .build();
+        }
     }
 
     @GET

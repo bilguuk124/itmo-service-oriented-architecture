@@ -3,6 +3,7 @@ package itmo.mainservice.service.impl;
 import itmo.library.ErrorBody;
 import itmo.mainservice.exception.HouseExistsException;
 import itmo.mainservice.exception.JpaException;
+import jakarta.persistence.NoResultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,4 +96,17 @@ public class ErrorBodyGenerator {
                 .timestamp(LocalDateTime.now())
                 .build();
     }
+
+    public ErrorBody generateNoResultException(String cheapness, String balcony) {
+        logger.warn("No result for {} and {}", cheapness, balcony);
+        logger.info("Generating No result exception error body");
+        return ErrorBody.builder()
+                .errorCode(400)
+                .message("No content")
+                .details("No result for " + cheapness + " and " + balcony)
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+
+
 }

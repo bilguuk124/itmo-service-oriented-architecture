@@ -160,7 +160,7 @@ public class FlatCrudRepository {
 
     }
 
-    public Flat getCheapestOrExpensiveWithOrWithoutBalcony(String cheapness, String balcony){
+    public Optional<Flat> getCheapestOrExpensiveWithOrWithoutBalcony(String cheapness, String balcony){
         EntityManager entityManager= entityManagerProvider.getEntityManager();
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Flat> query = criteriaBuilder.createQuery(Flat.class);
@@ -185,7 +185,9 @@ public class FlatCrudRepository {
 
         query.where(balconyPredicate);
 
-        return entityManager.createQuery(query).getSingleResult();
+        List<Flat> flat = entityManager.createQuery(query).getResultList();
+
+        return !flat.isEmpty() ? Optional.of(flat.get(0)) : Optional.empty();
     }
 
     public Long getNumberOfEntries(){
