@@ -1,7 +1,6 @@
 import React from 'react';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery } from 'react-query';
 import { Box } from '@material-ui/core';
-// import { DataGrid, GridToolbar, GridRenderCellParams, GridSortModel, GridColDef, useGridApiRef, GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton, useGridApiContext, useGridSelector, gridPageSelector, gridPageCountSelector, GridPagination, gridPaginationModelSelector } from '@mui/x-data-grid';
 import {
   DataGridPro,
   GridSortModel,
@@ -11,33 +10,55 @@ import {
   GridToolbarFilterButton,
   useGridApiRef,
   GridFilterModel,
-  getGridNumericOperators
+  getGridNumericOperators,
+  GridRowModes,
+  GridActionsCellItem,
+  GridRowModesModel,
+  GridEventListener,
+  GridRowEditStopReasons,
+  GridRowId,
+  GridRowModel
 } from '@mui/x-data-grid-pro';
 import { HouseService } from '../services/HouseService';
-import { FilteringInfo, House, PaginationInfo, SortingInfo, ComparisonAlias, ComparisonInfo } from "../types";
+import { FilteringInfo, House, PaginationInfo, SortingInfo, ComparisonAlias, ComparisonInfo, Feedback } from "../types";
 import { Button, Pagination, PaginationItem, Stack, TablePagination } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { getComparisonAliasByMathOperator } from '../utils';
+import { buildFilteringInfo, getComparisonAliasByMathOperator } from '../utils';
 import { reactQueryKeys } from '../constants';
+import EditIcon from '@mui/icons-material/Edit';
+import SaveIcon from '@mui/icons-material/Save';
+import CancelIcon from '@mui/icons-material/Close';
+import { buildFeedback, queryClient } from '../App';
 
-const PAGE_SIZE = 10
+const PAGE_SIZE = 5
 
-const buildFilteringInfo = (filterModel: GridFilterModel): FilteringInfo<any> => Object.fromEntries(filterModel.items.map((val) => [val.field, {
-  operation: getComparisonAliasByMathOperator(val.operator)!,
-  value: val.value
-}]))
 
-const columns: GridColDef<House>[] = [
-  { field: 'name', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6) },
-  { field: 'year', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6) },
-  { field: 'numberOfFloors', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6) }
-]
+interface HouseTableProps {
+  setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+}
 
-export const HousesTable = () => {
+
+export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
     pageSize: PAGE_SIZE,
   });
+
+  const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
+
+  const { mutate: deleteMutate, status } = useMutation([reactQueryKeys.deleteHouse],
+    (data: House) => HouseService.delete(data.name),
+    {
+      onSuccess() {
+        setFeedback(buildFeedback(status, 'House deleted'))
+        queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
+      },
+      onError(error: any) {
+        console.log(error);
+        setFeedback(buildFeedback(status, error.details))
+      }
+    }
+  )
 
   const dataGridRef = useGridApiRef()
 
@@ -56,9 +77,110 @@ export const HousesTable = () => {
     );
   }, []);
 
+  const handleRowEditStop: GridEventListener<'rowEditStop'> = (params, event) => {
+    if (params.reason === GridRowEditStopReasons.rowFocusOut) {
+      event.defaultMuiPrevented = true;
+    }
+  };
+
+  const handleEditClick = (id: GridRowId) => () => {
+    setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
+    console.log('handel edit')
+    console.log(id)
+  };
+
+  const handleSaveClick = (id: GridRowId) => () => {
+    setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
+  };
+
+  const handleDeleteClick = (id: GridRowId) => () => {
+    deleteMutate(dataGridRef.current.getRow(id)!)
+  };
+
+  const handleCancelClick = (id: GridRowId) => () => {
+    setRowModesModel({
+      ...rowModesModel,
+      [id]: { mode: GridRowModes.View, ignoreModifications: true },
+    });
+  };
+
+  const handleRowModesModelChange = (newRowModesModel: GridRowModesModel) => {
+    setRowModesModel(newRowModesModel);
+  };
+
+  const { mutateAsync, status: updateStatus } = useMutation([reactQueryKeys.updateHouse],
+    (newHouse: House) => HouseService.update(newHouse),
+    {
+      onSuccess() {
+        setFeedback(buildFeedback(updateStatus, 'House updated'))
+      },
+      onError(error: any) {
+        console.log(error);
+        setFeedback(buildFeedback(updateStatus, error.details))
+      }
+    }
+  )
+
+  const processRowUpdate = (newRow: House, old: House) => {
+    if (old === newRow)
+      return old
+
+    return mutateAsync(newRow);
+  };
+
+  const columns: GridColDef<House>[] = [
+    { field: 'name', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6)},
+    { field: 'year', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6), editable: true },
+    { field: 'numberOfFloors', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6), editable: true },
+    {
+      field: 'actions',
+      type: 'actions',
+      headerName: 'Actions',
+      width: 100,
+      cellClassName: 'actions',
+      getActions: ({ id }) => {
+        const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
+
+        if (isInEditMode) {
+          return [
+            <GridActionsCellItem
+              icon={<SaveIcon />}
+              label="Save"
+              sx={{
+                color: 'primary.main',
+              }}
+              onClick={handleSaveClick(id)} />,
+            <GridActionsCellItem
+              icon={<CancelIcon />}
+              label="Cancel"
+              className="textPrimary"
+              onClick={handleCancelClick(id)}
+              color="inherit" />,
+          ];
+        }
+
+        return [
+          <GridActionsCellItem
+            icon={<EditIcon />}
+            label="Edit"
+            className="textPrimary"
+            onClick={handleEditClick(id)}
+            color="inherit" />,
+          <GridActionsCellItem
+            icon={<DeleteIcon />}
+            label="Delete"
+            onClick={handleDeleteClick(id)}
+            color="inherit" />,
+        ];
+      }
+    },
+  ]
+
   const onFilterChange = React.useCallback((filterModel: GridFilterModel) => {
     if (filterModel.items.filter(val => val.value !== '' && val.value !== undefined).length === 0)
-      setQueryOptions((prev) => { return { ...prev, filtering: undefined } })
+      setQueryOptions((prev) => {
+        return { ...prev, filtering: undefined }
+      })
     setQueryOptions((prev) => {
       return {
         ...prev,
@@ -67,26 +189,22 @@ export const HousesTable = () => {
     })
   }, []);
 
-  // const handlePaginationModelChange = React.useCallback((event: React.ChangeEvent<unknown>, value: number) => {
-
-  // }, [])
-
-
   const { isLoading, error, data: resp } = useQuery(
     [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
-    () => HouseService.getAll({ ...paginationModel, pageNumber: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
+    () => HouseService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
   )
 
   const [rowCountState, setRowCountState] = React.useState(
-    resp?.length || 0,
+    resp?.numberOfEntries || 0,
   );
+
   React.useEffect(() => {
     setRowCountState((prevRowCountState: any) =>
-      resp?.length !== undefined
-        ? resp?.length
+      resp?.numberOfEntries !== undefined
+        ? resp?.numberOfEntries
         : prevRowCountState,
     );
-  }, [resp?.length, setRowCountState]);
+  }, [resp?.numberOfEntries, setRowCountState]);
 
   const CustomToolbar = () => {
     return (
@@ -101,7 +219,7 @@ export const HousesTable = () => {
     <Box sx={{ alignContent: 'center' }}>
       <DataGridPro
         columns={columns}
-        rows={resp ? resp : []}
+        rows={resp?.data ? resp.data : []}
         getRowId={(row) => row.name}
         slots={{ toolbar: CustomToolbar }}
         loading={isLoading}
@@ -111,6 +229,7 @@ export const HousesTable = () => {
         rowCount={rowCountState}
 
         // pagination
+        pagination
         paginationMode="server"
         pageSizeOptions={[PAGE_SIZE]}
         paginationModel={paginationModel}
@@ -120,14 +239,22 @@ export const HousesTable = () => {
         // filtering
         filterMode="server"
         onFilterModelChange={onFilterChange}
-        // filterModel={queryOptions.filtering}
 
         // sorting
         sortingMode="server"
         onSortModelChange={handleSortModelChange}
+
+        // editing data
+        editMode="row"
+        rowModesModel={rowModesModel}
+        onRowModesModelChange={handleRowModesModelChange}
+        processRowUpdate={processRowUpdate}
+        onProcessRowUpdateError={(e) => console.log(e)}
+        onRowEditStop={handleRowEditStop}
+
         apiRef={dataGridRef}
         slotProps={{
-          noRowsOverlay: { sx: { display: 'flex', height: '300px' } },
+          noRowsOverlay: { sx: { display: 'flex', height: '300px' } }
         }}
       />
     </Box>

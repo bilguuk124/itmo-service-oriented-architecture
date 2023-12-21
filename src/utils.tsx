@@ -1,6 +1,12 @@
 import { create } from 'xmlbuilder2'
 import { ComparisonAlias, FilteringInfo, FlatBackend, SortingInfo } from './types'
 import { parseString } from 'xml2js';
+import { GridFilterModel } from '@mui/x-data-grid-pro';
+
+export const buildFilteringInfo = (filterModel: GridFilterModel): FilteringInfo<any> => Object.fromEntries(filterModel.items.map((val) => [val.field, {
+    operation: getComparisonAliasByMathOperator(val.operator)!,
+    value: val.value
+  }]))
 
 export const getComparisonAliasByMathOperator = (oper: string): ComparisonAlias | undefined => {
     if ('=' === oper) return 'eq'

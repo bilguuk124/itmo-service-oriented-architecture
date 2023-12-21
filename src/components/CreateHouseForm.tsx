@@ -9,10 +9,10 @@ import {
     Snackbar,
     Alert
 } from '@mui/material/';
-import Flat, { House } from '../types';
+import Flat, { Feedback, House } from '../types';
 import { useMutation } from 'react-query';
 import { HouseService } from '../services/HouseService';
-import { queryClient } from '../App';
+import { buildFeedback, queryClient } from '../App';
 import { reactQueryKeys } from '../constants';
 
 const checkValid = (house: House): string[] => {
@@ -27,8 +27,12 @@ const checkValid = (house: House): string[] => {
 }
 
 
+interface HouseFormProps {
+    setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+}
 
-export const CreateHouseForm = () => {
+
+export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
     const initStateHouse = {
         name: 'hrushevka',
         year: 1,
@@ -36,23 +40,20 @@ export const CreateHouseForm = () => {
     }
 
     const [houseState, setHouseState] = React.useState<House>(initStateHouse)
-    const [respStatus, setStatus] = React.useState({
-        status: '',
-        msg: ''
-    });
+
 
     const { mutate, isError, isSuccess, error, status } = useMutation([reactQueryKeys.createHouse],
         (data: House) => HouseService.create(data),
         {
             onSuccess() {
                 setHouseState(initStateHouse);
-                setStatus({ status: status.toString(), msg: 'House Created' })
+                setFeedback(buildFeedback(status, 'House created')) 
                 queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
             },
             onError(error: any) {
                 console.log(error);
                 setHouseState(initStateHouse);
-                setStatus({ status: status.toString(), msg: error.delatils })
+                setFeedback(buildFeedback(status, error.details))
             },
             onSettled(data, error, variables) {
                 if (isError)
@@ -61,13 +62,6 @@ export const CreateHouseForm = () => {
             }
         }
     )
-
-    const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setStatus({ status: '', msg: '' });
-    };
 
     const submitForm = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -107,20 +101,6 @@ export const CreateHouseForm = () => {
                 </FormControl>
                 <Button variant='contained' sx={{ width: '70%', m: 2 }} type='submit'>Send</Button>
             </form>
-            <Snackbar
-                open={respStatus.status != ''}
-                autoHideDuration={6000}
-                onClose={handleClose}
-                message={respStatus.msg}
-                anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
-                sx={{ width: 'auto' }}>
-                <Alert onClose={handleClose}
-                    variant="filled"
-                    severity={respStatus.status === 'error' ? 'error' : respStatus.status === 'success' ? 'info' : 'success'}
-                    sx={{ width: '100%' }}>
-                    {respStatus.msg}
-                </Alert>
-            </Snackbar>
         </Container>
     )
 }

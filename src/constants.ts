@@ -3,14 +3,14 @@ import { Furnish, Transport, View } from "./types"
 export const reactQueryKeys = {
     getAllFlats: 'flatsAll',
     createFlat: 'createFlat',
-    updateFlat: '',
-    getFlat: '',
-    deleteFlat: '',
+    updateFlat: 'updateFlat',
+    getFlat: 'getHouse',
+    deleteFlat: 'deleteFlat',
     getAllHouses: 'getAllHouses',
     createHouse: 'createHouse',
-    updateHouse: '',
-    getHouse: '', 
-    deleteHouse: '',
+    updateHouse: 'updateHouse',
+    getHouse: 'getHouse', 
+    deleteHouse: 'deleteHouse',
 }
 
 export const flatInitState = {

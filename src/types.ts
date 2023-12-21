@@ -4,7 +4,7 @@ export type ComparisonInfo = { operation: ComparisonAlias, value: any }
 export type SortingDirection = 'asc' | 'desc' | null
 export type FilteringInfo<T> = Record<keyof Partial<T>, ComparisonInfo>
 export type SortingInfo<T> = Record<keyof Partial<House>, SortingDirection>
-export type PaginationInfo = { pageNumber: number, pageSize: number }
+export type PaginationInfo = { page: number, pageSize: number }
 
 export default interface Flat {
     id: number;
@@ -33,6 +33,11 @@ export interface FlatBackend extends Omit<Flat, 'id' | 'creationDate' | 'coordin
         coordinate_x: number;
         coordinate_y: number;
     }
+}
+
+export type PageableResponse<T> = {
+    data: T[],
+    numberOfEntries: number
 }
 
 export type House = {
@@ -67,4 +72,9 @@ export enum Transport {
     LITTLE = "LITTLE",
     NORMAL = "NORMAL",
     ENOUGH = "ENOUGH"
+}
+
+export interface Feedback {
+    status: 'success' | 'info' | 'error' | undefined;
+    message: string | undefined
 }
