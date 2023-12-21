@@ -64,52 +64,38 @@ public class FlatCrudRepository {
         Predicate predicate = criteriaBuilder.conjunction();
         for(Filter filter : filters){
             if ( (filter.getNestedName() != null && !filter.getNestedName().isEmpty()) || !(Objects.equals(filter.getNestedName(), "null"))){
-                switch (filter.getFilteringOperation()){
-                    case EQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    case NEQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    case GT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    case LT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    case GTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    case LTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
-                        break;
-                    default:
-                        throw new IllegalArgumentException();
-                }
+                predicate = switch (filter.getFilteringOperation()) {
+                    case EQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    case NEQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    case GT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    case LT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    case GTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    case LTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    default -> throw new IllegalArgumentException();
+                };
             }
             else{
-                switch (filter.getFilteringOperation()){
-                    case EQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    case NEQ:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    case GT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    case LT:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    case GTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    case LTE:
-                        predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
-                        break;
-                    default:
-                        throw new IllegalArgumentException();
-                }
+                predicate = switch (filter.getFilteringOperation()) {
+                    case EQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    case NEQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    case GT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    case LT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    case GTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    case LTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()).get(filter.getNestedName()), filter.getFieldValue()));
+                    default -> throw new IllegalArgumentException();
+                };
             }
         }
         return predicate;
@@ -200,5 +186,14 @@ public class FlatCrudRepository {
         query.where(balconyPredicate);
 
         return entityManager.createQuery(query).getSingleResult();
+    }
+
+    public Long getNumberOfEntries(){
+        CriteriaBuilder criteriaBuilder = entityManagerProvider.getEntityManager().getCriteriaBuilder();
+        CriteriaQuery<Long> criteriaQuery = criteriaBuilder.createQuery(Long.class);
+        Root<Flat> root = criteriaQuery.from(Flat.class);
+
+        criteriaQuery.select(criteriaBuilder.count(root));
+        return entityManagerProvider.getEntityManager().createQuery(criteriaQuery).getSingleResult();
     }
 }

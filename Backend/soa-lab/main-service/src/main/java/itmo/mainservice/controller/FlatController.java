@@ -11,7 +11,6 @@ import jakarta.inject.Inject;
 import jakarta.validation.*;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
@@ -63,12 +62,12 @@ public class FlatController {
 
             logger.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
 
-            List<Flat> resultPage = service.getAllFlats(sort, filter, page, pageSize);
+            FlatPageableResponse response = service.getAllFlats(sort, filter, page, pageSize);
 
-            logger.info("Sending result, result =" + resultPage.toString());
-            GenericEntity<List<Flat>> entity = new GenericEntity<>(resultPage) {};
+            logger.info("Sending result, result =" + response.toString());
+//            GenericEntity<PageableResponse<Flat>> entity = new GenericEntity<>(response) {};
             return Response
-                    .ok(entity, MediaType.APPLICATION_XML)
+                    .ok(response, MediaType.APPLICATION_XML)
                     .build();
         }
         catch (IllegalArgumentException e){

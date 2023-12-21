@@ -61,7 +61,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
 
 
     @Override
-    public List<Flat> getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws IllegalArgumentException {
+    public FlatPageableResponse getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws IllegalArgumentException {
         logger.info("Service to get all flats starting");
         List<Sort> sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
         List<Filter> filterList = FilterAndSortUtility.getFiltersFromStringList(filters, Flat.class);
@@ -71,8 +71,11 @@ public class FlatCrudServiceImpl implements FlatCrudService {
         filterList.forEach(s -> logger.info(s.toString()));
         if (page == null) page = FilterAndSortUtility.DEFAULT_PAGE;
         if (pageSize == null) pageSize = FilterAndSortUtility.DEFAULT_PAGE_SIZE;
+        List<Flat> responseData = repository.getAllPageable(sortList, filterList, page, pageSize);
+        Long numberOfEntries = repository.getNumberOfEntries();
+        FlatPageableResponse response = new FlatPageableResponse(responseData, numberOfEntries);
         logger.info("Service to get all flats ended successfully");
-        return repository.getAllPageable(sortList, filterList, page, pageSize);
+        return response;
     }
 
     @Override

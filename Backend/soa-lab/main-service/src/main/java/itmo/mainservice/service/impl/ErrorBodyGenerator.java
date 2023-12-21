@@ -1,6 +1,7 @@
 package itmo.mainservice.service.impl;
 
 import itmo.library.ErrorBody;
+import itmo.mainservice.exception.HouseExistsException;
 import itmo.mainservice.exception.JpaException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -80,6 +81,17 @@ public class ErrorBodyGenerator {
                 .errorCode(500)
                 .message("Unknown error")
                 .details(e.getMessage())
+                .timestamp(LocalDateTime.now())
+                .build();
+    }
+
+    public ErrorBody generateHouseExistsException(HouseExistsException e) {
+        logger.warn("Already exists" + e.getMessage());
+        logger.info("Generating HouseExists exception error body");
+        return ErrorBody.builder()
+                .errorCode(405)
+                .message("House with specified name already exists")
+                .details("House with specified name already exists")
                 .timestamp(LocalDateTime.now())
                 .build();
     }

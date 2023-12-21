@@ -2,8 +2,10 @@ package itmo.mainservice.service.impl;
 
 import itmo.library.Filter;
 import itmo.library.House;
+import itmo.library.HousePageableResponse;
 import itmo.library.Sort;
 import itmo.mainservice.config.TransactionProvider;
+import itmo.mainservice.exception.HouseExistsException;
 import itmo.mainservice.exception.HouseNotFoundException;
 import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.repository.HouseCrudRepository;
@@ -28,13 +30,13 @@ public class HouseCrudServiceImpl implements HouseCrudService {
 
     @Override
     @Transactional
-    public House createHouse(House house) throws JpaException {
+    public House createHouse(House house) throws HouseExistsException, JpaException {
         logger.info("Service to create a house starting");
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
         try{
             userTransaction.begin();
-            House house1 = new House();
-            house1.update(house);
+            if (repository.getByName(house.getName()).isPresent()) throw new HouseExistsException(house.getName());
+            House house1 = new House(house);
             repository.save(house1);
             userTransaction.commit();
             logger.info("Service to create a house ended successfully");
@@ -48,7 +50,7 @@ public class HouseCrudServiceImpl implements HouseCrudService {
     }
 
     @Override
-    public List<House> getAllHousesFilteredAndSorted(List<String> sorts, List<String> filters, Integer page, Integer pageSize) {
+    public HousePageableResponse getAllHousesFilteredAndSorted(List<String> sorts, List<String> filters, Integer page, Integer pageSize) {
         logger.info("Service to get all houses starting");
         List<Sort> sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
         List<Filter> filterList = FilterAndSortUtility.getFiltersFromStringList(filters, House.class);
@@ -58,8 +60,12 @@ public class HouseCrudServiceImpl implements HouseCrudService {
         filterList.forEach(s -> logger.info(s.toString()));
         if(page == null) page = FilterAndSortUtility.DEFAULT_PAGE;
         if (pageSize == null) pageSize = FilterAndSortUtility.DEFAULT_PAGE_SIZE;
+
+        List<House> responseData = repository.getAllPageableFilteredAndSorted(sortList, filterList, page, pageSize);
+        Long numberOfEntries = repository.getNumberOfEntries();
+        HousePageableResponse response = new HousePageableResponse(responseData, numberOfEntries);
         logger.info("Service to get all houses ended successfully");
-        return repository.getAllPageableFilteredAndSorted(sortList, filterList, page, pageSize);
+        return response;
     }
 
     @Override
@@ -76,7 +82,7 @@ public class HouseCrudServiceImpl implements HouseCrudService {
 
     @Override
     @Transactional
-    public House updateHouseByName(String name, House house) throws HouseNotFoundException, JpaException {
+    public House updateHouseByName(String name, Integer newYear, Integer newNumberOfFloors) throws HouseNotFoundException, JpaException {
         logger.info("Service to update the house by name starting");
         UserTransaction transaction = TransactionProvider.getUserTransaction();
         try{
@@ -87,7 +93,7 @@ public class HouseCrudServiceImpl implements HouseCrudService {
                 throw new HouseNotFoundException(name);
             }
             House house1 = result.get();
-            house1.update(house);
+            house1.update(newYear, newNumberOfFloors);
             repository.save(house1);
             transaction.commit();
             logger.info("Service to update the house by name ended successfully");

@@ -1,7 +1,9 @@
 package itmo.mainservice.controller;
 
 import itmo.library.House;
+import itmo.library.HousePageableResponse;
 import itmo.mainservice.exception.BadPageableException;
+import itmo.mainservice.exception.HouseExistsException;
 import itmo.mainservice.exception.HouseNotFoundException;
 import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.service.HouseCrudService;
@@ -79,11 +81,10 @@ public class HouseController {
 
         logger.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
 
-        List<House> resultPage = service.getAllHousesFilteredAndSorted(sort, filter, page, pageSize);
-        GenericEntity<List<House>> entity = new GenericEntity<>(resultPage){};
+        HousePageableResponse response = service.getAllHousesFilteredAndSorted(sort, filter, page, pageSize);
         logger.info("Successfully processed the request");
         return Response
-                .ok(entity, MediaType.APPLICATION_XML)
+                .ok(response, MediaType.APPLICATION_XML)
                 .build();
     }
 
@@ -91,7 +92,7 @@ public class HouseController {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    public Response createHouse(House house) throws JpaException {
+    public Response createHouse(House house) throws HouseExistsException, JpaException {
         logger.info("Got request to create a new house");
         House result = service.createHouse(house);
         return Response
@@ -131,11 +132,13 @@ public class HouseController {
     @PUT
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response updateHouseByName(@PathParam("name") String name, @Valid House house) throws JpaException, HouseNotFoundException {
+    public Response updateHouseByName(@PathParam("name") String name, @QueryParam("year") Integer newYear, @QueryParam("numberOfFloors") Integer newNumberOfFloors) throws JpaException, HouseNotFoundException {
         logger.info("Got request to update a house with name = {}", name);
         try{
-            if (name == null || name.isEmpty()) throw new ValidationException();
-            House result = service.updateHouseByName(name, house);
+            if (name == null || name.isEmpty()) throw new ValidationException("Name of the house can not be empty!");
+            if (newYear == null || newYear <= 0 || newYear > 634) throw new ValidationException("Year of the house must be > 0 and <= 634!");
+            if (newNumberOfFloors == null || newNumberOfFloors <= 0) throw new ValidationException("Number of floors must be greater than 0!");
+            House result = service.updateHouseByName(name, newYear, newNumberOfFloors);
             return Response
                     .ok(result, MediaType.APPLICATION_XML)
                     .build();

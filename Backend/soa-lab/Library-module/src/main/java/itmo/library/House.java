@@ -13,8 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-
 @Entity
 @Table(name = "house")
 @Setter
@@ -31,16 +29,21 @@ public class House{
 
     @Min(1)
     @Max(634)
-    @XmlElement(name = "yeer")
-    private Integer yeer;
+    @Column(name = "yeer")
+    private Integer year;
 
     @Min(1)
     @XmlElement(name = "numberOfFloors")
     private Integer numberOfFloors;
 
-    public void update(House house){
+    public House (House house){
         this.name = house.getName();
-        this.yeer = house.getYeer();
         this.numberOfFloors = house.getNumberOfFloors();
+        this.year = house.getYear();
+    }
+
+    public void update(Integer year, Integer numberOfFloors){
+        this.year = year;
+        this.numberOfFloors = numberOfFloors;
     }
 }

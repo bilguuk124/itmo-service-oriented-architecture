@@ -9,15 +9,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.xml.bind.annotation.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Setter
 @Getter
-@XmlRootElement(name = "flat_create_dto")
+@XmlRootElement(name = "newFlatRequest")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FlatCreateDTO {
     @NotNull

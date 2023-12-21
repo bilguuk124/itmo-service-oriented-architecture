@@ -16,6 +16,6 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
 
     @Override
     public Response toResponse(Throwable throwable) {
-        return Response.ok().entity(errorBodyGenerator.generateInternalServerError(throwable)).build();
+        return Response.status(500).entity(errorBodyGenerator.generateInternalServerError(throwable)).build();
     }
 }
