@@ -9,11 +9,12 @@ import {
     Snackbar,
     Alert
 } from '@mui/material/';
-import Flat, { Feedback, House } from '../types';
+import Flat, { Feedback, House } from '../../types';
 import { useMutation } from 'react-query';
-import { HouseService } from '../services/HouseService';
-import { buildFeedback, queryClient } from '../App';
-import { reactQueryKeys } from '../constants';
+import { HouseService } from '../../services/HouseService';
+import { queryClient } from '../../App';
+import { buildFeedback } from '../../utils';
+import { reactQueryKeys } from '../../constants';
 
 const checkValid = (house: House): string[] => {
     const res = []
@@ -47,13 +48,13 @@ export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
         {
             onSuccess() {
                 setHouseState(initStateHouse);
-                setFeedback(buildFeedback(status, 'House created')) 
+                setFeedback(buildFeedback('success', 'House created')) 
                 queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
             },
             onError(error: any) {
                 console.log(error);
                 setHouseState(initStateHouse);
-                setFeedback(buildFeedback(status, error.details))
+                setFeedback(buildFeedback('error', undefined, error))
             },
             onSettled(data, error, variables) {
                 if (isError)

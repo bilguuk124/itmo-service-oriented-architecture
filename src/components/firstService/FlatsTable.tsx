@@ -1,81 +1,121 @@
 import React from 'react';
+import Flat, { Feedback, FilteringInfo, FlatBackend, Furnish, SortingInfo, Transport, View } from '../../types';
 import { useMutation, useQuery } from 'react-query';
+import { FlatService } from '../../services/FlatsService';
 import { Box } from '@material-ui/core';
+import DeleteIcon from '@mui/icons-material/Delete';
 import {
   DataGridPro,
-  GridSortModel,
   GridColDef,
+  GridSortModel,
   GridToolbarContainer,
   GridToolbarColumnsButton,
   GridToolbarFilterButton,
   useGridApiRef,
   GridFilterModel,
-  getGridNumericOperators,
-  GridRowModes,
   GridActionsCellItem,
-  GridRowModesModel,
+  GridRowModes,
   GridEventListener,
   GridRowEditStopReasons,
   GridRowId,
-  GridRowModel
+  GridRowModesModel,
+  getGridNumericOperators,
+  GridOverlay,
+  GridCellParams,
+  GridFilterItem,
+  GridFilterOperator
 } from '@mui/x-data-grid-pro';
-import { HouseService } from '../services/HouseService';
-import { FilteringInfo, House, PaginationInfo, SortingInfo, ComparisonAlias, ComparisonInfo, Feedback } from "../types";
-import { Button, Pagination, PaginationItem, Stack, TablePagination } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { buildFilteringInfo, getComparisonAliasByMathOperator } from '../utils';
-import { reactQueryKeys } from '../constants';
+import { reactQueryKeys, gridColumns } from '../../constants';
+import { buildFilteringInfo } from '../../utils';
+import { queryClient } from '../../App';
+import { buildFeedback } from '../../utils';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Close';
-import { buildFeedback, queryClient } from '../App';
+import { AxiosError } from 'axios';
+import { TextField, styled } from '@mui/material';
 
 const PAGE_SIZE = 5
 
-
-interface HouseTableProps {
+interface FlatsTableProps {
   setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
 }
 
+const columnGroupingModel = [
+  {
+    groupId: 'coordinates',
+    headerClassName: 'MuiDataGrid-columnHeader--alignCenterr',
+    children: [{ field: 'coordinates.x' }, { field: 'coordinates.y' }],
+  },
+  {
+    groupId: 'house',
+    headerClassName: 'MuiDataGrid-columnHeader--alignCenter',
+    children: [{ field: 'house.name' }, { field: 'house.year' }, { field: 'house.numberOfFloors' }],
+  },
+];
 
-export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
+export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
+  const dataGridApiRef = useGridApiRef()
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
-    pageSize: PAGE_SIZE,
+    pageSize: 5,
   });
-
-  const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
-
-  const { mutate: deleteMutate, status } = useMutation([reactQueryKeys.deleteHouse],
-    (data: House) => HouseService.delete(data.name),
-    {
-      onSuccess() {
-        setFeedback(buildFeedback(status, 'House deleted'))
-        queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
-      },
-      onError(error: any) {
-        console.log(error);
-        setFeedback(buildFeedback(status, error.details))
-      }
-    }
-  )
-
-  const dataGridRef = useGridApiRef()
-
-  const [queryOptions, setQueryOptions] = React.useState<Partial<{ sorting: SortingInfo<House>, filtering: FilteringInfo<House> }>>({
+  const [queryOptions, setQueryOptions] = React.useState<Partial<{ sorting: SortingInfo<FlatBackend>, filtering: FilteringInfo<FlatBackend> }>>({
     sorting: undefined,
     filtering: undefined
   });
+  const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
+  const { mutate: deleteMutate, status: deletionStatus } = useMutation([reactQueryKeys.deleteFlat],
+    (flat: Flat) => FlatService.delete(flat.id),
+    {
+      onSuccess() {
+        setFeedback(buildFeedback('success', 'Flat deleted'))
+        queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
+      },
+      onError(error: AxiosError) {
+        console.log(error);
+        setFeedback(buildFeedback('error', undefined, error))
+      }
+    }
+  )
 
   const handleSortModelChange = React.useCallback((sortModel: GridSortModel) => {
     setQueryOptions((prev) => {
       return {
         ...prev,
-        sorting: Object.fromEntries(sortModel.map((gridSortItem) => [gridSortItem.field, gridSortItem.sort])) as SortingInfo<House>
+        sorting: Object.fromEntries(sortModel.map((gridSortItem) => [gridSortItem.field, gridSortItem.sort])) as SortingInfo<FlatBackend>
       }
     }
     );
   }, []);
+
+  const onFilterChange = React.useCallback((filterModel: GridFilterModel) => {
+    if (filterModel.items.filter(val => val.value !== '' && val.value !== undefined).length === 0)
+      setQueryOptions((prev) => {
+        return { ...prev, filtering: undefined }
+      })
+    setQueryOptions((prev) => {
+      return {
+        ...prev,
+        filtering: { ...prev.filtering!, ...buildFilteringInfo(filterModel) }
+      }
+    })
+  }, []);
+
+
+  const { isLoading, error, data: resp } = useQuery(
+    [reactQueryKeys.getAllFlats, queryOptions, paginationModel],
+    () => FlatService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
+  )
+
+  const CustomToolbar = () => {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+      </GridToolbarContainer>
+    );
+  }
 
   const handleRowEditStop: GridEventListener<'rowEditStop'> = (params, event) => {
     if (params.reason === GridRowEditStopReasons.rowFocusOut) {
@@ -94,7 +134,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
   };
 
   const handleDeleteClick = (id: GridRowId) => () => {
-    deleteMutate(dataGridRef.current.getRow(id)!)
+    deleteMutate(dataGridApiRef.current.getRow(id)!)
   };
 
   const handleCancelClick = (id: GridRowId) => () => {
@@ -108,30 +148,27 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
     setRowModesModel(newRowModesModel);
   };
 
-  const { mutateAsync, status: updateStatus } = useMutation([reactQueryKeys.updateHouse],
-    (newHouse: House) => HouseService.update(newHouse),
+  const { mutateAsync, status: updateStatus } = useMutation([reactQueryKeys.updateFlat],
+    (newFlat: Flat) => FlatService.update(newFlat),
     {
       onSuccess() {
-        setFeedback(buildFeedback(updateStatus, 'House updated'))
+        setFeedback(buildFeedback('success', 'Flat updated'))
       },
-      onError(error: any) {
+      onError(error: AxiosError) {
         console.log(error);
-        setFeedback(buildFeedback(updateStatus, error.details))
+        setFeedback(buildFeedback('error', undefined, error))
       }
     }
   )
 
-  const processRowUpdate = (newRow: House, old: House) => {
+  const processRowUpdate = (newRow: Flat, old: Flat) => {
     if (old === newRow)
       return old
-
     return mutateAsync(newRow);
   };
 
-  const columns: GridColDef<House>[] = [
-    { field: 'name', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6)},
-    { field: 'year', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6), editable: true },
-    { field: 'numberOfFloors', flex: 0.5, filterOperators: getGridNumericOperators().slice(0, 6), editable: true },
+  const columns: GridColDef<Flat>[] = [
+    ...gridColumns,
     {
       field: 'actions',
       type: 'actions',
@@ -173,62 +210,27 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
             color="inherit" />,
         ];
       }
-    },
+    }
   ]
 
-  const onFilterChange = React.useCallback((filterModel: GridFilterModel) => {
-    if (filterModel.items.filter(val => val.value !== '' && val.value !== undefined).length === 0)
-      setQueryOptions((prev) => {
-        return { ...prev, filtering: undefined }
-      })
-    setQueryOptions((prev) => {
-      return {
-        ...prev,
-        filtering: { ...prev.filtering!, ...buildFilteringInfo(filterModel) }
-      }
-    })
-  }, []);
-
-  const { isLoading, error, data: resp } = useQuery(
-    [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
-    () => HouseService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
-  )
-
-  const [rowCountState, setRowCountState] = React.useState(
-    resp?.numberOfEntries || 0,
-  );
-
-  React.useEffect(() => {
-    setRowCountState((prevRowCountState: any) =>
-      resp?.numberOfEntries !== undefined
-        ? resp?.numberOfEntries
-        : prevRowCountState,
-    );
-  }, [resp?.numberOfEntries, setRowCountState]);
-
-  const CustomToolbar = () => {
-    return (
-      <GridToolbarContainer>
-        <GridToolbarColumnsButton />
-        <GridToolbarFilterButton />
-      </GridToolbarContainer>
-    );
-  }
 
   return (
     <Box sx={{ alignContent: 'center' }}>
       <DataGridPro
+        autoHeight
         columns={columns}
-        rows={resp?.data ? resp.data : []}
-        getRowId={(row) => row.name}
-        slots={{ toolbar: CustomToolbar }}
-        loading={isLoading}
+        rows={resp ? resp.data ? resp.data : [] : []}
+        getRowId={(row) => row.id}
         density='compact'
+        experimentalFeatures={{ columnGrouping: true }}
+        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There are't flats id database"/>) }}
+        columnGroupingModel={columnGroupingModel}
+        loading={isLoading}
+        // autoPageSize
         rowSpacingType='border'
         showCellVerticalBorder
-        rowCount={rowCountState}
 
-        // pagination
+        //pagination
         pagination
         paginationMode="server"
         pageSizeOptions={[PAGE_SIZE]}
@@ -239,6 +241,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         // filtering
         filterMode="server"
         onFilterModelChange={onFilterChange}
+        // filterModel={queryOptions.filtering}
 
         // sorting
         sortingMode="server"
@@ -252,10 +255,8 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         onProcessRowUpdateError={(e) => console.log(e)}
         onRowEditStop={handleRowEditStop}
 
-        apiRef={dataGridRef}
-        slotProps={{
-          noRowsOverlay: { sx: { display: 'flex', height: '300px' } }
-        }}
+
+        apiRef={dataGridApiRef}
       />
     </Box>
   )

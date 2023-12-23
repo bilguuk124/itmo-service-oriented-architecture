@@ -1,7 +1,9 @@
 import { create } from 'xmlbuilder2'
-import { ComparisonAlias, FilteringInfo, FlatBackend, SortingInfo } from './types'
+import { ComparisonAlias, Feedback, FilteringInfo, FlatBackend, SortingInfo } from './types'
 import { parseString } from 'xml2js';
 import { GridFilterModel } from '@mui/x-data-grid-pro';
+import { AxiosError } from 'axios';
+import { MutationStatus } from 'react-query';
 
 export const buildFilteringInfo = (filterModel: GridFilterModel): FilteringInfo<any> => Object.fromEntries(filterModel.items.map((val) => [val.field, {
     operation: getComparisonAliasByMathOperator(val.operator)!,
@@ -9,12 +11,12 @@ export const buildFilteringInfo = (filterModel: GridFilterModel): FilteringInfo<
   }]))
 
 export const getComparisonAliasByMathOperator = (oper: string): ComparisonAlias | undefined => {
-    if ('=' === oper) return 'eq'
-    if ('!=' === oper) return 'neq'
-    if ('>' === oper) return 'gt'
-    if ('>=' === oper) return 'gte'
-    if ('<' === oper) return 'lt'
-    if ('<=' === oper) return 'lte'
+    if ('=' === oper || 'is' === oper) return 'eq'
+    if ('!=' === oper || 'is not' === oper) return 'neq'
+    if ('>' === oper || 'is after' === oper) return 'gt'
+    if ('>=' === oper || 'is on or after' === oper) return 'gte'
+    if ('<' === oper || 'is before' === oper) return 'lt'
+    if ('<=' === oper || 'is on or before' === oper) return 'lte'
 }
 
 export const genXml = (target: any, rootKey?: string): string => {
@@ -57,4 +59,11 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
     return Object.entries(filteringInfo) //getting keys of type
         .map(([key, val]) => `${key}[${val.operation}]=${val.value}`)
         .join(',')
-}
+};
+
+export const buildFeedback = (status: MutationStatus, msg?: string, error?: AxiosError) => {
+  return {
+    status: status == 'error' || status == 'success' ? status : 'info',
+    message: error ? parseXml(error.response?.data).errorBody.message : msg
+  } as Feedback;
+};

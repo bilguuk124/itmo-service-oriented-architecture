@@ -15,6 +15,15 @@ axios.interceptors.response.use(response => {
     return response
 })
 
+function makeArrFromRespData(pageableResp: any) {
+    if (pageableResp.data && pageableResp.data.house)
+        if (pageableResp.data.house.length)
+            return pageableResp.data.house
+        else
+            return [pageableResp.data.house]
+
+}
+
 export const HouseService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<House>, sorting?: SortingInfo<House>) {
         const { data, headers } = await axios.get(`/houses`, {
@@ -31,11 +40,11 @@ export const HouseService = {
         if (headers["content-type"] === 'application/xml' || headers["Content-Type"] === 'application/xml') {
             var pageableResp = parseXml(data).PageableResponse
             console.log(pageableResp)
-            // if (houses === undefined)
-            //     return []
-            // if (houses?.length === undefined)
-            //     houses = [houses]
-            const result = { data: mapToHouse(pageableResp.data.house), numberOfEntries: Number(pageableResp.numberOfEntries) } as PageableResponse<House>
+            if (pageableResp.numberOfEntries == 1)
+                pageableResp.data.house = [pageableResp.data.house]
+            if (pageableResp.numberOfEntries == 0)
+                return { data: [], numberOfEntries: parseInt(pageableResp.numberOfEntries) } as PageableResponse<House>
+            const result = { data: mapToHouse(pageableResp.data.house), numberOfEntries: parseInt(pageableResp.numberOfEntries) } as PageableResponse<House>
             console.log(result)
             return result
         }
@@ -51,7 +60,7 @@ export const HouseService = {
     },
 
     async update(house: House) {
-        var res = (await axios.put(`/houses/${house.name}`, genXml(house, 'house'), { headers: { 'Content-Type': 'application/xml' } })).data
+        var res = (await axios.put(`/houses/${house.name}?year=${house.year}&numberOfFloors=${house.numberOfFloors}`)).data
         console.log(res);
         res = parseXml(res).house
         return res

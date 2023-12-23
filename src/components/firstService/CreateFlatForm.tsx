@@ -10,14 +10,15 @@ import {
     Autocomplete,
     Switch
 } from '@mui/material/';
-import { Furnish, View, Transport, FlatBackend, Feedback, House } from '../types';
-import { useMutation, useQuery } from 'react-query';
-import { FlatService } from '../services/FlatsService';
-import { buildFeedback, queryClient } from '../App';
-import { flatInitState, reactQueryKeys } from '../constants';
+import { Furnish, View, Transport, FlatBackend, Feedback, House } from '../../types';
+import { QueryCache, useMutation, useQuery } from 'react-query';
+import { FlatService } from '../../services/FlatsService';
+import { queryClient } from '../../App';
+import { buildFeedback } from '../../utils';
+import { flatInitState, reactQueryKeys } from '../../constants';
 import { AxiosError } from 'axios';
-import { parseXml } from '../utils';
-import { HouseService } from '../services/HouseService';
+import { parseXml } from '../../utils';
+import { HouseService } from '../../services/HouseService';
 
 interface LabeledBoxProps {
     label: string;
@@ -74,11 +75,11 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
         {
             onSuccess() {
                 setFlatState(flatInitState);
-                setFeedback(buildFeedback(status, 'Flat Created'))
+                setFeedback(buildFeedback('success', 'Flat Created'))
                 queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
+                
             },
             onError(error: AxiosError) {
-                setFlatState(flatInitState);
                 console.log(error)
                 setFeedback(buildFeedback('error', "Creation failed", error))
                 queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
@@ -94,7 +95,7 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
 
     return (
         <Container maxWidth='sm'>
-            <Typography variant='button' sx={{ fontSize: 20 }}> Creating Flat</Typography>
+            <Typography variant='button' color='black' sx={{ fontSize: 20 }}> Creating Flat</Typography>
             <form onSubmit={submitForm}>
                 <FormControl>
                     <TextField
@@ -167,7 +168,7 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
                         renderInput={(params) =>
                             <TextField {...params} label={"View"}
                                 error={validateForm(flatState).includes('view')} required />}
-                        onFocus={()=>console.log(HouseService.getAll({page: 0, pageSize: 200}))}
+                        onFocus={()=>console.log(queryClient.getQueryData(reactQueryKeys.getAllHouses))}
                         sx={{ mb: 1, mt: 1 }}
                     />
                     <LabeledBox label='Coordinates'>

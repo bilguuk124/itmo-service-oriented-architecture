@@ -8,7 +8,7 @@ export const FlatService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<FlatBackend>, sorting?: SortingInfo<FlatBackend>) {
         const { data, headers } = await axios.get("/flats", {
             params: {
-                page: pagintion?.page ? pagintion?.page + 1 : undefined,
+                page: pagintion?.page! + 1,
                 pageSize: pagintion?.pageSize,
                 sort: sorting ? buildSortingParams(sorting) : undefined,
                 filter: filtering ? buildFilteringParams(filtering) : undefined
@@ -19,8 +19,11 @@ export const FlatService = {
         })
         if (headers["content-type"] === 'application/xml' || headers["Content-Type"] === 'application/xml') {
             let resp = parseXml(data).PageableResponse
-            console.log(resp)
-            const result = { data: mapRespToFlat([resp.data.flat]), numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
+            if (resp.data != undefined && resp.data.flat != undefined && resp.data.flat.length == undefined)
+                resp.data.flat = [resp.data.flat]
+            if (resp.data.flat == undefined)
+                return { data: [], numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
+            const result = { data: resp.data ? mapRespToFlat(resp.data.flat) : [], numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
             console.log(result)
             return result
         }
@@ -47,6 +50,8 @@ export const FlatService = {
 const mapRespToFlat = (resp: any): Flat[] => {
     return resp.map((container: any) => {
         let flat = container
+        console.log(flat);
+
         return (
             {
                 id: flat.$.id,
@@ -55,7 +60,7 @@ const mapRespToFlat = (resp: any): Flat[] => {
                     x: flat.coordinates.coordinate_x,
                     y: flat.coordinates.coordinate_y
                 },
-                creationDate: flat.creationDate,
+                creationDate: new Date(flat.creationDate),
                 area: flat.area,
                 numberOfRooms: flat.numberOfRooms,
                 furnish: flat.furnish,
