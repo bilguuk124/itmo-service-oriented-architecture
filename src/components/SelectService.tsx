@@ -86,7 +86,7 @@ export const SelectService: React.FC = () => {
         </Box>
       </TabContext>
       <Snackbar
-        open={feedback?.status != undefined}
+        open={feedback?.status !!= undefined}
         autoHideDuration={6000}
         onClose={handleClose}
         message={feedback?.message}

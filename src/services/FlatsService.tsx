@@ -45,8 +45,11 @@ export const FlatService = {
         console.log(a);
         res = mapFlat(a.flat)
         console.log(res);
-
         return res
+    },
+    
+    async deleteAllInHouse(houseName: string) {
+        return await axios.delete(`/flats/${houseName}`)
     }
 
 }

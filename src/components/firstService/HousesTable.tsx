@@ -23,16 +23,17 @@ import {
   GridOverlayProps
 } from '@mui/x-data-grid-pro';
 import { HouseService } from '../../services/HouseService';
-import { FilteringInfo, House, PaginationInfo, SortingInfo, ComparisonAlias, ComparisonInfo, Feedback } from "../../types";
-import { Button, Pagination, PaginationItem, Stack, TablePagination, styled } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { buildFilteringInfo, getComparisonAliasByMathOperator } from '../../utils';
+import { FilteringInfo, House, SortingInfo, Feedback } from "../../types";
+import { buildFilteringInfo } from '../../utils';
 import { reactQueryKeys } from '../../constants';
+import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
+import DeleteSweepSharp from '@mui/icons-material/DeleteSweepSharp';
 import CancelIcon from '@mui/icons-material/Close';
 import { buildFeedback } from '../../utils';
 import { AxiosError } from 'axios';
+import { FlatService } from '../../services/FlatsService';
 
 const PAGE_SIZE = 5
 
@@ -64,8 +65,21 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
       console.log(error);
       setFeedback(buildFeedback('error', undefined, error))
     }
-  }
-  )
+  })
+
+  const { mutate: deleteAllFlatsInHouseMutation } = useMutation({
+    mutationKey: [reactQueryKeys.deleteAllFlatsInHouse],
+    mutationFn: (house: House) => FlatService.deleteAllInHouse(house.name),
+
+    onSuccess(_, house) {
+      setFeedback(buildFeedback('success', `All flats in house '${house.name}' deleted`))
+      queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllFlats] })
+    },
+    onError(error: AxiosError) {
+      console.log(error);
+      setFeedback(buildFeedback('error', undefined, error))
+    }
+  })
 
   const [queryOptions, setQueryOptions] = React.useState<Partial<{ sorting: SortingInfo<House>, filtering: FilteringInfo<House> }>>({
     sorting: undefined,
@@ -100,6 +114,10 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
 
   const handleDeleteClick = (id: GridRowId) => () => {
     deleteMutate(dataGridRef.current.getRow(id)!)
+  };
+
+  const handleDeleteAllFlatsInHouse = (id: GridRowId) => () => {
+    deleteAllFlatsInHouseMutation(dataGridRef.current.getRow(id)!)
   };
 
   const handleCancelClick = (id: GridRowId) => () => {
@@ -175,6 +193,12 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
             label="Delete"
             onClick={handleDeleteClick(id)}
             color="inherit" />,
+          <GridActionsCellItem
+            icon={<DeleteSweepSharp sx={{ fontSize: 23 }} />}
+            label="Delete all flats"
+            onClick={handleDeleteAllFlatsInHouse(id)}
+            color="inherit" />,
+
         ];
       }
     },

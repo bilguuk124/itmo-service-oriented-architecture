@@ -29,7 +29,8 @@ export const reactQueryKeys = {
   getHouse: 'getHouse',
   deleteHouse: 'deleteHouse',
   findCheapest: 'findCheapest',
-  compareFlats: 'compareFlats'
+  compareFlats: 'compareFlats',
+  deleteAllFlatsInHouse: 'deleteAllFlatsInHouse'
 }
 
 export const flatInitState = {
