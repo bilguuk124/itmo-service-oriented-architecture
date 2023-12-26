@@ -1,8 +1,8 @@
 import React from 'react';
 import Flat, { Feedback, FilteringInfo, FlatBackend, Furnish, SortingInfo, Transport, View } from '../../types';
-import { useMutation, useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { FlatService } from '../../services/FlatsService';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {
   DataGridPro,
@@ -21,19 +21,13 @@ import {
   GridRowModesModel,
   getGridNumericOperators,
   GridOverlay,
-  GridCellParams,
-  GridFilterItem,
-  GridFilterOperator
 } from '@mui/x-data-grid-pro';
 import { reactQueryKeys, gridColumns } from '../../constants';
-import { buildFilteringInfo } from '../../utils';
-import { queryClient } from '../../App';
-import { buildFeedback } from '../../utils';
+import { buildFilteringInfo, buildFeedback } from '../../utils';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Close';
 import { AxiosError } from 'axios';
-import { TextField, styled } from '@mui/material';
 
 const PAGE_SIZE = 5
 
@@ -55,6 +49,7 @@ const columnGroupingModel = [
 ];
 
 export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
+  const queryClient = useQueryClient()
   const dataGridApiRef = useGridApiRef()
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
@@ -65,19 +60,18 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
     filtering: undefined
   });
   const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
-  const { mutate: deleteMutate, status: deletionStatus } = useMutation([reactQueryKeys.deleteFlat],
-    (flat: Flat) => FlatService.delete(flat.id),
-    {
-      onSuccess() {
-        setFeedback(buildFeedback('success', 'Flat deleted'))
-        queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
-      },
-      onError(error: AxiosError) {
-        console.log(error);
-        setFeedback(buildFeedback('error', undefined, error))
-      }
+  const { mutate: deleteMutate, status: deletionStatus } = useMutation({
+    mutationFn: (flat: Flat) => FlatService.delete(flat.id),
+    mutationKey: [reactQueryKeys.deleteFlat],
+    onSuccess: () => {
+      setFeedback(buildFeedback('success', 'Flat deleted'))
+      queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllFlats] })
+    },
+    onError: (error: AxiosError) => {
+      console.log(error);
+      setFeedback(buildFeedback('error', undefined, error))
     }
-  )
+  })
 
   const handleSortModelChange = React.useCallback((sortModel: GridSortModel) => {
     setQueryOptions((prev) => {
@@ -103,10 +97,10 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
   }, []);
 
 
-  const { isLoading, error, data: resp } = useQuery(
-    [reactQueryKeys.getAllFlats, queryOptions, paginationModel],
-    () => FlatService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
-  )
+  const { isLoading, error, data: resp } = useQuery({
+    queryKey: [reactQueryKeys.getAllFlats, queryOptions, paginationModel],
+    queryFn: () => FlatService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
+  })
 
   const CustomToolbar = () => {
     return (
@@ -148,22 +142,25 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
     setRowModesModel(newRowModesModel);
   };
 
-  const { mutateAsync, status: updateStatus } = useMutation([reactQueryKeys.updateFlat],
-    (newFlat: Flat) => FlatService.update(newFlat),
-    {
-      onSuccess() {
-        setFeedback(buildFeedback('success', 'Flat updated'))
-      },
-      onError(error: AxiosError) {
-        console.log(error);
-        setFeedback(buildFeedback('error', undefined, error))
-      }
+  const { mutateAsync, status: updateStatus } = useMutation({
+    mutationKey: [reactQueryKeys.updateFlat],
+    mutationFn: (newFlat: Flat) => FlatService.update(newFlat),
+    onSuccess() {
+      setFeedback(buildFeedback('success', 'Flat updated'))
+    },
+    onError(error: AxiosError) {
+      console.log(error);
+      setFeedback(buildFeedback('error', undefined, error))
     }
+  }
   )
 
   const processRowUpdate = (newRow: Flat, old: Flat) => {
     if (old === newRow)
       return old
+    console.log(newRow);
+    console.log(old);
+    
     return mutateAsync(newRow);
   };
 
@@ -223,7 +220,7 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
         getRowId={(row) => row.id}
         density='compact'
         experimentalFeatures={{ columnGrouping: true }}
-        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There are't flats id database"/>) }}
+        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There are't flats id database" />) }}
         columnGroupingModel={columnGroupingModel}
         loading={isLoading}
         // autoPageSize

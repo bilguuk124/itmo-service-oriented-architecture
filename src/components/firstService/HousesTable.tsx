@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMutation, useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Box } from '@material-ui/core';
 import {
   DataGridPro,
@@ -31,7 +31,6 @@ import { reactQueryKeys } from '../../constants';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Close';
-import { queryClient } from '../../App';
 import { buildFeedback } from '../../utils';
 import { AxiosError } from 'axios';
 
@@ -44,6 +43,8 @@ interface HouseTableProps {
 
 
 export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
+  const queryClient = useQueryClient()
+  const dataGridRef = useGridApiRef()
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
     pageSize: PAGE_SIZE,
@@ -51,21 +52,20 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
 
   const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
 
-  const { mutate: deleteMutate, status } = useMutation([reactQueryKeys.deleteHouse],
-    (data: House) => HouseService.delete(data.name),
-    {
-      onSuccess() {
-        setFeedback(buildFeedback('success', 'House deleted'))
-        queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
-      },
-      onError(error: AxiosError) {
-        console.log(error);
-        setFeedback(buildFeedback('error', undefined, error))
-      }
-    }
-  )
+  const { mutate: deleteMutate, status } = useMutation({
+    mutationKey: [reactQueryKeys.deleteHouse],
+    mutationFn: (data: House) => HouseService.delete(data.name),
 
-  const dataGridRef = useGridApiRef()
+    onSuccess() {
+      setFeedback(buildFeedback('success', 'House deleted'))
+      queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllHouses] })
+    },
+    onError(error: AxiosError) {
+      console.log(error);
+      setFeedback(buildFeedback('error', undefined, error))
+    }
+  }
+  )
 
   const [queryOptions, setQueryOptions] = React.useState<Partial<{ sorting: SortingInfo<House>, filtering: FilteringInfo<House> }>>({
     sorting: undefined,
@@ -113,18 +113,17 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
     setRowModesModel(newRowModesModel);
   };
 
-  const { mutateAsync, status: updateStatus } = useMutation([reactQueryKeys.updateHouse],
-    (newHouse: House) => HouseService.update(newHouse),
-    {
-      onSuccess() {
-        setFeedback(buildFeedback('success', 'House updated'))
-      },
-      onError(error: AxiosError) {
-        console.log(error);
-        setFeedback(buildFeedback('error', undefined, error))
-      }
+  const { mutateAsync } = useMutation({
+    mutationKey: [reactQueryKeys.updateHouse],
+    mutationFn: (newHouse: House) => HouseService.update(newHouse),
+    onSuccess() {
+      setFeedback(buildFeedback('success', 'House updated'))
+    },
+    onError(error: AxiosError) {
+      console.log(error);
+      setFeedback(buildFeedback('error', undefined, error))
     }
-  )
+  })
 
   const processRowUpdate = (newRow: House, old: House) => {
     if (old === newRow)
@@ -194,10 +193,10 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
     })
   }, []);
 
-  const { isLoading, error, data: resp } = useQuery(
-    [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
-    () => HouseService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
-  )
+  const { isLoading, error, data: resp } = useQuery({
+    queryKey: [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
+    queryFn: () => HouseService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
+  })
 
   const [rowCountState, setRowCountState] = React.useState(
     resp?.numberOfEntries || 0,

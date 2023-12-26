@@ -3,6 +3,7 @@ import {
   GridColDef,
   GridFilterItem,
   GridFilterOperator,
+  GridValueSetterParams,
   getGridDateOperators,
   getGridNumericOperators,
   getGridStringOperators
@@ -27,6 +28,8 @@ export const reactQueryKeys = {
   updateHouse: 'updateHouse',
   getHouse: 'getHouse',
   deleteHouse: 'deleteHouse',
+  findCheapest: 'findCheapest',
+  compareFlats: 'compareFlats'
 }
 
 export const flatInitState = {
@@ -138,6 +141,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     field: 'coordinates.x',
     headerName: 'X',
     valueGetter: (a) => a.row.coordinates.x,
+    valueSetter: (a: GridValueSetterParams) => { a.row.coordinates.x = parseInt(a.value); return { ...a.row, } },
     width: 30,
     align: 'center',
     headerAlign: 'center',
@@ -149,6 +153,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     field: 'coordinates.y',
     headerName: 'Y',
     valueGetter: (a) => a.row.coordinates.y,
+    valueSetter: (a: GridValueSetterParams) => { a.row.coordinates.y = parseInt(a.value); return { ...a.row, } },
     width: 30,
     align: 'center',
     headerAlign: 'center',
@@ -213,6 +218,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     field: 'house.name',
     headerName: 'name',
     valueGetter: (a) => a.row.house.name,
+    valueSetter: (a: GridValueSetterParams) => { a.row.house.name = parseInt(a.value); return { ...a.row, } },
     headerAlign: 'center',
     align: 'center',
     flex: 0.6,
@@ -222,6 +228,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     field: 'house.year',
     headerName: 'year',
     valueGetter: (a) => a.row.house.year,
+    valueSetter: (a: GridValueSetterParams) => { a.row.house.year = parseInt(a.value); return { ...a.row, } },
     headerAlign: 'center',
     align: 'center',
     flex: 0.4,
@@ -232,6 +239,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     field: 'house.numberOfFloors',
     headerName: 'numberOfFloors',
     valueGetter: (a) => a.row.house.numberOfFloors,
+    valueSetter: (a: GridValueSetterParams) => { a.row.house.numberOfFloors = parseInt(a.value); return { ...a.row, } },
     headerAlign: 'center',
     align: 'center',
     flex: 0.6,

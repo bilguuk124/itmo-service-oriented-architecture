@@ -2,7 +2,7 @@ import axios from "axios";
 import Flat, { FilteringInfo, FlatBackend, PageableResponse, PaginationInfo, SortingInfo } from "../types";
 import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
 // axios.defaults.baseURL = "http://localhost:9000"
-axios.defaults.baseURL = "http://localhost:8080/api"
+// axios.defaults.baseURL = "http://localhost:8080/api"
 
 export const FlatService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<FlatBackend>, sorting?: SortingInfo<FlatBackend>) {
@@ -23,7 +23,7 @@ export const FlatService = {
                 resp.data.flat = [resp.data.flat]
             if (resp.data.flat == undefined)
                 return { data: [], numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
-            const result = { data: resp.data ? mapRespToFlat(resp.data.flat) : [], numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
+            const result = { data: resp.data ? mapRespToFlats(resp.data.flat) : [], numberOfEntries: Number(resp.numberOfEntries) } as PageableResponse<Flat>
             console.log(result)
             return result
         }
@@ -39,43 +39,50 @@ export const FlatService = {
     },
 
     async update(flat: Flat) {
-        var res = (await axios.put(`/flats/${flat.id}`, genXml(flat, 'flat'), { headers: { 'Content-Type': 'application/xml' } })).data
+        var res = (await axios.put(`/flats/${flat.id}`, genXml(flat, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })).data
         console.log(res);
-        res = mapRespToFlat(parseXml(res))
+        var a = parseXml(res)
+        console.log(a);
+        res = mapFlat(a.flat)
+        console.log(res);
+
         return res
     }
 
 }
 
-const mapRespToFlat = (resp: any): Flat[] => {
-    return resp.map((container: any) => {
-        let flat = container
-        console.log(flat);
 
-        return (
-            {
-                id: flat.$.id,
-                name: flat.name,
-                coordinates: {
-                    x: flat.coordinates.coordinate_x,
-                    y: flat.coordinates.coordinate_y
-                },
-                creationDate: new Date(flat.creationDate),
-                area: flat.area,
-                numberOfRooms: flat.numberOfRooms,
-                furnish: flat.furnish,
-                view: flat.view,
-                transport: flat.transport,
-                price: flat.price,
-                hasBalcony: flat.hasBalcony,
-                house: {
-                    name: flat.house.name,
-                    year: flat.house.year,
-                    numberOfFloors: flat.house.numberOfFloors
-                }
-            } as Flat
-        )
-    })
+const mapFlat = (container: any): Flat => {
+    let flat = container
+    console.log(flat);
+
+    return (
+        {
+            id: flat.$.id,
+            name: flat.name,
+            coordinates: {
+                x: flat.coordinates.coordinate_x,
+                y: flat.coordinates.coordinate_y
+            },
+            creationDate: new Date(flat.creationDate),
+            area: flat.area,
+            numberOfRooms: flat.numberOfRooms,
+            furnish: flat.furnish,
+            view: flat.view,
+            transport: flat.transport,
+            price: flat.price,
+            hasBalcony: flat.hasBalcony,
+            house: {
+                name: flat.house.name,
+                year: flat.house.year,
+                numberOfFloors: flat.house.numberOfFloors
+            }
+        } as Flat
+    )
+}
+
+const mapRespToFlats = (resp: any): Flat[] => {
+    return resp.map(mapFlat)
 }
 
 

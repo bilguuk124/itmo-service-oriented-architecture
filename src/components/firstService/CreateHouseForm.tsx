@@ -10,9 +10,8 @@ import {
     Alert
 } from '@mui/material/';
 import Flat, { Feedback, House } from '../../types';
-import { useMutation } from 'react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { HouseService } from '../../services/HouseService';
-import { queryClient } from '../../App';
 import { buildFeedback } from '../../utils';
 import { reactQueryKeys } from '../../constants';
 
@@ -34,6 +33,7 @@ interface HouseFormProps {
 
 
 export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
+    const queryClient = useQueryClient()
     const initStateHouse = {
         name: 'hrushevka',
         year: 1,
@@ -43,26 +43,25 @@ export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
     const [houseState, setHouseState] = React.useState<House>(initStateHouse)
 
 
-    const { mutate, isError, isSuccess, error, status } = useMutation([reactQueryKeys.createHouse],
-        (data: House) => HouseService.create(data),
-        {
-            onSuccess() {
-                setHouseState(initStateHouse);
-                setFeedback(buildFeedback('success', 'House created')) 
-                queryClient.invalidateQueries(reactQueryKeys.getAllHouses)
-            },
-            onError(error: any) {
-                console.log(error);
-                setHouseState(initStateHouse);
-                setFeedback(buildFeedback('error', undefined, error))
-            },
-            onSettled(data, error, variables) {
-                if (isError)
-                    console.log(error)
-                console.log(data)
-            }
+    const { mutate, isError, isSuccess, error, status } = useMutation({
+        mutationKey: [reactQueryKeys.createHouse],
+        mutationFn: (data: House) => HouseService.create(data),
+        onSuccess() {
+            setHouseState(initStateHouse);
+            setFeedback(buildFeedback('success', 'House created'))
+            queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllHouses] })
+        },
+        onError(error: any) {
+            console.log(error);
+            setHouseState(initStateHouse);
+            setFeedback(buildFeedback('error', undefined, error))
+        },
+        onSettled(data, error, variables) {
+            if (isError)
+                console.log(error)
+            console.log(data)
         }
-    )
+    })
 
     const submitForm = (e: React.SyntheticEvent) => {
         e.preventDefault();

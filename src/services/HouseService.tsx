@@ -4,7 +4,7 @@ import { FilteringInfo, House, PageableResponse, PaginationInfo, SortingInfo } f
 import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
 import { log } from "console";
 // axios.defaults.baseURL = "http://localhost:9000"
-axios.defaults.baseURL = "http://localhost:8080/api"
+// axios.defaults.baseURL = "http://localhost:8080/api"
 
 axios.interceptors.request.use(request => {
     console.log('Starting Request', JSON.stringify(request, null, 2))
@@ -28,7 +28,7 @@ export const HouseService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<House>, sorting?: SortingInfo<House>) {
         const { data, headers } = await axios.get(`/houses`, {
             params: {
-                page: pagintion?.page! + 1,
+                page: pagintion ? pagintion.page! + 1 : undefined,
                 pageSize: pagintion?.pageSize,
                 sort: sorting ? buildSortingParams(sorting) : undefined,
                 filter: filtering ? buildFilteringParams(filtering) : undefined

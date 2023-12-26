@@ -2,7 +2,7 @@ import axios from "axios"
 import Flat from "../types"
 import { parseXml } from "../utils"
 
-const rootPath = "http://localhost:9090/api/agency"
+const rootPath = "http://localhost:9090/agency"
 
 export const AgencyService = {
     async findWithBalcony(isCheapest: boolean, hasBalcony: boolean) {
@@ -13,5 +13,6 @@ export const AgencyService = {
     async compareFlats(firstFlatId: number, secondFlatId: number) {
         var { data } = await axios.get(`${rootPath}/get-cheapest/${firstFlatId}/${secondFlatId}`)
         console.log(parseXml(data));
+        return parseXml(data) as Flat
     }
 }

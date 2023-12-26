@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { Container, Snackbar, Alert, Stack, Button } from '@mui/material'
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { Feedback } from './types';
-import { Anchor } from 'antd';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { SelectService } from './components/SelectService';
+import axios from 'axios';
 
-export const queryClient = new QueryClient({
+axios.defaults.baseURL = "http://localhost:9090/api"
+
+const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
@@ -19,6 +20,7 @@ const App: React.FC = () => {
     <>
     <QueryClientProvider client={queryClient}>
         <SelectService></SelectService>
+        {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
     </>
   )

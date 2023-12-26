@@ -11,13 +11,11 @@ import {
     Switch
 } from '@mui/material/';
 import { Furnish, View, Transport, FlatBackend, Feedback, House } from '../../types';
-import { QueryCache, useMutation, useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { FlatService } from '../../services/FlatsService';
-import { queryClient } from '../../App';
 import { buildFeedback } from '../../utils';
 import { flatInitState, reactQueryKeys } from '../../constants';
 import { AxiosError } from 'axios';
-import { parseXml } from '../../utils';
 import { HouseService } from '../../services/HouseService';
 
 interface LabeledBoxProps {
@@ -68,30 +66,40 @@ interface CreateFlatFormProps {
 }
 
 export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) => {
+    const queryClient = useQueryClient()
     const [flatState, setFlatState] = React.useState<FlatBackend>(flatInitState)
 
-    const { mutate, status, error } = useMutation([reactQueryKeys.createFlat],
-        (data: FlatBackend) => FlatService.create(data),
-        {
-            onSuccess() {
-                setFlatState(flatInitState);
-                setFeedback(buildFeedback('success', 'Flat Created'))
-                queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
-                
-            },
-            onError(error: AxiosError) {
-                console.log(error)
-                setFeedback(buildFeedback('error', "Creation failed", error))
-                queryClient.invalidateQueries(reactQueryKeys.getAllFlats)
-            }
+    const { mutate, status, error } = useMutation({
+        mutationKey: [reactQueryKeys.createFlat],
+        mutationFn: (data: FlatBackend) => FlatService.create(data),
+        onSuccess() {
+            setFlatState(flatInitState);
+            setFeedback(buildFeedback('success', 'Flat Created'))
+            queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllFlats] })
+
+        },
+        onError(error: AxiosError) {
+            console.log(error)
+            setFeedback(buildFeedback('error', "Creation failed", error))
+            queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllFlats] })
         }
-    )
+    })
 
     const submitForm = (e: React.SyntheticEvent) => {
         e.preventDefault();
         mutate(flatState)
     }
 
+
+    const [houses, setHousesState] = React.useState(['']);
+
+    React.useEffect(() => {
+        const data = queryClient.ensureQueryData({
+            queryKey: [reactQueryKeys.getAllHouses],
+            queryFn: () => HouseService.getAll()
+        })
+        data.then((x) => setHousesState(x?.data.map(x => x.name)!))
+    }, [])
 
     return (
         <Container maxWidth='sm'>
@@ -168,7 +176,6 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
                         renderInput={(params) =>
                             <TextField {...params} label={"View"}
                                 error={validateForm(flatState).includes('view')} required />}
-                        onFocus={()=>console.log(queryClient.getQueryData(reactQueryKeys.getAllHouses))}
                         sx={{ mb: 1, mt: 1 }}
                     />
                     <LabeledBox label='Coordinates'>
@@ -184,7 +191,6 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
                                 id='coordinateX'
                                 label='X'
                                 required
-
                                 error={validateForm(flatState).includes('coordinateX')}
                                 value={flatState.coordinates.coordinate_x}
                                 onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_x: parseInt(e.target.value) } })} />
@@ -198,12 +204,18 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
                                 onChange={e => setFlatState({ ...flatState, coordinates: { ...flatState.coordinates, coordinate_y: parseInt(e.target.value) } })} />
                         </Box>
                     </LabeledBox>
-                    <TextField fullWidth
-                        id='houseName'
-                        label='House Name'
-                        error={validateForm(flatState).includes('houseName')}
+                    <Autocomplete
+                        id="houseName"
+                        options={houses}
                         value={flatState.house.name}
-                        onChange={e => setFlatState({ ...flatState, house: { ...flatState.house, name: e.target.value } })}
+                        onChange={(e, val) => setFlatState({ ...flatState, house: { ...flatState.house, name: val ? val : houses[1] } })}
+                        renderInput={(params) =>
+                            <TextField
+                                {...params}
+                                label='House Name'
+                                error={validateForm(flatState).includes('houseName')}
+                                required />}
+                        sx={{ mb: 1, mt: 1 }}
                     />
                     <FormControlLabel control={<Switch />} label="Has balcony" value={flatState.hasBalcony} onChange={(e, val) => setFlatState({ ...flatState, hasBalcony: val })} sx={{ alignSelf: 'center' }} />
                 </FormControl>
