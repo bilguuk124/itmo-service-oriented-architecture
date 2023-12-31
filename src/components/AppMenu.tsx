@@ -10,10 +10,7 @@ import { Feedback } from '../types';
 import { SecondService } from './secondService/Agency';
 import { OtherTools } from './firstService/OtherTools';
 
-interface HouseTableProps {
-  setFeedback: React.Dispatch<React.SetStateAction<Feedback>>;
-}
-export const SelectService: React.FC = () => {
+export const AppMenu: React.FC = () => {
   const [value, setValue] = React.useState('1');
   const [feedback, setFeedback] = React.useState<Feedback>({ message: undefined, status: undefined });
 

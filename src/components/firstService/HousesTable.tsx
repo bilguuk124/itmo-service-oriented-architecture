@@ -34,6 +34,7 @@ import CancelIcon from '@mui/icons-material/Close';
 import { buildFeedback } from '../../utils';
 import { AxiosError } from 'axios';
 import { FlatService } from '../../services/FlatsService';
+import { Tooltip } from '@mui/material';
 
 const PAGE_SIZE = 5
 
@@ -158,7 +159,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 100,
+      width: 130,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
@@ -166,16 +167,12 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         if (isInEditMode) {
           return [
             <GridActionsCellItem
-              icon={<SaveIcon />}
+              icon={<Tooltip title='Save changes' ><SaveIcon /></Tooltip>}
               label="Save"
-              sx={{
-                color: 'primary.main',
-              }}
               onClick={handleSaveClick(id)} />,
             <GridActionsCellItem
-              icon={<CancelIcon />}
+              icon={<Tooltip title='Cansel Changes' ><CancelIcon /></Tooltip>}
               label="Cancel"
-              className="textPrimary"
               onClick={handleCancelClick(id)}
               color="inherit" />,
           ];
@@ -183,18 +180,17 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
 
         return [
           <GridActionsCellItem
-            icon={<EditIcon />}
+            icon={<Tooltip title='Editing house' ><EditIcon /></Tooltip>}
             label="Edit"
-            className="textPrimary"
             onClick={handleEditClick(id)}
             color="inherit" />,
           <GridActionsCellItem
-            icon={<DeleteIcon />}
+            icon={<Tooltip title='Delete house' ><DeleteIcon /></Tooltip>}
             label="Delete"
             onClick={handleDeleteClick(id)}
             color="inherit" />,
           <GridActionsCellItem
-            icon={<DeleteSweepSharp sx={{ fontSize: 23 }} />}
+            icon={<Tooltip title='Delete all flats in house' ><DeleteSweepSharp sx={{ fontSize: 23 }} /></Tooltip>}
             label="Delete all flats"
             onClick={handleDeleteAllFlatsInHouse(id)}
             color="inherit" />,

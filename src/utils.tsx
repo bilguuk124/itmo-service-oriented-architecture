@@ -1,5 +1,5 @@
 import { create } from 'xmlbuilder2'
-import { ComparisonAlias, Feedback, FilteringInfo, FlatBackend, SortingInfo } from './types'
+import { BadResponse, ComparisonAlias, Feedback, FilteringInfo, FlatBackend, SortingInfo } from './types'
 import { parseString } from 'xml2js';
 import { GridFilterModel } from '@mui/x-data-grid-pro';
 import { AxiosError } from 'axios';
@@ -64,6 +64,6 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
 export const buildFeedback = (status: MutationStatus, msg?: string, error?: AxiosError) => {
   return {
     status: status == 'error' || status == 'success' ? status : 'info',
-    message: error ? parseXml(error.response?.data).errorBody.message : msg
+    message: error ? (error.response?.data as BadResponse).message : msg
   } as Feedback;
 };

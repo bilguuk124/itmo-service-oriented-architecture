@@ -2,7 +2,7 @@ import axios from "axios"
 import Flat from "../types"
 import { parseXml } from "../utils"
 
-const rootPath = "http://localhost:9090/agency"
+const rootPath = "http://localhost:8080/agency"
 
 export const AgencyService = {
     async findWithBalcony(isCheapest: boolean, hasBalcony: boolean) {

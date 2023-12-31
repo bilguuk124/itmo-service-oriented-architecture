@@ -14,6 +14,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { HouseService } from '../../services/HouseService';
 import { buildFeedback } from '../../utils';
 import { reactQueryKeys } from '../../constants';
+import { AxiosError } from 'axios';
 
 const checkValid = (house: House): string[] => {
     const res = []
@@ -51,7 +52,8 @@ export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
             setFeedback(buildFeedback('success', 'House created'))
             queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllHouses] })
         },
-        onError(error: any) {
+        onError(error: AxiosError) {
+            console.log('hahahah')
             console.log(error);
             setHouseState(initStateHouse);
             setFeedback(buildFeedback('error', undefined, error))
