@@ -1,10 +1,9 @@
 import axios from "axios";
 import { parseString } from 'xml2js';
 import { FilteringInfo, House, PageableResponse, PaginationInfo, SortingInfo } from "../types";
-import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
+import { parseXml, genXml, buildSortingParams, buildFilteringParams, buildFSPath } from "../utils";
 import { log } from "console";
-// axios.defaults.baseURL = "http://localhost:9000"
-// axios.defaults.baseURL = "http://localhost:8080/api"
+import { firstServicePath } from "../constants";
 
 axios.interceptors.request.use(request => {
     console.log('Starting Request', JSON.stringify(request, null, 2))
@@ -26,7 +25,7 @@ function makeArrFromRespData(pageableResp: any) {
 
 export const HouseService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<House>, sorting?: SortingInfo<House>) {
-        const { data, headers } = await axios.get(`/houses`, {
+        const { data, headers } = await axios.get(buildFSPath(`/houses`), {
             params: {
                 page: pagintion ? pagintion.page! + 1 : undefined,
                 pageSize: pagintion?.pageSize,
@@ -52,15 +51,15 @@ export const HouseService = {
     },
 
     async create(house: House) {
-        return await axios.post('/houses', genXml(house, 'house'), { headers: { 'Content-Type': 'application/xml' } })
+        return await axios.post(buildFSPath('/houses'), genXml(house, 'house'), { headers: { 'Content-Type': 'application/xml' } })
     },
 
     async delete(name: string) {
-        return await axios.delete(`/houses/${name}`)
+        return await axios.delete(buildFSPath(`/houses/${name}`))
     },
 
     async update(house: House) {
-        var res = (await axios.put(`/houses/${house.name}?year=${house.year}&numberOfFloors=${house.numberOfFloors}`)).data
+        var res = (await axios.put(buildFSPath(`/houses/${house.name}?year=${house.year}&numberOfFloors=${house.numberOfFloors}`))).data
         console.log(res);
         res = parseXml(res).house
         return res

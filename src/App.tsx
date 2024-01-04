@@ -4,8 +4,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { AppMenu } from './components/AppMenu';
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:8080/api"
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

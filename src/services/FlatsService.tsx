@@ -1,12 +1,10 @@
 import axios from "axios";
 import Flat, { FilteringInfo, FlatBackend, PageableResponse, PaginationInfo, SortingInfo } from "../types";
-import { parseXml, genXml, buildSortingParams, buildFilteringParams } from "../utils";
-// axios.defaults.baseURL = "http://localhost:9000"
-// axios.defaults.baseURL = "http://localhost:8080/api"
+import { parseXml, genXml, buildSortingParams, buildFilteringParams, buildFSPath } from "../utils";
 
 export const FlatService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<FlatBackend>, sorting?: SortingInfo<FlatBackend>) {
-        const { data, headers } = await axios.get("/flats", {
+        const { data, headers } = await axios.get(buildFSPath(`/flats`), {
             params: {
                 page: pagintion?.page! + 1,
                 pageSize: pagintion?.pageSize,
@@ -31,31 +29,39 @@ export const FlatService = {
     },
 
     async create(flat: FlatBackend) {
-        return await axios.post('/flats', genXml(flat, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })
+        return await axios.post(buildFSPath(`/flats`), genXml(flat, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })
     },
 
     async delete(flatId: number) {
-        return await axios.delete(`/flats/${flatId}`)
+        return await axios.delete(buildFSPath(`/flats/${flatId}`))
     },
 
     async update(flat: Flat) {
-        var res = (await axios.put(`/flats/${flat.id}`, genXml(flat, 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })).data
+        var res = (await axios.put(buildFSPath(`/flats/${flat.id}`), genXml(mapToBakendFlat(flat), 'newFlatRequest'), { headers: { 'Content-Type': 'application/xml' } })).data
         console.log(res);
         var a = parseXml(res)
         console.log(a);
-        res = mapFlat(a.flat)
+        res = mapToFlat(a.flat)
         console.log(res);
         return res
     },
-    
+
     async deleteAllInHouse(houseName: string) {
-        return await axios.delete(`/flats/${houseName}`)
+        return await axios.delete(buildFSPath(`/flats/${houseName}`))
+    },
+
+    async get(flatId: number) {
+        return mapToFlat(parseXml((await axios.get(buildFSPath(`/flats/${flatId}`))).data).flat) as Flat
+    },
+
+    async isExist(flatId: number) {
+        return (await axios.get(buildFSPath(`/flats/${flatId}`))).status == 200
     }
 
 }
 
 
-const mapFlat = (container: any): Flat => {
+export const mapToFlat = (container: any): Flat => {
     let flat = container
     console.log(flat);
 
@@ -84,8 +90,20 @@ const mapFlat = (container: any): Flat => {
     )
 }
 
-const mapRespToFlats = (resp: any): Flat[] => {
-    return resp.map(mapFlat)
+export const mapToBakendFlat = (flat: Flat): FlatBackend => {
+    return (
+        {
+            ...flat,
+            coordinates: {
+                coordinate_x: flat.coordinates.x,
+                coordinate_y: flat.coordinates.y
+            }
+        } as FlatBackend
+    )
+}
+
+export const mapRespToFlats = (resp: any): Flat[] => {
+    return resp.map(mapToFlat)
 }
 
 

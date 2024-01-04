@@ -7,7 +7,7 @@ import { CreateFlatForm } from './firstService/CreateFlatForm';
 import { CreateHouseForm } from './firstService/CreateHouseForm';
 import { HousesTable } from './firstService/HousesTable';
 import { Feedback } from '../types';
-import { SecondService } from './secondService/Agency';
+import { AgencyTools } from './secondService/Agency';
 import { OtherTools } from './firstService/OtherTools';
 
 export const AppMenu: React.FC = () => {
@@ -48,7 +48,7 @@ export const AppMenu: React.FC = () => {
               <Tab value="2" label="Houses table" />
               <Tab value="3" label="Create flat" />
               <Tab value="4" label="Create house" />
-              <Tab value='6' label="Other tools" />
+              {/* <Tab value='6' label="Other tools" /> */}
               <Divider orientation='vertical' flexItem sx={{ backgroundColor: 'white', ml: 4, mr: 4 }} />
               <Tab value='5'
                 disableRipple
@@ -75,11 +75,11 @@ export const AppMenu: React.FC = () => {
             <CreateHouseForm setFeedback={setFeedback} />
           </TabPanel>
           <TabPanel value='5' id='secondservice'>
-            <SecondService setFeedback={setFeedback} />
+            <AgencyTools setFeedback={setFeedback} />
           </TabPanel>
-          <TabPanel value='6'>
+          {/* <TabPanel value='6'>
             <OtherTools setFeedback={setFeedback} />
-          </TabPanel>
+          </TabPanel> */}
         </Box>
       </TabContext>
       <Snackbar

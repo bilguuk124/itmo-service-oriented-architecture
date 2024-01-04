@@ -29,7 +29,7 @@ import { reactQueryKeys } from '../../constants';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
-import DeleteSweepSharp from '@mui/icons-material/DeleteSweepSharp';
+import DeleteSweep from '@mui/icons-material/DeleteSweep';
 import CancelIcon from '@mui/icons-material/Close';
 import { buildFeedback } from '../../utils';
 import { AxiosError } from 'axios';
@@ -190,7 +190,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
             onClick={handleDeleteClick(id)}
             color="inherit" />,
           <GridActionsCellItem
-            icon={<Tooltip title='Delete all flats in house' ><DeleteSweepSharp sx={{ fontSize: 23 }} /></Tooltip>}
+            icon={<Tooltip title='Delete all flats in house' ><DeleteSweep sx={{ fontSize: 24 }} /></Tooltip>}
             label="Delete all flats"
             onClick={handleDeleteAllFlatsInHouse(id)}
             color="inherit" />,

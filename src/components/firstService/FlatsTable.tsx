@@ -39,7 +39,7 @@ const columnGroupingModel = [
   {
     groupId: 'coordinates',
     headerClassName: 'MuiDataGrid-columnHeader--alignCenterr',
-    children: [{ field: 'coordinates.x' }, { field: 'coordinates.y' }],
+    children: [{ field: 'coordinate_x' }, { field: 'coordinate_y' }],
   },
   {
     groupId: 'house',

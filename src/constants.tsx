@@ -15,6 +15,9 @@ import Flat,
   View
 } from "./types"
 
+export const firstServicePath = "http://localhost:8080/api"
+export const secondServicePath = "http://localhost:9090/agency"
+
 export const reactQueryKeys = {
   getAllFlats: 'flatsAll',
   createFlat: 'createFlat',
@@ -137,7 +140,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     filterOperators: customStringOperators
   },
   {
-    field: 'coordinates.x',
+    field: 'coordinate_x',
     headerName: 'X',
     valueGetter: (a) => a.row.coordinates.x,
     valueSetter: (a: GridValueSetterParams) => { a.row.coordinates.x = parseInt(a.value); return { ...a.row, } },
@@ -149,7 +152,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     filterOperators: customNumberOperators
   },
   {
-    field: 'coordinates.y',
+    field: 'coordinate_y',
     headerName: 'Y',
     valueGetter: (a) => a.row.coordinates.y,
     valueSetter: (a: GridValueSetterParams) => { a.row.coordinates.y = parseInt(a.value); return { ...a.row, } },

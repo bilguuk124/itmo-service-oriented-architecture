@@ -4,11 +4,14 @@ import { parseString } from 'xml2js';
 import { GridFilterModel } from '@mui/x-data-grid-pro';
 import { AxiosError } from 'axios';
 import { MutationStatus } from 'react-query';
+import { firstServicePath as firstServiceRootPath, reactQueryKeys, secondServicePath as secondServiceRootPath } from './constants';
+import { useQuery } from '@tanstack/react-query';
+import { FlatService } from './services/FlatsService';
 
 export const buildFilteringInfo = (filterModel: GridFilterModel): FilteringInfo<any> => Object.fromEntries(filterModel.items.map((val) => [val.field, {
     operation: getComparisonAliasByMathOperator(val.operator)!,
     value: val.value
-  }]))
+}]))
 
 export const getComparisonAliasByMathOperator = (oper: string): ComparisonAlias | undefined => {
     if ('=' === oper || 'is' === oper) return 'eq'
@@ -21,6 +24,8 @@ export const getComparisonAliasByMathOperator = (oper: string): ComparisonAlias 
 
 export const genXml = (target: any, rootKey?: string): string => {
     // create(flat)
+    console.log(target);
+    
     let obj = { ...target }
 
     if (rootKey)
@@ -61,9 +66,23 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
         .join(',')
 };
 
-export const buildFeedback = (status: MutationStatus, msg?: string, error?: AxiosError) => {
-  return {
-    status: status == 'error' || status == 'success' ? status : 'info',
-    message: error ? (error.response?.data as BadResponse).message : msg
-  } as Feedback;
+export const buildFeedback = (status: 'error' | 'success', msg?: string, error?: AxiosError) => {
+    return {
+        status: status == 'error' || status == 'success' ? status : 'info',
+        message: error ? (error.response?.data as BadResponse).message : msg
+    } as Feedback;
 };
+
+export const buildFSPath = (path: string): string => {
+    return `${firstServiceRootPath}${path}`
+}
+
+export const buildSecondServicePath = (path: string): string => {
+    return `${secondServiceRootPath}${path}`
+}
+
+export const isFlatExist = (flatId: number): boolean => {
+    var isSuccess = false
+    FlatService.get(flatId).then()
+    return isSuccess
+}
