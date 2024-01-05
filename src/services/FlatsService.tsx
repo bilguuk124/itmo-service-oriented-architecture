@@ -56,6 +56,14 @@ export const FlatService = {
 
     async isExist(flatId: number) {
         return (await axios.get(buildFSPath(`/flats/${flatId}`))).status == 200
+    },
+
+    async countInHouse(houseId: string) {
+        return parseXml((await axios.get(buildFSPath(`/flats/${houseId}/count`))).data, 'flat_count') as number
+    }, 
+
+    async countWithLessRoomsNumber(roomsNumber: number) {
+        return parseXml((await axios.get(buildFSPath(`/flats/numberOfRooms/${roomsNumber}`))).data, 'flat_count') as number
     }
 
 }

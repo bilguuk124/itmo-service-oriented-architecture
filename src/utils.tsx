@@ -66,7 +66,7 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
         .join(',')
 };
 
-export const buildFeedback = (status: 'error' | 'success', msg?: string, error?: AxiosError) => {
+export const buildFeedback = (status: 'error' | 'success'  | 'info', msg?: string, error?: AxiosError) => {
     return {
         status: status == 'error' || status == 'success' ? status : 'info',
         message: error ? (parseXml(error.response?.data, 'errorBody') as BadResponse).details : msg

@@ -14,12 +14,12 @@ export const FlatComparison: React.FC<FlatComparisonProps> = ({ firstFlat, secon
         <Stack direction='row' spacing={2} sx={{ m: 2 }} justifyContent='center' useFlexGap flexWrap="wrap">
             <Paper
                 elevation={cheapestFlatId == firstFlat.id ? 20 : 1}
-                sx={{ textAlign: 'left', p: 2, bgcolor: cheapestFlatId == firstFlat.id ? 'PaleGreen' : 'inherit' }}
+                sx={{ textAlign: 'left', p: 2, bgcolor: cheapestFlatId === firstFlat.id ? 'PaleGreen' : 'inherit' }}
                 ref={ref => ref?.replaceChildren(new JSONFormatter(firstFlat).render())}>
             </Paper>
             <Paper
                 elevation={cheapestFlatId == secondFlat.id ? 20 : 1}
-                sx={{ textAlign: 'left', p: 2, bgcolor: cheapestFlatId == secondFlat.id ? 'PaleGreen' : 'inherit' }}
+                sx={{ textAlign: 'left', p: 2, bgcolor: cheapestFlatId === secondFlat.id ? 'PaleGreen' : 'inherit' }}
                 ref={ref => ref?.replaceChildren(new JSONFormatter(secondFlat).render())}>
             </Paper>
         </Stack>

@@ -1,5 +1,5 @@
 import { Box, Divider, FormControl, FormControlLabel, Stack, Switch, TextField, Typography, Button, Paper } from "@mui/material"
-import React, { useEffect, useState } from "react"
+import React, { memo, useEffect, useMemo, useState } from "react"
 import { reactQueryKeys } from "../../constants"
 import Flat, { FedbackableProps, Feedback } from "../../types";
 import { AgencyService } from "../../services/AgencyService";
@@ -34,7 +34,7 @@ const GetCheapest: React.FC<FedbackableProps> = ({ setFeedback }) => {
 
     const compareFlats = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        AgencyService.compareFlats(flatParams.firstFlatId, flatParams.secondFlatId).then(flat => { setCheapestFlat({ ...flat }) }).catch((a) => {
+        AgencyService.compareFlats(flatParams.firstFlatId, flatParams.secondFlatId).then(flat => { setCheapestFlat((prev) => prev = flat) }).catch((a) => {
             console.log(a)
             setFeedback(buildFeedback('error', undefined, a as AxiosError))
         })
@@ -53,11 +53,21 @@ const GetCheapest: React.FC<FedbackableProps> = ({ setFeedback }) => {
         if (!cheapestFlat)
             return
         console.log(cheapestFlat);
-        FlatService.get(cheapestFlat.id === flatParams.firstFlatId ? flatParams.secondFlatId : flatParams.firstFlatId)
+        FlatService.get(cheapestFlat.id == flatParams.firstFlatId ? flatParams.secondFlatId : flatParams.firstFlatId)
             .then(flat => setNonCheapestFlat(flat))
             .catch((a) => setFeedback(buildFeedback('error', undefined, a as AxiosError)))
 
     }, [cheapestFlat])
+
+    const ShowComparison = memo<{cheapestFlat: Flat | undefined}>(({cheapestFlat}) => {
+        if (cheapestFlat && nonCheapestFlat)
+            return (<FlatComparison
+                firstFlat={cheapestFlat.id == flatParams.firstFlatId ? cheapestFlat : nonCheapestFlat}
+                secondFlat={cheapestFlat.id == flatParams.secondFlatId ? cheapestFlat : nonCheapestFlat}
+                cheapestFlatId={cheapestFlat.id} />)
+        return null
+    })
+
     return (
         <>
             <form onSubmit={compareFlats}>
@@ -70,26 +80,19 @@ const GetCheapest: React.FC<FedbackableProps> = ({ setFeedback }) => {
                             error={validateForm(flatParams).includes('firstFlatId')}
                             value={flatParams.firstFlatId}
                             type="number"
-                            onChange={e => setFlatParams({ ...flatParams, firstFlatId: parseInt(e.target.value) })}></TextField>
+                            onChange={e => setFlatParams((prev) => { return { ...prev, firstFlatId: parseInt(e.target.value) } })}></TextField>
                         <TextField
                             id='secondFlatId'
                             label='Second flat'
                             error={validateForm(flatParams).includes('secondFlatId')}
                             value={flatParams.secondFlatId}
                             type="number"
-                            onChange={e => setFlatParams({ ...flatParams, secondFlatId: parseInt(e.target.value) })}></TextField>
+                            onChange={e => setFlatParams((prev) => { return { ...prev, secondFlatId: parseInt(e.target.value) } })}></TextField>
                     </Stack>
                     <Button variant='contained' color='primary' sx={{ width: '10vw', alignSelf: 'center' }} type="submit" >Compare</Button>
                 </FormControl>
             </form>
-            {
-                cheapestFlat && nonCheapestFlat ?
-                    <FlatComparison
-                        firstFlat={cheapestFlat.id == flatParams.firstFlatId ? cheapestFlat : nonCheapestFlat}
-                        secondFlat={nonCheapestFlat.id == flatParams.secondFlatId ? nonCheapestFlat : cheapestFlat}
-                        cheapestFlatId={cheapestFlat.id} />
-                    : undefined
-            }
+            <ShowComparison cheapestFlat={cheapestFlat}></ShowComparison>
         </>
     )
 }
@@ -138,9 +141,9 @@ const FindFlat: React.FC<FedbackableProps> = ({ setFeedback }) => {
                     <Button variant='contained' color='primary' sx={{ width: '10vw', alignSelf: 'center' }} type="submit">Find</Button>
                 </FormControl>
             </form>
-            {foundFlat && <Paper 
+            {foundFlat && <Paper
                 elevation={2}
-                sx={{ textAlign: 'left', p: 2, m:2, maxWidth: 800, display: 'inline-grid' , alignSelf: 'center', alignContent: 'center' }}
+                sx={{ textAlign: 'left', p: 2, m: 2, maxWidth: 800, display: 'inline-grid', alignSelf: 'center', alignContent: 'center' }}
                 ref={ref => ref?.replaceChildren(new JSONFormatter(foundFlat).render())}>
             </Paper>}
         </>

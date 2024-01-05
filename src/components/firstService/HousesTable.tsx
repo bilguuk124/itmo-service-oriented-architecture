@@ -31,6 +31,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import DeleteSweep from '@mui/icons-material/DeleteSweep';
 import CancelIcon from '@mui/icons-material/Close';
+import FunctionsIcon from '@mui/icons-material/Functions';
 import { buildFeedback } from '../../utils';
 import { AxiosError } from 'axios';
 import { FlatService } from '../../services/FlatsService';
@@ -131,6 +132,14 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
     setRowModesModel(newRowModesModel);
   };
 
+  const handleCountFlatsClick = (id: GridRowId) => () => {
+    const house = dataGridRef.current.getRow(id) as House
+    FlatService.countInHouse(house.name)
+      .then(flatsNumber => `House ${house.name} has ${flatsNumber} flats`)
+      .then(message => setFeedback(buildFeedback('info', message)))
+      .catch(err => setFeedback(buildFeedback('info', undefined, err)))
+  }
+
   const { mutateAsync } = useMutation({
     mutationKey: [reactQueryKeys.updateHouse],
     mutationFn: (newHouse: House) => HouseService.update(newHouse),
@@ -158,7 +167,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 130,
+      width: 160,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
@@ -179,19 +188,24 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
 
         return [
           <GridActionsCellItem
-            icon={<Tooltip title='Editing house' ><EditIcon /></Tooltip>}
+            icon={<Tooltip title='Edit' ><EditIcon /></Tooltip>}
             label="Edit"
             onClick={handleEditClick(id)}
             color="inherit" />,
           <GridActionsCellItem
-            icon={<Tooltip title='Delete house' ><DeleteIcon /></Tooltip>}
+            icon={<Tooltip title='Delete' ><DeleteIcon /></Tooltip>}
             label="Delete"
             onClick={handleDeleteClick(id)}
             color="inherit" />,
           <GridActionsCellItem
-            icon={<Tooltip title='Delete all flats in house' ><DeleteSweep sx={{ fontSize: 24 }} /></Tooltip>}
+            icon={<Tooltip title='Delete all flats' ><DeleteSweep sx={{ fontSize: 24 }} /></Tooltip>}
             label="Delete all flats"
             onClick={handleDeleteAllFlatsInHouse(id)}
+            color="inherit" />,
+          <GridActionsCellItem
+            icon={<Tooltip title='Count flats' ><FunctionsIcon sx={{ fontSize: 24}} /></Tooltip>}
+            label="Count flats"
+            onClick={handleCountFlatsClick(id)}
             color="inherit" />,
 
         ];
@@ -239,7 +253,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
   }
 
   return (
-    <Box sx={{ alignContent: 'center' }}>
+    <Box sx={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
       <DataGridPro
         autoHeight
         columns={columns}
@@ -277,6 +291,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         onRowEditStop={handleRowEditStop}
 
         apiRef={dataGridRef}
+        sx={{ maxWidth: 1000 }}
       />
     </Box>
   )
