@@ -29,7 +29,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Close';
 import { AxiosError } from 'axios';
 
-const PAGE_SIZE = 5
+const PAGE_SIZE = 10
 
 interface FlatsTableProps extends FedbackableProps {
 }

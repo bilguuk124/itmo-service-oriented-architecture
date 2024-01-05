@@ -69,7 +69,7 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
 export const buildFeedback = (status: 'error' | 'success', msg?: string, error?: AxiosError) => {
     return {
         status: status == 'error' || status == 'success' ? status : 'info',
-        message: error ? (error.response?.data as BadResponse).message : msg
+        message: error ? (parseXml(error.response?.data, 'errorBody') as BadResponse).details : msg
     } as Feedback;
 };
 

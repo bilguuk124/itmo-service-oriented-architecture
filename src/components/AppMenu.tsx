@@ -8,18 +8,27 @@ import { CreateHouseForm } from './firstService/CreateHouseForm';
 import { HousesTable } from './firstService/HousesTable';
 import { Feedback } from '../types';
 import { AgencyTools } from './secondService/Agency';
-import { OtherTools } from './firstService/OtherTools';
+import { Button, message } from 'antd';
+
+message.config({})
 
 export const AppMenu: React.FC = () => {
   const [value, setValue] = React.useState('1');
   const [feedback, setFeedback] = React.useState<Feedback>({ message: undefined, status: undefined });
+  const [messageApi, contextHolder] = message.useMessage();
 
-  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
-      return;
+  React.useEffect(() => {
+    if (!feedback)
+      return
+    switch (feedback.status) {
+      case 'error': messageApi.error({content: feedback.message, style: {marginRight: 0, color: 'red'}})
+        break
+      case 'info': messageApi.info({content: feedback.message, style: {marginRight: 0}})
+        break
+      case 'success': messageApi.success({content: feedback.message, style: {marginRight: 0, color: 'green'}, })
+        break
     }
-    setFeedback({ status: undefined, message: undefined });
-  };
+  }, [feedback])
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -82,20 +91,7 @@ export const AppMenu: React.FC = () => {
           </TabPanel> */}
         </Box>
       </TabContext>
-      <Snackbar
-        open={feedback?.status !!= undefined}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        message={feedback?.message}
-        anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
-        sx={{ width: 'auto' }}>
-        <Alert onClose={handleClose}
-          variant="filled"
-          severity={feedback?.status}
-          sx={{ width: '100%' }}>
-          {feedback?.message}
-        </Alert>
-      </Snackbar>
+      {contextHolder}
     </Box>
   );
 };
