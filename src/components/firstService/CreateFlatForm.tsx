@@ -10,7 +10,7 @@ import {
     Autocomplete,
     Switch
 } from '@mui/material/';
-import { Furnish, View, Transport, FlatBackend, Feedback, House } from '../../types';
+import { Furnish, View, Transport, FlatBackend, Feedback, House, FedbackableProps } from '../../types';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { FlatService } from '../../services/FlatsService';
 import { buildFeedback } from '../../utils';
@@ -61,8 +61,7 @@ const validateForm = (flat: FlatBackend): string[] => {
     return res
 }
 
-interface CreateFlatFormProps {
-    setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+interface CreateFlatFormProps extends FedbackableProps {
 }
 
 export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) => {

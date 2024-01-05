@@ -23,7 +23,7 @@ import {
   GridOverlayProps
 } from '@mui/x-data-grid-pro';
 import { HouseService } from '../../services/HouseService';
-import { FilteringInfo, House, SortingInfo, Feedback } from "../../types";
+import { FilteringInfo, House, SortingInfo, Feedback, FedbackableProps } from "../../types";
 import { buildFilteringInfo } from '../../utils';
 import { reactQueryKeys } from '../../constants';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -39,8 +39,7 @@ import { Tooltip } from '@mui/material';
 const PAGE_SIZE = 5
 
 
-interface HouseTableProps {
-  setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+interface HouseTableProps extends FedbackableProps {
 }
 
 

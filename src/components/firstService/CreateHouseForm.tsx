@@ -9,7 +9,7 @@ import {
     Snackbar,
     Alert
 } from '@mui/material/';
-import Flat, { Feedback, House } from '../../types';
+import Flat, { FedbackableProps, Feedback, House } from '../../types';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { HouseService } from '../../services/HouseService';
 import { buildFeedback } from '../../utils';
@@ -28,8 +28,7 @@ const checkValid = (house: House): string[] => {
 }
 
 
-interface HouseFormProps {
-    setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+interface HouseFormProps extends FedbackableProps {
 }
 
 

@@ -78,3 +78,7 @@ export interface Feedback {
     status: 'success' | 'info' | 'error' | undefined;
     message: string | undefined
 }
+
+export interface FedbackableProps {
+    setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+}

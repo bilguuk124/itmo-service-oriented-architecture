@@ -1,8 +1,7 @@
 import { Box, Divider } from "@mui/material";
-import { Feedback } from "../../types";
+import { FedbackableProps, Feedback } from "../../types";
 
-interface OtherToolsParams {
-    setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+interface OtherToolsParams extends FedbackableProps{
 }
 export const OtherTools: React.FC<OtherToolsParams> = ({ setFeedback }) => {
     return (

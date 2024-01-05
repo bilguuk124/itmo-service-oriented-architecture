@@ -1,5 +1,5 @@
 import React from 'react';
-import Flat, { Feedback, FilteringInfo, FlatBackend, Furnish, SortingInfo, Transport, View } from '../../types';
+import Flat, { FedbackableProps, Feedback, FilteringInfo, FlatBackend, Furnish, SortingInfo, Transport, View } from '../../types';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { FlatService } from '../../services/FlatsService';
 import { Box } from '@mui/material';
@@ -31,8 +31,7 @@ import { AxiosError } from 'axios';
 
 const PAGE_SIZE = 5
 
-interface FlatsTableProps {
-  setFeedback: React.Dispatch<React.SetStateAction<Feedback>>
+interface FlatsTableProps extends FedbackableProps {
 }
 
 const columnGroupingModel = [
