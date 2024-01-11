@@ -196,7 +196,8 @@ export const gridColumns: GridColDef<Flat>[] = [
     headerAlign: 'center',
     align: 'center',
     flex: 0.4,
-    editable: true
+    editable: true,
+    filterOperators: customStringOperators
   },
   {
     field: 'view',
@@ -205,7 +206,8 @@ export const gridColumns: GridColDef<Flat>[] = [
     headerAlign: 'center',
     align: 'center',
     flex: 0.4,
-    editable: true
+    editable: true,
+    filterOperators: customStringOperators
   },
   {
     field: 'transport',
@@ -215,6 +217,7 @@ export const gridColumns: GridColDef<Flat>[] = [
     align: 'center',
     flex: 0.4,
     editable: true,
+    filterOperators: customStringOperators
   },
   {
     field: 'house.name',

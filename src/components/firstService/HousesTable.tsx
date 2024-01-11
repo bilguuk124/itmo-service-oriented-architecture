@@ -37,19 +37,17 @@ import { AxiosError } from 'axios';
 import { FlatService } from '../../services/FlatsService';
 import { Tooltip } from '@mui/material';
 
-const PAGE_SIZE = 5
-
+const PAGE_SIZES = [10, 5, 20]
 
 interface HouseTableProps extends FedbackableProps {
 }
-
 
 export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
   const queryClient = useQueryClient()
   const dataGridRef = useGridApiRef()
   const [paginationModel, setPaginationModel] = React.useState({
     page: 0,
-    pageSize: PAGE_SIZE,
+    pageSize: 5,
   });
 
   const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
@@ -259,7 +257,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         columns={columns}
         rows={resp?.data ? resp.data : []}
         getRowId={(row) => row.name}
-        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There are't flats id database" />) }}
+        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There aren't flats in database" />) }}
         loading={isLoading}
         density='compact'
         rowSpacingType='border'
@@ -269,7 +267,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
         // pagination
         pagination
         paginationMode="server"
-        pageSizeOptions={[PAGE_SIZE]}
+        pageSizeOptions={PAGE_SIZES}
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
         // autoPageSize

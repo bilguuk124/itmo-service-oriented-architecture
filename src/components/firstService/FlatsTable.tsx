@@ -1,8 +1,8 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent, useCallback, useState } from 'react';
 import Flat, { FedbackableProps, Feedback, FilteringInfo, FlatBackend, Furnish, SortingInfo, Transport, View } from '../../types';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { FlatService } from '../../services/FlatsService';
-import { Box, Button, IconButton, Menu, Stack, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {
   DataGridPro,
@@ -27,65 +27,11 @@ import { buildFilteringInfo, buildFeedback } from '../../utils';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Close';
-import ConstructionIcon from '@mui/icons-material/Construction';
 import { AxiosError } from 'axios';
-import { FormControl, FormControlLabel } from '@material-ui/core';
+import { CustomDataGridToolbar } from './CustomDataGridToolbar';
 
 
-const BasicMenu: React.FC<FedbackableProps> = ({ setFeedback }) => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [roomsNumber, setRoomsNumber] = useState(0)
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault()
-    FlatService.countWithLessRoomsNumber(roomsNumber)
-      .then(flatsNumber => `There are ${flatsNumber} flats which has less ${roomsNumber} rooms `)
-      .then(message => setFeedback(buildFeedback('info', message)))
-      .catch(err => setFeedback(buildFeedback('info', undefined, err)))
-  }
-
-  return (
-    <div>
-      <IconButton
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        <ConstructionIcon color='primary' sx={{ fontSize: 20 }} />
-      </IconButton>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-      >
-        <form onSubmit={handleSubmit}>
-          <Stack sx={{ m: 1 }}>
-            <Typography>Count flats with less rooms number</Typography>
-            <TextField
-              label="Rooms number"
-              type='number'
-              variant="filled"
-              size='small'
-              value={roomsNumber}
-              onChange={(val) => setRoomsNumber(parseInt(val.target.value))} />
-          </Stack>
-        </form>
-      </Menu>
-    </div>
-  );
-}
-
-const PAGE_SIZE = 10
+const PAGE_SIZES = [10, 5, 20]
 
 interface FlatsTableProps extends FedbackableProps {
 }
@@ -106,15 +52,15 @@ const columnGroupingModel = [
 export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
   const queryClient = useQueryClient()
   const dataGridApiRef = useGridApiRef()
-  const [paginationModel, setPaginationModel] = React.useState({
+  const [paginationModel, setPaginationModel] = useState({
     page: 0,
     pageSize: 5,
   });
-  const [queryOptions, setQueryOptions] = React.useState<Partial<{ sorting: SortingInfo<FlatBackend>, filtering: FilteringInfo<FlatBackend> }>>({
+  const [queryOptions, setQueryOptions] = useState<Partial<{ sorting: SortingInfo<FlatBackend>, filtering: FilteringInfo<FlatBackend> }>>({
     sorting: undefined,
     filtering: undefined
   });
-  const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>({});
+  const [rowModesModel, setRowModesModel] = useState<GridRowModesModel>({});
   const { mutate: deleteMutate, status: deletionStatus } = useMutation({
     mutationFn: (flat: Flat) => FlatService.delete(flat.id),
     mutationKey: [reactQueryKeys.deleteFlat],
@@ -128,7 +74,7 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
     }
   })
 
-  const handleSortModelChange = React.useCallback((sortModel: GridSortModel) => {
+  const handleSortModelChange = useCallback((sortModel: GridSortModel) => {
     setQueryOptions((prev) => {
       return {
         ...prev,
@@ -162,7 +108,7 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
       <GridToolbarContainer>
         <GridToolbarColumnsButton />
         <GridToolbarFilterButton />
-        <BasicMenu setFeedback={setFeedback} />
+        <CustomDataGridToolbar setFeedback={setFeedback} />
       </GridToolbarContainer>
     );
   }
@@ -267,6 +213,18 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
   ]
 
 
+  const [rowCountState, setRowCountState] = React.useState(
+    resp?.numberOfEntries || 0,
+  );
+
+  React.useEffect(() => {
+    setRowCountState((prevRowCountState: any) =>
+      resp?.numberOfEntries !== undefined
+        ? resp?.numberOfEntries
+        : prevRowCountState,
+    );
+  }, [resp?.numberOfEntries, setRowCountState]);
+
   return (
     <Box sx={{ alignContent: 'center' }}>
       <DataGridPro
@@ -276,17 +234,17 @@ export const FlatsTable: React.FC<FlatsTableProps> = ({ setFeedback }) => {
         getRowId={(row) => row.id}
         density='compact'
         experimentalFeatures={{ columnGrouping: true }}
-        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There are't flats id database" />) }}
+        slots={{ toolbar: CustomToolbar, noRowsOverlay: () => (<GridOverlay children="There aren't flats in database" />) }}
         columnGroupingModel={columnGroupingModel}
         loading={isLoading}
-        // autoPageSize
         rowSpacingType='border'
         showCellVerticalBorder
+        rowCount={rowCountState}
 
         //pagination
         pagination
         paginationMode="server"
-        pageSizeOptions={[PAGE_SIZE]}
+        pageSizeOptions={PAGE_SIZES}
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
         // autoPageSize
