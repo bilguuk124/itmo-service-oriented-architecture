@@ -26,7 +26,8 @@ public class Coordinates implements Serializable {
     @Max(548)
     @NotNull
     @XmlElement(name = "coordinate_x")
-    private double x;
+    private Double x;
+
     @XmlElement(name = "coordinate_y")
     @NotNull
     private Integer y;

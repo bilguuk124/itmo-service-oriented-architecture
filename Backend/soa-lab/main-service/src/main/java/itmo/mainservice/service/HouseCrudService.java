@@ -3,6 +3,7 @@ package itmo.mainservice.service;
 import itmo.library.House;
 import itmo.library.HousePageableResponse;
 import itmo.mainservice.exception.HouseExistsException;
+import itmo.mainservice.exception.HouseNotEmptyException;
 import itmo.mainservice.exception.HouseNotFoundException;
 import itmo.mainservice.exception.JpaException;
 import jakarta.ejb.Local;
@@ -18,7 +19,7 @@ public interface HouseCrudService {
     House getHouseByName(String name) throws HouseNotFoundException;
     @Transactional
     House updateHouseByName(String name, Integer newYear, Integer newNumberOfFloors) throws HouseNotFoundException, JpaException;
-    void deleteByName(String name) throws HouseNotFoundException, JpaException;
+    void deleteByName(String name) throws HouseNotFoundException, JpaException, HouseNotEmptyException;
 
     boolean exists(House house);
 }

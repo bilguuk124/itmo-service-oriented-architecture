@@ -84,37 +84,17 @@ public class Flat {
     @NotNull
     private Boolean hasBalcony;
 
-    public void update(FlatCreateDTO dto){
-        if (dto.getCoordinates() != null && !dto.getCoordinates().equals(coordinates)){
-            setCoordinates(dto.getCoordinates());
-        }
-        if (dto.getName() != null && !dto.getName().equals(name)){
-            setName(dto.getName());
-        }
-        if (dto.getArea() >= 1 && dto.getArea() <= 527 && area != dto.getArea()){
-            setArea(dto.getArea());
-        }
-        if (dto.getNumberOfRooms() >= 1 && numberOfRooms != dto.getNumberOfRooms()){
-            setNumberOfRooms(dto.getNumberOfRooms());
-        }
-        if (dto.getFurnish() != null && !dto.getFurnish().equals(furnish)){
-            setFurnish(dto.getFurnish());
-        }
-        if (dto.getTransport() != null && !dto.getTransport().equals(transport)){
-            setTransport(dto.getTransport());
-        }
-        if (dto.getView() != null && !dto.getView().equals(view)){
-            setView(dto.getView());
-        }
-        if (dto.getPrice() != null && !dto.getPrice().equals(price)){
-            setPrice(dto.getPrice());
-        }
-        if (dto.getHasBalcony() != null && !dto.getHasBalcony().equals(hasBalcony)){
-            setHasBalcony(dto.getHasBalcony());
-        }
-        if (dto.getHouse() != null && !dto.getHouse().equals(house)){
-            setHouse(dto.getHouse());
-        }
+    public void update(FlatCreateDTO flatCreateDTO){
+        setName(flatCreateDTO.getName());
+        setCoordinates(flatCreateDTO.getCoordinates());
+        setArea(flatCreateDTO.getArea());
+        setNumberOfRooms(flatCreateDTO.getNumberOfRooms());
+        setFurnish(Furnish.fromValue(flatCreateDTO.getFurnish()));
+        setTransport(Transport.fromValue(flatCreateDTO.getTransport()));
+        setView(View.fromValue(flatCreateDTO.getView()));
+        setHouse(flatCreateDTO.getHouse());
+        setPrice(flatCreateDTO.getPrice());
+        setHasBalcony(Boolean.getBoolean(flatCreateDTO.getHasBalcony()));
     }
 
     public Flat(String name, Coordinates coordinates, int area, long numberOfRooms, Furnish furnish, View view, Transport transport, House house, Long price, boolean hasBalcony) {

@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.TransactionManager;
 import jakarta.transaction.UserTransaction;
 import jakarta.ws.rs.ext.Provider;
+import lombok.Getter;
 
 import java.util.logging.Logger;
 
@@ -15,7 +16,9 @@ public class TransactionProvider {
     private static final int MAX_TIMEOUT = 300000;
     private static final int DEFAULT_JTA_TIMEOUT = 300000;
 
+    @Getter
     private static TransactionManager transactionManager;
+    @Getter
     private static UserTransaction userTransaction;
 
     @Inject
@@ -38,11 +41,4 @@ public class TransactionProvider {
         }
     }
 
-    public static TransactionManager getTransactionManager() {
-        return transactionManager;
-    }
-
-    public static UserTransaction getUserTransaction() {
-        return userTransaction;
-    }
 }

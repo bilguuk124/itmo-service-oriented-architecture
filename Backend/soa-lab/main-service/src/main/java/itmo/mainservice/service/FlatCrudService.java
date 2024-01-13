@@ -16,7 +16,7 @@ import java.util.List;
 public interface FlatCrudService {
     @Transactional
     Flat createFlat(FlatCreateDTO flatCreateDTO) throws JpaException, HouseNotFoundException;
-    FlatPageableResponse getAllFlats(List<String> sort, List<String> filter, Integer page, Integer pageSize);
+    FlatPageableResponse getAllFlats(List<String> sort, List<String> filter, Integer page, Integer pageSize) throws Exception;
     Flat getFlatByID(Integer id) throws FlatNotFoundException;
     Flat updateFlatById(Integer id, FlatCreateDTO flatCreateDTO) throws FlatNotFoundException;
     void deleteById(Integer id) throws FlatNotFoundException, JpaException;

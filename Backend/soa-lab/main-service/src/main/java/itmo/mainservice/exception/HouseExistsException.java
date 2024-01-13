@@ -3,7 +3,6 @@ package itmo.mainservice.exception;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 
-@Getter
 
 public class HouseExistsException extends Exception {
 

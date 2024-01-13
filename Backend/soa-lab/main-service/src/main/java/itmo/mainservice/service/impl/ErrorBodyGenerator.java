@@ -1,13 +1,19 @@
 package itmo.mainservice.service.impl;
 
 import itmo.library.ErrorBody;
+import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.HouseExistsException;
+import itmo.mainservice.exception.HouseNotEmptyException;
 import itmo.mainservice.exception.JpaException;
 import jakarta.persistence.NoResultException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.core.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 public class ErrorBodyGenerator {
 
@@ -28,12 +34,12 @@ public class ErrorBodyGenerator {
                 .build();
     }
 
-    public ErrorBody generateBadPageableError() {
+    public ErrorBody generateBadPageableError(BadPageableException exception) {
         logger.info("Generating bad pageable error body");
         return ErrorBody.builder()
                 .errorCode(400)
                 .message("Validation Error")
-                .details("page and page size cannot be less than 1")
+                .details(exception.getMessage() != null ? exception.getMessage() : "Bad pageable")
                 .timestamp(LocalDateTime.now())
                 .build();
     }
@@ -49,9 +55,9 @@ public class ErrorBodyGenerator {
                 .build();
     }
 
-    public ErrorBody generateHouseNotFoundError(String name) {
+    public ErrorBody generateHouseNotFoundError(String message) {
         logger.info("Generating House not found exception error body");
-        return new ErrorBody(404, "House not found", "House with name = " + name + " was not found", LocalDateTime.now());
+        return new ErrorBody(404, "House not found", message, LocalDateTime.now());
     }
 
     public ErrorBody generateServletError(String servletName, Integer statusCode, String message) {
@@ -80,7 +86,7 @@ public class ErrorBodyGenerator {
         logger.info("Generating Unknown exception error body");
         return ErrorBody.builder()
                 .errorCode(500)
-                .message("Unknown error")
+                .message(e.getClass().getSimpleName())
                 .details(e.getMessage())
                 .timestamp(LocalDateTime.now())
                 .build();
@@ -109,4 +115,19 @@ public class ErrorBodyGenerator {
     }
 
 
+    public ErrorBody generateHouseNotEmptyException(HouseNotEmptyException e) {
+        return ErrorBody.builder()
+                .errorCode(400)
+                .message("House is not empty")
+                .details("House was not removed because it is not empty")
+                .build();
+    }
+
+    public ErrorBody generateNotFoundException(NotFoundException e, HttpServletRequest request) {
+        return ErrorBody.builder()
+                .errorCode(404)
+                .message("Resource not found")
+                .details("Resource on this path does not exist: " + request.getRequestURL().toString())
+                .build();
+    }
 }

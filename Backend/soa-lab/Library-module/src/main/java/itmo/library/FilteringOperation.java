@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.Arrays;
 import java.util.Objects;
 
+@Getter
 @RequiredArgsConstructor
 public enum FilteringOperation {
     EQ("eq"),
@@ -16,7 +17,6 @@ public enum FilteringOperation {
     LTE("lte"),
     UNDEFINED("undefined");
 
-    @Getter
     private final String value;
 
     @Override

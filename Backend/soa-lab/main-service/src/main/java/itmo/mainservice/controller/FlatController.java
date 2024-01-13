@@ -7,6 +7,7 @@ import itmo.mainservice.exception.HouseNotFoundException;
 import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.service.FlatCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
+import itmo.mainservice.service.impl.Validator;
 import jakarta.inject.Inject;
 import jakarta.validation.*;
 import jakarta.ws.rs.*;
@@ -37,21 +38,20 @@ public class FlatController {
     @Path("/aaa")
     @Produces(MediaType.APPLICATION_XML)
     public Response get(){
-        return Response.ok(new Flat(1, "Hrus", new Coordinates(1,2), LocalDate.now()
+        return Response.ok(new Flat(1, "Hrus", new Coordinates(1D,2), LocalDate.now()
                 ,100,3, Furnish.BAD, View.NORMAL, Transport.NORMAL, new House("hell",2,3),200L, false)).build();
     }
 
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public Response getAllFlats(@QueryParam("page") Integer page,
-                                @QueryParam("pageSize") Integer pageSize,
+    public Response getAllFlats(@QueryParam("page") String pageStr,
+                                @QueryParam("pageSize") String pageSizeStr,
                                 @QueryParam("sort") String sortParam,
-                                @QueryParam("filter") String filterParam) throws BadPageableException {
+                                @QueryParam("filter") String filterParam) throws Exception {
         try{
             logger.info("Received a request to get all flats");
-
-            if (page != null && page <= 0) throw new BadPageableException();
-            if (page != null && pageSize <= 0) throw new BadPageableException();
+            int page = Validator.validatePageable(pageStr);
+            int pageSize = Validator.validatePageable(pageSizeStr);
 
             List<String> sort = (sortParam == null)
                     ? new ArrayList<>()
@@ -65,10 +65,12 @@ public class FlatController {
             FlatPageableResponse response = service.getAllFlats(sort, filter, page, pageSize);
 
             logger.info("Sending result, result =" + response.toString());
-//            GenericEntity<PageableResponse<Flat>> entity = new GenericEntity<>(response) {};
             return Response
                     .ok(response, MediaType.APPLICATION_XML)
                     .build();
+        }
+        catch (NumberFormatException e){
+            throw new BadPageableException("Page and pageSize must be a number!");
         }
         catch (IllegalArgumentException e){
             return Response
@@ -83,7 +85,7 @@ public class FlatController {
     @Produces(MediaType.APPLICATION_XML)
     public Response getFlatById(@PathParam("id") Integer id) throws FlatNotFoundException {
         try {
-            if (id <= 0) throw new ValidationException();
+            if (id <= 0) throw new ValidationException("Id must be a positive integer");
             return Response
                     .ok(service.getFlatByID(id))
                     .build();
@@ -100,7 +102,8 @@ public class FlatController {
     @POST
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response createFlat(FlatCreateDTO flatCreateDTO) throws JpaException, HouseNotFoundException {
+    public Response createFlat(FlatCreateDTO flatCreateDTO) throws JpaException, HouseNotFoundException, ValidationException{
+        Validator.validateNewFlatRequest(flatCreateDTO);
         Flat result = service.createFlat(flatCreateDTO);
         return Response
                 .ok(result)
@@ -114,7 +117,7 @@ public class FlatController {
     public Response deleteFlatByIdOrHouse(@PathParam("id") String param) throws JpaException, HouseNotFoundException, FlatNotFoundException {
         int id;
         try{
-            if (param == null || param.isEmpty()) throw new ValidationException();
+            if (param == null || param.isEmpty()) throw new ValidationException("Id must not be empty!");
             id = Integer.parseInt(param);
             service.deleteById(id);
             return Response
@@ -137,18 +140,18 @@ public class FlatController {
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response updateFlatById(@PathParam("id") Integer id, FlatCreateDTO dto) throws FlatNotFoundException {
+    public Response updateFlatById(@PathParam("id") String idStr, FlatCreateDTO dto) throws FlatNotFoundException, ValidationException {
         try{
-            if (id <= 0) throw new ValidationException();
+            if (idStr == null || idStr.isEmpty()) throw new ValidationException("Id cannot be empty");
+            int id = Integer.parseInt(idStr);
+            if (id <= 0) throw new ValidationException("Id must be positive integer");
+            Validator.validateNewFlatRequest(dto);
             Flat result = service.updateFlatById(id, dto);
             return Response
                     .ok(result)
                     .build();
-        } catch (ValidationException ex){
-            return Response
-                    .status(Response.Status.BAD_REQUEST)
-                    .entity(errorBodyGenerator.generateValidationError(id))
-                    .build();
+        } catch (NumberFormatException ex){
+            throw new ValidationException("Id must be a positive number");
         }
     }
 

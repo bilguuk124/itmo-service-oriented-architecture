@@ -4,10 +4,14 @@ import itmo.library.House;
 import itmo.library.Filter;
 import itmo.library.Sort;
 import itmo.mainservice.config.EntityManagerProvider;
+import itmo.mainservice.exception.HouseNotEmptyException;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
+import org.hibernate.exception.ConstraintViolationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,6 +22,7 @@ public class HouseCrudRepository {
 
     @Inject
     private EntityManagerProvider entityManagerProvider;
+    private final Logger logger = LoggerFactory.getLogger(HouseCrudRepository.class);
 
     public void save(House house){
         entityManagerProvider.getEntityManager().persist(house);
@@ -30,10 +35,21 @@ public class HouseCrudRepository {
         return Optional.of(house);
     }
 
-    public boolean deleteByName(String name){
+    public boolean deleteByName(String name) throws HouseNotEmptyException {
+        logger.info("Getting the house");
         House house = entityManagerProvider.getEntityManager().find(House.class, name);
-        if(house == null) return false;
-        entityManagerProvider.getEntityManager().remove(house);
+        if(house == null) {
+            logger.info("House was not found");
+            return false;
+        }
+        logger.info("House was found");
+        try{
+            entityManagerProvider.getEntityManager().remove(house);
+            entityManagerProvider.getEntityManager().flush();
+        } catch (ConstraintViolationException exception){
+            logger.warn("House was not empty!");
+            throw new HouseNotEmptyException(exception);
+        }
         return true;
     }
 

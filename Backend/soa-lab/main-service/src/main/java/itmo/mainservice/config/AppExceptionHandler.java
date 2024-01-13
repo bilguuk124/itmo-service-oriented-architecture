@@ -7,9 +7,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Marshaller;
+import jdk.jfr.ContentType;
 import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +21,7 @@ import java.io.Serial;
 import java.util.Enumeration;
 
 @WebServlet("/AppExceptionHandler")
+@Produces(MediaType.APPLICATION_XML)
 public class AppExceptionHandler extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -38,12 +41,11 @@ public class AppExceptionHandler extends HttpServlet {
     @SneakyThrows
     private void processError(HttpServletRequest request, HttpServletResponse response) {
         logger.info("Processing default error fallback");
-
         String message = (String) request.getAttribute("jakarta.servlet.error.message");
         Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");
         String servletName = (String) request.getAttribute("jakarta.servlet.error.servlet_name");
         if (servletName == null) servletName = "Unknown";
-
+        response.setContentType(MediaType.APPLICATION_XML);
         ErrorBody errorBody = errorBodyGenerator.generateServletError(servletName, statusCode, message);
         response.setContentType(MediaType.APPLICATION_XML);
         PrintWriter out = response.getWriter();

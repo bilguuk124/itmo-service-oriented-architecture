@@ -2,12 +2,10 @@ package itmo.mainservice.controller;
 
 import itmo.library.House;
 import itmo.library.HousePageableResponse;
-import itmo.mainservice.exception.BadPageableException;
-import itmo.mainservice.exception.HouseExistsException;
-import itmo.mainservice.exception.HouseNotFoundException;
-import itmo.mainservice.exception.JpaException;
+import itmo.mainservice.exception.*;
 import itmo.mainservice.service.HouseCrudService;
 import itmo.mainservice.service.impl.ErrorBodyGenerator;
+import itmo.mainservice.service.impl.Validator;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.*;
@@ -63,14 +61,14 @@ public class HouseController {
     @GET
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response getAllHousesFilteredAndSorted(@QueryParam("page") Integer page,
-                                                  @QueryParam("pageSize") Integer pageSize,
+    public Response getAllHousesFilteredAndSorted(@QueryParam("page") String pageStr,
+                                                  @QueryParam("pageSize") String pageSizeStr,
                                                   @QueryParam("sort") String sortParam,
                                                   @QueryParam("filter") String filterParam) throws BadPageableException {
         logger.info("Got request to get all houses");
 
-        if (page != null && page <= 0) throw new BadPageableException();
-        if (page != null && pageSize <= 0) throw new BadPageableException();
+        int page = Validator.validatePageable(pageStr);
+        int pageSize = Validator.validatePageable(pageSizeStr);
 
         List<String> sort = (sortParam == null)
                 ? new ArrayList<>()
@@ -94,6 +92,7 @@ public class HouseController {
     @Consumes(MediaType.APPLICATION_XML)
     public Response createHouse(House house) throws HouseExistsException, JpaException {
         logger.info("Got request to create a new house");
+        Validator.validateHouse(house);
         House result = service.createHouse(house);
         return Response
                 .ok(result, MediaType.APPLICATION_XML)
@@ -103,10 +102,10 @@ public class HouseController {
     @DELETE
     @Path("/{name}")
     @Produces(MediaType.APPLICATION_XML)
-    public Response deleteHouseByName(@PathParam("name") String name) throws JpaException, HouseNotFoundException {
+    public Response deleteHouseByName(@PathParam("name") String name) throws JpaException, HouseNotFoundException, HouseNotEmptyException {
         logger.info("Got request to delete a house with name = {}", name);
         try {
-            if (name == null || name.isEmpty()) throw new ValidationException();
+            if (name == null || name.isEmpty()) throw new ValidationException("House name cannot be empty");
             service.deleteByName(name);
             return Response.ok().build();
         }

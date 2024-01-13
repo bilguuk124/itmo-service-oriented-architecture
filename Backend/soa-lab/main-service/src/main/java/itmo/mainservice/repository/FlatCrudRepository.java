@@ -9,6 +9,7 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
 import jakarta.transaction.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public class FlatCrudRepository {
         return flat != null ? Optional.of(flat) : Optional.empty();
     }
 
-    public List<Flat> getAllPageable(List<Sort> sorts, List<Filter> filters, Integer page, Integer pageSize){
+    public List<Flat> getAllPageable(List<Sort> sorts, List<Filter> filters, Integer page, Integer pageSize) throws Exception {
         CriteriaBuilder criteriaBuilder = entityManagerProvider.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Flat> criteriaQuery = criteriaBuilder.createQuery(Flat.class);
         Root<Flat> root = criteriaQuery.from(Flat.class);
@@ -60,10 +61,60 @@ public class FlatCrudRepository {
         return true;
     }
 
-    private Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root,  List<Filter> filters){
+    private Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root,  List<Filter> filters) throws Exception {
         Predicate predicate = criteriaBuilder.conjunction();
         for(Filter filter : filters){
-            if ( (filter.getNestedName() != null && !filter.getNestedName().isEmpty()) || !(Objects.equals(filter.getNestedName(), "null"))){
+            if (filter.getFieldName().equals("furnish") || filter.getFieldName().equals("view") || filter.getFieldName().equals("transport")){
+                if (filter.getFilteringOperation() != FilteringOperation.EQ && filter.getFilteringOperation() != FilteringOperation.NEQ) throw new Exception();
+                switch (filter.getFieldName()){
+                    case "furnish" -> {
+                        if (filter.getFilteringOperation() == FilteringOperation.EQ) {
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), Furnish.fromValue(filter.getFieldValue())));
+                        }
+                        else {
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), Furnish.fromValue(filter.getFieldValue())));
+                        }
+                    }
+
+                    case "view" -> {
+                        if (filter.getFilteringOperation() == FilteringOperation.EQ){
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), View.fromValue(filter.getFieldValue())));
+                        }
+                        else{
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), View.fromValue(filter.getFieldValue())));
+                        }
+                    }
+
+                    case "transport" -> {
+                        if (filter.getFilteringOperation() == FilteringOperation.EQ){
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), Transport.fromValue(filter.getFieldValue())));
+                        }else{
+                            predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), Transport.fromValue(filter.getFieldValue())));
+                        }
+                    }
+                    default ->
+                        throw new IllegalArgumentException();
+
+                }
+            }
+            else if (filter.getFieldName().equals("creationDate")){
+                predicate = switch (filter.getFilteringOperation()){
+                    case EQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    case NEQ ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    case GT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    case LT ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    case GTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    case LTE ->
+                            criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()), LocalDate.parse(filter.getFieldValue())));
+                    default -> throw new IllegalArgumentException();
+                };
+            }
+            else if ((filter.getNestedName() != null && !filter.getNestedName().isEmpty()) || !(Objects.equals(filter.getNestedName(), "null"))){
                 predicate = switch (filter.getFilteringOperation()) {
                     case EQ ->
                             criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));

@@ -4,9 +4,14 @@ import lombok.Getter;
 
 @Getter
 public class HouseNotFoundException extends Exception {
-    private final String houseName;
 
-    public HouseNotFoundException(String houseName){
-        this.houseName = houseName;
+    public HouseNotFoundException(String message){
+        super(message);
+    }
+
+    public static class NoMatchFoundException extends Exception {
+        public NoMatchFoundException(String message){
+            super(message);
+        }
     }
 }

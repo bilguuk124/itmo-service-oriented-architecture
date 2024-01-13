@@ -43,8 +43,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
                 throw new HouseNotFoundException(house.getName());
             }
             Flat flat = new Flat();
-            LocalDate date = LocalDate.now();
-            flat.setCreationDate(date);
+            flat.setCreationDate(LocalDate.now());
             flat.update(flatCreateDTO);
             repository.save(flat);
             userTransaction.commit();
@@ -61,7 +60,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
 
 
     @Override
-    public FlatPageableResponse getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws IllegalArgumentException {
+    public FlatPageableResponse getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws Exception {
         logger.info("Service to get all flats starting");
         List<Sort> sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
         List<Filter> filterList = FilterAndSortUtility.getFiltersFromStringList(filters, Flat.class);
@@ -96,6 +95,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
         try{
             userTransaction.begin();
             logger.info("Service to update a flat by id starting");
+            validateFlatCreateDto(flatCreateDTO);
             Optional<Flat> result = repository.getById(id);
             if (result.isEmpty()) {
                 logger.warn("Service to update a flat by id ended unsuccessfully, flat was not found, throwing an exception");
@@ -112,6 +112,12 @@ public class FlatCrudServiceImpl implements FlatCrudService {
             logger.warn("Service to update a flat by id ended unsuccessfully, transaction error, throwing an exception");
             throw new RuntimeException(e);
         }
+    }
+
+    private void validateFlatCreateDto(FlatCreateDTO flatCreateDTO) {
+        if (flatCreateDTO.getName() == null || flatCreateDTO.getName().isEmpty()) throw new ValidationException("name: cannot be null or empty!");
+        if (flatCreateDTO.getCoordinates().getX() > 548) throw new ValidationException("Coordinates: x must be less than 548!");
+        if (flatCreateDTO.getCoordinates().getY() == null) throw new ValidationException("Coordinates: y must be not null");
     }
 
     @Override

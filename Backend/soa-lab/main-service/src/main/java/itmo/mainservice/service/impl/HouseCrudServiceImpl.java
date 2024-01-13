@@ -6,6 +6,7 @@ import itmo.library.HousePageableResponse;
 import itmo.library.Sort;
 import itmo.mainservice.config.TransactionProvider;
 import itmo.mainservice.exception.HouseExistsException;
+import itmo.mainservice.exception.HouseNotEmptyException;
 import itmo.mainservice.exception.HouseNotFoundException;
 import itmo.mainservice.exception.JpaException;
 import itmo.mainservice.repository.HouseCrudRepository;
@@ -14,6 +15,7 @@ import itmo.mainservice.utility.FilterAndSortUtility;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import jakarta.transaction.*;
+import jakarta.validation.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -107,19 +109,21 @@ public class HouseCrudServiceImpl implements HouseCrudService {
     }
 
     @Override
-    public void deleteByName(String name) throws HouseNotFoundException, JpaException {
+    public void deleteByName(String name) throws HouseNotFoundException, JpaException, HouseNotEmptyException {
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
         try{
             userTransaction.begin();
             logger.info("Service to delete a house by name starting");
             if (!repository.deleteByName(name)) {
                 logger.warn("Service to delete a house by name ended unsuccessfully, house was not found, throwing an exception");
+                userTransaction.rollback();
                 throw new HouseNotFoundException(name);
             }
             userTransaction.commit();
             logger.info("Service to delete a house by name ended successfully");
         } catch (HeuristicRollbackException | SystemException | HeuristicMixedException | NotSupportedException |
                  RollbackException e) {
+            logger.error(e.getMessage());
             throw new JpaException(e);
         }
     }

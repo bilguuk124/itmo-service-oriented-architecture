@@ -1,7 +1,5 @@
 package itmo.library;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -27,22 +25,19 @@ public class FlatCreateDTO {
 
     @Min(1)
     @Max(527)
-    private int area;
+    private Integer area;
 
     @Min(1)
-    private long numberOfRooms;
+    private Integer numberOfRooms;
 
-    @Enumerated(EnumType.STRING)
     @NotNull
-    private Furnish furnish;
+    private String furnish;
 
-    @Enumerated(EnumType.STRING)
     @NotNull
-    private View view;
+    private String view;
 
-    @Enumerated(EnumType.STRING)
     @NotNull
-    private Transport transport;
+    private String transport;
 
     @NotNull
     private House house;
@@ -51,6 +46,6 @@ public class FlatCreateDTO {
     private Long price;
 
     @NotNull
-    private Boolean hasBalcony;
+    private String hasBalcony;
 
 }
