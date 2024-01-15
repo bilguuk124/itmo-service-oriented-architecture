@@ -5,17 +5,16 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 @XmlEnum
 @Getter
 @RequiredArgsConstructor
 public enum Transport {
-    FEW("few"),
-    NONE("none"),
-    LITTLE("little"),
     NORMAL("normal"),
-    ENOUGH("enough");
+    FEW("few"),
+    ENOUGH("enough"),
+    LITTLE("little"),
+    NONE("none");
 
     private final String value;
 

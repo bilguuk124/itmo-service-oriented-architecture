@@ -5,16 +5,15 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 @XmlEnum
 @Getter
 @RequiredArgsConstructor
-public enum View {
-    STREET("street"),
+public enum View{
     YARD("yard"),
-    BAD("bad"),
     NORMAL("normal"),
+    STREET("street"),
+    BAD("bad"),
     TERRIBLE("terrible");
 
     private final String value;

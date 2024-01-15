@@ -9,10 +9,14 @@ import itmo.mainservice.repository.FlatCrudRepository;
 import itmo.mainservice.service.FlatCrudService;
 import itmo.mainservice.service.HouseCrudService;
 import itmo.mainservice.utility.FilterAndSortUtility;
+import jakarta.ejb.EJBTransactionRolledbackException;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import jakarta.transaction.*;
-import jakarta.validation.*;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Valid;
+import jakarta.validation.ValidationException;
+import org.hibernate.type.descriptor.java.CoercionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,20 +27,17 @@ import java.util.Optional;
 @Stateless
 public class FlatCrudServiceImpl implements FlatCrudService {
 
+    private final Logger logger = LoggerFactory.getLogger(FlatCrudServiceImpl.class);
     @Inject
     private FlatCrudRepository repository;
     @Inject
     private HouseCrudService houseCrudService;
 
-    private final Logger logger = LoggerFactory.getLogger(FlatCrudServiceImpl.class);
-
-
     @Override
-    @Transactional
     public Flat createFlat(FlatCreateDTO flatCreateDTO) throws JpaException, ConstraintViolationException, HouseNotFoundException {
         logger.info("Service to create a flat starting");
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
-        try{
+        try {
             userTransaction.begin();
             House house = flatCreateDTO.getHouse();
             if (!houseCrudService.exists(house)) {
@@ -58,23 +59,34 @@ public class FlatCrudServiceImpl implements FlatCrudService {
     }
 
 
-
     @Override
-    public FlatPageableResponse getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws Exception {
+    public FlatPageableResponse getAllFlats(List<String> sorts, List<String> filters, Integer page, Integer pageSize) throws ValidationException, SystemException, JpaException {
         logger.info("Service to get all flats starting");
-        List<Sort> sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
-        List<Filter> filterList = FilterAndSortUtility.getFiltersFromStringList(filters, Flat.class);
-        logger.info("Sort List: ");
-        sortList.forEach(s -> logger.info(s.toString()));
-        logger.info("Filter List: ");
-        filterList.forEach(s -> logger.info(s.toString()));
-        if (page == null) page = FilterAndSortUtility.DEFAULT_PAGE;
-        if (pageSize == null) pageSize = FilterAndSortUtility.DEFAULT_PAGE_SIZE;
-        List<Flat> responseData = repository.getAllPageable(sortList, filterList, page, pageSize);
-        Long numberOfEntries = repository.getNumberOfEntries();
-        FlatPageableResponse response = new FlatPageableResponse(responseData, numberOfEntries);
-        logger.info("Service to get all flats ended successfully");
-        return response;
+        UserTransaction userTransaction = TransactionProvider.getUserTransaction();
+        try{
+            userTransaction.begin();
+            List<Sort> sortList = FilterAndSortUtility.getSortsFromStringList(sorts);
+            List<Filter> filterList = FilterAndSortUtility.getFiltersFromStringList(filters, Flat.class);
+            Validator.validateSortList(sortList, Flat.class);
+            Validator.validateFilterList(filterList, Flat.class);
+            logger.info("Sort List: ");
+            sortList.forEach(s -> logger.info(s.toString()));
+            logger.info("Filter List: ");
+            filterList.forEach(s -> logger.info(s.toString()));
+            if (page == null) page = FilterAndSortUtility.DEFAULT_PAGE;
+            if (pageSize == null) pageSize = FilterAndSortUtility.DEFAULT_PAGE_SIZE;
+            List<Flat> responseData = repository.getAllPageable(sortList, filterList, page, pageSize);
+            Long numberOfEntries = repository.getNumberOfEntries();
+            FlatPageableResponse response = new FlatPageableResponse(responseData, numberOfEntries);
+            logger.info("Service to get all flats ended successfully");
+            return response;
+        } catch (SystemException | NotSupportedException e) {
+            userTransaction.rollback();
+            throw new JpaException(e);
+        } catch (IllegalArgumentException e){
+            userTransaction.rollback();
+            throw new ValidationException(e.getMessage());
+        }
     }
 
     @Override
@@ -90,9 +102,9 @@ public class FlatCrudServiceImpl implements FlatCrudService {
     }
 
     @Override
-    public Flat updateFlatById(Integer id, FlatCreateDTO flatCreateDTO) throws FlatNotFoundException{
+    public Flat updateFlatById(Integer id, FlatCreateDTO flatCreateDTO) throws FlatNotFoundException {
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
-        try{
+        try {
             userTransaction.begin();
             logger.info("Service to update a flat by id starting");
             validateFlatCreateDto(flatCreateDTO);
@@ -115,16 +127,19 @@ public class FlatCrudServiceImpl implements FlatCrudService {
     }
 
     private void validateFlatCreateDto(FlatCreateDTO flatCreateDTO) {
-        if (flatCreateDTO.getName() == null || flatCreateDTO.getName().isEmpty()) throw new ValidationException("name: cannot be null or empty!");
-        if (flatCreateDTO.getCoordinates().getX() > 548) throw new ValidationException("Coordinates: x must be less than 548!");
-        if (flatCreateDTO.getCoordinates().getY() == null) throw new ValidationException("Coordinates: y must be not null");
+        if (flatCreateDTO.getName() == null || flatCreateDTO.getName().isEmpty())
+            throw new ValidationException("name: cannot be null or empty!");
+        if (flatCreateDTO.getCoordinates().getX() > 548)
+            throw new ValidationException("Coordinates: x must be less than 548!");
+        if (flatCreateDTO.getCoordinates().getY() == null)
+            throw new ValidationException("Coordinates: y must be not null");
     }
 
     @Override
     public void deleteById(Integer id) throws FlatNotFoundException, JpaException {
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
 
-        try{
+        try {
             userTransaction.begin();
             logger.info("Service to delete a flat by id starting");
             if (!repository.deleteById(id)) {
@@ -142,7 +157,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
     @Override
     public void deleteFlatsOfTheHouse(String houseName) throws HouseNotFoundException, JpaException {
         UserTransaction userTransaction = TransactionProvider.getUserTransaction();
-        try{
+        try {
             userTransaction.begin();
             logger.info("Service to delete flats of same house starting");
             House house = houseCrudService.getHouseByName(houseName);
@@ -163,7 +178,7 @@ public class FlatCrudServiceImpl implements FlatCrudService {
     public FlatCount getFlatCountOfHouse(String houseName) throws HouseNotFoundException {
         logger.info("Service to get flat count of same house starting");
         House house = houseCrudService.getHouseByName(houseName);
-        if (house == null){
+        if (house == null) {
             logger.warn("Service to get flat count of same house ended unsuccessfully, house not found, throwing exception");
             throw new HouseNotFoundException(houseName);
         }

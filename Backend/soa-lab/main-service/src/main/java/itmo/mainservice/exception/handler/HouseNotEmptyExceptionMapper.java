@@ -16,9 +16,9 @@ import org.slf4j.LoggerFactory;
 
 public class HouseNotEmptyExceptionMapper implements ExceptionMapper<HouseNotEmptyException> {
 
+    private final Logger logger = LoggerFactory.getLogger(HouseNotEmptyExceptionMapper.class);
     @Inject
     private ErrorBodyGenerator errorBodyGenerator;
-    private final Logger logger = LoggerFactory.getLogger(HouseNotEmptyExceptionMapper.class);
 
     @Override
     public Response toResponse(HouseNotEmptyException e) {

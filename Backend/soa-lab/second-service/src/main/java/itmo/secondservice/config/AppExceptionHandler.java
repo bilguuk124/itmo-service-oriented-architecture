@@ -1,8 +1,6 @@
-package itmo.mainservice.config;
+package itmo.secondservice.config;
 
 import itmo.library.ErrorBody;
-import itmo.mainservice.service.impl.ErrorBodyGenerator;
-import jakarta.inject.Inject;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,15 +21,14 @@ import java.io.Serial;
 public class AppExceptionHandler extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final Logger logger = LoggerFactory.getLogger(AppExceptionHandler.class);
-    @Inject
-    private ErrorBodyGenerator errorBodyGenerator;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+    private final Logger logger = LoggerFactory.getLogger(AppExceptionHandler.class);
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response){
         processError(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response){
         processError(request, response);
     }
 
@@ -40,11 +37,12 @@ public class AppExceptionHandler extends HttpServlet {
         logger.info("Processing default error fallback");
         String message = (String) request.getAttribute("jakarta.servlet.error.message");
         Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");
-        String servletName = (String) request.getAttribute("jakarta.servlet.error.servlet_name");
-        if (servletName == null) servletName = "Unknown";
         response.setContentType(MediaType.APPLICATION_XML);
-        ErrorBody errorBody = errorBodyGenerator.generateServletError(servletName, statusCode, message);
-        response.setContentType(MediaType.APPLICATION_XML);
+        ErrorBody errorBody = ErrorBody.builder()
+                .errorCode(statusCode)
+                .message("Unknown error")
+                .details(message)
+                .build();
         PrintWriter out = response.getWriter();
         JAXBContext context = JAXBContext.newInstance(AppExceptionHandler.class, ErrorBody.class);
         Marshaller marshaller = context.createMarshaller();

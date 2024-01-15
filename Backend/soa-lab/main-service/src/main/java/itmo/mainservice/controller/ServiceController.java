@@ -29,10 +29,10 @@ public class ServiceController {
     @Path("/find-with-balcony/{cheapest}/{with-balcony}")
     public Response getCheapestOrExpensiveWithOrWithoutBalconyFlat(@PathParam("cheapest") String cheapness, @PathParam("with-balcony") String balcony) throws NoFlatsExistsException {
         log.info("Got request to get cheapest or most expensive flat with or without balcony");
-        try{
+        try {
             if (
                     (cheapness == null || cheapness.isEmpty()) ||
-                    (!Objects.equals(cheapness, "expensive") && !Objects.equals(cheapness, "cheapest"))
+                            (!Objects.equals(cheapness, "expensive") && !Objects.equals(cheapness, "cheapest"))
             ) {
                 log.error("Bad Request parameter must be either 'cheapest' or 'expensive' (without '')");
                 throw new IllegalArgumentException("Must be expensive or cheapest!");
@@ -40,7 +40,7 @@ public class ServiceController {
 
             if (
                     (balcony == null || balcony.isEmpty()) ||
-                    (!Objects.equals(balcony,"with-balcony") && !Objects.equals(balcony, "without-balcony"))
+                            (!Objects.equals(balcony, "with-balcony") && !Objects.equals(balcony, "without-balcony"))
             ) {
                 log.error("Bad Request parameter must be either 'with-balcony' or 'without-balcony' (without '')");
                 throw new IllegalArgumentException("Must be with-balcony or without-balcony");
@@ -52,7 +52,7 @@ public class ServiceController {
                     .ok(flat)
                     .build();
 
-        } catch (IllegalArgumentException ex){
+        } catch (IllegalArgumentException ex) {
             log.info("Returning error body for bad request");
             return Response
                     .status(Response.Status.BAD_REQUEST)

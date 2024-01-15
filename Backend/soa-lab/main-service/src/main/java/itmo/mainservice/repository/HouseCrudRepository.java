@@ -1,11 +1,10 @@
 package itmo.mainservice.repository;
 
-import itmo.library.House;
 import itmo.library.Filter;
+import itmo.library.House;
 import itmo.library.Sort;
 import itmo.mainservice.config.EntityManagerProvider;
 import itmo.mainservice.exception.HouseNotEmptyException;
-import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
@@ -17,19 +16,18 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Stateless
 public class HouseCrudRepository {
 
+    private final Logger logger = LoggerFactory.getLogger(HouseCrudRepository.class);
     @Inject
     private EntityManagerProvider entityManagerProvider;
-    private final Logger logger = LoggerFactory.getLogger(HouseCrudRepository.class);
 
-    public void save(House house){
+    public void save(House house) {
         entityManagerProvider.getEntityManager().persist(house);
         entityManagerProvider.getEntityManager().flush();
     }
 
-    public Optional<House> getByName(String name){
+    public Optional<House> getByName(String name) {
         House house = entityManagerProvider.getEntityManager().find(House.class, name);
         if (house == null) return Optional.empty();
         return Optional.of(house);
@@ -38,33 +36,33 @@ public class HouseCrudRepository {
     public boolean deleteByName(String name) throws HouseNotEmptyException {
         logger.info("Getting the house");
         House house = entityManagerProvider.getEntityManager().find(House.class, name);
-        if(house == null) {
+        if (house == null) {
             logger.info("House was not found");
             return false;
         }
         logger.info("House was found");
-        try{
+        try {
             entityManagerProvider.getEntityManager().remove(house);
             entityManagerProvider.getEntityManager().flush();
-        } catch (ConstraintViolationException exception){
+        } catch (ConstraintViolationException exception) {
             logger.warn("House was not empty!");
             throw new HouseNotEmptyException(exception);
         }
         return true;
     }
 
-    public List<House> getAllPageableFilteredAndSorted(List<Sort> sorts, List<Filter> filters, Integer page, Integer pageSize){
+    public List<House> getAllPageableFilteredAndSorted(List<Sort> sorts, List<Filter> filters, Integer page, Integer pageSize) {
         CriteriaBuilder criteriaBuilder = entityManagerProvider.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<House> criteriaQuery = criteriaBuilder.createQuery(House.class);
         Root<House> root = criteriaQuery.from(House.class);
         criteriaQuery.select(root);
 
-        if (filters != null && !filters.isEmpty()){
+        if (filters != null && !filters.isEmpty()) {
             criteriaQuery.where(applyFilters(criteriaBuilder, root, filters));
         }
 
-        if (sorts != null && !sorts.isEmpty()){
-            criteriaQuery.orderBy(getJPAOrders(criteriaBuilder, root, sorts));
+        if (sorts != null && !sorts.isEmpty()) {
+            criteriaQuery.orderBy(applySort(criteriaBuilder, root, sorts));
         }
 
         TypedQuery<House> query = entityManagerProvider.getEntityManager().createQuery(criteriaQuery);
@@ -74,23 +72,22 @@ public class HouseCrudRepository {
                 .getResultList();
     }
 
-    private List<Order> getJPAOrders(CriteriaBuilder criteriaBuilder, Root<House> root, List<Sort> sorts) {
+    private List<Order> applySort(CriteriaBuilder criteriaBuilder, Root<House> root, List<Sort> sorts) {
         return sorts.stream()
                 .map(sortParam -> {
-                        if (sortParam.isDesc()){
-                            return criteriaBuilder.desc(root.get(sortParam.getFieldName()));
-                        }
-                        else{
-                            return criteriaBuilder.asc(root.get(sortParam.getFieldName()));
-                        }
+                    if (sortParam.isDesc()) {
+                        return criteriaBuilder.desc(root.get(sortParam.getFieldName()));
+                    } else {
+                        return criteriaBuilder.asc(root.get(sortParam.getFieldName()));
+                    }
                 })
                 .collect(Collectors.toList());
     }
 
-    public Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root, List<Filter> filters){
+    public Predicate applyFilters(CriteriaBuilder criteriaBuilder, Root<?> root, List<Filter> filters) {
         Predicate predicate = criteriaBuilder.conjunction();
 
-        for (Filter filter: filters){
+        for (Filter filter : filters) {
             predicate = switch (filter.getFilteringOperation()) {
                 case EQ ->
                         criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
@@ -111,11 +108,11 @@ public class HouseCrudRepository {
     }
 
     public boolean checkExist(House house) {
-       Optional<House> result = getByName(house.getName());
-       return result.isPresent();
+        Optional<House> result = getByName(house.getName());
+        return result.isPresent();
     }
 
-    public Long getNumberOfEntries(){
+    public Long getNumberOfEntries() {
         CriteriaBuilder criteriaBuilder = entityManagerProvider.getEntityManager().getCriteriaBuilder();
         CriteriaQuery<Long> criteriaQuery = criteriaBuilder.createQuery(Long.class);
         Root<House> root = criteriaQuery.from(House.class);

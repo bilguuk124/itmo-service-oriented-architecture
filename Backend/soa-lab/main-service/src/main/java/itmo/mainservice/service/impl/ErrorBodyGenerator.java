@@ -5,10 +5,8 @@ import itmo.mainservice.exception.BadPageableException;
 import itmo.mainservice.exception.HouseExistsException;
 import itmo.mainservice.exception.HouseNotEmptyException;
 import itmo.mainservice.exception.JpaException;
-import jakarta.persistence.NoResultException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.NotFoundException;
-import jakarta.ws.rs.core.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,12 +17,12 @@ public class ErrorBodyGenerator {
 
     private final Logger logger = LoggerFactory.getLogger(ErrorBodyGenerator.class);
 
-    public ErrorBody generateFlatNotFoundError(int id){
+    public ErrorBody generateFlatNotFoundError(int id) {
         logger.info("Generating flat not found error body");
         return new ErrorBody(404, "Flat not found", "Flat with id = " + id + " was not found", LocalDateTime.now());
     }
 
-    public ErrorBody generateValidationError(Integer id){
+    public ErrorBody generateValidationError(Integer id) {
         logger.info("Generating validation error body");
         return ErrorBody.builder()
                 .errorCode(400)

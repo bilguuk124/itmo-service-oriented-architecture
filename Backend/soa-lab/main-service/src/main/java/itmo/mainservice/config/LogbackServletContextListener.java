@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
 public class LogbackServletContextListener implements ServletContextListener {
 
     @Override
-    public void contextInitialized(ServletContextEvent event){
+    public void contextInitialized(ServletContextEvent event) {
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
         context.start();
     }
 
     @Override
-    public void contextDestroyed(ServletContextEvent event){
+    public void contextDestroyed(ServletContextEvent event) {
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
         context.stop();
     }

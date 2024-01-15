@@ -8,9 +8,9 @@ import itmo.mainservice.service.impl.ErrorBodyGenerator;
 import itmo.mainservice.service.impl.Validator;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.*;
+import jakarta.validation.Valid;
+import jakarta.validation.ValidationException;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
@@ -26,23 +26,22 @@ import java.util.stream.Stream;
 @Path("/houses")
 public class HouseController {
 
+    private final Logger logger = LoggerFactory.getLogger(HouseController.class);
     @Inject
     private HouseCrudService service;
-
     @Inject
     private ErrorBodyGenerator errorBodyGenerator;
-
-    private final Logger logger = LoggerFactory.getLogger(HouseController.class);
 
     @GET
     @Path("/aaa")
     @Produces(MediaType.APPLICATION_XML)
-    public Response get(@Context final HttpServletRequest request){
+    public Response get(@Context final HttpServletRequest request) {
         logger.info("Got test request");
         House house = new House("hello", 2, 3);
         List<House> houses = new ArrayList<>();
         houses.add(house);
-        GenericEntity<List<House>> entity = new GenericEntity<>(houses){};
+        GenericEntity<List<House>> entity = new GenericEntity<>(houses) {
+        };
         return Response
                 .ok(entity)
                 .build();
@@ -52,7 +51,7 @@ public class HouseController {
     @Path("/aaa")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    public Response post(House house)  {
+    public Response post(House house) {
         logger.info("Testing post method");
         return Response.ok(house).build();
     }
@@ -87,7 +86,6 @@ public class HouseController {
     }
 
 
-
     @POST
     @Consumes(MediaType.APPLICATION_XML)
     public Response createHouse(House house) throws HouseExistsException, JpaException {
@@ -104,18 +102,9 @@ public class HouseController {
     @Produces(MediaType.APPLICATION_XML)
     public Response deleteHouseByName(@PathParam("name") String name) throws JpaException, HouseNotFoundException, HouseNotEmptyException {
         logger.info("Got request to delete a house with name = {}", name);
-        try {
-            if (name == null || name.isEmpty()) throw new ValidationException("House name cannot be empty");
-            service.deleteByName(name);
-            return Response.ok().build();
-        }
-        catch (ValidationException e){
-            logger.warn("Validation error");
-            return Response
-                    .status(Response.Status.BAD_REQUEST)
-                    .entity(errorBodyGenerator.generateValidationError(name))
-                    .build();
-        }
+        if (name == null || name.isEmpty()) throw new ValidationException("House name cannot be empty");
+        service.deleteByName(name);
+        return Response.ok().build();
     }
 
     @GET
@@ -133,20 +122,15 @@ public class HouseController {
     @Produces(MediaType.APPLICATION_XML)
     public Response updateHouseByName(@PathParam("name") String name, @QueryParam("year") Integer newYear, @QueryParam("numberOfFloors") Integer newNumberOfFloors) throws JpaException, HouseNotFoundException {
         logger.info("Got request to update a house with name = {}", name);
-        try{
-            if (name == null || name.isEmpty()) throw new ValidationException("Name of the house can not be empty!");
-            if (newYear == null || newYear <= 0 || newYear > 634) throw new ValidationException("Year of the house must be > 0 and <= 634!");
-            if (newNumberOfFloors == null || newNumberOfFloors <= 0) throw new ValidationException("Number of floors must be greater than 0!");
-            House result = service.updateHouseByName(name, newYear, newNumberOfFloors);
-            return Response
-                    .ok(result, MediaType.APPLICATION_XML)
-                    .build();
-        } catch (ValidationException e){
-            logger.warn("Validation error");
-            return Response
-                    .status(Response.Status.BAD_REQUEST)
-                    .entity(errorBodyGenerator.generateValidationError(name))
-                    .build();
-        }
+        if (name == null || name.isEmpty()) throw new ValidationException("Name of the house can not be empty!");
+        if (newYear == null || newYear <= 0 || newYear > 634)
+            throw new ValidationException("Year of the house must be > 0 and <= 634!");
+        if (newNumberOfFloors == null || newNumberOfFloors <= 0)
+            throw new ValidationException("Number of floors must be greater than 0!");
+        House result = service.updateHouseByName(name, newYear, newNumberOfFloors);
+        return Response
+                .ok(result, MediaType.APPLICATION_XML)
+                .build();
+
     }
 }

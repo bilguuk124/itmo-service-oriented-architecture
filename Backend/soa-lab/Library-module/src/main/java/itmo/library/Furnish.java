@@ -5,16 +5,15 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 @Getter
 @XmlEnum
 @RequiredArgsConstructor
 public enum Furnish {
     NONE("none"),
-    FINE("fine"),
+    LITTLE("little"),
     BAD("bad"),
-    LITTLE("little");
+    FINE("fine");
 
     private final String value;
 

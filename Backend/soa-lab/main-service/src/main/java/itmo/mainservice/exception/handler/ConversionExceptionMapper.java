@@ -11,7 +11,7 @@ import org.eclipse.persistence.exceptions.ConversionException;
 
 @Provider
 @Produces(MediaType.APPLICATION_XML)
-public class ConversionExceptionMapper implements ExceptionMapper<ConversionException>{
+public class ConversionExceptionMapper implements ExceptionMapper<ConversionException> {
 
     @Inject
     private ErrorBodyGenerator errorBodyGenerator;

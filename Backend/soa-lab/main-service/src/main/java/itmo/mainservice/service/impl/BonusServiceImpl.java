@@ -3,7 +3,6 @@ package itmo.mainservice.service.impl;
 import itmo.library.Flat;
 import itmo.mainservice.exception.FlatNotFoundException;
 import itmo.mainservice.exception.HouseNotFoundException;
-import itmo.mainservice.exception.NoFlatsExistsException;
 import itmo.mainservice.repository.FlatCrudRepository;
 import itmo.mainservice.service.BonusService;
 import jakarta.ejb.Stateless;
@@ -32,7 +31,7 @@ public class BonusServiceImpl implements BonusService {
     }
 
     @Override
-    public Flat getCheaperOfTwoFlats(Integer id1, Integer id2) throws FlatNotFoundException{
+    public Flat getCheaperOfTwoFlats(Integer id1, Integer id2) throws FlatNotFoundException {
         log.info("Service is checking if flats with given id exists");
         Optional<Flat> flat1 = repository.getById(id1);
         Optional<Flat> flat2 = repository.getById(id2);
@@ -50,8 +49,7 @@ public class BonusServiceImpl implements BonusService {
         if (flat1.get().getPrice() >= flat2.get().getPrice()) {
             log.info("Flat 2 is cheaper, hence it will be returned");
             return flat2.get();
-        }
-        else {
+        } else {
             log.info("Flat 1 is cheaper, hence it will be returned");
             return flat1.get();
         }

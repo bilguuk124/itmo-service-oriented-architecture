@@ -15,10 +15,14 @@ import java.util.List;
 public interface HouseCrudService {
     @Transactional
     House createHouse(House house) throws HouseExistsException, JpaException;
+
     HousePageableResponse getAllHousesFilteredAndSorted(List<String> sorts, List<String> filters, Integer page, Integer pageSize);
+
     House getHouseByName(String name) throws HouseNotFoundException;
+
     @Transactional
     House updateHouseByName(String name, Integer newYear, Integer newNumberOfFloors) throws HouseNotFoundException, JpaException;
+
     void deleteByName(String name) throws HouseNotFoundException, JpaException, HouseNotEmptyException;
 
     boolean exists(House house);

@@ -15,10 +15,10 @@ import java.util.regex.Pattern;
 @Stateless
 public class FilterAndSortUtility {
 
-    private final static Pattern nestedFieldNamePattern = Pattern.compile("(.*)\\.(.*)");
-    private final static Pattern lhsPattern = Pattern.compile("(.*)\\[(.*)]=(.*)");
     public final static int DEFAULT_PAGE_SIZE = 10;
     public final static int DEFAULT_PAGE = 1;
+    private final static Pattern nestedFieldNamePattern = Pattern.compile("(.*)\\.(.*)");
+    private final static Pattern lhsPattern = Pattern.compile("(.*)\\[(.*)]=(.*)");
 
     public static List<Sort> getSortsFromStringList(List<String> sorts) {
         List<Sort> sortList = new ArrayList<>();
@@ -73,12 +73,14 @@ public class FilterAndSortUtility {
                 if (clazz.equals(Flat.class)) {
                     checkIfEquationOperation(filteringOperation, fieldName);
                     if (Objects.equals(fieldName, "view") || Objects.equals(fieldName, "transport") || Objects.equals(fieldName, "furnish")) {
+
                         fieldValue = matcher.group(3).toLowerCase();
                     } else fieldValue = matcher.group(3);
-                } else{
+                } else {
                     fieldValue = matcher.group(3);
                 }
             }
+
             if (fieldName != null && fieldName.isEmpty())
                 throw new IllegalArgumentException("Filter field name cannot be empty");
             if (fieldValue != null && fieldValue.isEmpty())
@@ -98,21 +100,6 @@ public class FilterAndSortUtility {
 
     private static void checkIfEquationOperation(FilteringOperation filteringOperation, String fieldName) {
         boolean equationOperation = Objects.equals(filteringOperation, FilteringOperation.EQ) || Objects.equals(filteringOperation, FilteringOperation.NEQ);
-        if (Objects.equals(fieldName, "furnish")) {
-            if (!equationOperation) {
-                throw new IllegalArgumentException("Balcony can be only equals or not equals to!");
-            }
-        }
-        if (Objects.equals(fieldName, "view")) {
-            if (!equationOperation) {
-                throw new IllegalArgumentException("Balcony can be only equals or not equals to!");
-            }
-        }
-        if (Objects.equals(fieldName, "transport")) {
-            if (!equationOperation) {
-                throw new IllegalArgumentException("Balcony can be only equals or not equals to!");
-            }
-        }
         if (Objects.equals(fieldName, "hasBalcony")) {
             if (!equationOperation) {
                 throw new IllegalArgumentException("Balcony can be only equals or not equals to!");

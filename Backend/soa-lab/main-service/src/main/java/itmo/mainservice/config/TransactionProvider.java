@@ -27,6 +27,7 @@ public class TransactionProvider {
     static {
         initAtomikos();
     }
+
     private static void initAtomikos() {
         try {
             com.atomikos.icatch.jta.UserTransactionManager utm = new UserTransactionManager();
