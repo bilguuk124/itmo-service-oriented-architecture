@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  tomcat:
+    relaxed-query-chars: '[,]'
+
+spring:
+  application:
+    name: MAIN-SERVICE
+  datasource:
+    username: "postgres"
+    password: "Gungun124"
+    url: jdbc:postgresql://localhost:8888/SOA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+
