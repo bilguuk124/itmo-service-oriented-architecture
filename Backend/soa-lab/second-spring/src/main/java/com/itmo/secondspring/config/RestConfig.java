@@ -17,7 +17,6 @@ import java.util.List;
 public class RestConfig {
 
     @Bean
-    @LoadBalanced
     public RestTemplate restTemplate(){
         RestTemplate restTemplate = new RestTemplate();
         List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();

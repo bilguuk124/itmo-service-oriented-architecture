@@ -30,7 +30,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @RestController
-@RequestMapping(value = "/agency",produces = MediaType.APPLICATION_XML_VALUE)
+@RequestMapping(value = "/",produces = MediaType.APPLICATION_XML_VALUE)
 public class SecondController {
 
 
@@ -63,7 +63,7 @@ public class SecondController {
             if ((balcony == null || balcony.isEmpty()) ||
                     (!Objects.equals(balcony,"with-balcony") && !Objects.equals(balcony, "without-balcony"))
             ) throw new IllegalArgumentException("Must be with-balcony or without-balcony");
-            String url = "http://localhost:8080/api/find-with-balcony/" + cheapest + "/" + balcony;
+            String url = "http://127.0.0.1:16000/api/find-with-balcony/" + cheapest + "/" + balcony;
             ResponseEntity<?> entity = null;
             try{
                 entity = restTemplate
@@ -98,7 +98,7 @@ public class SecondController {
             if (id1 == null || id1 < 1) throw new ValidationException("Id must be positive integer");
             if (id2 == null || id2 < 1) throw new ValidationException("Id must be positive integer");
 
-            String url = "http://localhost:8080/api/get-cheapest/" + id1 + "/" + id2;
+            String url = "http://127.0.0.1:16000/api/get-cheapest/" + id1 + "/" + id2;
             ResponseEntity<?> entity = null;
             try{
                 entity = restTemplate
