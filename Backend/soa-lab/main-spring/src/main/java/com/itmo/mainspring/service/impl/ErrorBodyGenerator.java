@@ -5,12 +5,12 @@ import com.itmo.mainspring.exception.BadPageableException;
 import com.itmo.mainspring.exception.HouseExistsException;
 import com.itmo.mainspring.exception.HouseNotEmptyException;
 import com.itmo.mainspring.exception.JpaException;
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.MissingServletRequestParameterException;
-import org.springframework.web.servlet.resource.NoResourceFoundException;
+//import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.time.LocalDateTime;
 
@@ -118,14 +118,14 @@ public class ErrorBodyGenerator {
                 .build();
     }
 
-    public ErrorBody generateNotFoundException(NoResourceFoundException e, HttpServletRequest request) {
-        return ErrorBody.builder()
-                .errorCode(404)
-                .message("Resource not found")
-                .details("Resource on this path does not exist: " + request.getRequestURL().toString())
-                .timestamp(LocalDateTime.now())
-                .build();
-    }
+//    public ErrorBody generateNotFoundException(NoResourceFoundException e, HttpServletRequest request) {
+//        return ErrorBody.builder()
+//                .errorCode(404)
+//                .message("Resource not found")
+//                .details("Resource on this path does not exist: " + request.getRequestURL().toString())
+//                .timestamp(LocalDateTime.now())
+//                .build();
+//    }
 
     public ErrorBody generateMissingParameter(MissingServletRequestParameterException e) {
         return ErrorBody.builder()

@@ -5,12 +5,12 @@ import com.itmo.feignclient.entity.House;
 import com.itmo.mainspring.entity.Sort;
 import com.itmo.mainspring.exception.HouseNotEmptyException;
 import com.itmo.mainspring.repository.HouseCrudRepository;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.PersistenceContextType;
-import jakarta.persistence.TypedQuery;
-import jakarta.persistence.criteria.*;
-import jakarta.transaction.Transactional;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.*;
+import javax.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Component;
@@ -91,21 +91,28 @@ public class HouseCrudRepositoryImpl implements HouseCrudRepository {
         Predicate predicate = criteriaBuilder.conjunction();
 
         for (Filter filter : filters) {
-            predicate = switch (filter.getFilteringOperation()) {
-                case EQ ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
-                case NEQ ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), filter.getFieldValue()));
-                case GT ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()), filter.getFieldValue()));
-                case LT ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()), filter.getFieldValue()));
-                case GTE ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
-                case LTE ->
-                        criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
-                default -> throw new IllegalArgumentException();
-            };
+            switch (filter.getFilteringOperation()) {
+                case EQ:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                case NEQ:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.notEqual(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                case GT:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThan(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                case LT:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThan(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                case GTE:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.greaterThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                case LTE:
+                    predicate = criteriaBuilder.and(predicate, criteriaBuilder.lessThanOrEqualTo(root.get(filter.getFieldName()), filter.getFieldValue()));
+                    break;
+                default:
+                    throw new IllegalArgumentException();
+            }
         }
         return predicate;
     }

@@ -1,0 +1,34 @@
+global
+    maxconn 4096
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend myfrontend
+    bind *:8080
+    mode http
+    default_backend mybackend
+
+global
+    maxconn 4096
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend myfrontend
+    bind *:8080
+    mode http
+    default_backend mybackend
+
+backend mybackend
+    mode http
+    balance roundrobin
+    {{ range services }}
+    server {{ .ServiceName }} {{ .Address }}:{{ .ServicePort }} check
+    {{ end }}

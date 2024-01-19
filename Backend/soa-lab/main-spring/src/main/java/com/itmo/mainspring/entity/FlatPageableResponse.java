@@ -1,7 +1,7 @@
 package com.itmo.mainspring.entity;
 
 import com.itmo.feignclient.entity.Flat;
-import jakarta.xml.bind.annotation.*;
+import javax.xml.bind.annotation.*;
 import lombok.*;
 
 import java.util.List;

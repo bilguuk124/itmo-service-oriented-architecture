@@ -2,7 +2,7 @@ package com.itmo.secondspring.controller;
 
 
 import com.itmo.feignclient.entity.*;
-import jakarta.validation.ValidationException;
+import javax.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

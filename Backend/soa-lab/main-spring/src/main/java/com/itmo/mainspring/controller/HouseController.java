@@ -5,7 +5,7 @@ import com.itmo.mainspring.entity.HousePageableResponse;
 import com.itmo.mainspring.exception.*;
 import com.itmo.mainspring.service.HouseCrudService;
 import com.itmo.mainspring.service.impl.Validator;
-import jakarta.validation.ValidationException;
+import javax.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
@@ -48,10 +49,10 @@ public class HouseController {
 
         List<String> sort = (sortParam == null)
                 ? new ArrayList<>()
-                : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+                : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).collect(Collectors.toList());
         List<String> filter = (filterParam == null)
                 ? new ArrayList<>()
-                : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+                : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).collect(Collectors.toList());
 
         logger.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
 

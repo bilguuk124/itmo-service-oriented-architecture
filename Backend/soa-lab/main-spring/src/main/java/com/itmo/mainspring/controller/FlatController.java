@@ -6,7 +6,7 @@ import com.itmo.mainspring.exception.FlatNotFoundException;
 import com.itmo.mainspring.exception.HouseNotFoundException;
 import com.itmo.mainspring.service.FlatCrudService;
 import com.itmo.mainspring.service.impl.Validator;
-import jakarta.validation.ValidationException;
+import javax.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -17,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Slf4j
@@ -48,10 +49,10 @@ public class FlatController {
 
         List<String> sort = (sortParam == null)
                 ? new ArrayList<>()
-                : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+                : Stream.of(sortParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).collect(Collectors.toList());
         List<String> filter = (filterParam == null)
                 ? new ArrayList<>()
-                : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).toList();
+                : Stream.of(filterParam.split(",")).filter(s -> !s.isEmpty()).map(String::trim).collect(Collectors.toList());
 
         log.info("page = {}, pageSize = {}, sort = {} filter = {}", page, pageSize, Arrays.toString(sort.toArray()), Arrays.toString(filter.toArray()));
 

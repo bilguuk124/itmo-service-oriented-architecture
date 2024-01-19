@@ -1,15 +1,14 @@
 package com.itmo.mainspring.exception;
 
 import com.itmo.mainspring.service.impl.ErrorBodyGenerator;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.ValidationException;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 @RestControllerAdvice
 @RequiredArgsConstructor
@@ -66,12 +65,12 @@ public class GlobalExceptionHandler {
                 .body(generator.generateValidationError(e.getMessage()));
     }
 
-    @ExceptionHandler(NoResourceFoundException.class)
-    public ResponseEntity<?> handleNotFoundException(NoResourceFoundException e, HttpServletRequest request){
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(generator.generateNotFoundException(e,request));
-    }
+//    @ExceptionHandler(NoResourceFoundException.class)
+//    public ResponseEntity<?> handleNotFoundException(NoResourceFoundException e, HttpServletRequest request){
+//        return ResponseEntity
+//                .status(HttpStatus.NOT_FOUND)
+//                .body(generator.generateNotFoundException(e,request));
+//    }
 
     @ExceptionHandler(NumberFormatException.class)
     public ResponseEntity<?> handleNumberFormatException(NumberFormatException e){

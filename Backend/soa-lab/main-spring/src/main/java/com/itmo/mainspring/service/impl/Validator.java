@@ -3,7 +3,7 @@ package com.itmo.mainspring.service.impl;
 import com.itmo.feignclient.entity.*;
 import com.itmo.mainspring.entity.*;
 import com.itmo.mainspring.exception.BadPageableException;
-import jakarta.validation.ValidationException;
+import javax.validation.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,8 +39,8 @@ public class Validator {
         if (!validateBoolean(dto.getHasBalcony()))
             stringBuilder.append("Has Balcony boolean must be either true or false, ");
 
-
-        if(!stringBuilder.isEmpty()) throw new ValidationException(stringBuilder.toString());
+        String res = stringBuilder.toString();
+        if(!res.isEmpty()) throw new ValidationException(res);
     }
 
     private static void validateCoordinates(FlatCreateDTO dto, StringBuilder stringBuilder) {
@@ -112,7 +112,8 @@ public class Validator {
                 }
             }
         }
-        if (!stringBuilder.isEmpty()) throw new ValidationException(stringBuilder.toString());
+        String res = stringBuilder.toString();
+        if(!res.isEmpty()) throw new ValidationException(res);
     }
 
     public static void validateSortList(List<Sort> sortList, Class<?> clazz) {
@@ -130,7 +131,8 @@ public class Validator {
                 }
             }
         }
-        if (!stringBuilder.isEmpty()) throw new ValidationException(stringBuilder.toString());
+        String res = stringBuilder.toString();
+        if(!res.isEmpty()) throw new ValidationException(res);
     }
 
 
