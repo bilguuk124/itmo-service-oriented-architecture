@@ -4,6 +4,7 @@ package com.itmo.secondspring.controller;
 import com.itmo.feignclient.entity.*;
 import javax.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
+import org.assertj.core.data.MapEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
 import java.util.Objects;
 
 @RestController
@@ -75,6 +77,8 @@ public class SecondController {
 
                 logger.info("Response: {}" , entity);
                 logger.info("Success: {}", entity.getBody());
+
+
                 return ResponseEntity
                         .ok(entity.getBody());
             } catch (HttpClientErrorException e){

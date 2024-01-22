@@ -1,6 +1,7 @@
 global
         log /dev/log   local0
         log 127.0.0.1   local1 notice
+
         maxconn 4096
         daemon
 
@@ -25,6 +26,10 @@ frontend stats
 
 frontend webapp1
          bind *:16000
+         http-request set-header Origin %[hdr(Origin)]
+         http-request add-header Access-Control-Allow-Origin %[hdr(Origin)]
+         http-request add-header Access-Control-Allow-Credentials [true]
+
          default_backend main-service
 
 

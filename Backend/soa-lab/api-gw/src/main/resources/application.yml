@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: https://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
 
@@ -13,10 +13,6 @@ zuul:
 
 server:
   port: 15000
-  ssl:
-    key-store: soa3.p12
-    key-password: 123456
-    key-store-type: PKC12
 
 
 spring:

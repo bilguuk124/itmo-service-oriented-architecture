@@ -70,7 +70,7 @@ public class Flat {
     @XmlElement
     private Transport transport;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "house_name")
     @XmlElement
     @NotNull

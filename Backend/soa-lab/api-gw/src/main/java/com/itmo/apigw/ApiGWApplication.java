@@ -12,4 +12,5 @@ public class ApiGWApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiGWApplication.class, args);
     }
+
 }
