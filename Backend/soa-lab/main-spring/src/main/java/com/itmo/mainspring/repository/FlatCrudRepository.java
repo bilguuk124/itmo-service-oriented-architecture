@@ -14,7 +14,7 @@ public interface FlatCrudRepository {
     void save(Flat flat);
     Optional<Flat> getById(Integer id);
     List<Flat> getAllPageable(List<Sort> sorts, List<Filter> filters, Integer page, Integer pageSize);
-    public boolean deleteById(Integer id);
+    boolean deleteById(Integer id);
     long getFlatCountWithSameHouse(House house);
     void deleteFlatsOfTheHouse(House house);
     long getFlatCountWithLessRooms(Integer maxRoomNumber);

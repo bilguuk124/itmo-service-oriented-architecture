@@ -5,7 +5,7 @@ import com.itmo.mainspring.exception.BadPageableException;
 import com.itmo.mainspring.exception.HouseExistsException;
 import com.itmo.mainspring.exception.HouseNotEmptyException;
 import com.itmo.mainspring.exception.JpaException;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

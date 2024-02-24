@@ -6,7 +6,7 @@ import com.itmo.mainspring.exception.FlatNotFoundException;
 import com.itmo.mainspring.exception.HouseNotFoundException;
 import com.itmo.mainspring.service.FlatCrudService;
 import com.itmo.mainspring.service.impl.Validator;
-import javax.validation.ValidationException;
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;

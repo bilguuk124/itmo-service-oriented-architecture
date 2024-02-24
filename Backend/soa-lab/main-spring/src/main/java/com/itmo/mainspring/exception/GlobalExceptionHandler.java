@@ -1,8 +1,8 @@
 package com.itmo.mainspring.exception;
 
 import com.itmo.mainspring.service.impl.ErrorBodyGenerator;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.ValidationException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

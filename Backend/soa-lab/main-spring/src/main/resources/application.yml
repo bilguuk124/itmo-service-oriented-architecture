@@ -1,24 +1,27 @@
 server:
   tomcat:
     relaxed-query-chars: '[,]'
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    key-store: classpath:keystore.p12
+    key-store-password: Gungun124
+
+  port: 16000
+
 
 spring:
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-        health-check-tls-skip-verify: true
-        scheme: https
-
   application:
     name: MAIN-SERVICE
 
+#  datasource:
+#    username: "postgres"
+#    password: "Gungun124"
+#    url: jdbc:postgresql://localhost:8888/SOA
   datasource:
-    username: "postgres"
-    password: "Gungun124"
-    url: jdbc:postgresql://localhost:8888/SOA
+    username: s289142
+    password: GDXUsG87MexaZU9m
+    url: jdbc:postgresql://pg:5432/studs
   jpa:
     show-sql: true
     hibernate:

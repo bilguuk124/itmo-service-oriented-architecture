@@ -1,0 +1,10 @@
+server:
+  port: 9091
+  ssl:
+    enabled: true
+    key-store-type: JKS
+    key-store: classpath:keystore.jks
+    key-store-password: Gungun124
+    key-alias: soa1
+    trust-store: classpath:keystore.jks
+    trust-store-password: Gungun124

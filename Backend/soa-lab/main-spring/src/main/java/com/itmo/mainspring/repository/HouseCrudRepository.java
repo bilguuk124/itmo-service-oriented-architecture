@@ -4,9 +4,9 @@ import com.itmo.mainspring.entity.Filter;
 import com.itmo.feignclient.entity.House;
 import com.itmo.mainspring.entity.Sort;
 import com.itmo.mainspring.exception.HouseNotEmptyException;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

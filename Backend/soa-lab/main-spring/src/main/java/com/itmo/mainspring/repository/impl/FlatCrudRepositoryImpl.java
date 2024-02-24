@@ -3,12 +3,12 @@ package com.itmo.mainspring.repository.impl;
 import com.itmo.feignclient.entity.*;
 import com.itmo.mainspring.entity.*;
 import com.itmo.mainspring.repository.FlatCrudRepository;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.*;
-import javax.transaction.Transactional;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.PersistenceContextType;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.*;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Component
 public class FlatCrudRepositoryImpl implements FlatCrudRepository {
 
-    @PersistenceContext(type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(type = PersistenceContextType.TRANSACTION)
     private EntityManager entityManagerProvider;
 
     @Transactional

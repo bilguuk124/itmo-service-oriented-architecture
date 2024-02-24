@@ -1,9 +1,0 @@
-server:
-  port: 8090
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/bilguuk124/config.git

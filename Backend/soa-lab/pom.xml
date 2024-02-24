@@ -9,11 +9,8 @@
 
     <modules>
         <module>main-spring</module>
-        <module>second-spring</module>
         <module>client</module>
-        <module>service-discovery</module>
-        <module>api-gw</module>
-        <module>config-server</module>
+        <module>second-service-soap</module>
     </modules>
 
     <version>1.0</version>
@@ -28,23 +25,34 @@
                 <version>3.8.1</version>
                 <inherited>true</inherited>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.maven.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
+
 
     <dependencyManagement>
         <dependencies>
@@ -55,13 +63,7 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -82,11 +84,8 @@
     </dependencies>
 
     <properties>
-<!--        <jersey.version>3.1.4</jersey.version>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <war.mvn.plugin.version>3.4.0</war.mvn.plugin.version>-->
-        <spring.boot.maven.plugin.version>2.3.6.RELEASE</spring.boot.maven.plugin.version>
-        <spring.boot.dependencies.version>2.3.6.RELEASE</spring.boot.dependencies.version>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <spring.boot.maven.plugin.version>3.2.1</spring.boot.maven.plugin.version>
+        <spring.boot.dependencies.version>3.2.1</spring.boot.dependencies.version>
     </properties>
 </project>

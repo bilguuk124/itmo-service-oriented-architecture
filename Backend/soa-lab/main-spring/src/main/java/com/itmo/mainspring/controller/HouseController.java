@@ -5,7 +5,7 @@ import com.itmo.mainspring.entity.HousePageableResponse;
 import com.itmo.mainspring.exception.*;
 import com.itmo.mainspring.service.HouseCrudService;
 import com.itmo.mainspring.service.impl.Validator;
-import javax.validation.ValidationException;
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

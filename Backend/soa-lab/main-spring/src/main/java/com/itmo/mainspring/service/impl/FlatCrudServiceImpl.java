@@ -9,13 +9,14 @@ import com.itmo.mainspring.repository.FlatCrudRepository;
 import com.itmo.mainspring.service.FlatCrudService;
 import com.itmo.mainspring.service.HouseCrudService;
 import com.itmo.mainspring.utility.FilterAndSortUtility;
-import javax.transaction.SystemException;
-import javax.validation.ConstraintViolationException;
-import javax.validation.ValidationException;
+import jakarta.transaction.SystemException;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -28,11 +29,12 @@ import java.util.Optional;
 public class FlatCrudServiceImpl implements FlatCrudService {
 
     private final Logger logger = LoggerFactory.getLogger(FlatCrudServiceImpl.class);
+    @Qualifier("flatCrudRepository")
     private final FlatCrudRepository repository;
     private final HouseCrudService houseCrudService;
 
     @Override
-    public Flat createFlat(FlatCreateDTO flatCreateDTO) throws ConstraintViolationException, HouseNotFoundException {
+    public Flat createFlat(FlatCreateDTO flatCreateDTO) throws HouseNotFoundException {
         logger.info("Service to create a flat starting");
         House house = flatCreateDTO.getHouse();
         if (!houseCrudService.exists(house)) {

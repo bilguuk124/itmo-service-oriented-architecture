@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.itmo.com/soa"
+            xmlns:tns="http://www.itmo.com/soa"
+            elementFormDefault="qualified">
+
+    <xs:complexType name="Flat">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="coordinates" type="tns:Coordinates"/>
+            <xs:element name="creationDate" type="xs:date"/>
+            <xs:element name="area" type="xs:int"/>
+            <xs:element name="numberOfRooms" type="xs:long"/>
+            <xs:element name="furnish" type="tns:Furnish"/>
+            <xs:element name="view" type="tns:View"/>
+            <xs:element name="transport" type="tns:Transport"/>
+            <xs:element name="house" type ="tns:House"/>
+            <xs:element name="price" type="xs:long"/>
+            <xs:element name="hasBalcony" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="CheapestBalconyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Flat" type="tns:Flat"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CheapestOfTwoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Flat" type="tns:Flat"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CheapestBalconyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cheapest" type="xs:string"/>
+                <xs:element name="balcony" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CheapestOfTwoRequest" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id1" type="xs:long"/>
+                <xs:element name="id2" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ErrorBody">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="errorCode" type="xs:int"/>
+                <xs:element name="message" type="xs:string"/>
+                <xs:element name="details" type="xs:string"/>
+                <xs:element name="timestamp" type="xs:dateTime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Coordinates">
+        <xs:sequence>
+            <xs:element name="coordinate_x" type="xs:double"/>
+            <xs:element name="coordinate_y" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="House">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="year" type="xs:int"/>
+            <xs:element name="numberOfFloors" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Furnish" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Normal"/>
+            <xs:enumeration value="LITTLE"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="FINE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="View" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="YARD"/>
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="STREET"/>
+            <xs:enumeration value="BAD"/>
+            <xs:enumeration value="TERRIBLE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Transport" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="FEW"/>
+            <xs:enumeration value="ENOUGH"/>
+            <xs:enumeration value="LITTLE"/>
+            <xs:enumeration value="NONE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

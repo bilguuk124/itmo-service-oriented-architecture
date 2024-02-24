@@ -1,0 +1,29 @@
+server:
+  tomcat:
+    relaxed-query-chars: '[,]'
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    key-store: classpath:keystore.p12
+    key-store-password: Gungun124
+
+  port: 8080
+
+
+spring:
+  application:
+    name: MAIN-SERVICE
+
+  datasource:
+    username: "postgres"
+    password: "Gungun124"
+    url: jdbc:postgresql://localhost:8888/SOA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+

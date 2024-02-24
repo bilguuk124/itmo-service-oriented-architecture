@@ -2,17 +2,14 @@ package com.itmo.feignclient.entity;
 
 
 import com.itmo.feignclient.entity.adapters.LocalDateXmlAdapter;
-import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -20,7 +17,9 @@ import java.time.LocalDate;
 @Entity
 @Setter
 @Getter
+@ToString
 @NoArgsConstructor
+@Builder
 @Table(name = "flat")
 @XmlRootElement(name = "flat")
 @XmlType(propOrder = {"name","coordinates","creationDate","area","numberOfRooms","furnish", "view","transport","house","price","hasBalcony"})
@@ -70,7 +69,7 @@ public class Flat {
     @XmlElement
     private Transport transport;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "house_name")
     @XmlElement
     @NotNull

@@ -1,16 +1,13 @@
 package com.itmo.feignclient.entity;
 
-import javax.persistence.Embeddable;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotNull;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -20,6 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @XmlRootElement
 @Setter
+@Builder
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Coordinates implements Serializable {
 

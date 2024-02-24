@@ -1,6 +1,6 @@
 package com.itmo.feignclient.entity;
 
-import javax.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnum;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
