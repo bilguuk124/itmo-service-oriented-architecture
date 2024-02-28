@@ -15,8 +15,8 @@ import Flat,
   View
 } from "./types"
 
-export const firstServicePath = "http://localhost:8080/api"
-export const secondServicePath = "http://localhost:9090/agency"
+export const firstServicePath = "https://localhost:16000/api"
+export const secondServicePath = "https://localhost:9090/agency"
 
 export const reactQueryKeys = {
   getAllFlats: 'flatsAll',
@@ -208,6 +208,23 @@ export const gridColumns: GridColDef<Flat>[] = [
     flex: 0.4,
     editable: true,
     filterOperators: customStringOperators
+  },
+  {
+    field: 'price',
+    type: "number",
+    flex: 0.4,
+    headerAlign: 'center',
+    align: 'center',
+    editable: true,
+    filterOperators: customNumberOperators
+  },
+  {
+    field: 'hasBalcony',
+    type: "boolean",
+    flex: 0.4,
+    headerAlign: 'center',
+    align: 'center',
+    editable: true
   },
   {
     field: 'transport',

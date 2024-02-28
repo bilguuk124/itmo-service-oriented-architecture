@@ -5,7 +5,7 @@ import Flat, { FedbackableProps, Feedback } from "../../types";
 import { AgencyService } from "../../services/AgencyService";
 import { useQuery } from "@tanstack/react-query";
 import { FlatComparison } from "./FlatComparison";
-import { buildFeedback, isFlatExist } from "../../utils";
+import { buildFeedback } from "../../utils";
 import axios, { AxiosError } from "axios";
 import { FlatService } from "../../services/FlatsService";
 import JSONFormatter from "json-formatter-js";

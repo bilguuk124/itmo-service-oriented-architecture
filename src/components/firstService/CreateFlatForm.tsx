@@ -95,9 +95,9 @@ export const CreateFlatForm: React.FC<CreateFlatFormProps> = ({ setFeedback }) =
     React.useEffect(() => {
         const data = queryClient.ensureQueryData({
             queryKey: [reactQueryKeys.getAllHouses],
-            queryFn: () => HouseService.getAll()
+            queryFn: () => HouseService.getAll({page: 1, pageSize: 1000}),
         })
-        data.then((x) => setHousesState(x?.data.map(x => x.name)!))
+        data.then((x) => setHousesState(x?.data.map(x => x.name)!)).catch(a => setFeedback(buildFeedback("error", undefined, a)))
     }, [])
 
     return (

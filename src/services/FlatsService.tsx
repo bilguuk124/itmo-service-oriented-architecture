@@ -75,7 +75,7 @@ export const mapToFlat = (container: any): Flat => {
 
     return (
         {
-            id: flat.$.id,
+            id: flat.$ ? flat.$.id : flat.id,
             name: flat.name,
             coordinates: {
                 x: flat.coordinates.coordinate_x,
@@ -88,7 +88,7 @@ export const mapToFlat = (container: any): Flat => {
             view: flat.view,
             transport: flat.transport,
             price: flat.price,
-            hasBalcony: flat.hasBalcony,
+            hasBalcony: flat.hasBalcony === "true",
             house: {
                 name: flat.house.name,
                 year: flat.house.year,

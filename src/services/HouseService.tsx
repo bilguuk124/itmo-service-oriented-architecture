@@ -27,7 +27,7 @@ export const HouseService = {
     async getAll(pagintion?: PaginationInfo, filtering?: FilteringInfo<House>, sorting?: SortingInfo<House>) {
         const { data, headers } = await axios.get(buildFSPath(`/houses`), {
             params: {
-                page: pagintion ? pagintion.page! + 1 : undefined,
+                page: pagintion ? pagintion.page! : undefined,
                 pageSize: pagintion?.pageSize,
                 sort: sorting ? buildSortingParams(sorting) : undefined,
                 filter: filtering ? buildFilteringParams(filtering) : undefined

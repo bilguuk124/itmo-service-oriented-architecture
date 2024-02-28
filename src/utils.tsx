@@ -47,6 +47,7 @@ export const parseXml = (xmlReq: any, root?: string) => {
             res = result[root]
         else res = result
     })
+    console.log(res)
     return res
 }
 
@@ -67,9 +68,10 @@ export const buildFilteringParams = (filteringInfo: FilteringInfo<any>): string 
 };
 
 export const buildFeedback = (status: 'error' | 'success'  | 'info', msg?: string, error?: AxiosError) => {
+    console.log(error)
     return {
         status: status == 'error' || status == 'success' ? status : 'info',
-        message: error ? (parseXml(error.response?.data, 'errorBody') as BadResponse).details : msg
+        message: error ? (parseXml(error.response?.data, 'ErrorBody') as BadResponse).details : msg
     } as Feedback;
 };
 

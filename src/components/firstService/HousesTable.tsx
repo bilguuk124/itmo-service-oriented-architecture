@@ -226,7 +226,7 @@ export const HousesTable: React.FC<HouseTableProps> = ({ setFeedback }) => {
 
   const { isLoading, error, data: resp } = useQuery({
     queryKey: [reactQueryKeys.getAllHouses, queryOptions, paginationModel],
-    queryFn: () => HouseService.getAll({ ...paginationModel, page: paginationModel.page }, queryOptions.filtering, queryOptions.sorting)
+    queryFn: () => HouseService.getAll({ ...paginationModel, page: paginationModel.page + 1 }, queryOptions.filtering, queryOptions.sorting)
   })
 
   const [rowCountState, setRowCountState] = React.useState(

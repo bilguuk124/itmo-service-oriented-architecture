@@ -55,8 +55,8 @@ export const AppMenu: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   React.useEffect(() => {
-    if (!feedback)
-      return
+    // if (!feedback)
+    //   return
     switch (feedback.status) {
       case 'error': messageApi.error({ content: feedback.message, style: { marginRight: 0, color: 'red' } })
         break
