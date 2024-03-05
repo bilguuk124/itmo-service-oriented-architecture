@@ -43,7 +43,7 @@ export const HouseService = {
                 pageableResp.data.house = [pageableResp.data.house]
             if (pageableResp.numberOfEntries == 0)
                 return { data: [], numberOfEntries: parseInt(pageableResp.numberOfEntries) } as PageableResponse<House>
-            const result = { data: mapToHouse(pageableResp.data.house), numberOfEntries: parseInt(pageableResp.numberOfEntries) } as PageableResponse<House>
+            const result = { data: mapToHouseArr(pageableResp.data.house), numberOfEntries: parseInt(pageableResp.numberOfEntries) } as PageableResponse<House>
             console.log(result)
             return result
         }
@@ -66,17 +66,18 @@ export const HouseService = {
     }
 }
 
-const mapToHouse = (resp: any): House[] => {
-    return (resp.map((container: any) => {
-        // console.log(container.house)
-        let house = container
-        return (
-            {
-                name: house.name,
-                year: house.year,
-                numberOfFloors: house.numberOfFloors
-            }
-        )
-    }))
+export const mapToHouse = (house: any):House => {
+    return (
+        {
+            name: house.name,
+            year: house.year,
+            numberOfFloors: house.numberOfFloors
+        } as House
+    )
+}
+
+
+export const mapToHouseArr = (resp: any): House[] => {
+    return (resp.map(mapToHouse))
 }
 

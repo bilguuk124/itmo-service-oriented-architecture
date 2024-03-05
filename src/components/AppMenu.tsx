@@ -7,7 +7,7 @@ import { CreateFlatForm } from './firstService/CreateFlatForm';
 import { CreateHouseForm } from './firstService/CreateHouseForm';
 import { HousesTable } from './firstService/HousesTable';
 import { Feedback } from '../types';
-import { AgencyTools } from './secondService/Agency';
+import { AgencyToolsComponent } from './secondService/AgencyToolsComponent';
 import { message } from 'antd';
 import ConstructionIcon from '@mui/icons-material/Construction';
 
@@ -119,7 +119,7 @@ export const AppMenu: React.FC = () => {
             <CreateHouseForm setFeedback={setFeedback} />
           </TabPanel>
           <TabPanel value='5' id='secondservice'>
-            <AgencyTools setFeedback={setFeedback} />
+            <AgencyToolsComponent setFeedback={setFeedback} />
           </TabPanel>
         </Box>
       </TabContext>

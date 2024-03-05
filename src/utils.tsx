@@ -71,7 +71,7 @@ export const buildFeedback = (status: 'error' | 'success'  | 'info', msg?: strin
     console.log(error)
     return {
         status: status == 'error' || status == 'success' ? status : 'info',
-        message: error ? (parseXml(error.response?.data, 'ErrorBody') as BadResponse).details : msg
+        message: error ? error.response ? (parseXml(error.response.data, 'ErrorBody') as BadResponse).details : error.message : msg
     } as Feedback;
 };
 

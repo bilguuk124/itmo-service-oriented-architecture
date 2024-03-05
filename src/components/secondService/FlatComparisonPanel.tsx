@@ -9,7 +9,7 @@ interface FlatComparisonProps {
     cheapestFlatId: number
 }
 
-export const FlatComparison: React.FC<FlatComparisonProps> = ({ firstFlat, secondFlat, cheapestFlatId }) => {
+export const FlatsComparisonPanel: React.FC<FlatComparisonProps> = ({ firstFlat, secondFlat, cheapestFlatId }) => {
     return (
         <Stack direction='row' spacing={2} sx={{ m: 2 }} justifyContent='center' useFlexGap flexWrap="wrap">
             <Paper

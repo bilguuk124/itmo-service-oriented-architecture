@@ -52,7 +52,6 @@ export const CreateHouseForm: React.FC<HouseFormProps> = ({ setFeedback }) => {
             queryClient.invalidateQueries({ queryKey: [reactQueryKeys.getAllHouses] })
         },
         onError(error: AxiosError) {
-            console.log('hahahah')
             console.log(error);
             setHouseState(initStateHouse);
             setFeedback(buildFeedback('error', undefined, error))
