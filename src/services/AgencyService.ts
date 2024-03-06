@@ -1,6 +1,6 @@
 import axios from "axios"
 import Flat, { House } from "../types"
-import { buildSecondServicePath as buildSecondServiceUrl, parseXml } from "../utils"
+import { buildSecondServicePath as buildSecondServiceUrl, genXml, parseXml } from "../utils"
 import { mapToFlat } from "./FlatsService"
 import { mapToHouse } from "./HouseService"
 
@@ -19,8 +19,8 @@ export const AgencyService = {
         return a as Flat
     },
 
-    async testPost(){
-        var { data } = await axios.post(buildSecondServiceUrl('/test'))
+    async testPost(house: House){
+        var { data } = await axios.post(buildSecondServiceUrl('/test'), genXml(house, 'house'), { headers: { 'Content-Type': 'application/xml' } })
         return mapToHouse(parseXml(data).House) as House
     }
 }
